@@ -1,4 +1,4 @@
-全部都是combinational circuit，在輸入的時候同時輸出結果。
+在輸入的下一個cycle輸出結果
 指令：
 1. pattern_gen.c
   gcc pattern_gen.c -o pattern_creator
