@@ -1,1 +1,8 @@
 每次輸入一個column的input，經過`PE_block_W次之後算出結果
+指令：
+1. pattern_gen.c
+gcc pattern_gen.c -o pattern
+./pattern
+2. PE_block.v
+iverilog -o sim.vvp PE_block.v tb_PE_block.v
+vvp sim.vvp
