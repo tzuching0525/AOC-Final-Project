@@ -15,7 +15,6 @@ reg [`DATA_SIZE-1:0] weight [0:`TEST_SIZE-1];
 reg [`DATA_SIZE * 4-1:0] bias [0:`TEST_SIZE-1];
 reg en;
 wire [`DATA_SIZE*4-1:0] opsum;
-wire valid;
 reg [4:0] count;
 reg [`DATA_SIZE*4-1:0] golden_opsum[0:`TEST_SIZE-1];
 integer err = 0;
@@ -45,7 +44,6 @@ initial begin
     rst = 1; en = 0;
     #(`CYCLE*2) rst = 0; en = 1;
     while(count < `TEST_SIZE - 1) begin
-        wait(valid);
         @ (negedge clk); 
         // compare results
         if(opsum !== golden_opsum[count]) begin
@@ -82,8 +80,7 @@ PE pe(
     .weight(weight_wire),
     .bias(bias_wire),
     .en(en),
-    .opsum(opsum),
-    .valid(valid)
+    .opsum(opsum)
 );
 
 initial begin
