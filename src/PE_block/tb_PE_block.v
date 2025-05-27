@@ -111,54 +111,54 @@ always @(posedge clk) begin
 end
 
 wire [`DATA_SIZE-1:0] ifmap_wire = ifmap[count];
-wire [`DATA_SIZE-1:0] weight_wire0 = weight[count * `PE_block_H]; 
-wire [`DATA_SIZE-1:0] weight_wire1 = weight[count * `PE_block_H + 1];
-wire [`DATA_SIZE-1:0] weight_wire2 = weight[count * `PE_block_H + 2];
-wire [`DATA_SIZE-1:0] weight_wire3 = weight[count * `PE_block_H + 3];
-wire [`DATA_SIZE-1:0] weight_wire4 = weight[count * `PE_block_H + 4];
-wire [`DATA_SIZE-1:0] weight_wire5 = weight[count * `PE_block_H + 5];
-wire [`DATA_SIZE-1:0] weight_wire6 = weight[count * `PE_block_H + 6];
-wire [`DATA_SIZE-1:0] weight_wire7 = weight[count * `PE_block_H + 7]; 
-wire [`DATA_SIZE * 4-1:0] bias_wire0 = bias[(pattern) * `PE_block_H];
-wire [`DATA_SIZE * 4-1:0] bias_wire1 = bias[(pattern) * `PE_block_H + 1];
-wire [`DATA_SIZE * 4-1:0] bias_wire2 = bias[(pattern) * `PE_block_H + 2];
-wire [`DATA_SIZE * 4-1:0] bias_wire3 = bias[(pattern) * `PE_block_H + 3];
-wire [`DATA_SIZE * 4-1:0] bias_wire4 = bias[(pattern) * `PE_block_H + 4];
-wire [`DATA_SIZE * 4-1:0] bias_wire5 = bias[(pattern) * `PE_block_H + 5];
-wire [`DATA_SIZE * 4-1:0] bias_wire6 = bias[(pattern) * `PE_block_H + 6];
-wire [`DATA_SIZE * 4-1:0] bias_wire7 = bias[(pattern) * `PE_block_H + 7];
+// wire [`DATA_SIZE-1:0] weight_wire0 = weight[count * `PE_block_H]; 
+// wire [`DATA_SIZE-1:0] weight_wire1 = weight[count * `PE_block_H + 1];
+// wire [`DATA_SIZE-1:0] weight_wire2 = weight[count * `PE_block_H + 2];
+// wire [`DATA_SIZE-1:0] weight_wire3 = weight[count * `PE_block_H + 3];
+// wire [`DATA_SIZE-1:0] weight_wire4 = weight[count * `PE_block_H + 4];
+// wire [`DATA_SIZE-1:0] weight_wire5 = weight[count * `PE_block_H + 5];
+// wire [`DATA_SIZE-1:0] weight_wire6 = weight[count * `PE_block_H + 6];
+// wire [`DATA_SIZE-1:0] weight_wire7 = weight[count * `PE_block_H + 7]; 
+// wire [`DATA_SIZE * 4-1:0] bias_wire0 = bias[(pattern) * `PE_block_H];
+// wire [`DATA_SIZE * 4-1:0] bias_wire1 = bias[(pattern) * `PE_block_H + 1];
+// wire [`DATA_SIZE * 4-1:0] bias_wire2 = bias[(pattern) * `PE_block_H + 2];
+// wire [`DATA_SIZE * 4-1:0] bias_wire3 = bias[(pattern) * `PE_block_H + 3];
+// wire [`DATA_SIZE * 4-1:0] bias_wire4 = bias[(pattern) * `PE_block_H + 4];
+// wire [`DATA_SIZE * 4-1:0] bias_wire5 = bias[(pattern) * `PE_block_H + 5];
+// wire [`DATA_SIZE * 4-1:0] bias_wire6 = bias[(pattern) * `PE_block_H + 6];
+// wire [`DATA_SIZE * 4-1:0] bias_wire7 = bias[(pattern) * `PE_block_H + 7];
 
 PE_block pe_block(
     .clk(clk),
     .rst(rst),
     .ifmap(ifmap_wire),
-    .weight0(weight_wire0),
-    .weight1(weight_wire1),
-    .weight2(weight_wire2),
-    .weight3(weight_wire3),
-    .weight4(weight_wire4),
-    .weight5(weight_wire5),
-    .weight6(weight_wire6),
-    .weight7(weight_wire7),
-    .bias0(bias_wire0),
-    .bias1(bias_wire1),
-    .bias2(bias_wire2),
-    .bias3(bias_wire3),
-    .bias4(bias_wire4),
-    .bias5(bias_wire5),
-    .bias6(bias_wire6),
-    .bias7(bias_wire7),
+    .weight(weight_wire),
+    .bias(bias_wire),
     .i_en(en),
-    .ofmap0(ofmap[0]),
-    .ofmap1(ofmap[1]),
-    .ofmap2(ofmap[2]),
-    .ofmap3(ofmap[3]),
-    .ofmap4(ofmap[4]),
-    .ofmap5(ofmap[5]),
-    .ofmap6(ofmap[6]),
-    .ofmap7(ofmap[7]),
+    .ofmap(ofmap),
     .valid(valid)
 );
+
+wire [7:0] weight_wire [0 : `PE_block_H - 1];
+wire [31:0] bias_wire [0 : `PE_block_H - 1];
+
+assign weight_wire[0] = weight[count * `PE_block_H];
+assign weight_wire[1] = weight[count * `PE_block_H + 1];
+assign weight_wire[2] = weight[count * `PE_block_H + 2];
+assign weight_wire[3] = weight[count * `PE_block_H + 3];
+assign weight_wire[4] = weight[count * `PE_block_H + 4];
+assign weight_wire[5] = weight[count * `PE_block_H + 5];
+assign weight_wire[6] = weight[count * `PE_block_H + 6];
+assign weight_wire[7] = weight[count * `PE_block_H + 7];
+assign bias_wire[0] = bias[pattern * `PE_block_H];
+assign bias_wire[1] = bias[pattern * `PE_block_H + 1];
+assign bias_wire[2] = bias[pattern * `PE_block_H + 2];
+assign bias_wire[3] = bias[pattern * `PE_block_H + 3];
+assign bias_wire[4] = bias[pattern * `PE_block_H + 4];
+assign bias_wire[5] = bias[pattern * `PE_block_H + 5];
+assign bias_wire[6] = bias[pattern * `PE_block_H + 6];
+assign bias_wire[7] = bias[pattern * `PE_block_H + 7];
+
 
 initial begin
     `ifdef SYN
