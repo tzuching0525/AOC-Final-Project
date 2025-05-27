@@ -1,0 +1,8 @@
+指令：
+1. pattern_gen.c
+  gcc pattern_gen.c -o pattern
+  ./pattern
+  (0: easy case, 1: random generate patterns)
+2. PE.v
+  iverilog -o sim.vvp PE.v tb_PE.v 
+  vvp sim.vvp
