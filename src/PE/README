@@ -1,9 +1,2 @@
 在輸入的下一個cycle輸出結果
-指令：
-1. pattern_gen.c
-  gcc pattern_gen.c -o pattern_creator
-  ./pattern_creator
-  (0: easy case, 1: random generate patterns)
-2. PE.v
-  iverilog -o sim.vvp PE.v tb_PE.v 
-  vvp sim.vvp
+
