@@ -4,5 +4,5 @@
   ./pattern
   (0: easy case, 1: random generate patterns)
 2. PE.v
-  iverilog -o sim.vvp PE.v tb_PE.v 
+  iverilog -g2012 -o sim.vvp PE.v tb_PE.v 
   vvp sim.vvp
