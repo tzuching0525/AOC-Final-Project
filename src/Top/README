@@ -1,3 +1,9 @@
 testbench: (2 type operation: (128*64)*(64), (64*128)*(128))
-simulate DRAM as readmem, input data to GLB(SRAM) by 4 byte.
-After 64*64*1byte weight, 64*1byte ifmap, 
+simulate DRAM as readmem, input data to GLB(SRAM) once 4 byte.
+After 64*64*1byte weight, 64*1byte ifmap, 64*4byte bias are transfered to GLB, PE_array starts to compute (8*32)*(32) MVM.
+Bias(ipsum) needs to be updated by opsum of former MVM output.
+PE_array will compute 16 times (row first) MVM, and output 64 ofmaps to GLB.
+Each type of operation needs two times (64*64)*(64) MVM.
+For operation type 1 ((128*64)*(64)): 
+Ofmap size is 128, output of MVM be stored in GLB.
+After all 128 ofmaps are computed completely, ofmaps will be transfered to DRAM in a row.
