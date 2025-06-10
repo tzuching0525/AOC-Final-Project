@@ -1,0 +1,3 @@
+testbench: (2 type operation: (128*64)*(64), (64*128)*(128))
+simulate DRAM as readmem, input data to GLB(SRAM) by 4 byte.
+After 64*64*1byte weight, 64*1byte ifmap, 
