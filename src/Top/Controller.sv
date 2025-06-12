@@ -19,7 +19,8 @@ module Controller (
     input logic valid_ppu,
     output logic [7:0] ppu_count,
     input logic mode,
-    output logic done
+    output logic done,
+    output logic mode1_step0
 );
 
 parameter   IDLE = 3'd0,
@@ -32,6 +33,13 @@ parameter   IDLE = 3'd0,
 logic [2:0] cur_state, next_state;
 
 assign ofmap_ren = (cur_state == PPU);
+
+always @(posedge clk) begin
+    if(rst) mode1_step0 <= 0;
+    else if(mode == 0) mode1_step0 <= 0;
+    else if(ready) mode1_step0 <= !mode1_step0;
+    else mode1_step0 <= mode1_step0;
+end
 
 // data_address
 always @(posedge clk) begin
@@ -74,6 +82,7 @@ end
 // array count
 always @(posedge clk) begin
     if(rst) compute_stage <= 4'd0;
+    else if(ready) compute_stage <= 0;
     else if(valid_array) compute_stage <= compute_stage + 1;
     else compute_stage <= compute_stage;
 end
@@ -96,6 +105,8 @@ always @(posedge clk) begin
     if(rst) cur_state <= IDLE;
     else cur_state <= next_state;
 end
+
+
 
 always @(*) begin
     case (cur_state)

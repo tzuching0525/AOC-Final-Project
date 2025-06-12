@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <math.h>
 
 int main() {
     FILE *fp1, *fp2, *fp3, *fp4, *fp5, *fp6;
@@ -63,21 +64,18 @@ int main() {
             for(int j = 0; j < 64; j++) {
                 golden_reg[i] += weight_reg[j + i * 64] * (ifmap_reg[j] - 128);
             }
-            golden_reg[i] = golden_reg[i] >> scaling_factor;
+            if(golden_reg[i] < 0) golden_reg[i] = 0;
+            golden_reg[i] = golden_reg[i] / (1LL << scaling_factor);
             golden_reg[i] += 128;
             if(golden_reg[i] > 255) golden_reg[i] = 255;
         }
-        // printf("%d\n", golden_reg[0]);
-        // printf("%d\n", golden_reg[1]);
-        // printf("%d\n", golden_reg[2]);
-        // printf("%d\n", golden_reg[3]);
     }
     // weight: 64 * 128                 ifmap: 128        64     bias: 64    ofmap: 64
     // [ -128   -127   -126 ...]      [128]->[0]          []          [0]          []
     // [...             126 127]      [129]->[1]          []          [0]          []
     // [ -128   -127   -126 ...]   X  [130]->[2]      =   []      +   [0]      =   []
     // [...]                          [...]->[...]        []          [0]          []
-    // [ ... ... ...    126 127]      [191]->[63]         []          [0]          []
+    // [ ... ... ...    126 127]      [255]->[127]        []          [0]          []
     //
     else if(mode == 1) {
         // ifmap
@@ -98,6 +96,10 @@ int main() {
             for(int j = 0; j < 128; j++) {
                 golden_reg[i] += weight_reg[j + i * 128] * (ifmap_reg[j] - 128);
             }
+            if(golden_reg[i] < 0) golden_reg[i] = 0;
+            golden_reg[i] = golden_reg[i] / (1LL << scaling_factor);
+            golden_reg[i] += 128;
+            if(golden_reg[i] > 255) golden_reg[i] = 255;
         }
     }
     else if(mode == 2){

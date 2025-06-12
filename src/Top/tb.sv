@@ -21,11 +21,11 @@ reg [0:0] mode [0:0];
 
 reg [`DATA_SIZE-1:0] ifmap [0:`ifmap_size-1];
 reg [`DATA_SIZE-1:0] weight [0:`weight_W * `weight_H-1];
-reg [`DATA_SIZE * 4-1:0] bias [0:`bias_size-1];
+reg [`DATA_SIZE-1:0] bias [0:`bias_size-1];
 logic [5:0] scaling_factor [0:0];
 reg ready;
 wire [31:0] ofmap;
-logic [31:0] ofmap_reg [0:63];
+logic [31:0] ofmap_reg [0:127];
 logic [11:0] input_count;
 reg [`DATA_SIZE*4-1:0] golden_opsum[0:`ofmap_size-1];
 integer err = 0;
@@ -34,6 +34,7 @@ logic [31:0] data_in;
 logic done;
 logic i_en;
 integer i;
+integer step = 0;
 integer ofmap_count = 0;
 // integer ifmap_length = (mode)? 128 : 64; // 128 for MLP3, 64 for MLP0
 
@@ -57,27 +58,61 @@ integer ofmap_count = 0;
 
 always @(posedge clk) begin
     if(rst) input_count <= 12'd0;
-    else if(ready) input_count <= 12'd0;
+    // else if(ready) input_count <= 12'd0;
     else if(i_en) input_count <= input_count + 1;
     else input_count <= input_count;
 end
 
 logic [7:0] ifmap0, ifmap1, ifmap2, ifmap3, weight0, weight1, weight2, weight3;
-
+logic [7:0] ifmap4, ifmap5, ifmap6, ifmap7, weight4, weight5, weight6, weight7;
+// mode 0, step 0
 assign ifmap0 = ifmap[4 * input_count];
 assign ifmap1 = ifmap[4 * input_count + 1];
 assign ifmap2 = ifmap[4 * input_count + 2];
 assign ifmap3 = ifmap[4 * input_count + 3];
-assign weight0 = weight[4 * (input_count - 16)];
-assign weight1 = weight[4 * (input_count - 16) + 1];
-assign weight2 = weight[4 * (input_count - 16) + 2];
-assign weight3 = weight[4 * (input_count - 16) + 3];
+assign weight0 = (mode[0][0] == 0)? weight[4 * (input_count - 16)] : weight[4 * (input_count - 16) + (input_count - 16) / 16 * 64];
+assign weight1 = (mode[0][0] == 0)? weight[4 * (input_count - 16) + 1] : weight[4 * (input_count - 16) + (input_count - 16) / 16 * 64 + 1];
+assign weight2 = (mode[0][0] == 0)? weight[4 * (input_count - 16) + 2] : weight[4 * (input_count - 16) + (input_count - 16) / 16 * 64 + 2];
+assign weight3 = (mode[0][0] == 0)? weight[4 * (input_count - 16) + 3] : weight[4 * (input_count - 16) + (input_count - 16) / 16 * 64 + 3];
+// mode 0, step 1
+assign ifmap4 = (mode[0][0] == 0)? ifmap[4 * (input_count - 16 - 64 * 16 - 64)] : ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 64];
+assign ifmap5 = (mode[0][0] == 0)? ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 1] : ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 1 + 64];
+assign ifmap6 = (mode[0][0] == 0)? ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 2] : ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 2 + 64];
+assign ifmap7 = (mode[0][0] == 0)? ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 3] : ifmap[4 * (input_count - 16 - 64 * 16 - 64) + 3 + 64];
+assign weight4 = (mode[0][0] == 0)? weight[4 * (input_count - 16 * 2 - 64)] : 
+                              weight[4 * (input_count - 16 * 2 - 64 * 16 - 64) + (input_count - 16 * 2 - 64 * 16 - 64) / 16 * 64 + 64];
+assign weight5 = (mode[0][0] == 0)? weight[4 * (input_count - 16 * 2 - 64) + 1] : 
+                              weight[4 * (input_count - 16 * 2 - 64 * 16 - 64) + (input_count - 16 * 2 - 64 * 16 - 64) / 16 * 64 + 64 + 1];
+assign weight6 = (mode[0][0] == 0)? weight[4 * (input_count - 16 * 2 - 64) + 2] : 
+                              weight[4 * (input_count - 16 * 2 - 64 * 16 - 64) + (input_count - 16 * 2 - 64 * 16 - 64) / 16 * 64 + 64 + 2];
+assign weight7 = (mode[0][0] == 0)? weight[4 * (input_count - 16 * 2 - 64) + 3] : 
+                              weight[4 * (input_count - 16 * 2 - 64 * 16 - 64) + (input_count - 16 * 2 - 64 * 16 - 64) / 16 * 64 + 64 + 3];
 
 
-assign data_in = (input_count < 16)? {ifmap3, ifmap2, ifmap1, ifmap0} : 
-                 (input_count < 16 + 64 * 16)? {weight3, weight2, weight1, weight0} : 
-                 (input_count < 16 + 64 * 16 + 128)? bias[input_count - 16 - 64 * 16] : 32'd0;
+// assign data_in = (input_count < 16)? {ifmap3, ifmap2, ifmap1, ifmap0} : 
+//                  (input_count < 16 + 64 * 16)? {weight3, weight2, weight1, weight0} : 
+//                  (input_count < 16 + 64 * 16 + 128)? bias[input_count - 16 - 64 * 16] : 32'd0;
 
+always @(*) begin
+    if(mode[0][0] == 0) begin
+        if(input_count < 16) data_in = {ifmap3, ifmap2, ifmap1, ifmap0};
+        else if(input_count < 16 + 64 * 16) data_in = {weight3, weight2, weight1, weight0};
+        else if(input_count < 16 + 64 * 16 + 64) data_in = bias[input_count - 16 - 64 * 16];
+        else if(input_count < 16 * 2 + 64 * 16 + 64) data_in = {ifmap7, ifmap6, ifmap5, ifmap4}; 
+        else if(input_count < 16 * 2 + 64 * 16 * 2 + 64) data_in = {weight7, weight6, weight5, weight4};
+        else if(input_count < 16 * 2 + 64 * 16 * 2 + 64 * 2) data_in = bias[input_count - 16 * 2 - 64 * 16 * 2];
+        else data_in = 0;
+    end
+    else begin
+        if(input_count < 16) data_in = {ifmap3, ifmap2, ifmap1, ifmap0};
+        else if(input_count < 16 + 64 * 16) data_in = {weight3, weight2, weight1, weight0};
+        else if(input_count < 16 + 64 * 16 + 64) data_in = bias[input_count - 16 - 64 * 16];
+        else if(input_count < 16 * 2 + 64 * 16 + 64) data_in = {ifmap7, ifmap6, ifmap5, ifmap4}; 
+        else if(input_count < 16 * 2 + 64 * 16 * 2 + 64) data_in = {weight7, weight6, weight5, weight4};
+        else if(input_count < 16 * 2 + 64 * 16 * 2 + 64 * 2) data_in = bias[input_count - 16 * 2 - 64 * 16 * 2 - 64];
+        else data_in = 0;
+    end
+end
 
 // main function
 initial begin
@@ -87,73 +122,50 @@ initial begin
     // integer weight_length = (mode)? 128 : 64; // 128 for MLP3, 64 for MLP0
     // integer bias_length = (mode)? 64 : 128; // 64 for MLP3, 128 for MLP0
     // send data: DRAM --> GLB
-    wait(valid == 0);  #1; ready = 1; 
-    @(negedge clk); ready = 0; i_en = 1;
-    // wait(ifmap_count[3:0] == 15); 
-    // wait(weight_count[9:0] == 64 * 64 / 4 - 1); 
-    // wait(bias_count == 63); 
-    wait(input_count == 64 / 4 + 64 * 64 / 4 + 128); ready = 0;
+    // wait(valid == 0);  #1; ready = 1; 
+    // @(negedge clk); ready = 0; i_en = 1;
+    // // wait(ifmap_count[3:0] == 15); 
+    // // wait(weight_count[9:0] == 64 * 64 / 4 - 1); 
+    // // wait(bias_count == 63); 
+    // wait(input_count == 64 / 4 + 64 * 64 / 4 + 64); i_en = 0;
 
     // wait(done);
-    wait(ofmap_count == 64);
-    if(mode == 0) begin
-        #1; ready = 1;
+    // wait(ofmap_count == 64);
+    if(mode[0][0] == 0) begin
+        wait(valid == 0); #1; ready = 1;
         @(negedge clk); ready = 0; i_en = 1;
-        wait(input_count == 64 / 4 + 64 * 64 / 4 + 128); ready = 0;
+        wait(input_count == 64 / 4 + 64 * 64 / 4 + 64); i_en = 0;
+        wait(ofmap_count == 64); #1; ready = 1;
+        @(negedge clk); ready = 0; i_en = 1;
+        wait(input_count == 16 * 2 + 64 * 16 * 2 + 64 * 2); i_en = 0;
+        wait(ofmap_count == 128);
+        for (i = 0;i < 128 ;i = i + 1 ) begin
+            if(ofmap_reg[i] !== golden_opsum[i]) begin
+                $display("Error at index %d: Expected %08h, got %08h", i, golden_opsum[i], ofmap_reg[i]);
+                err = err + 1;
+            end
+            else $display("Pass at index %d", i);
+        end
+    end
+    else begin
+        wait(valid == 0); #1; ready = 1;
+        @(negedge clk); ready = 0; i_en = 1;
+        wait(input_count == 64 / 4 + 64 * 64 / 4 + 64); i_en = 0;
+        wait(ofmap_count == 64); #1; ready = 1;
+        @(negedge clk); ready = 0; i_en = 1;
+        wait(input_count == 16 * 2 + 64 * 16 * 2 + 64 * 2); i_en = 0;
+        wait(ofmap_count == 128);
+        for (i = 0;i < 64 ;i = i + 1 ) begin
+            if(ofmap_reg[i] !== golden_opsum[i]) begin
+                $display("Error at index %d: Expected %08h, got %08h", i, golden_opsum[i], ofmap_reg[i]);
+                err = err + 1;
+            end
+            else $display("Pass at index %d", i);
+        end
     end
     // @ (negedge clk); 
     // compare results
-    for (i = 0;i < 64 ;i = i + 1 ) begin
-        if(ofmap_reg[i] !== golden_opsum[i]) begin
-            $display("Error at index %d: Expected %h, got %h", i, golden_opsum[i], ofmap_reg[i]);
-            err = err + 1;
-        end
-        else $display("Pass at index %d", i);
-    end
-
-    // if(ofmap[0] !== golden_opsum[pattern * `PE_block_H]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     0, golden_opsum[(pattern) * `PE_block_H], ofmap[0]);
-    //     $finish;
-    // end 
-    // else if(ofmap[1] !== golden_opsum[(pattern) * `PE_block_H + 1]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     1, golden_opsum[(pattern) * `PE_block_H + 1], ofmap[1]);
-    //     $finish;
-    // end
-    // else if(ofmap[2] !== golden_opsum[(pattern) * `PE_block_H + 2]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     2, golden_opsum[(pattern) * `PE_block_H + 2], ofmap[2]);
-    //     $finish;
-    // end
-    // else if(ofmap[3] !== golden_opsum[(pattern) * `PE_block_H + 3]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     3, golden_opsum[(pattern) * `PE_block_H + 3], ofmap[3]);
-    //     $finish;
-    // end
-    // else if(ofmap[4] !== golden_opsum[(pattern) * `PE_block_H + 4]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     4, golden_opsum[(pattern) * `PE_block_H + 4], ofmap[4]);
-    //     $finish;
-    // end 
-    // else if(ofmap[5] !== golden_opsum[(pattern) * `PE_block_H + 5]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     5, golden_opsum[(pattern) * `PE_block_H + 5], ofmap[5]);
-    //     $finish;
-    // end
-    // else if(ofmap[6] !== golden_opsum[(pattern) * `PE_block_H + 6]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     6, golden_opsum[(pattern) * `PE_block_H + 6], ofmap[6]);
-    //     $finish;
-    // end
-    // else if(ofmap[7] !== golden_opsum[(pattern) * `PE_block_H + 7]) begin
-    //     $display("Error at pattern %d opsum %d: Expected %h, got %h", pattern, 
-    //     7, golden_opsum[(pattern) * `PE_block_H + 7], ofmap[7]);
-    //     $finish;
-    // end
-    // else begin
-    //     $display("Pass at pattern %d", pattern);
-    // end
+    
 
     $display("Test completed.");
     if(err == 0) $display("All tests passed!");
@@ -164,11 +176,30 @@ end
 
 // get ofmap into ofmap_reg
 initial begin
-    while(ofmap_count < 64) begin
-        @(negedge clk);
-        if(valid) begin
-            ofmap_reg[ofmap_count] = ofmap;
-            ofmap_count = ofmap_count + 1;
+    # 10;
+    if(mode[0][0] == 0) begin
+        while(ofmap_count < 128) begin
+            @(negedge clk);
+            if(valid) begin
+                ofmap_reg[ofmap_count] = ofmap;
+                ofmap_count = ofmap_count + 1;
+            end
+        end
+    end
+    else begin
+        while(ofmap_count < 64) begin
+            @(negedge clk);
+            if(valid) begin
+                bias[ofmap_count] = ofmap;
+                ofmap_count = ofmap_count + 1;
+            end
+        end
+        while(ofmap_count < 128) begin
+            @(negedge clk);
+            if(valid) begin
+                ofmap_reg[ofmap_count - 64] = ofmap;
+                ofmap_count = ofmap_count + 1;
+            end
         end
     end
 end

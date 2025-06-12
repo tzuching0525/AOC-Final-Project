@@ -8,7 +8,8 @@ module PPU (
     input [`DATA_BITS-1:0] data_in,
     input [5:0] scaling_factor,
     output logic[7:0] data_out,
-    output logic valid
+    output logic valid,
+    output logic [31:0] data_in_out
 );
 
 logic [`DATA_BITS - 1:0] relu_out;
@@ -26,10 +27,12 @@ always @(posedge clk) begin
     if(rst) begin
         valid <= 1'd0;
         data_out <= 8'd0;
+        data_in_out <= 32'd0;
     end
     else begin
         valid <= i_en;
         data_out <= (i_en)? data_temp : 8'd0;
+        data_in_out <= data_in;
     end
 end
 

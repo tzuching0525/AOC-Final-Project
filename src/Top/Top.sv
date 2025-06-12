@@ -50,6 +50,9 @@ module Top (
     logic [31:0] ppu_input;
     logic [11:0] data_address;
     logic valid_array, valid_ppu;
+    logic [7:0] ppu_output;
+    logic [31:0] ppu_in_out;
+    logic mode1_step0;
     
 
     logic [3:0] compute_stage;
@@ -99,7 +102,8 @@ module Top (
         .ppu_count(ppu_count),
         .done(done),
         .mode(mode),
-        .ofmap_ren(ofmap_ren)
+        .ofmap_ren(ofmap_ren),
+        .mode1_step0(mode1_step0)
     );
 
     // Instantiate the PPU
@@ -110,8 +114,11 @@ module Top (
         .data_in(ppu_input),
         .scaling_factor(scaling_factor),
         .valid(valid_ppu),
-        .data_out(ofmap)
+        .data_out(ppu_output),
+        .data_in_out(ppu_in_out)
     );
+
+    assign ofmap = (mode1_step0)? ppu_in_out : {24'd0, ppu_output};
 
     // Instantiate the array
     PE_array array (
