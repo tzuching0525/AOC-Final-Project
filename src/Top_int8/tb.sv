@@ -245,8 +245,10 @@ initial begin
 end
 
 initial begin
-    $fsdbDumpfile("tb.fsdb");
-    $fsdbDumpvars("+struct", "+mda", tb);
+    // $fsdbDumpfile("tb.fsdb");
+    // $fsdbDumpvars("+struct", "+mda", tb);
+    $dumpfile("tb.vcd"); 
+    $dumpvars(1);
 end
 
 // initial begin
@@ -255,7 +257,7 @@ end
 // end
 
 always begin
-    #(`CYCLE/2) clk = ~clk;
+    #(`CYCLE/2) clk <= ~clk;
 end
 
 initial begin

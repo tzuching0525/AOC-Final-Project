@@ -120,6 +120,5 @@ always @(*) begin
         default: next_state = IDLE;
     endcase
 end
-    
 
 endmodule
