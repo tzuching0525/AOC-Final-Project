@@ -14,8 +14,10 @@ module Controller (
     output logic bias_ren,
     output logic ofmap_ren,
     output logic [11:0] data_address, // write address for glb
-    output logic compute_stage0, // 0 to 15: array -> GLB
+    output logic [3:0] compute_stage, // 0 to 15: array -> GLB
     input logic valid_array,
+    input logic valid_ppu,
+    output logic [7:0] ppu_count,
     input logic mode,
     output logic done,
     output logic mode1_step0
@@ -29,9 +31,6 @@ parameter   IDLE = 3'd0,
             PPU = 3'd5, 
             DONE = 3'd6;
 logic [2:0] cur_state, next_state;
-logic [7:0] ppu_count;
-logic [3:0] compute_stage;
-assign compute_stage0 = compute_stage[0];
 
 assign ofmap_ren = (cur_state == PPU);
 
@@ -121,6 +120,5 @@ always @(*) begin
         default: next_state = IDLE;
     endcase
 end
-    
 
 endmodule

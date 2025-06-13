@@ -18,9 +18,9 @@ module PE_array (
     wire valid_pe = (&valid_chain);
 
     wire [`BIT - 1 : 0] weight_wire [0 : `PE_array_size - 1][0 : `PE_block_H - 1];
-    // wire [`BIT * 4 - 1 : 0] bias_wire [0 : `PE_array_size - 1][0 : `PE_block_H - 1];
+    wire [`BIT * 4 - 1 : 0] bias_wire [0 : `PE_array_size - 1][0 : `PE_block_H - 1];
     wire [`BIT * 4 - 1 : 0] opsum_wire [0 : `PE_array_size - 1][0 : `PE_block_H - 1];
-    genvar gen, gen_wire;
+    genvar gen;
 
     wire [`BIT*4 - 1 : 0] bias_zero [0 : `PE_block_H - 1];
 
@@ -35,7 +35,7 @@ module PE_array (
 
     generate
         for(gen = 0 ; gen < `PE_array_size; gen = gen + 1) begin: PE_array
-            if(gen == 0) begin
+            if(gen == 0) begin : gen_PE_array0
                 PE_block pe_block(
                     .clk(clk),
                     .rst(rst),
@@ -47,7 +47,7 @@ module PE_array (
                     .valid(valid_chain[gen])
                 );
             end
-            else begin
+            else begin : gen_PE_array1
                 PE_block pe_block(
                     .clk(clk),
                     .rst(rst),
@@ -62,7 +62,7 @@ module PE_array (
         end
     endgenerate
 
-    // assign bias_wire[0] = bias;
+    assign bias_wire[0] = bias;
     
 
     // generate
@@ -99,5 +99,4 @@ module PE_array (
         .valid    	(valid     )
     );
     
-
 endmodule
