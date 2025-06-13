@@ -32,7 +32,7 @@ module Top (
     input logic clk,
     input logic rst,
     input logic mode, // 0: MLP0, 1: MLP3
-    input logic [5:0] scaling_factor,
+    input logic [11:0] scaling_factor,
     input logic ready, // DRAM ready to transfer data into GLB
     input logic i_en,
     input logic [`DATA_SIZE - 1 : 0] data_in,
@@ -134,10 +134,10 @@ module Top (
 
     // Instantiate the SRAM for input feature map
     sram_ifmap #(
-        .SIZE(32) // Size of the SRAM
+        .ADDR_BIT(5) // Size of the SRAM
     ) GLB_ifmap (
         .CLK(clk),
-        .ADDR(data_address), // Address from data_in
+        .ADDR(data_address[4:0]), // Address from data_in
         .EN(ifmap_ren), // Enable signal
         .WE(ifmap_wen), // Write enable (not used in this case)
         .DI(data_in), // Data input
@@ -146,10 +146,11 @@ module Top (
 
     // Instantiate the SRAM
     sram_weight #(
-        .SIZE(64*64/4) // Size of the SRAM
+        .ADDR_BIT(10)
+        // .SIZE(64*64/4) // Size of the SRAM
     ) GLB_weight (
         .CLK(clk),
-        .ADDR(data_address), // Address from data_in
+        .ADDR(data_address[9:0]), // Address from data_in
         .EN(weight_ren), // Enable signal
         .WE(weight_wen), // Write enable (not used in this case)
         .DI(data_in), // Data input
@@ -161,10 +162,11 @@ module Top (
     // assign bias_address = (bias_ren)? data_address << 1 : data_address;
 
     sram_bias #(
-        .SIZE(128) // Size of the SRAM
+        .ADDR_BIT(7)
+        // .SIZE(128) // Size of the SRAM
     ) GLB_bias (
         .CLK(clk),
-        .ADDR(data_address), // Address from data_in
+        .ADDR(data_address[6:0]), // Address from data_in
         .EN(bias_ren), // Enable signal
         .WE(bias_wen), // Write enable (not used in this case)
         .DI(data_in), // Data input
@@ -176,10 +178,11 @@ module Top (
     assign ofmap_address = (ofmap_ren)? data_address : data_address - 12'd8;
 
     sram_ofmap #(
-        .SIZE(128) // Size of the SRAM
+        .ADDR_BIT(7)
+        // .SIZE(128) // Size of the SRAM
     ) GLB_ofmap (
         .CLK(clk),
-        .ADDR(ofmap_address), // Address from data_in
+        .ADDR(ofmap_address[6:0]), // Address from data_in
         .EN(ofmap_ren), // Enable signal
         .WE(compute_stage[0] && valid_array), // Write enable (not used in this case)
         .DI(ofmap_wire), // Data input
