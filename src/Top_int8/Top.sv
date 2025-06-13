@@ -42,6 +42,12 @@ module Top (
     output logic done // done signal
 );
     integer i;
+    logic ifmap_wen, ifmap_ren;
+    logic weight_wen, weight_ren;
+    logic bias_wen, bias_ren;
+    logic ofmap_ren;
+    logic i_en_array;
+    logic i_en_ppu;
     logic [7:0] ifmap_wire [0 : 7];
     logic [7:0] weight_wire [0 : 63];
     logic [31:0] bias_wire [0 : 7];
@@ -50,7 +56,7 @@ module Top (
     logic [31:0] ppu_input;
     logic [11:0] data_address;
     logic valid_array, valid_ppu;
-    logic [7:0] ppu_output;
+    logic [7:0] ppu_output, ppu_count;
     logic [31:0] ppu_in_out;
     logic mode1_step0;
     

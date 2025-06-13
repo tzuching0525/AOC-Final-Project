@@ -24,7 +24,7 @@ always @(*) begin
     // data_temp = (!data_quant[7])? 8'd255 : data_quant[7:0];
 
     relu_out = (data_in[`DATA_BITS - 1])? `DATA_BITS'd0 : data_in;
-    data_shift = (relu_out / scaling_factor);
+    data_shift = (relu_out / {20'd0, scaling_factor});
     // data_quant = (data_shift[7:0] ^ 8'd128);
     data_temp = data_shift[7:0];
 end
