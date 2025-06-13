@@ -210,7 +210,6 @@ Top Top(
     .mode(mode[0]),
     .scaling_factor(scaling_factor[0]),
     .ready(ready),
-    .i_en(i_en),
     .data_in(data_in),
     .valid(valid),
     .ofmap(ofmap),
@@ -245,10 +244,8 @@ initial begin
 end
 
 initial begin
-    // $fsdbDumpfile("tb.fsdb");
-    // $fsdbDumpvars("+struct", "+mda", tb);
-    $dumpfile("tb.vcd"); 
-    $dumpvars(1);
+    $fsdbDumpfile("tb.fsdb");
+    $fsdbDumpvars("+struct", "+mda", tb);
 end
 
 // initial begin
@@ -257,7 +254,7 @@ end
 // end
 
 always begin
-    #(`CYCLE/2) clk <= ~clk;
+    #(`CYCLE/2) clk = ~clk;
 end
 
 initial begin

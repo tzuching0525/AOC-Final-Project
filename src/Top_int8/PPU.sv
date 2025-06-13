@@ -13,8 +13,8 @@ module PPU (
 );
 
 logic [`DATA_BITS - 1:0] relu_out;
-logic [`DATA_BITS-1:0] data_shift;
-logic [7:0] data_temp;
+logic [7:0] data_shift;
+logic [7:0] data_quant, data_temp;
 
 always @(*) begin
     // relu_out = (data_in[`DATA_BITS - 1])? `DATA_BITS'd0 : data_in;
