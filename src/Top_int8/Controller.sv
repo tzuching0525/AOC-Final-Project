@@ -115,7 +115,7 @@ always @(*) begin
         READ_IFMAP: next_state = (data_address == `WIDTH / 4 - 1)? READ_WEIGHT : READ_IFMAP;
         READ_WEIGHT: next_state = (data_address == `WIDTH * `WIDTH / 4 - 1)? READ_BIAS : READ_WEIGHT;
         READ_BIAS: next_state = (data_address == `WIDTH - 1)? ARRAY : READ_BIAS;
-        ARRAY: next_state = (compute_stage == `ARRAY_TIMES - 1 && valid_array)? PPU : ARRAY;
+        ARRAY: next_state = ({1'b0, compute_stage} == `ARRAY_TIMES - 1 && valid_array)? PPU : ARRAY;
         PPU: next_state = (ppu_count == `WIDTH)? DONE : PPU;
         DONE: next_state = (ready)? READ_IFMAP : DONE; 
         default: next_state = IDLE;

@@ -8,8 +8,8 @@ module PE (
     output reg signed [31:0] opsum,
     output reg valid
 );
-    wire signed [31:0] ifmap_adjusted = ifmap; // Adjusting ifmap to be centered around 0
-    wire signed [31:0] weight_adjusted = weight; // Adjusting weight to be centered around 0
+    wire signed [31:0] ifmap_adjusted = {24'd0, ifmap}; // Adjusting ifmap to be centered around 0
+    wire signed [31:0] weight_adjusted = {24'd0, weight}; // Adjusting weight to be centered around 0
     always @(posedge clk) begin
         if(rst) begin
             opsum <= 32'd0;
