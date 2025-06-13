@@ -34,7 +34,6 @@ module Top (
     input logic mode, // 0: MLP0, 1: MLP3
     input logic [11:0] scaling_factor,
     input logic ready, // DRAM ready to transfer data into GLB
-    input logic i_en,
     input logic [`DATA_SIZE - 1 : 0] data_in,
     output logic valid, // output valid signal
     output logic [`DATA_SIZE-1:0] ofmap, // output feature map
@@ -47,7 +46,7 @@ module Top (
     logic bias_wen, bias_ren;
     logic ofmap_ren;
     logic i_en_array;
-    logic i_en_ppu;
+    logic i_en_ppu; 
     logic [7:0] ifmap_wire [0 : 7];
     logic [7:0] weight_wire [0 : 63];
     logic [31:0] bias_wire [0 : 7];
@@ -55,15 +54,13 @@ module Top (
     logic [31:0] bias_input [0 : 7];
     logic [31:0] ppu_input;
     logic [11:0] data_address;
-    logic valid_array, valid_ppu;
-    logic [7:0] ppu_output, ppu_count;
+    logic valid_array;
+    logic [7:0] ppu_output;
     logic [31:0] ppu_in_out;
     logic mode1_step0;
     
 
-    logic [3:0] compute_stage;
-
-    assign valid = valid_ppu;
+    logic compute_stage0;
 
     always @(posedge clk) begin
         if(rst) begin
@@ -72,7 +69,7 @@ module Top (
         else if(data_address == 0) begin
             for(i = 0; i < 8; i = i + 1) bias_input[i] <= bias_wire[i];
         end
-        else if(valid_array && !compute_stage[0])  begin
+        else if(valid_array && !compute_stage0)  begin
             for(i = 0; i < 8; i = i + 1) bias_input[i] <= ofmap_wire[i];
         end
         else if(valid_array) begin 
@@ -100,12 +97,10 @@ module Top (
         .bias_ren(bias_ren),
         .data_address(data_address), // write data into SRAM
         // read data form SRAM to array
-        .compute_stage(compute_stage), // 0 to 15: array -> GLB
+        .compute_stage0(compute_stage0), // 0 to 15: array -> GLB
         .i_en_array(i_en_array),
         .i_en_ppu(i_en_ppu),
         .valid_array(valid_array),
-        .valid_ppu(valid_ppu),
-        .ppu_count(ppu_count),
         .done(done),
         .mode(mode),
         .ofmap_ren(ofmap_ren),
@@ -119,7 +114,7 @@ module Top (
         .i_en(i_en_ppu),
         .data_in(ppu_input),
         .scaling_factor(scaling_factor),
-        .valid(valid_ppu),
+        .valid(valid),
         .data_out(ppu_output),
         .data_in_out(ppu_in_out)
     );
@@ -143,7 +138,7 @@ module Top (
         .ADDR_BIT(5) // Size of the SRAM
     ) GLB_ifmap (
         .CLK(clk),
-        .ADDR(data_address), // Address from data_in
+        .ADDR(data_address[4:0]), // Address from data_in
         .EN(ifmap_ren), // Enable signal
         .WE(ifmap_wen), // Write enable (not used in this case)
         .DI(data_in), // Data input
@@ -156,7 +151,7 @@ module Top (
         // .SIZE(64*64/4) // Size of the SRAM
     ) GLB_weight (
         .CLK(clk),
-        .ADDR(data_address), // Address from data_in
+        .ADDR(data_address[9:0]), // Address from data_in
         .EN(weight_ren), // Enable signal
         .WE(weight_wen), // Write enable (not used in this case)
         .DI(data_in), // Data input
@@ -172,7 +167,7 @@ module Top (
         // .SIZE(128) // Size of the SRAM
     ) GLB_bias (
         .CLK(clk),
-        .ADDR(data_address), // Address from data_in
+        .ADDR(data_address[6:0]), // Address from data_in
         .EN(bias_ren), // Enable signal
         .WE(bias_wen), // Write enable (not used in this case)
         .DI(data_in), // Data input
@@ -180,17 +175,17 @@ module Top (
     );
     
     // Instantiate the SRAM for output feature map
-    logic [11:0] ofmap_address;
-    assign ofmap_address = (ofmap_ren)? data_address : data_address - 12'd8;
+    logic [6:0] ofmap_address;
+    assign ofmap_address = (ofmap_ren)? data_address[6:0] : data_address[6:0] - 7'd8;
 
     sram_ofmap #(
         .ADDR_BIT(7)
         // .SIZE(128) // Size of the SRAM
     ) GLB_ofmap (
         .CLK(clk),
-        .ADDR(ofmap_address), // Address from data_in
+        .ADDR(ofmap_address[6:0]), // Address from data_in
         .EN(ofmap_ren), // Enable signal
-        .WE(compute_stage[0] && valid_array), // Write enable (not used in this case)
+        .WE(compute_stage0 && valid_array), // Write enable (not used in this case)
         .DI(ofmap_wire), // Data input
         .DO(ppu_input) // Data output (not used in this case)
     );

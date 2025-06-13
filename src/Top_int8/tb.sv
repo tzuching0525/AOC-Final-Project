@@ -34,7 +34,7 @@ logic [31:0] data_in;
 logic done;
 logic i_en;
 integer i;
-integer step = 0;
+//integer step = 0;
 integer ofmap_count = 0;
 // integer ifmap_length = (mode)? 128 : 64; // 128 for MLP3, 64 for MLP0
 
@@ -129,7 +129,7 @@ initial begin
     // // wait(bias_count == 63); 
     // wait(input_count == 64 / 4 + 64 * 64 / 4 + 64); i_en = 0;
 
-    // wait(done);
+    wait(done);
     // wait(ofmap_count == 64);
     if(mode[0][0] == 0) begin
         wait(valid == 0); #1; ready = 1;
@@ -244,8 +244,10 @@ initial begin
 end
 
 initial begin
-    $fsdbDumpfile("tb.fsdb");
-    $fsdbDumpvars("+struct", "+mda", tb);
+    //$fsdbDumpfile("tb.fsdb");
+    //$fsdbDumpvars("+struct", "+mda", tb);
+    $dumpfile("dump.vcd"); 
+    $dumpvars(1);
 end
 
 // initial begin
@@ -254,7 +256,7 @@ end
 // end
 
 always begin
-    #(`CYCLE/2) clk = ~clk;
+    #(`CYCLE/2) clk <= ~clk;
 end
 
 initial begin
