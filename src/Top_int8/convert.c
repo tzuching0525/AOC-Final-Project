@@ -22,21 +22,21 @@ int main() {
     int num;
     while (fscanf(fin1, "%d", &num) == 1) {
         int val = num;
-        fprintf(fout1, "%02X\n", val);
+        fprintf(fout1, "%02X\n", (unsigned char)val);
     }
     while (fscanf(fin2, "%d", &num) == 1) {
         int val = num;
-        fprintf(fout2, "%02X\n", val);
+        fprintf(fout2, "%02X\n", (unsigned char)val);
     }
     while (fscanf(fin3, "%d", &num) == 1) {
         int val = num;
-        fprintf(fout3, "%08X\n", val);
+        fprintf(fout3, "%08X\n", (unsigned char)val);
     }
     while (fscanf(fin4, "%d", &num) == 1) {
         int val;
         if(num < 0) val = 0;
         else val = num;
-        fprintf(fout4, "%02X\n", val);
+        fprintf(fout4, "%02X\n", (unsigned char)val);
     }
     fprintf(fout5, "%d\n", mode);
     fprintf(fout6, "%03X\n", scaling_factor);

@@ -1,15 +1,15 @@
 module sram_ifmap #(
-    parameter SIZE=4096
+    parameter ADDR_BIT=5
 )(
     input logic CLK,
-    input logic [11:0] ADDR,
+    input logic [ADDR_BIT - 1:0] ADDR,
     input logic EN,
     input logic WE,
     input logic [31:0] DI,
     output logic [7:0] DO [0:7]
 );
 
-logic [31:0] ram [0:SIZE-1];
+logic [31:0] ram [0:(1 << ADDR_BIT)-1];
 logic [7:0] DO_wire [0:3][0:7];
 
 always @(posedge CLK) begin

@@ -1,15 +1,15 @@
 module sram_weight #(
-    parameter SIZE=4096
+    parameter ADDR_BIT=10
 )(
     input logic CLK,
-    input logic [11:0] ADDR,
+    input logic [ADDR_BIT-1:0] ADDR,
     input logic EN,
     input logic WE,
     input logic [31:0] DI,
     output logic [7:0] DO [0:63]
 );
 
-logic [31:0] ram [0:SIZE-1];
+logic [31:0] ram [0:(1 << ADDR_BIT)-1];
 logic [7:0] DO_wire [0:3][0:63];
 
 always @(posedge CLK) begin
@@ -88,7 +88,7 @@ genvar i, j;
 generate
     for (i = 0; i < 4; i = i + 1) begin
         for (j = 0; j < 64; j = j + 1) begin
-            assign DO_wire[i][j] = ram[ADDR[11:3] * 128 + ADDR[2] * 8 + (j % 8) * 16 + (j / 8)][(i+1) * 8 - 1 : i * 8];
+            assign DO_wire[i][j] = ram[ADDR[ADDR_BIT-1:3] * 128 + ADDR[2] * 8 + (j % 8) * 16 + (j / 8)][(i+1) * 8 - 1 : i * 8];
         end
     end
 endgenerate

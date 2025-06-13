@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 `define CYCLE 10
 `define MAX_CYCLE 10000
-`define DATA_SIZE 8
+`define DATA 8
 `define ifmap_size 128 // define max value maybe some of array are not used
 `define weight_W 128
 `define weight_H 128
@@ -19,15 +19,15 @@ reg clk = 0;
 reg rst = 0;
 reg [0:0] mode [0:0];
 
-reg [`DATA_SIZE-1:0] ifmap [0:`ifmap_size-1];
-reg [`DATA_SIZE-1:0] weight [0:`weight_W * `weight_H-1];
-reg [`DATA_SIZE-1:0] bias [0:`bias_size-1];
+reg [`DATA-1:0] ifmap [0:`ifmap_size-1];
+reg [`DATA-1:0] weight [0:`weight_W * `weight_H-1];
+reg [`DATA*4-1:0] bias [0:`bias_size-1];
 logic [11:0] scaling_factor [0:0];
 reg ready;
 wire [31:0] ofmap;
 logic [31:0] ofmap_reg [0:127];
 logic [11:0] input_count;
-reg [`DATA_SIZE*4-1:0] golden_opsum[0:`ofmap_size-1];
+reg [`DATA*4-1:0] golden_opsum[0:`ofmap_size-1];
 integer err = 0;
 wire valid;
 logic [31:0] data_in;
@@ -204,7 +204,7 @@ initial begin
     end
 end
 
-Top top(
+Top Top(
     .clk(clk),
     .rst(rst),
     .mode(mode[0]),
@@ -240,7 +240,7 @@ Top top(
 
 initial begin
     `ifdef SYN
-        $sdf_annotate(`SDFFILE, PE);
+        $sdf_annotate(`SDFFILE, Top);
     `endif
 end
 

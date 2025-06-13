@@ -134,7 +134,7 @@ module Top (
 
     // Instantiate the SRAM for input feature map
     sram_ifmap #(
-        .SIZE(32) // Size of the SRAM
+        .ADDR_BIT(5) // Size of the SRAM
     ) GLB_ifmap (
         .CLK(clk),
         .ADDR(data_address), // Address from data_in
@@ -146,7 +146,8 @@ module Top (
 
     // Instantiate the SRAM
     sram_weight #(
-        .SIZE(64*64/4) // Size of the SRAM
+        .ADDR_BIT(10)
+        // .SIZE(64*64/4) // Size of the SRAM
     ) GLB_weight (
         .CLK(clk),
         .ADDR(data_address), // Address from data_in
@@ -161,7 +162,8 @@ module Top (
     // assign bias_address = (bias_ren)? data_address << 1 : data_address;
 
     sram_bias #(
-        .SIZE(128) // Size of the SRAM
+        .ADDR_BIT(7)
+        // .SIZE(128) // Size of the SRAM
     ) GLB_bias (
         .CLK(clk),
         .ADDR(data_address), // Address from data_in
@@ -176,7 +178,8 @@ module Top (
     assign ofmap_address = (ofmap_ren)? data_address : data_address - 12'd8;
 
     sram_ofmap #(
-        .SIZE(128) // Size of the SRAM
+        .ADDR_BIT(7)
+        // .SIZE(128) // Size of the SRAM
     ) GLB_ofmap (
         .CLK(clk),
         .ADDR(ofmap_address), // Address from data_in
