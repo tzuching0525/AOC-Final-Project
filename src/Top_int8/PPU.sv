@@ -14,7 +14,7 @@ module PPU (
 
 logic [`DATA_BITS - 1:0] relu_out;
 logic [7:0] data_shift;
-logic [7:0] data_quant, data_temp;
+logic [7:0] data_temp;
 
 always @(*) begin
     // relu_out = (data_in[`DATA_BITS - 1])? `DATA_BITS'd0 : data_in;
@@ -24,7 +24,11 @@ always @(*) begin
     // data_temp = (!data_quant[7])? 8'd255 : data_quant[7:0];
 
     relu_out = (data_in[`DATA_BITS - 1])? `DATA_BITS'd0 : data_in;
+    /* verilator lint_off WIDTHEXPAND */
+    /* verilator lint_off WIDTHTRUNC */
     data_shift = (relu_out / scaling_factor);
+    /* verilator lint_on  WIDTHTRUNC */
+    /* verilator lint_on  WIDTHEXPAND */
     // data_quant = (data_shift[7:0] ^ 8'd128);
     data_temp = data_shift[7:0];
 end

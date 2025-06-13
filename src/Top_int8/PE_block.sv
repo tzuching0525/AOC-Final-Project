@@ -11,7 +11,6 @@ module PE_block (
     output [31:0] ofmap[0 : `PE_block_H - 1],
     output valid
 );
-    integer i;
     // wire [7:0] weight [0 : `PE_block_H - 1];
     // wire [31:0] bias [0 : `PE_block_H - 1];
     // wire [31:0] ofmap [0 : `PE_block_H - 1];
@@ -50,7 +49,7 @@ module PE_block (
 
     generate
         for (gen = 0; gen < `PE_block_H * `PE_block_W; gen = gen + 1) begin: PE_block
-            if(gen < `PE_block_H) begin // First column of PE block
+            if(gen < `PE_block_H) begin : gen_PE_block0 // First column of PE block
                 PE pe(
                     .clk(clk),
                     .rst(rst),
@@ -62,7 +61,7 @@ module PE_block (
                     .valid(valid_chain[0][gen])
                 );
             end
-            else if(gen < `PE_block_H * (`PE_block_W - 1)) begin // middle columns of PE block
+            else if(gen < `PE_block_H * (`PE_block_W - 1)) begin : gen_PE_block1 // middle columns of PE block
                 PE pe(
                     .clk(clk),
                     .rst(rst),
@@ -74,7 +73,7 @@ module PE_block (
                     .valid(valid_chain[gen / `PE_block_H][gen % `PE_block_H])
                 );
             end
-            else begin // Last column of PE block
+            else begin : gen_PE_block2 // Last column of PE block
                 PE pe(
                     .clk(clk),
                     .rst(rst),
