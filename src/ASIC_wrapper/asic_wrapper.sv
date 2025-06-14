@@ -26,7 +26,6 @@ module asic_wrapper (
   input ARESETn,
 
   output logic ASIC_interrupt,
-
   /*************** AXI slave ***************/
   //WRITE ADDRESS0
 	input [`AXI_IDS_BITS-1:0] AWID_S,
@@ -69,11 +68,11 @@ module asic_wrapper (
 );
   logic [31:0] DATA_buffer [0:1103]; // ifmap weight bias 16 + 1024 + 64
   
-  logic [31:0] OFMAP_buffer [0:63];
   logic [10:0] write_cnt, write_cnt_next, count, count_next, bias_cnt;
   logic [31:0] ofmap;
-  logic data_ready, data_ready_reg, data_ready_reg_next, ofmap_valid, bias_write, valid;
+  logic data_ready, data_ready_reg, data_ready_reg_next, bias_write, valid;
   integer i;
+
   typedef enum logic [1:0] {
       WAIT,
       LOAD_BIAS,
@@ -83,8 +82,7 @@ module asic_wrapper (
   state_t state, next_state;
   logic [6:0] output_cnt_next, output_cnt;
   logic [7:0] ofmap_count;
-  logic [31:0] ofmap_reg [0:127];
-  logic [31:0] bias       [0:63];
+  logic [31:0] ofmap_reg [0:127]; // ofmap 128
 /***************************************** 
         ASIC slave ( MMIO config ) 
 *****************************************/
@@ -110,7 +108,7 @@ module asic_wrapper (
   logic [`DATA_BITS-1:0] DATA, ASIC_DATA_next;          
   logic [`DATA_BITS-1:0] ASIC_OFMAP, ASIC_OFMAP_next;
 
-  // Sequential logic
+  // Sequential logic DATA for top
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
       DATA <= 32'd0;
@@ -121,18 +119,24 @@ module asic_wrapper (
       end
     end
   end
-  
+
   always_comb begin
-    count_next = count;
+    ASIC_interrupt = (ofmap_count == 64 || ofmap_count == 128);
+  end
+
+  always_comb begin
     if (data_ready_reg == 1'b1) begin
       count_next = count + 1'b1;
     end
     else if (count == 11'd1103) begin
       count_next = 11'd0;
     end
+    else begin
+      count_next = count;
+    end
   end
 
-  // Sequential logic
+  // Sequential logic handshake data to DATA_buffer
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
       for (i = 0; i < 1104; i = i + 1) begin
@@ -169,6 +173,15 @@ module asic_wrapper (
       end
   end
 
+  always_ff @(posedge ACLK) begin
+      if (~ARESETn) begin
+        output_cnt <= 7'd0;
+      end
+      else begin
+        output_cnt <= output_cnt_next;
+      end
+  end
+
   always_comb begin
     next_state = state;
     case (state)
@@ -181,24 +194,26 @@ module asic_wrapper (
         end
       end
       LOAD_BIAS: begin
-        if (ofmap_count == 8'd64) next_state = LOAD_OFMAP;
+        if (ofmap_count == 8'd63) begin
+          next_state = LOAD_OFMAP;
+        end
       end
       LOAD_OFMAP: begin
-        if (ofmap_count == 8'd128) begin
+        if (ofmap_count == 8'd127) begin
           next_state = WAIT;
         end
       end
       default: begin
-        next_state = WAIT;
+        next_state = state;
       end
     endcase
   end
 
+  //OFMAP sequential logic
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
       ofmap_count <= 8'd0;
       ofmap_valid <= 1'd0;
-      output_cnt <= 7'd0;
       bias_write <= 1'd0;
     end 
     else begin
@@ -212,14 +227,10 @@ module asic_wrapper (
           LOAD_OFMAP: begin
             if (ASIC_ENABLE[3] == 1) begin
               ofmap_reg[ofmap_count - 64] <= ofmap;
-            end else begin
-              ofmap_reg[ofmap_count[6:0]] <= ofmap;
-            end
-            if (ofmap_count == 128) begin
-              ofmap_count <= 8'd0;
-              ofmap_valid <= 1'd1;
+              ofmap_count <= ofmap_count + 1;
             end
             else begin
+              ofmap_reg[ofmap_count[6:0]] <= ofmap;
               ofmap_count <= ofmap_count + 1;
             end
           end
@@ -230,7 +241,7 @@ module asic_wrapper (
     end
   end
 
-
+  //writein DATA_buffer
   always_comb begin
     if (write_cnt == 11'd1103 || (bias_write && write_cnt == 11'd1039)) begin
       data_ready = 1'b1;
@@ -310,35 +321,28 @@ module asic_wrapper (
       end
 
       READ_DATA: begin
-        if (ofmap_valid) begin
-          RVALID_S = 1'b1; // data valid
-          RLAST_S = 1'b1; // always the last one data
-          // read data select
-          case (addr_S_reg)
-            `ASIC_ENABLE_OFFSET: begin
-              RDATA = ASIC_ENABLE;
-              RRESP_S = `AXI_RESP_OKAY;
-            end
-            `ASIC_DATA_OFFSET: begin
-              RDATA = DATA;
-              RRESP_S = `AXI_RESP_OKAY;
-            end
-            `ASIC_OFMAP_OFFSET: begin
-              RDATA = ASIC_OFMAP;
-              ASIC_OFMAP_next = ofmap_reg[output_cnt];
-              output_cnt_next = output_cnt + 1'd1;
-              RRESP_S = `AXI_RESP_OKAY;
-            end
-            default: begin
-              RDATA_S = `AXI_DATA_BITS'd0;
-              RRESP_S = `AXI_RESP_SLVERR; // error address
-            end
-          endcase
-        end else begin
-          RVALID_S = 1'b0;
-          RLAST_S  = 1'b0;
-        end
-
+        RVALID_S = 1'b1; // data valid
+        RLAST_S = 1'b1; // always the last one data
+        // read data select
+        case (addr_S_reg)
+          `ASIC_ENABLE_OFFSET: begin
+            RDATA = ASIC_ENABLE;
+            RRESP_S = `AXI_RESP_OKAY;
+          end
+          `ASIC_DATA_OFFSET: begin
+            RDATA = DATA;
+            RRESP_S = `AXI_RESP_OKAY;
+          end
+          `ASIC_OFMAP_OFFSET: begin
+            RDATA = ofmap_reg[output_cnt];
+            output_cnt_next = output_cnt + 1'd1;
+            RRESP_S = `AXI_RESP_OKAY;
+          end
+          default: begin
+            RDATA_S = `AXI_DATA_BITS'd0;
+            RRESP_S = `AXI_RESP_SLVERR; // error address
+          end
+        endcase
         if (RVALID_S && RREADY_S) begin // master is ready to get data
           cs_slave_next = IDLE; // finish read request
           RID_S_next = `AXI_IDS_BITS'd0;
