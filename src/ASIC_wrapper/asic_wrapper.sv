@@ -1,6 +1,24 @@
 `define ASIC_ENABLE_OFFSET   0x0
 `define ASIC_DATA_OFFSET     0x4
 `define ASIC_OFMAP_OFFSET    0x8
+`define AXI_ID_BITS 4
+`define AXI_IDS_BITS 8
+`define AXI_ADDR_BITS 32
+`define AXI_LEN_BITS 4
+`define AXI_SIZE_BITS 3
+`define AXI_DATA_BITS 32
+`define AXI_STRB_BITS 4
+`define AXI_LEN_ONE 4'h0
+`define AXI_SIZE_BYTE 3'b000
+`define AXI_SIZE_HWORD 3'b001
+`define AXI_SIZE_WORD 3'b010
+`define AXI_BURST_INC 2'h1
+`define AXI_STRB_WORD 4'b1111
+`define AXI_STRB_HWORD 4'b0011
+`define AXI_STRB_BYTE 4'b0001
+`define AXI_RESP_OKAY 2'h0
+`define AXI_RESP_SLVERR 2'h2
+`define AXI_RESP_DECERR 2'h3
 
 
 module asic_wrapper (
@@ -49,11 +67,22 @@ module asic_wrapper (
 	output logic RVALID_S,
 	input RREADY_S,
 );
-  logic [31:0] DATA_buffer [0:1103];
+  logic [31:0] DATA_buffer [0:1103]; // ifmap weight bias 16 + 1024 + 64
+  
   logic [31:0] OFMAP_buffer [0:63];
-  logic [10:0] write_cnt, write_cnt_next, count, count_next;
-  logic data_ready, data_ready_reg, ofmap_valid;
+  logic [10:0] write_cnt, write_cnt_next, count, count_next, bias_cnt;
+  logic data_ready, data_ready_reg, ofmap_valid, bias_write;
   integer i;
+  typedef enum logic [1:0] {
+      IDLE,
+      LOAD_BIAS,
+      LOAD_OFMAP
+  } state_t;
+
+  state_t state, next_state;
+  logic [6:0] ofmap_count, output_cnt_next, output_cnt;
+  logic [31:0] ofmap_reg [0:63];
+  logic [31:0] bias       [0:63];
 /***************************************** 
         ASIC slave ( MMIO config ) 
 *****************************************/
@@ -99,6 +128,7 @@ module asic_wrapper (
       count_next = 1'b0;
     end
   end
+
   // Sequential logic
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
@@ -116,15 +146,82 @@ module asic_wrapper (
     if (~ARESETn) begin
       write_cnt <= 11'b0;
       count <= 11'b0;
+      bias_cnt <= 11'd0;
     end
     else begin
       count <= count_next;
       write_cnt <= write_cnt_next;
+      bias_cnt <= ofmap_count + 11'd1040;
     end
   end
 
+  always_ff @(posedge ACLK) begin
+      if (~ARESETn) begin
+        state <= IDLE;
+      end
+      else begin
+        state <= next_state;
+      end
+  end
+
   always_comb begin
-    if (write_cnt == 11'd1103) begin
+    next_state = state;
+    case (state)
+      IDLE: begin
+        if (ASIC_ENABLE[3] == 1) begin
+          next_state = LOAD_BIAS;
+        end
+        else begin 
+          next_state = LOAD_OFMAP;
+        end
+      end
+      LOAD_BIAS: begin
+        if (ofmap_count == 64) next_state = LOAD_OFMAP;
+      end
+      LOAD_OFMAP: begin
+        if (ofmap_count == 128) begin
+          next_state = IDLE;
+        end
+      end
+    endcase
+  end
+  always_ff @(posedge ACLK) begin
+    if (~ARESETn) begin
+      ofmap_count <= 7'd0;
+      ofmap_valid <= 1'd0;
+      output_cnt <= 7'd0;
+      bias_write <= 1'd0;
+    end 
+    else begin
+      if (valid) begin
+        case (state)
+          LOAD_BIAS: begin
+            DATA_buffer[bias_cnt] <= ofmap;
+            ofmap_count <= ofmap_count + 1;
+            bias_write <= 1'd1;
+          end
+          LOAD_OFMAP: begin
+            if (ASIC_ENABLE[3] == 1) begin
+              ofmap_reg[ofmap_count - 64] <= ofmap;
+            end else begin
+              ofmap_reg[ofmap_count] <= ofmap;
+            end
+            if (ofmap_count == 128) begin
+              ofmap_count <= 7'd0;
+              ofmap_valid <= 1'd1;
+            end
+            else begin
+              ofmap_count <= ofmap_count + 1;
+            end
+          end
+        endcase
+      end
+    end
+  end
+
+
+  always_comb begin
+    if (write_cnt == 11'd1103 || (bias_write && write_cnt == 11'd1039)) begin
       data_ready = 1'b1;
       data_ready_reg = 1'b1;
     end 
@@ -166,6 +263,7 @@ module asic_wrapper (
     ASIC_ENABLE_next = ASIC_ENABLE;
     ASIC_DATA_next <= ASIC_DATA;
     ASIC_OFMAP_next = ASIC_OFMAP;
+    output_cnt_next = output_cnt;
     write_cnt_next = write_cnt;
     // Default assignments
     cs_slave_next = cs_slave;
@@ -219,6 +317,8 @@ module asic_wrapper (
             end
             `ASIC_OFMAP_OFFSET: begin
               RDATA = ASIC_OFMAP;
+              ASIC_OFMAP_next = ofmap_reg[ofmap_cnt];
+              output_cnt_next = output_cnt + 1'd1;
               RRESP_S = `AXI_RESPOKAY;
             end
             default: begin
@@ -290,8 +390,8 @@ asic Top(
 
     .ready(data_ready),
     .data_in(DATA),
-    .valid(ofmap_valid),
-    .ofmap(ASIC_OFMAP),
+    .valid(valid),
+    .ofmap(ofmap),
     .done()
 );
 
