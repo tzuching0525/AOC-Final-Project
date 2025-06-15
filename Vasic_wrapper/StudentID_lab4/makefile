@@ -20,7 +20,10 @@ CXXFLAGS = -std=c++2a -Os -I. -MMD \
            -I$(VERILATOR_INC)/vltstd \
            -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 \
            -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 \
-           -faligned-new -fcf-protection=none
+           -faligned-new -fcf-protection=none \
+           -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized \
+           -Wno-unused-but-set-variable -Wno-unused-parameter \
+           -Wno-unused-variable
 
 .PHONY: all clean tb hardware compile
 
