@@ -24,6 +24,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_triggers__stl(Vasic_wrapper___0
 }
 
 VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___024root* vlSelf);
+VL_ATTR_COLD void Vasic_wrapper___024root____Vm_traceActivitySetAll(Vasic_wrapper___024root* vlSelf);
 VL_ATTR_COLD void Vasic_wrapper_PE_block___stl_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf);
 VL_ATTR_COLD void Vasic_wrapper_PE_block___stl_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf);
 VL_ATTR_COLD void Vasic_wrapper_PE_block___stl_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf);
@@ -41,6 +42,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_stl(Vasic_wrapper___024root* vl
     // Body
     if ((1ULL & vlSelfRef.__VstlTriggered.word(0U))) {
         Vasic_wrapper___024root___stl_sequent__TOP__0(vlSelf);
+        Vasic_wrapper___024root____Vm_traceActivitySetAll(vlSelf);
         Vasic_wrapper_PE_block___stl_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block__0((&vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block));
         Vasic_wrapper_PE_block___stl_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block__0((&vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block));
         Vasic_wrapper_PE_block___stl_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block__0((&vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block));
@@ -57,13 +59,9 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___stl_sequent__TOP__0\n"); );
     Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Init
-    IData/*31:0*/ asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out;
-    asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out = 0;
-    CData/*7:0*/ asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift;
-    asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift = 0;
     // Body
     vlSelfRef.BVALID_S = 0U;
+    vlSelfRef.asic_wrapper__DOT__ASIC_OFMAP_next = vlSelfRef.asic_wrapper__DOT__ASIC_OFMAP;
     vlSelfRef.RLAST_S = 0U;
     vlSelfRef.WREADY_S = 0U;
     vlSelfRef.ASIC_interrupt = ((0x40U == (IData)(vlSelfRef.asic_wrapper__DOT__ofmap_count)) 
@@ -112,6 +110,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
         vlSelfRef.asic_wrapper__DOT__next_state = vlSelfRef.asic_wrapper__DOT__state;
     }
     vlSelfRef.ARREADY_S = 0U;
+    vlSelfRef.asic_wrapper__DOT__output_cnt_next = vlSelfRef.asic_wrapper__DOT__output_cnt;
     vlSelfRef.asic_wrapper__DOT__ofmap = ((IData)(vlSelfRef.asic_wrapper__DOT__Top__DOT__mode1_step0)
                                            ? vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu_in_out
                                            : (IData)(vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu_output));
@@ -195,15 +194,15 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
             }
         }
     }
-    asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out 
+    vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out 
         = ((vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu_input 
             >> 0x1fU) ? 0U : vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu_input);
-    asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift 
-        = (0xffU & VL_DIV_III(32, asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out, 
+    vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift 
+        = (0xffU & VL_DIV_III(32, vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out, 
                               (0xfffU & (vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE 
                                          >> 4U))));
     vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu__DOT__data_temp 
-        = asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift;
+        = vlSelfRef.asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift;
     vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block.bias[0U] 
         = vlSelfRef.asic_wrapper__DOT__Top__DOT__bias_input
         [0U];
@@ -409,17 +408,31 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
                       >> 1U)))) {
             if ((1U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
                 vlSelfRef.RLAST_S = 1U;
-                vlSelfRef.RRESP_S = ((0U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)
-                                      ? 0U : ((4U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)
-                                               ? 0U
-                                               : ((8U 
-                                                   == vlSelfRef.asic_wrapper__DOT__addr_S_reg)
-                                                   ? 0U
-                                                   : 2U)));
+                if ((0U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    vlSelfRef.RRESP_S = 0U;
+                    vlSelfRef.asic_wrapper__DOT__RDATA 
+                        = vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE;
+                } else if ((4U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    vlSelfRef.RRESP_S = 0U;
+                    vlSelfRef.asic_wrapper__DOT__RDATA 
+                        = vlSelfRef.asic_wrapper__DOT__DATA;
+                } else if ((8U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    vlSelfRef.RRESP_S = 0U;
+                    vlSelfRef.asic_wrapper__DOT__RDATA 
+                        = vlSelfRef.asic_wrapper__DOT__ofmap_reg
+                        [vlSelfRef.asic_wrapper__DOT__output_cnt];
+                } else {
+                    vlSelfRef.RRESP_S = 2U;
+                }
                 if ((0U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                     if ((4U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                         if ((8U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                             vlSelfRef.RDATA_S = 0U;
+                        }
+                        if ((8U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                            vlSelfRef.asic_wrapper__DOT__output_cnt_next 
+                                = (0x7fU & ((IData)(1U) 
+                                            + (IData)(vlSelfRef.asic_wrapper__DOT__output_cnt)));
                         }
                     }
                 }
@@ -4299,29 +4312,22 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__1(Vasic_wrapper___
     vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT____Vcellout__PE_array__BRA__6__KET____DOT__gen_PE_array1__DOT__pe_block__ofmap[7U] 
         = vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__6__KET____DOT__gen_PE_array1__DOT__pe_block.ofmap
         [7U];
-    vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT__valid_pe 
-        = ((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-            [3U]) & ((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__6__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-                      [3U]) & ((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__5__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-                                [3U]) & ((0xffU == 
-                                          vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__4__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-                                          [3U]) & (
-                                                   (0xffU 
-                                                    == 
-                                                    vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__3__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-                                                    [3U]) 
-                                                   & ((0xffU 
-                                                       == 
-                                                       vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-                                                       [3U]) 
-                                                      & ((0xffU 
-                                                          == 
-                                                          vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
-                                                          [3U]) 
-                                                         & (0xffU 
-                                                            == 
-                                                            vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block.__PVT__valid_chain
-                                                            [3U]))))))));
+    vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT__valid_chain 
+        = ((((((IData)((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                        [3U])) << 1U) | (0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__6__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                                         [3U])) << 6U) 
+            | ((((IData)((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__5__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                          [3U])) << 1U) | (0xffU == 
+                                           vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__4__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                                           [3U])) << 4U)) 
+           | (((((IData)((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__3__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                          [3U])) << 1U) | (0xffU == 
+                                           vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                                           [3U])) << 2U) 
+              | (((IData)((0xffU == vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block.__PVT__valid_chain
+                           [3U])) << 1U) | (0xffU == 
+                                            vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block.__PVT__valid_chain
+                                            [3U]))));
     vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT____Vcellout__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block__ofmap[0U] 
         = vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block.ofmap
         [0U];

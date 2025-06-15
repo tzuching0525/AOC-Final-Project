@@ -14,6 +14,7 @@ void Vasic_wrapper___024root___eval_ico(Vasic_wrapper___024root* vlSelf) {
     // Body
     if ((1ULL & vlSelfRef.__VicoTriggered.word(0U))) {
         Vasic_wrapper___024root___ico_sequent__TOP__0(vlSelf);
+        vlSelfRef.__Vm_traceActivity[1U] = 1U;
     }
 }
 

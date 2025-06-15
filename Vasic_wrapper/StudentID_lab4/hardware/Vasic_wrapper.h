@@ -12,6 +12,7 @@
 
 class Vasic_wrapper__Syms;
 class Vasic_wrapper___024root;
+class VerilatedVcdC;
 class Vasic_wrapper_PE_block;
 
 
@@ -25,7 +26,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper VL_NOT_FINAL : public Verilated
 
     // CONSTEXPR CAPABILITIES
     // Verilated with --trace?
-    static constexpr bool traceCapable = false;
+    static constexpr bool traceCapable = true;
 
     // PORTS
     // The application code writes and reads these signals to
@@ -121,6 +122,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper VL_NOT_FINAL : public Verilated
     /// Re-init after cloning the model at the process level (e.g. fork in Linux)
     /// Re-allocate necessary resources. Called after cloning.
     void atClone() const;
+    std::unique_ptr<VerilatedTraceConfig> traceConfig() const override final;
   private:
     // Internal functions - trace registration
     void traceBaseModel(VerilatedTraceBaseC* tfp, int levels, int options);

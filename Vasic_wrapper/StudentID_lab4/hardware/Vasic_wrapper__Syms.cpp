@@ -27,7 +27,7 @@ Vasic_wrapper__Syms::Vasic_wrapper__Syms(VerilatedContext* contextp, const char*
     , TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block{this, Verilated::catName(namep, "asic_wrapper.Top.array.PE_array[7].gen_PE_array1.pe_block")}
 {
         // Check resources
-        Verilated::stackCheck(1801);
+        Verilated::stackCheck(757);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);
     _vm_contextp__->timeprecision(-12);

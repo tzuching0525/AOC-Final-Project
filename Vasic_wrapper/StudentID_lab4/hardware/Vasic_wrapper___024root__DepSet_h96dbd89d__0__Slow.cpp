@@ -12,6 +12,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_static(Vasic_wrapper___024root*
 }
 
 VL_ATTR_COLD void Vasic_wrapper___024root___eval_initial__TOP(Vasic_wrapper___024root* vlSelf);
+VL_ATTR_COLD void Vasic_wrapper___024root____Vm_traceActivitySetAll(Vasic_wrapper___024root* vlSelf);
 
 VL_ATTR_COLD void Vasic_wrapper___024root___eval_initial(Vasic_wrapper___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_initial\n"); );
@@ -19,6 +20,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_initial(Vasic_wrapper___024root
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     Vasic_wrapper___024root___eval_initial__TOP(vlSelf);
+    Vasic_wrapper___024root____Vm_traceActivitySetAll(vlSelf);
     vlSelfRef.__Vtrigprevexpr___TOP__ACLK__0 = vlSelfRef.ACLK;
 }
 
@@ -159,6 +161,17 @@ VL_ATTR_COLD void Vasic_wrapper___024root___dump_triggers__nba(Vasic_wrapper___0
 }
 #endif  // VL_DEBUG
 
+VL_ATTR_COLD void Vasic_wrapper___024root____Vm_traceActivitySetAll(Vasic_wrapper___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root____Vm_traceActivitySetAll\n"); );
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    vlSelfRef.__Vm_traceActivity[0U] = 1U;
+    vlSelfRef.__Vm_traceActivity[1U] = 1U;
+    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    vlSelfRef.__Vm_traceActivity[3U] = 1U;
+}
+
 VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___ctor_var_reset\n"); );
     Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
@@ -213,7 +226,14 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     vlSelf->asic_wrapper__DOT__i = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__state = VL_RAND_RESET_I(2);
     vlSelf->asic_wrapper__DOT__next_state = VL_RAND_RESET_I(2);
+    vlSelf->asic_wrapper__DOT__output_cnt_next = VL_RAND_RESET_I(7);
+    vlSelf->asic_wrapper__DOT__output_cnt = VL_RAND_RESET_I(7);
     vlSelf->asic_wrapper__DOT__ofmap_count = VL_RAND_RESET_I(8);
+    for (int __Vi0 = 0; __Vi0 < 128; ++__Vi0) {
+        vlSelf->asic_wrapper__DOT__ofmap_reg[__Vi0] = VL_RAND_RESET_I(32);
+    }
+    vlSelf->asic_wrapper__DOT__ofmap_valid = VL_RAND_RESET_I(1);
+    vlSelf->asic_wrapper__DOT__RDATA = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__cs_slave = VL_RAND_RESET_I(3);
     vlSelf->asic_wrapper__DOT__cs_slave_next = VL_RAND_RESET_I(3);
     vlSelf->asic_wrapper__DOT__addr_S_reg = VL_RAND_RESET_I(32);
@@ -226,9 +246,12 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     vlSelf->asic_wrapper__DOT__ASIC_ENABLE_next = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__DATA = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__ASIC_DATA_next = VL_RAND_RESET_I(32);
+    vlSelf->asic_wrapper__DOT__ASIC_OFMAP = VL_RAND_RESET_I(32);
+    vlSelf->asic_wrapper__DOT__ASIC_OFMAP_next = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT____Vlvbound_h36234f8c__0 = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT____Vlvbound_haa40a020__0 = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT____Vlvbound_hf69f4574__0 = VL_RAND_RESET_I(32);
+    vlSelf->asic_wrapper__DOT__Top__DOT__i = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__Top__DOT__ifmap_ren = VL_RAND_RESET_I(1);
     vlSelf->asic_wrapper__DOT__Top__DOT__weight_ren = VL_RAND_RESET_I(1);
     vlSelf->asic_wrapper__DOT__Top__DOT__bias_ren = VL_RAND_RESET_I(1);
@@ -260,11 +283,13 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     vlSelf->asic_wrapper__DOT__Top__DOT__controller__DOT__next_state = VL_RAND_RESET_I(3);
     vlSelf->asic_wrapper__DOT__Top__DOT__controller__DOT__ppu_count = VL_RAND_RESET_I(8);
     vlSelf->asic_wrapper__DOT__Top__DOT__controller__DOT__compute_stage = VL_RAND_RESET_I(4);
+    vlSelf->asic_wrapper__DOT__Top__DOT__ppu__DOT__relu_out = VL_RAND_RESET_I(32);
+    vlSelf->asic_wrapper__DOT__Top__DOT__ppu__DOT__data_shift = VL_RAND_RESET_I(8);
     vlSelf->asic_wrapper__DOT__Top__DOT__ppu__DOT__data_temp = VL_RAND_RESET_I(8);
     for (int __Vi0 = 0; __Vi0 < 64; ++__Vi0) {
         vlSelf->asic_wrapper__DOT__Top__DOT__array__DOT__opsum[__Vi0] = VL_RAND_RESET_I(32);
     }
-    vlSelf->asic_wrapper__DOT__Top__DOT__array__DOT__valid_pe = VL_RAND_RESET_I(1);
+    vlSelf->asic_wrapper__DOT__Top__DOT__array__DOT__valid_chain = VL_RAND_RESET_I(8);
     for (int __Vi0 = 0; __Vi0 < 8; ++__Vi0) {
         for (int __Vi1 = 0; __Vi1 < 8; ++__Vi1) {
             vlSelf->asic_wrapper__DOT__Top__DOT__array__DOT__weight_wire[__Vi0][__Vi1] = VL_RAND_RESET_I(8);
@@ -326,6 +351,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     for (int __Vi0 = 0; __Vi0 < 8; ++__Vi0) {
         vlSelf->asic_wrapper__DOT__Top__DOT__array__DOT____Vcellinp__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block__weight[__Vi0] = VL_RAND_RESET_I(8);
     }
+    vlSelf->asic_wrapper__DOT__Top__DOT__array__DOT__u_Adder_tree__DOT__i = VL_RAND_RESET_I(32);
     for (int __Vi0 = 0; __Vi0 < 32; ++__Vi0) {
         vlSelf->asic_wrapper__DOT__Top__DOT__GLB_ifmap__DOT__ram[__Vi0] = VL_RAND_RESET_I(32);
     }
@@ -350,4 +376,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     }
     vlSelf->__Vdly__asic_wrapper__DOT__Top__DOT__data_address = VL_RAND_RESET_I(12);
     vlSelf->__Vtrigprevexpr___TOP__ACLK__0 = VL_RAND_RESET_I(1);
+    for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
+        vlSelf->__Vm_traceActivity[__Vi0] = 0;
+    }
 }
