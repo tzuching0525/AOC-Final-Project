@@ -1,0 +1,20 @@
+verilated_fst_c.o: \
+ /opt/verilator-5.030/share/verilator/include/verilated_fst_c.cpp \
+ /opt/verilator-5.030/share/verilator/include/verilated.h \
+ /opt/verilator-5.030/share/verilator/include/verilatedos.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_config.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_types.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_funcs.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_fst_c.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_trace.h \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/fastlz.c \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/fastlz.h \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/fastlz.c \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/fstapi.c \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/fst_config.h \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/fstapi.h \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/lz4.h \
+ /opt/verilator-5.030/share/verilator/include/gtkwave/lz4.c \
+ /opt/verilator-5.030/share/verilator/include/verilated_trace_imp.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_intrinsics.h \
+ /opt/verilator-5.030/share/verilator/include/verilated_threads.h
