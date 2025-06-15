@@ -108,9 +108,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         IData/*31:0*/ asic_wrapper__DOT__ASIC_ENABLE_next;
         IData/*31:0*/ asic_wrapper__DOT__DATA;
         IData/*31:0*/ asic_wrapper__DOT__ASIC_DATA_next;
-        IData/*31:0*/ asic_wrapper__DOT____Vlvbound_hcfe141db__0;
-        IData/*31:0*/ asic_wrapper__DOT____Vlvbound_h7b019288__0;
-        IData/*31:0*/ asic_wrapper__DOT____Vlvbound_h34e68872__0;
+        IData/*31:0*/ asic_wrapper__DOT____Vlvbound_h36234f8c__0;
+        IData/*31:0*/ asic_wrapper__DOT____Vlvbound_haa40a020__0;
+        IData/*31:0*/ asic_wrapper__DOT____Vlvbound_hf69f4574__0;
         IData/*31:0*/ asic_wrapper__DOT__Top__DOT__ppu_input;
         IData/*31:0*/ asic_wrapper__DOT__Top__DOT__ppu_in_out;
         IData/*31:0*/ __VactIterCount;

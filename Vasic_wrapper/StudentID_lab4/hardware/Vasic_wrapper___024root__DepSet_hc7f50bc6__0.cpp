@@ -11,10 +11,9 @@ VL_ATTR_COLD void Vasic_wrapper___024root___dump_triggers__ico(Vasic_wrapper___0
 #endif  // VL_DEBUG
 
 void Vasic_wrapper___024root___eval_triggers__ico(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_triggers__ico\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__VicoTriggered.set(0U, (IData)(vlSelfRef.__VicoFirstIteration));
 #ifdef VL_DEBUG
@@ -29,10 +28,9 @@ VL_ATTR_COLD void Vasic_wrapper___024root___dump_triggers__act(Vasic_wrapper___0
 #endif  // VL_DEBUG
 
 void Vasic_wrapper___024root___eval_triggers__act(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_triggers__act\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__VactTriggered.set(0U, ((IData)(vlSelfRef.ACLK) 
                                        & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__ACLK__0))));
@@ -59,10 +57,9 @@ void Vasic_wrapper___024root___nba_sequent__TOP__1(Vasic_wrapper___024root* vlSe
 void Vasic_wrapper___024root___nba_sequent__TOP__2(Vasic_wrapper___024root* vlSelf);
 
 void Vasic_wrapper___024root___eval_nba(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_nba\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vasic_wrapper___024root___nba_sequent__TOP__0(vlSelf);
@@ -82,10 +79,9 @@ void Vasic_wrapper___024root___eval_nba(Vasic_wrapper___024root* vlSelf) {
 }
 
 VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___nba_sequent__TOP__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__ofmap_reg;
     for (int __Vi0 = 0; __Vi0 < 128; ++__Vi0) {
@@ -439,11 +435,11 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
     __VdlySet__asic_wrapper__DOT__Top__DOT__GLB_weight__DOT__ram__v0 = 0U;
     __VdlySet__asic_wrapper__DOT__Top__DOT__weight_wire__v0 = 0U;
     if (vlSelfRef.ARESETn) {
-        vlSelfRef.asic_wrapper__DOT____Vlvbound_hcfe141db__0 
+        vlSelfRef.asic_wrapper__DOT____Vlvbound_h36234f8c__0 
             = vlSelfRef.asic_wrapper__DOT__ASIC_DATA_next;
         if ((0x44fU >= (IData)(vlSelfRef.asic_wrapper__DOT__write_cnt))) {
             __VdlyVal__asic_wrapper__DOT__DATA_buffer__v0 
-                = vlSelfRef.asic_wrapper__DOT____Vlvbound_hcfe141db__0;
+                = vlSelfRef.asic_wrapper__DOT____Vlvbound_h36234f8c__0;
             __VdlyDim0__asic_wrapper__DOT__DATA_buffer__v0 
                 = vlSelfRef.asic_wrapper__DOT__write_cnt;
             vlSelfRef.__VdlyCommitQueueasic_wrapper__DOT__DATA_buffer.enqueue(__VdlyVal__asic_wrapper__DOT__DATA_buffer__v0, (IData)(__VdlyDim0__asic_wrapper__DOT__DATA_buffer__v0));
@@ -451,10 +447,10 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
     } else {
         vlSelfRef.asic_wrapper__DOT__i = 0U;
         while (VL_GTS_III(32, 0x450U, vlSelfRef.asic_wrapper__DOT__i)) {
-            vlSelfRef.asic_wrapper__DOT____Vlvbound_h7b019288__0 = 0U;
-            if (VL_LIKELY((0x44fU >= (0x7ffU & vlSelfRef.asic_wrapper__DOT__i)))) {
+            vlSelfRef.asic_wrapper__DOT____Vlvbound_haa40a020__0 = 0U;
+            if (VL_LIKELY(((0x44fU >= (0x7ffU & vlSelfRef.asic_wrapper__DOT__i))))) {
                 __VdlyVal__asic_wrapper__DOT__DATA_buffer__v1 
-                    = vlSelfRef.asic_wrapper__DOT____Vlvbound_h7b019288__0;
+                    = vlSelfRef.asic_wrapper__DOT____Vlvbound_haa40a020__0;
                 __VdlyDim0__asic_wrapper__DOT__DATA_buffer__v1 
                     = (0x7ffU & vlSelfRef.asic_wrapper__DOT__i);
                 vlSelfRef.__VdlyCommitQueueasic_wrapper__DOT__DATA_buffer.enqueue(__VdlyVal__asic_wrapper__DOT__DATA_buffer__v1, (IData)(__VdlyDim0__asic_wrapper__DOT__DATA_buffer__v1));
@@ -466,11 +462,11 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
     if (vlSelfRef.ARESETn) {
         if (vlSelfRef.asic_wrapper__DOT__valid) {
             if ((1U == (IData)(vlSelfRef.asic_wrapper__DOT__state))) {
-                vlSelfRef.asic_wrapper__DOT____Vlvbound_h34e68872__0 
+                vlSelfRef.asic_wrapper__DOT____Vlvbound_hf69f4574__0 
                     = vlSelfRef.asic_wrapper__DOT__ofmap;
                 if ((0x44fU >= (IData)(vlSelfRef.asic_wrapper__DOT__bias_cnt))) {
                     __VdlyVal__asic_wrapper__DOT__DATA_buffer__v2 
-                        = vlSelfRef.asic_wrapper__DOT____Vlvbound_h34e68872__0;
+                        = vlSelfRef.asic_wrapper__DOT____Vlvbound_hf69f4574__0;
                     __VdlyDim0__asic_wrapper__DOT__DATA_buffer__v2 
                         = vlSelfRef.asic_wrapper__DOT__bias_cnt;
                     vlSelfRef.__VdlyCommitQueueasic_wrapper__DOT__DATA_buffer.enqueue(__VdlyVal__asic_wrapper__DOT__DATA_buffer__v2, (IData)(__VdlyDim0__asic_wrapper__DOT__DATA_buffer__v2));
@@ -2257,10 +2253,9 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
 }
 
 VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__1(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___nba_sequent__TOP__1\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSymsp->TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block.bias[0U] 
         = vlSelfRef.asic_wrapper__DOT__Top__DOT__bias_input

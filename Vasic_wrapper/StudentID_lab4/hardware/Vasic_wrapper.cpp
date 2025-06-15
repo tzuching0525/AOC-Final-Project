@@ -103,7 +103,7 @@ void Vasic_wrapper::eval_step() {
 bool Vasic_wrapper::eventsPending() { return false; }
 
 uint64_t Vasic_wrapper::nextTimeSlot() {
-    VL_FATAL_MT(__FILE__, __LINE__, "", "%Error: No delays in the design");
+    VL_FATAL_MT(__FILE__, __LINE__, "", "No delays in the design");
     return 0;
 }
 

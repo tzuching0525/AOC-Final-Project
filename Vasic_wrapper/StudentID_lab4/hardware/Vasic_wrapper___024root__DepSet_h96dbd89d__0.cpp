@@ -8,10 +8,9 @@
 void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper___024root* vlSelf);
 
 void Vasic_wrapper___024root___eval_ico(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_ico\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1ULL & vlSelfRef.__VicoTriggered.word(0U))) {
         Vasic_wrapper___024root___ico_sequent__TOP__0(vlSelf);
@@ -19,10 +18,9 @@ void Vasic_wrapper___024root___eval_ico(Vasic_wrapper___024root* vlSelf) {
 }
 
 VL_INLINE_OPT void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___ico_sequent__TOP__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.AWREADY_S = 0U;
     vlSelfRef.ARREADY_S = 0U;
@@ -129,10 +127,9 @@ VL_INLINE_OPT void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper__
 void Vasic_wrapper___024root___eval_triggers__ico(Vasic_wrapper___024root* vlSelf);
 
 bool Vasic_wrapper___024root___eval_phase__ico(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_phase__ico\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     CData/*0:0*/ __VicoExecute;
     // Body
@@ -145,17 +142,15 @@ bool Vasic_wrapper___024root___eval_phase__ico(Vasic_wrapper___024root* vlSelf) 
 }
 
 void Vasic_wrapper___024root___eval_act(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_act\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
 VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__2(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___nba_sequent__TOP__2\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     IData/*31:0*/ __VdlyVal__asic_wrapper__DOT__Top__DOT__bias_wire__v0;
     __VdlyVal__asic_wrapper__DOT__Top__DOT__bias_wire__v0 = 0;
@@ -227,10 +222,9 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__2(Vasic_wrapper__
 void Vasic_wrapper___024root___eval_triggers__act(Vasic_wrapper___024root* vlSelf);
 
 bool Vasic_wrapper___024root___eval_phase__act(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_phase__act\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     VlTriggerVec<2> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
@@ -248,10 +242,9 @@ bool Vasic_wrapper___024root___eval_phase__act(Vasic_wrapper___024root* vlSelf) 
 void Vasic_wrapper___024root___eval_nba(Vasic_wrapper___024root* vlSelf);
 
 bool Vasic_wrapper___024root___eval_phase__nba(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_phase__nba\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     CData/*0:0*/ __VnbaExecute;
     // Body
@@ -274,10 +267,9 @@ VL_ATTR_COLD void Vasic_wrapper___024root___dump_triggers__act(Vasic_wrapper___0
 #endif  // VL_DEBUG
 
 void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     IData/*31:0*/ __VicoIterCount;
     CData/*0:0*/ __VicoContinue;
@@ -288,7 +280,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
     vlSelfRef.__VicoFirstIteration = 1U;
     __VicoContinue = 1U;
     while (__VicoContinue) {
-        if (VL_UNLIKELY((0x64U < __VicoIterCount))) {
+        if (VL_UNLIKELY(((0x64U < __VicoIterCount)))) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__ico(vlSelf);
 #endif
@@ -304,7 +296,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
     __VnbaIterCount = 0U;
     __VnbaContinue = 1U;
     while (__VnbaContinue) {
-        if (VL_UNLIKELY((0x64U < __VnbaIterCount))) {
+        if (VL_UNLIKELY(((0x64U < __VnbaIterCount)))) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__nba(vlSelf);
 #endif
@@ -315,7 +307,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
         vlSelfRef.__VactIterCount = 0U;
         vlSelfRef.__VactContinue = 1U;
         while (vlSelfRef.__VactContinue) {
-            if (VL_UNLIKELY((0x64U < vlSelfRef.__VactIterCount))) {
+            if (VL_UNLIKELY(((0x64U < vlSelfRef.__VactIterCount)))) {
 #ifdef VL_DEBUG
                 Vasic_wrapper___024root___dump_triggers__act(vlSelf);
 #endif
@@ -336,40 +328,39 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 
 #ifdef VL_DEBUG
 void Vasic_wrapper___024root___eval_debug_assertions(Vasic_wrapper___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vasic_wrapper___024root___eval_debug_assertions\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if (VL_UNLIKELY((vlSelfRef.ACLK & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.ACLK & 0xfeU)))) {
         Verilated::overWidthError("ACLK");}
-    if (VL_UNLIKELY((vlSelfRef.ARESETn & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.ARESETn & 0xfeU)))) {
         Verilated::overWidthError("ARESETn");}
-    if (VL_UNLIKELY((vlSelfRef.AWLEN_S & 0xf0U))) {
+    if (VL_UNLIKELY(((vlSelfRef.AWLEN_S & 0xf0U)))) {
         Verilated::overWidthError("AWLEN_S");}
-    if (VL_UNLIKELY((vlSelfRef.AWSIZE_S & 0xf8U))) {
+    if (VL_UNLIKELY(((vlSelfRef.AWSIZE_S & 0xf8U)))) {
         Verilated::overWidthError("AWSIZE_S");}
-    if (VL_UNLIKELY((vlSelfRef.AWBURST_S & 0xfcU))) {
+    if (VL_UNLIKELY(((vlSelfRef.AWBURST_S & 0xfcU)))) {
         Verilated::overWidthError("AWBURST_S");}
-    if (VL_UNLIKELY((vlSelfRef.AWVALID_S & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.AWVALID_S & 0xfeU)))) {
         Verilated::overWidthError("AWVALID_S");}
-    if (VL_UNLIKELY((vlSelfRef.WSTRB_S & 0xf0U))) {
+    if (VL_UNLIKELY(((vlSelfRef.WSTRB_S & 0xf0U)))) {
         Verilated::overWidthError("WSTRB_S");}
-    if (VL_UNLIKELY((vlSelfRef.WLAST_S & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.WLAST_S & 0xfeU)))) {
         Verilated::overWidthError("WLAST_S");}
-    if (VL_UNLIKELY((vlSelfRef.WVALID_S & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.WVALID_S & 0xfeU)))) {
         Verilated::overWidthError("WVALID_S");}
-    if (VL_UNLIKELY((vlSelfRef.BREADY_S & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.BREADY_S & 0xfeU)))) {
         Verilated::overWidthError("BREADY_S");}
-    if (VL_UNLIKELY((vlSelfRef.ARLEN_S & 0xf0U))) {
+    if (VL_UNLIKELY(((vlSelfRef.ARLEN_S & 0xf0U)))) {
         Verilated::overWidthError("ARLEN_S");}
-    if (VL_UNLIKELY((vlSelfRef.ARSIZE_S & 0xf8U))) {
+    if (VL_UNLIKELY(((vlSelfRef.ARSIZE_S & 0xf8U)))) {
         Verilated::overWidthError("ARSIZE_S");}
-    if (VL_UNLIKELY((vlSelfRef.ARBURST_S & 0xfcU))) {
+    if (VL_UNLIKELY(((vlSelfRef.ARBURST_S & 0xfcU)))) {
         Verilated::overWidthError("ARBURST_S");}
-    if (VL_UNLIKELY((vlSelfRef.ARVALID_S & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.ARVALID_S & 0xfeU)))) {
         Verilated::overWidthError("ARVALID_S");}
-    if (VL_UNLIKELY((vlSelfRef.RREADY_S & 0xfeU))) {
+    if (VL_UNLIKELY(((vlSelfRef.RREADY_S & 0xfeU)))) {
         Verilated::overWidthError("RREADY_S");}
 }
 #endif  // VL_DEBUG

@@ -7,10 +7,9 @@
 #include "Vasic_wrapper__Syms.h"
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -544,10 +543,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__1__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -1081,10 +1079,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__2__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -1618,10 +1615,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__3__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__3__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -2155,10 +2151,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__4__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__4__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -2692,10 +2687,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__5__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__5__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -3229,10 +3223,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__6__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__6__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
@@ -3766,10 +3759,9 @@ VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT_
 }
 
 VL_INLINE_OPT void Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block__0(Vasic_wrapper_PE_block* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+            Vasic_wrapper_PE_block___nba_sequent__TOP__asic_wrapper__DOT__Top__DOT__array__DOT__PE_array__BRA__7__KET____DOT__gen_PE_array1__DOT__pe_block__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    Vasic_wrapper__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.__Vcellout__PE_block__BRA__8__KET____DOT__gen_PE_block1__DOT__pe__valid 
         = ((IData)(vlSymsp->TOP.ARESETn) && (1U & vlSelfRef.__PVT__valid_chain
