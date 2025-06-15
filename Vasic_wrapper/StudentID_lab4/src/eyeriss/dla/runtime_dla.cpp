@@ -67,85 +67,112 @@ int qlinear_relu(int8_t *input_in_DRAM, int8_t *weight_in_DRAM,
     set_enable(scale, mode);  // undone
 
     uint32_t ifmap0, ifmap1, weight0, weight1, data_in;
+    //int ifmap_size = 16;
+    //int weight_size = 1024;
+    //int 
+
     for (uint32_t i = 0; i < 16 * 2 + 64 * 16 * 2 + 64 * 2; ++i) {
-        ifmap0 =    (input_in_DRAM[4 * i + 3]) << 24 |
-                    (input_in_DRAM[4 * i + 2]) << 16 |
-                    (input_in_DRAM[4 * i + 1]) << 8 |
-                    (input_in_DRAM[4 * i + 0]);
-        if (mode == 0) {
-            weight0 =   (weight_in_DRAM[4 * (i - 16) + 3] << 24) |
-                        (weight_in_DRAM[4 * (i - 16) + 2] << 16) |
-                        (weight_in_DRAM[4 * (i - 16) + 1] << 8) |
-                        (weight_in_DRAM[4 * (i - 16) + 0]);
+        
+        if(i < 16) {
+            ifmap0 =    ((uint8_t)input_in_DRAM[4 * i + 3]) << 24 |
+                        ((uint8_t)input_in_DRAM[4 * i + 2]) << 16 |
+                        ((uint8_t)input_in_DRAM[4 * i + 1]) << 8 |
+                        ((uint8_t)input_in_DRAM[4 * i + 0]);
+            /*printf("input in dram[%d] = %d\n", 4 * i + 3, input_in_DRAM[4 * i + 3]);
+            printf("input in dram[%d] = %d\n", 4 * i + 2, input_in_DRAM[4 * i + 2]);
+            printf("input in dram[%d] = %d\n", 4 * i + 1, input_in_DRAM[4 * i + 1]);
+            printf("input in dram[%d] = %d\n", 4 * i + 0, input_in_DRAM[4 * i + 0]);
+            printf("ifmap0 = %x\n", ifmap0);*/
         }
-        else {
-            weight0 =   (weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 3] << 24) |
-                        (weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 2] << 16) |
-                        (weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 1] << 8) |
-                        (weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 0]);
+        if(i >= 16 && i < 16 + 16*64 + 64) {
+            if (mode == 0) {
+                weight0 =   ((uint8_t)weight_in_DRAM[4 * (i - 16) + 3] << 24) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16) + 2] << 16) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16) + 1] << 8) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16) + 0]);
+            }
+            else {
+                weight0 =   ((uint8_t)weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 3] << 24) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 2] << 16) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 1] << 8) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16) + (i - 16) / 16 * 64 + 0]);
+            }
         }
 
-        if (mode == 0) {
-            ifmap1 =    (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 3]) << 24 |
-                        (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 2]) << 16 |
-                        (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 1]) << 8 |
-                        (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 0]);
-        }
-        else {
-            ifmap1 =    (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 3]) << 24 |
-                        (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 2]) << 16 |
-                        (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 1]) << 8 |
-                        (input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 0]);
-        }
-        if (mode == 0) {
-            weight1 =   (weight_in_DRAM[4 * (i - 16 * 2 - 64) + 3] << 24) |
-                        (weight_in_DRAM[4 * (i - 16 * 2 - 64) + 2] << 16) |
-                        (weight_in_DRAM[4 * (i - 16 * 2 - 64) + 1] << 8) |
-                        (weight_in_DRAM[4 * (i - 16 * 2 - 64) + 0]);
-        }
-        else {
-            weight1 =   (weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 3] << 24) |
-                        (weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 2] << 16) |
-                        (weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 1] << 8) |
-                        (weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 0]);
+        if(i >= 16 + 64 * 16 + 64) {
+            if (mode == 0) {
+                ifmap1 =    ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 3]) << 24 |
+                            ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 2]) << 16 |
+                            ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 1]) << 8 |
+                            ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 0]);
+            }
+            else {
+                ifmap1 =    ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 3]) << 24 |
+                            ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 2]) << 16 |
+                            ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 1]) << 8 |
+                            ((uint8_t)input_in_DRAM[4 * (i - 16 - 64 * 16 - 64) + 64 + 0]);
+            }
+            if (mode == 0) {
+                weight1 =   ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64) + 3] << 24) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64) + 2] << 16) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64) + 1] << 8) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64) + 0]);
+            }
+            else {
+                weight1 =   ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 3] << 24) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 2] << 16) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 1] << 8) |
+                            ((uint8_t)weight_in_DRAM[4 * (i - 16 * 2 - 64 * 16 - 64) + (i - 16 * 2 - 64 * 16 - 6) / 16 * 64 + 0]);
+            }
         }
 
         if(i < 16) { 
             data_in = ifmap0;
+            //printf("ifmap0[%d] %x\n", i, data_in);
         }
         else if(i < 16 + 64 * 16) {
             data_in = weight0;
+            //printf("weight0[%d] %x\n", i, data_in);
         } 
         else if(i < 16 + 64 * 16 + 64) {
             data_in = bias[i - 16 - 64 * 16];
+            //printf("bias[%d] %x\n", i, data_in);
         }
         else if(i < 16 * 2 + 64 * 16 + 64) {
             data_in = ifmap1;
+            //printf("ifmap1[%d] %x\n", i, data_in);
         } 
         else if(i < 16 * 2 + 64 * 16 * 2 + 64) {
             data_in = weight1;
+           //printf("weight1[%d] %x\n", i, data_in);
         }
         else if(i < 16 * 2 + 64 * 16 * 2 + 64 * 2) {
             data_in = bias[i - 16 * 2 - 64 * 16 * 2];
+            //printf("bias[%d] %x\n", i, data_in);
         }
         else {
             data_in = 0;
+            //printf("0\n");
         }
         // Write data to the DLA register
         reg_write(DLA_DATA_OFFSET, data_in);
         if (i == 16 + 64 * 16 + 64) {
-            wait_for_interrupt();
+            //wait_for_interrupt();
         }
     }
-
-    wait_for_interrupt();
+    printf("input\n");
+    fflush(stdout);
+    //wait_for_interrupt();
 
     // Read data from the DLA register
     for (uint32_t i = 0; i < 64; ++i) {
+        printf("for\n");
         uint32_t v = reg_read(DLA_OFMAP_OFFSET);
+        printf("read\n");
         output_in_DRAM[i] = v;
+        printf ("golden[%d] = %x\n", i, v);
     }
-
+    fflush(stdout);
     dla_stop();
 
 #ifdef DLA_INFO
