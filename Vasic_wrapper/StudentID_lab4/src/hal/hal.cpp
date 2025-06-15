@@ -134,8 +134,6 @@ bool HardwareAbstractionLayer::memory_set(uint32_t addr, uint32_t data) {
         clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
     }
     clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
-    printf("current_state : %d\n", device->current_state);
-    printf("next_state : %d\n", device->n_state);
     device->BREADY_S = 0;
 
     int resp = device->BRESP_S;
@@ -146,7 +144,7 @@ bool HardwareAbstractionLayer::memory_set(uint32_t addr, uint32_t data) {
 /**
  * @brief Reads data from a specific MMIO address.
  */
-bool HardwareAbstractionLayer::memory_get(uint32_t addr, uint32_t &data) {
+bool HardwareAbstractionLayer::memory_get(uint32_t addr, int32_t &data) {
     if (device == NULL) {
         fprintf(stderr, "[HAL] device is not init yet.\n");
     }
@@ -170,25 +168,46 @@ bool HardwareAbstractionLayer::memory_get(uint32_t addr, uint32_t &data) {
     //device->ARSIZE_S = 0;   // unused
     //device->ARBURST_S = 0;  // unused
     device->ARVALID_S = 1;  // valid
-
+    device->eval();
     // wait for ready (address)
     /*! <<<========= Implement here =========>>>*/
-    do {
+
+    /*do {
         clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
-    } while (!device->ARREADY_S);
+        printf("ARVALID_S : %d\n", device->ARVALID_S);
+        printf("ARREADY_S : %d\n", device->ARREADY_S);
+        printf("current_state : %d\n", device->current_state);
+        printf("next_state : %d\n", device->n_state);
+    } while (!device->ARREADY_S);*/
+    while (!device->ARREADY_S) {
+        clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
+    }
+    clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
+
     device->ARVALID_S = 0;
 
     // wait for valid (data)
     /*! <<<========= Implement here =========>>>*/
     device->RREADY_S = 1;
-    do {
+    
+    device->eval();
+    /*do {
         clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
-    } while (!device->RVALID_S);
+    } while (!device->RVALID_S);*/
+    while (!device->RVALID_S) {
+        clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
+    }
+    clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
+
     device->RREADY_S = 0;
 
     // get read data
     data = device->RDATA_S;
+    printf("RDATA_S :%d\n", device->RDATA_S);
+
+    device->eval();
     int resp = device->RRESP_S;
+    printf("resp : %d\n", device->RRESP_S);
     clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
     return resp == AXI_RESP_OKAY;
 }

@@ -179,7 +179,7 @@ class HardwareAbstractionLayer {
      * @param data Reference to store the read data.
      * @return True if the read operation is successful, false otherwise.
      */
-    bool memory_get(uint32_t addr, uint32_t &data);
+    bool memory_get(uint32_t addr, int32_t &data);
 
     /**
      * @brief Waits for an interrupt request (IRQ) from the hardware.

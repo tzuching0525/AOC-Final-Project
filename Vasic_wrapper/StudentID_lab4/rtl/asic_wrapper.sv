@@ -90,7 +90,7 @@ module asic_wrapper (
 /***************************************** 
         ASIC slave ( MMIO config ) 
 *****************************************/
-  logic [`AXI_DATA_BITS-1:0] RDATA;
+  //logic [`AXI_DATA_BITS-1:0] RDATA;
 
   /* AXI slave FSM */
   typedef enum logic [2:0] {
@@ -332,15 +332,15 @@ module asic_wrapper (
         // read data select
         case (addr_S_reg)
           `ASIC_ENABLE_OFFSET: begin
-            RDATA = ASIC_ENABLE;
+            RDATA_S = ASIC_ENABLE;
             RRESP_S = `AXI_RESP_OKAY;
           end
           `ASIC_DATA_OFFSET: begin
-            RDATA = DATA;
+            RDATA_S = DATA;
             RRESP_S = `AXI_RESP_OKAY;
           end
           `ASIC_OFMAP_OFFSET: begin
-            RDATA = ofmap_reg[output_cnt];
+            RDATA_S = ofmap_reg[output_cnt];
             output_cnt_next = output_cnt + 1'd1;
             RRESP_S = `AXI_RESP_OKAY;
           end

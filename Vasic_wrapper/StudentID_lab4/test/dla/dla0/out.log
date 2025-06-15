@@ -1,6666 +1,2557 @@
-current_state : 0
-next_state : 0
 Start writing ifmap0...
-i = 0
 [ifmap0][ 0] = 0xfcf9f7ff
-current_state : 0
-next_state : 0
-i = 1
 [ifmap0][ 1] = 0xfefd00fc
-current_state : 0
-next_state : 0
-i = 2
 [ifmap0][ 2] = 0xfffdfffc
-current_state : 0
-next_state : 0
-i = 3
 [ifmap0][ 3] = 0xfefdff00
-current_state : 0
-next_state : 0
-i = 4
 [ifmap0][ 4] = 0xfcfefffe
-current_state : 0
-next_state : 0
-i = 5
 [ifmap0][ 5] = 0x01fffeff
-current_state : 0
-next_state : 0
-i = 6
 [ifmap0][ 6] = 0xfd010100
-current_state : 0
-next_state : 0
-i = 7
 [ifmap0][ 7] = 0xfdfd04fc
-current_state : 0
-next_state : 0
-i = 8
 [ifmap0][ 8] = 0x00ff01fe
-current_state : 0
-next_state : 0
-i = 9
 [ifmap0][ 9] = 0xfefdfd7e
-current_state : 0
-next_state : 0
-i = 10
 [ifmap0][10] = 0x0000fe00
-current_state : 0
-next_state : 0
-i = 11
 [ifmap0][11] = 0xfd00fcfb
-current_state : 0
-next_state : 0
-i = 12
 [ifmap0][12] = 0x0300fdfe
-current_state : 0
-next_state : 0
-i = 13
 [ifmap0][13] = 0xfc00fffd
-current_state : 0
-next_state : 0
-i = 14
 [ifmap0][14] = 0xfdfbfe00
-current_state : 0
-next_state : 0
-i = 15
 [ifmap0][15] = 0xfdebfbff
-current_state : 0
-next_state : 0
 Start writing weight0...
 [weight0][   0] = 0xffe823fb
-current_state : 0
-next_state : 0
 [weight0][   1] = 0xfcf80ef1
-current_state : 0
-next_state : 0
 [weight0][   2] = 0x04efffe2
-current_state : 0
-next_state : 0
 [weight0][   3] = 0x0aeef7fa
-current_state : 0
-next_state : 0
 [weight0][   4] = 0x03eb11f6
-current_state : 0
-next_state : 0
 [weight0][   5] = 0x2325ffff
-current_state : 0
-next_state : 0
 [weight0][   6] = 0xfd182623
-current_state : 0
-next_state : 0
 [weight0][   7] = 0x0aea21f4
-current_state : 0
-next_state : 0
 [weight0][   8] = 0x12f4f806
-current_state : 0
-next_state : 0
 [weight0][   9] = 0xe4e807c7
-current_state : 0
-next_state : 0
 [weight0][  10] = 0xf21f0a22
-current_state : 0
-next_state : 0
 [weight0][  11] = 0xfb1cf2f2
-current_state : 0
-next_state : 0
 [weight0][  12] = 0x3c0bf716
-current_state : 0
-next_state : 0
 [weight0][  13] = 0xe7e523e2
-current_state : 0
-next_state : 0
 [weight0][  14] = 0xf7ebfd07
-current_state : 0
-next_state : 0
 [weight0][  15] = 0x1031ddf4
-current_state : 0
-next_state : 0
 [weight0][  16] = 0xe8cd39f8
-current_state : 0
-next_state : 0
 [weight0][  17] = 0xf5dce3e9
-current_state : 0
-next_state : 0
 [weight0][  18] = 0xeddaf1f1
-current_state : 0
-next_state : 0
 [weight0][  19] = 0xfef20af5
-current_state : 0
-next_state : 0
 [weight0][  20] = 0xe5dc10ed
-current_state : 0
-next_state : 0
 [weight0][  21] = 0xf7370526
-current_state : 0
-next_state : 0
 [weight0][  22] = 0xf3d522e4
-current_state : 0
-next_state : 0
 [weight0][  23] = 0x0bdb4def
-current_state : 0
-next_state : 0
 [weight0][  24] = 0x01f4e70d
-current_state : 0
-next_state : 0
 [weight0][  25] = 0x0acf181a
-current_state : 0
-next_state : 0
 [weight0][  26] = 0xea230d08
-current_state : 0
-next_state : 0
 [weight0][  27] = 0x1ee9f9df
-current_state : 0
-next_state : 0
 [weight0][  28] = 0x41cdfe34
-current_state : 0
-next_state : 0
 [weight0][  29] = 0xd8f516ef
-current_state : 0
-next_state : 0
 [weight0][  30] = 0xdaf813fc
-current_state : 0
-next_state : 0
 [weight0][  31] = 0xe7fdeef4
-current_state : 0
-next_state : 0
 [weight0][  32] = 0x03ec1af4
-current_state : 0
-next_state : 0
 [weight0][  33] = 0x0dff17e6
-current_state : 0
-next_state : 0
 [weight0][  34] = 0xf1f0efe1
-current_state : 0
-next_state : 0
 [weight0][  35] = 0x23fafcfa
-current_state : 0
-next_state : 0
 [weight0][  36] = 0xef010ff9
-current_state : 0
-next_state : 0
 [weight0][  37] = 0x043305db
-current_state : 0
-next_state : 0
 [weight0][  38] = 0xed2c3121
-current_state : 0
-next_state : 0
 [weight0][  39] = 0x12ce20fe
-current_state : 0
-next_state : 0
 [weight0][  40] = 0x16f5de07
-current_state : 0
-next_state : 0
 [weight0][  41] = 0xeddb05cd
-current_state : 0
-next_state : 0
 [weight0][  42] = 0xd9240f36
-current_state : 0
-next_state : 0
 [weight0][  43] = 0x180feffc
-current_state : 0
-next_state : 0
 [weight0][  44] = 0x3720e41f
-current_state : 0
-next_state : 0
 [weight0][  45] = 0xebf423ef
-current_state : 0
-next_state : 0
 [weight0][  46] = 0xd7caf509
-current_state : 0
-next_state : 0
 [weight0][  47] = 0x2c2acfe2
-current_state : 0
-next_state : 0
 [weight0][  48] = 0xe3d13704
-current_state : 0
-next_state : 0
 [weight0][  49] = 0xe9d7dfee
-current_state : 0
-next_state : 0
 [weight0][  50] = 0xe4d4e2ec
-current_state : 0
-next_state : 0
 [weight0][  51] = 0xf5f60af9
-current_state : 0
-next_state : 0
 [weight0][  52] = 0xeed4f6f0
-current_state : 0
-next_state : 0
 [weight0][  53] = 0x1124032d
-current_state : 0
-next_state : 0
 [weight0][  54] = 0xd9db33f1
-current_state : 0
-next_state : 0
 [weight0][  55] = 0xf6df5adb
-current_state : 0
-next_state : 0
 [weight0][  56] = 0xffe6fafd
-current_state : 0
-next_state : 0
 [weight0][  57] = 0xf8c11415
-current_state : 0
-next_state : 0
 [weight0][  58] = 0xf7340113
-current_state : 0
-next_state : 0
 [weight0][  59] = 0x10eafce8
-current_state : 0
-next_state : 0
 [weight0][  60] = 0x4ac8fd3e
-current_state : 0
-next_state : 0
 [weight0][  61] = 0xebfb1bf1
-current_state : 0
-next_state : 0
 [weight0][  62] = 0xe1fa01fd
-current_state : 0
-next_state : 0
 [weight0][  63] = 0xdcf2e601
-current_state : 0
-next_state : 0
 [weight0][  64] = 0xece836d6
-current_state : 0
-next_state : 0
 [weight0][  65] = 0x03f1eae3
-current_state : 0
-next_state : 0
 [weight0][  66] = 0xf4ebe3f2
-current_state : 0
-next_state : 0
 [weight0][  67] = 0xfdf3160b
-current_state : 0
-next_state : 0
 [weight0][  68] = 0xf8ec02e4
-current_state : 0
-next_state : 0
 [weight0][  69] = 0xf9510e02
-current_state : 0
-next_state : 0
 [weight0][  70] = 0xebe63606
-current_state : 0
-next_state : 0
 [weight0][  71] = 0x0fe24d0e
-current_state : 0
-next_state : 0
 [weight0][  72] = 0x16ecd3f6
-current_state : 0
-next_state : 0
 [weight0][  73] = 0xf3bc15fa
-current_state : 0
-next_state : 0
 [weight0][  74] = 0xd91dee3e
-current_state : 0
-next_state : 0
 [weight0][  75] = 0x2001fbe4
-current_state : 0
-next_state : 0
 [weight0][  76] = 0x61f90637
-current_state : 0
-next_state : 0
 [weight0][  77] = 0xf8da14e7
-current_state : 0
-next_state : 0
 [weight0][  78] = 0xe4e30f09
-current_state : 0
-next_state : 0
 [weight0][  79] = 0xff08d6e6
-current_state : 0
-next_state : 0
 [weight0][  80] = 0xefde2cf3
-current_state : 0
-next_state : 0
 [weight0][  81] = 0xe8dbf3dd
-current_state : 0
-next_state : 0
 [weight0][  82] = 0xf5dfe8ed
-current_state : 0
-next_state : 0
 [weight0][  83] = 0x0b03fcf4
-current_state : 0
-next_state : 0
 [weight0][  84] = 0xeaedfb08
-current_state : 0
-next_state : 0
 [weight0][  85] = 0x05201820
-current_state : 0
-next_state : 0
 [weight0][  86] = 0xede53d08
-current_state : 0
-next_state : 0
 [weight0][  87] = 0xf4e151f3
-current_state : 0
-next_state : 0
 [weight0][  88] = 0x1ff1e40c
-current_state : 0
-next_state : 0
 [weight0][  89] = 0x07cf1415
-current_state : 0
-next_state : 0
 [weight0][  90] = 0x0e27f62a
-current_state : 0
-next_state : 0
 [weight0][  91] = 0x18f6f1e7
-current_state : 0
-next_state : 0
 [weight0][  92] = 0x51de0824
-current_state : 0
-next_state : 0
 [weight0][  93] = 0xeaf933f9
-current_state : 0
-next_state : 0
 [weight0][  94] = 0xd6e108f8
-current_state : 0
-next_state : 0
 [weight0][  95] = 0xf0f4dafb
-current_state : 0
-next_state : 0
 [weight0][  96] = 0xebd620fa
-current_state : 0
-next_state : 0
 [weight0][  97] = 0xe9f404e4
-current_state : 0
-next_state : 0
 [weight0][  98] = 0xfeeff0fd
-current_state : 0
-next_state : 0
 [weight0][  99] = 0x0de3fbfa
-current_state : 0
-next_state : 0
 [weight0][ 100] = 0x01fdecf6
-current_state : 0
-next_state : 0
 [weight0][ 101] = 0x081c0f10
-current_state : 0
-next_state : 0
 [weight0][ 102] = 0xfa0d4208
-current_state : 0
-next_state : 0
 [weight0][ 103] = 0x04f325e0
-current_state : 0
-next_state : 0
 [weight0][ 104] = 0x0ddfda08
-current_state : 0
-next_state : 0
 [weight0][ 105] = 0xf7ea130b
-current_state : 0
-next_state : 0
 [weight0][ 106] = 0xfb39ef1b
-current_state : 0
-next_state : 0
 [weight0][ 107] = 0x01f7fef3
-current_state : 0
-next_state : 0
 [weight0][ 108] = 0x5ecd070e
-current_state : 0
-next_state : 0
 [weight0][ 109] = 0xf20241e9
-current_state : 0
-next_state : 0
 [weight0][ 110] = 0x03e5f00f
-current_state : 0
-next_state : 0
 [weight0][ 111] = 0xe1f1eb06
-current_state : 0
-next_state : 0
 [weight0][ 112] = 0xf1e12efc
-current_state : 0
-next_state : 0
 [weight0][ 113] = 0xf7eef2f1
-current_state : 0
-next_state : 0
 [weight0][ 114] = 0xe2e1f2ed
-current_state : 0
-next_state : 0
 [weight0][ 115] = 0x03f91aee
-current_state : 0
-next_state : 0
 [weight0][ 116] = 0xf2df1ae5
-current_state : 0
-next_state : 0
 [weight0][ 117] = 0xf53b0814
-current_state : 0
-next_state : 0
 [weight0][ 118] = 0xf9ca12e8
-current_state : 0
-next_state : 0
 [weight0][ 119] = 0x0ee548ed
-current_state : 0
-next_state : 0
 [weight0][ 120] = 0xeafbe909
-current_state : 0
-next_state : 0
 [weight0][ 121] = 0x14c70e0c
-current_state : 0
-next_state : 0
 [weight0][ 122] = 0xef111cfd
-current_state : 0
-next_state : 0
 [weight0][ 123] = 0x0ee1f8ec
-current_state : 0
-next_state : 0
 [weight0][ 124] = 0x2bd60637
-current_state : 0
-next_state : 0
 [weight0][ 125] = 0xe5f308f7
-current_state : 0
-next_state : 0
 [weight0][ 126] = 0xdbf90f08
-current_state : 0
-next_state : 0
 [weight0][ 127] = 0xf9f8effe
-current_state : 0
-next_state : 0
 [weight0][ 128] = 0xf1eb14f9
-current_state : 0
-next_state : 0
 [weight0][ 129] = 0xeae71ada
-current_state : 0
-next_state : 0
 [weight0][ 130] = 0xedfeeef3
-current_state : 0
-next_state : 0
 [weight0][ 131] = 0x0bdef1fc
-current_state : 0
-next_state : 0
 [weight0][ 132] = 0xe5f6e9e8
-current_state : 0
-next_state : 0
 [weight0][ 133] = 0x1c191a09
-current_state : 0
-next_state : 0
 [weight0][ 134] = 0x0024511b
-current_state : 0
-next_state : 0
 [weight0][ 135] = 0xf8eb24f7
-current_state : 0
-next_state : 0
 [weight0][ 136] = 0x2201dff8
-current_state : 0
-next_state : 0
 [weight0][ 137] = 0xfada03fd
-current_state : 0
-next_state : 0
 [weight0][ 138] = 0x122fea2e
-current_state : 0
-next_state : 0
 [weight0][ 139] = 0x0f12f507
-current_state : 0
-next_state : 0
 [weight0][ 140] = 0x4afef805
-current_state : 0
-next_state : 0
 [weight0][ 141] = 0xec1a48df
-current_state : 0
-next_state : 0
 [weight0][ 142] = 0xfde0e505
-current_state : 0
-next_state : 0
 [weight0][ 143] = 0xfc13e6fc
-current_state : 0
-next_state : 0
 [weight0][ 144] = 0x06ea20ea
-current_state : 0
-next_state : 0
 [weight0][ 145] = 0x080000f2
-current_state : 0
-next_state : 0
 [weight0][ 146] = 0xfdee05f2
-current_state : 0
-next_state : 0
 [weight0][ 147] = 0x0efbfb13
-current_state : 0
-next_state : 0
 [weight0][ 148] = 0x00f304ed
-current_state : 0
-next_state : 0
 [weight0][ 149] = 0x0a320ff4
-current_state : 0
-next_state : 0
 [weight0][ 150] = 0xf706341b
-current_state : 0
-next_state : 0
 [weight0][ 151] = 0x0fe0210d
-current_state : 0
-next_state : 0
 [weight0][ 152] = 0x1affe60b
-current_state : 0
-next_state : 0
 [weight0][ 153] = 0xf3c318e1
-current_state : 0
-next_state : 0
 [weight0][ 154] = 0xef0d0747
-current_state : 0
-next_state : 0
 [weight0][ 155] = 0x2d0e020a
-current_state : 0
-next_state : 0
 [weight0][ 156] = 0x3510f528
-current_state : 0
-next_state : 0
 [weight0][ 157] = 0xf8ef1ced
-current_state : 0
-next_state : 0
 [weight0][ 158] = 0xe8e6f20c
-current_state : 0
-next_state : 0
 [weight0][ 159] = 0x1e26e4e7
-current_state : 0
-next_state : 0
 [weight0][ 160] = 0xecd83501
-current_state : 0
-next_state : 0
 [weight0][ 161] = 0xf4eeeddf
-current_state : 0
-next_state : 0
 [weight0][ 162] = 0xe7e4e7ef
-current_state : 0
-next_state : 0
 [weight0][ 163] = 0x08051ff3
-current_state : 0
-next_state : 0
 [weight0][ 164] = 0xecd700ef
-current_state : 0
-next_state : 0
 [weight0][ 165] = 0xf7440f0f
-current_state : 0
-next_state : 0
 [weight0][ 166] = 0xf1d91cf4
-current_state : 0
-next_state : 0
 [weight0][ 167] = 0x16e45def
-current_state : 0
-next_state : 0
 [weight0][ 168] = 0xfbe3eb0a
-current_state : 0
-next_state : 0
 [weight0][ 169] = 0x07bd111b
-current_state : 0
-next_state : 0
 [weight0][ 170] = 0xe725120c
-current_state : 0
-next_state : 0
 [weight0][ 171] = 0x1cf9f1e2
-current_state : 0
-next_state : 0
 [weight0][ 172] = 0x3dd5f93f
-current_state : 0
-next_state : 0
 [weight0][ 173] = 0xd8de06e7
-current_state : 0
-next_state : 0
 [weight0][ 174] = 0xe1ee18f8
-current_state : 0
-next_state : 0
 [weight0][ 175] = 0xebfed804
-current_state : 0
-next_state : 0
 [weight0][ 176] = 0xf7d923a5
-current_state : 0
-next_state : 0
 [weight0][ 177] = 0x0ae802ee
-current_state : 0
-next_state : 0
 [weight0][ 178] = 0xf3dcf009
-current_state : 0
-next_state : 0
 [weight0][ 179] = 0xffe41c21
-current_state : 0
-next_state : 0
 [weight0][ 180] = 0x10c6ebe2
-current_state : 0
-next_state : 0
 [weight0][ 181] = 0xfc55220a
-current_state : 0
-next_state : 0
 [weight0][ 182] = 0xe7e058ed
-current_state : 0
-next_state : 0
 [weight0][ 183] = 0x16ea4afc
-current_state : 0
-next_state : 0
 [weight0][ 184] = 0x11e7c9e7
-current_state : 0
-next_state : 0
 [weight0][ 185] = 0xeca21eff
-current_state : 0
-next_state : 0
 [weight0][ 186] = 0xfa33d96e
-current_state : 0
-next_state : 0
 [weight0][ 187] = 0x1af010ee
-current_state : 0
-next_state : 0
 [weight0][ 188] = 0x4ff11039
-current_state : 0
-next_state : 0
 [weight0][ 189] = 0x0cd624fc
-current_state : 0
-next_state : 0
 [weight0][ 190] = 0xdce61110
-current_state : 0
-next_state : 0
 [weight0][ 191] = 0xfc06e3e9
-current_state : 0
-next_state : 0
 [weight0][ 192] = 0xe7f310ff
-current_state : 0
-next_state : 0
 [weight0][ 193] = 0xf2f511eb
-current_state : 0
-next_state : 0
 [weight0][ 194] = 0xfef9f7ef
-current_state : 0
-next_state : 0
 [weight0][ 195] = 0x1afff1fb
-current_state : 0
-next_state : 0
 [weight0][ 196] = 0xf2fbf70f
-current_state : 0
-next_state : 0
 [weight0][ 197] = 0x09101f05
-current_state : 0
-next_state : 0
 [weight0][ 198] = 0xeb204222
-current_state : 0
-next_state : 0
 [weight0][ 199] = 0x05e41cf8
-current_state : 0
-next_state : 0
 [weight0][ 200] = 0x19e3d301
-current_state : 0
-next_state : 0
 [weight0][ 201] = 0xf5e30000
-current_state : 0
-next_state : 0
 [weight0][ 202] = 0xfc39ee2e
-current_state : 0
-next_state : 0
 [weight0][ 203] = 0x0407f302
-current_state : 0
-next_state : 0
 [weight0][ 204] = 0x42dff506
-current_state : 0
-next_state : 0
 [weight0][ 205] = 0xee064be8
-current_state : 0
-next_state : 0
 [weight0][ 206] = 0xffda020b
-current_state : 0
-next_state : 0
 [weight0][ 207] = 0xf9ffeafd
-current_state : 0
-next_state : 0
 [weight0][ 208] = 0xf5ec0808
-current_state : 0
-next_state : 0
 [weight0][ 209] = 0xe4fcf8f6
-current_state : 0
-next_state : 0
 [weight0][ 210] = 0x08010b0b
-current_state : 0
-next_state : 0
 [weight0][ 211] = 0x10f5eb0a
-current_state : 0
-next_state : 0
 [weight0][ 212] = 0x000feb15
-current_state : 0
-next_state : 0
 [weight0][ 213] = 0x08db021d
-current_state : 0
-next_state : 0
 [weight0][ 214] = 0xe2082f0a
-current_state : 0
-next_state : 0
 [weight0][ 215] = 0xf40d0dec
-current_state : 0
-next_state : 0
 [weight0][ 216] = 0x0deaf2fb
-current_state : 0
-next_state : 0
 [weight0][ 217] = 0xf00b1400
-current_state : 0
-next_state : 0
 [weight0][ 218] = 0x0b3fcf0d
-current_state : 0
-next_state : 0
 [weight0][ 219] = 0xf602fde2
-current_state : 0
-next_state : 0
 [weight0][ 220] = 0x3cd01208
-current_state : 0
-next_state : 0
 [weight0][ 221] = 0x0a0b2ef4
-current_state : 0
-next_state : 0
 [weight0][ 222] = 0x1300f8ef
-current_state : 0
-next_state : 0
 [weight0][ 223] = 0xeae50b0e
-current_state : 0
-next_state : 0
 [weight0][ 224] = 0xec00fe07
-current_state : 0
-next_state : 0
 [weight0][ 225] = 0xf407f500
-current_state : 0
-next_state : 0
 [weight0][ 226] = 0xf606fe16
-current_state : 0
-next_state : 0
 [weight0][ 227] = 0xfa0bf8f7
-current_state : 0
-next_state : 0
 [weight0][ 228] = 0x0408e217
-current_state : 0
-next_state : 0
 [weight0][ 229] = 0xfbf6f90b
-current_state : 0
-next_state : 0
 [weight0][ 230] = 0x11fffaf5
-current_state : 0
-next_state : 0
 [weight0][ 231] = 0xf71afcf7
-current_state : 0
-next_state : 0
 [weight0][ 232] = 0x0bfd16f1
-current_state : 0
-next_state : 0
 [weight0][ 233] = 0x0a10fef3
-current_state : 0
-next_state : 0
 [weight0][ 234] = 0x1c0200fa
-current_state : 0
-next_state : 0
 [weight0][ 235] = 0xe6f3040e
-current_state : 0
-next_state : 0
 [weight0][ 236] = 0xecfd00eb
-current_state : 0
-next_state : 0
 [weight0][ 237] = 0x1005f010
-current_state : 0
-next_state : 0
 [weight0][ 238] = 0x1512fbf6
-current_state : 0
-next_state : 0
 [weight0][ 239] = 0xfa021614
-current_state : 0
-next_state : 0
 [weight0][ 240] = 0xe3e215f3
-current_state : 0
-next_state : 0
 [weight0][ 241] = 0xf7de0cde
-current_state : 0
-next_state : 0
 [weight0][ 242] = 0xeef6f5f6
-current_state : 0
-next_state : 0
 [weight0][ 243] = 0x15ebf101
-current_state : 0
-next_state : 0
 [weight0][ 244] = 0xf6feeafa
-current_state : 0
-next_state : 0
 [weight0][ 245] = 0x12212006
-current_state : 0
-next_state : 0
 [weight0][ 246] = 0xf1044e1b
-current_state : 0
-next_state : 0
 [weight0][ 247] = 0x0bde3fef
-current_state : 0
-next_state : 0
 [weight0][ 248] = 0x0eeecdfe
-current_state : 0
-next_state : 0
 [weight0][ 249] = 0x01d10d0a
-current_state : 0
-next_state : 0
 [weight0][ 250] = 0x0335eb31
-current_state : 0
-next_state : 0
 [weight0][ 251] = 0x04fff6fe
-current_state : 0
-next_state : 0
 [weight0][ 252] = 0x52e20313
-current_state : 0
-next_state : 0
 [weight0][ 253] = 0xe4063fe4
-current_state : 0
-next_state : 0
 [weight0][ 254] = 0xeedaf3fc
-current_state : 0
-next_state : 0
 [weight0][ 255] = 0xf504e7f1
-current_state : 0
-next_state : 0
 [weight0][ 256] = 0xe1d936fe
-current_state : 0
-next_state : 0
 [weight0][ 257] = 0xeedce5e8
-current_state : 0
-next_state : 0
 [weight0][ 258] = 0xf6e4dde4
-current_state : 0
-next_state : 0
 [weight0][ 259] = 0xf9f005f9
-current_state : 0
-next_state : 0
 [weight0][ 260] = 0xe0e4f8e0
-current_state : 0
-next_state : 0
 [weight0][ 261] = 0x0d350735
-current_state : 0
-next_state : 0
 [weight0][ 262] = 0xe6ca23eb
-current_state : 0
-next_state : 0
 [weight0][ 263] = 0xf8df5edd
-current_state : 0
-next_state : 0
 [weight0][ 264] = 0x00f1f408
-current_state : 0
-next_state : 0
 [weight0][ 265] = 0xffc91017
-current_state : 0
-next_state : 0
 [weight0][ 266] = 0xf91f1212
-current_state : 0
-next_state : 0
 [weight0][ 267] = 0x10f4fcdf
-current_state : 0
-next_state : 0
 [weight0][ 268] = 0x45d20740
-current_state : 0
-next_state : 0
 [weight0][ 269] = 0xdceb18ed
-current_state : 0
-next_state : 0
 [weight0][ 270] = 0xd7fc09fb
-current_state : 0
-next_state : 0
 [weight0][ 271] = 0xdaf3d8fc
-current_state : 0
-next_state : 0
 [weight0][ 272] = 0xf2ee11f7
-current_state : 0
-next_state : 0
 [weight0][ 273] = 0xf9f1fdef
-current_state : 0
-next_state : 0
 [weight0][ 274] = 0xf3fff6ef
-current_state : 0
-next_state : 0
 [weight0][ 275] = 0x00e7eb0a
-current_state : 0
-next_state : 0
 [weight0][ 276] = 0xf5fbf803
-current_state : 0
-next_state : 0
 [weight0][ 277] = 0x15131b0a
-current_state : 0
-next_state : 0
 [weight0][ 278] = 0xde0d5024
-current_state : 0
-next_state : 0
 [weight0][ 279] = 0x01de29f4
-current_state : 0
-next_state : 0
 [weight0][ 280] = 0x1eeeed0b
-current_state : 0
-next_state : 0
 [weight0][ 281] = 0xf3e01106
-current_state : 0
-next_state : 0
 [weight0][ 282] = 0x0627f638
-current_state : 0
-next_state : 0
 [weight0][ 283] = 0x08fe00f4
-current_state : 0
-next_state : 0
 [weight0][ 284] = 0x3deef411
-current_state : 0
-next_state : 0
 [weight0][ 285] = 0xf40844f0
-current_state : 0
-next_state : 0
 [weight0][ 286] = 0xeaedfcfc
-current_state : 0
-next_state : 0
 [weight0][ 287] = 0xe7fee0f8
-current_state : 0
-next_state : 0
 [weight0][ 288] = 0xfc05f401
-current_state : 0
-next_state : 0
 [weight0][ 289] = 0x07f60105
-current_state : 0
-next_state : 0
 [weight0][ 290] = 0xfe090804
-current_state : 0
-next_state : 0
 [weight0][ 291] = 0x02000102
-current_state : 0
-next_state : 0
 [weight0][ 292] = 0x05080803
-current_state : 0
-next_state : 0
 [weight0][ 293] = 0x0103040c
-current_state : 0
-next_state : 0
 [weight0][ 294] = 0xf806f7f7
-current_state : 0
-next_state : 0
 [weight0][ 295] = 0xf507fefb
-current_state : 0
-next_state : 0
 [weight0][ 296] = 0x030805f8
-current_state : 0
-next_state : 0
 [weight0][ 297] = 0x00fd06fa
-current_state : 0
-next_state : 0
 [weight0][ 298] = 0xf8faf3f7
-current_state : 0
-next_state : 0
 [weight0][ 299] = 0x00fd06fe
-current_state : 0
-next_state : 0
 [weight0][ 300] = 0x03000006
-current_state : 0
-next_state : 0
 [weight0][ 301] = 0xfeff09fe
-current_state : 0
-next_state : 0
 [weight0][ 302] = 0xfffb0101
-current_state : 0
-next_state : 0
 [weight0][ 303] = 0xf4f8fc03
-current_state : 0
-next_state : 0
 [weight0][ 304] = 0xeee721fe
-current_state : 0
-next_state : 0
 [weight0][ 305] = 0x05f109eb
-current_state : 0
-next_state : 0
 [weight0][ 306] = 0xf2ebebf1
-current_state : 0
-next_state : 0
 [weight0][ 307] = 0xfaf317f8
-current_state : 0
-next_state : 0
 [weight0][ 308] = 0x03fd03ea
-current_state : 0
-next_state : 0
 [weight0][ 309] = 0xf51b1df4
-current_state : 0
-next_state : 0
 [weight0][ 310] = 0xfdff3f1a
-current_state : 0
-next_state : 0
 [weight0][ 311] = 0x07e439fb
-current_state : 0
-next_state : 0
 [weight0][ 312] = 0x18ffc5ed
-current_state : 0
-next_state : 0
 [weight0][ 313] = 0xf8da1af7
-current_state : 0
-next_state : 0
 [weight0][ 314] = 0x02230b3c
-current_state : 0
-next_state : 0
 [weight0][ 315] = 0x220af1ff
-current_state : 0
-next_state : 0
 [weight0][ 316] = 0x5211f317
-current_state : 0
-next_state : 0
 [weight0][ 317] = 0xf7f833f0
-current_state : 0
-next_state : 0
 [weight0][ 318] = 0xf0d6fa00
-current_state : 0
-next_state : 0
 [weight0][ 319] = 0xf605eff1
-current_state : 0
-next_state : 0
 [weight0][ 320] = 0xecd72ff3
-current_state : 0
-next_state : 0
 [weight0][ 321] = 0xe7dedfed
-current_state : 0
-next_state : 0
 [weight0][ 322] = 0x06e2f807
-current_state : 0
-next_state : 0
 [weight0][ 323] = 0xf9e7f2f8
-current_state : 0
-next_state : 0
 [weight0][ 324] = 0xf9d8f5e0
-current_state : 0
-next_state : 0
 [weight0][ 325] = 0x0b0c042a
-current_state : 0
-next_state : 0
 [weight0][ 326] = 0xf2e640fd
-current_state : 0
-next_state : 0
 [weight0][ 327] = 0xfff84ef5
-current_state : 0
-next_state : 0
 [weight0][ 328] = 0x00eff007
-current_state : 0
-next_state : 0
 [weight0][ 329] = 0xfdde100e
-current_state : 0
-next_state : 0
 [weight0][ 330] = 0x0429f707
-current_state : 0
-next_state : 0
 [weight0][ 331] = 0x13f106e1
-current_state : 0
-next_state : 0
 [weight0][ 332] = 0x4ed00e3c
-current_state : 0
-next_state : 0
 [weight0][ 333] = 0xf3ef21ea
-current_state : 0
-next_state : 0
 [weight0][ 334] = 0xf3f601ff
-current_state : 0
-next_state : 0
 [weight0][ 335] = 0xd6f4f50b
-current_state : 0
-next_state : 0
 [weight0][ 336] = 0xe7d72800
-current_state : 0
-next_state : 0
 [weight0][ 337] = 0xf2f12ed3
-current_state : 0
-next_state : 0
 [weight0][ 338] = 0xf1f7fbf4
-current_state : 0
-next_state : 0
 [weight0][ 339] = 0x0cf6f2f4
-current_state : 0
-next_state : 0
 [weight0][ 340] = 0xf9fef6e4
-current_state : 0
-next_state : 0
 [weight0][ 341] = 0x113416f3
-current_state : 0
-next_state : 0
 [weight0][ 342] = 0xff194826
-current_state : 0
-next_state : 0
 [weight0][ 343] = 0xf3d73ae8
-current_state : 0
-next_state : 0
 [weight0][ 344] = 0x16f0b8fe
-current_state : 0
-next_state : 0
 [weight0][ 345] = 0xf0ca1bef
-current_state : 0
-next_state : 0
 [weight0][ 346] = 0xff3e093d
-current_state : 0
-next_state : 0
 [weight0][ 347] = 0x0bfae910
-current_state : 0
-next_state : 0
 [weight0][ 348] = 0x4afbf0fe
-current_state : 0
-next_state : 0
 [weight0][ 349] = 0xf20546da
-current_state : 0
-next_state : 0
 [weight0][ 350] = 0xf5d3e317
-current_state : 0
-next_state : 0
 [weight0][ 351] = 0xf11fe0e7
-current_state : 0
-next_state : 0
 [weight0][ 352] = 0x00f72bff
-current_state : 0
-next_state : 0
 [weight0][ 353] = 0x13f71fea
-current_state : 0
-next_state : 0
 [weight0][ 354] = 0x02f7f9ea
-current_state : 0
-next_state : 0
 [weight0][ 355] = 0x0ff70efa
-current_state : 0
-next_state : 0
 [weight0][ 356] = 0xfcf810ef
-current_state : 0
-next_state : 0
 [weight0][ 357] = 0x1a3607e7
-current_state : 0
-next_state : 0
 [weight0][ 358] = 0xfa1f1d24
-current_state : 0
-next_state : 0
 [weight0][ 359] = 0x0bd621f8
-current_state : 0
-next_state : 0
 [weight0][ 360] = 0x16fbe30d
-current_state : 0
-next_state : 0
 [weight0][ 361] = 0xf2d814cb
-current_state : 0
-next_state : 0
 [weight0][ 362] = 0xe918112d
-current_state : 0
-next_state : 0
 [weight0][ 363] = 0x141be4ef
-current_state : 0
-next_state : 0
 [weight0][ 364] = 0x3d25e71e
-current_state : 0
-next_state : 0
 [weight0][ 365] = 0xed0033df
-current_state : 0
-next_state : 0
 [weight0][ 366] = 0xdddcf101
-current_state : 0
-next_state : 0
 [weight0][ 367] = 0x2127d8e8
-current_state : 0
-next_state : 0
 [weight0][ 368] = 0xf1cd30f6
-current_state : 0
-next_state : 0
 [weight0][ 369] = 0xf2dee7e5
-current_state : 0
-next_state : 0
 [weight0][ 370] = 0xebdeeff8
-current_state : 0
-next_state : 0
 [weight0][ 371] = 0x0af309fb
-current_state : 0
-next_state : 0
 [weight0][ 372] = 0xe3cf01ea
-current_state : 0
-next_state : 0
 [weight0][ 373] = 0x052b0728
-current_state : 0
-next_state : 0
 [weight0][ 374] = 0xebcf28e8
-current_state : 0
-next_state : 0
 [weight0][ 375] = 0xfeea4cea
-current_state : 0
-next_state : 0
 [weight0][ 376] = 0xfbebeefc
-current_state : 0
-next_state : 0
 [weight0][ 377] = 0x01cd050e
-current_state : 0
-next_state : 0
 [weight0][ 378] = 0xf02b1000
-current_state : 0
-next_state : 0
 [weight0][ 379] = 0x14f6fada
-current_state : 0
-next_state : 0
 [weight0][ 380] = 0x4ed80f33
-current_state : 0
-next_state : 0
 [weight0][ 381] = 0xd7e116e3
-current_state : 0
-next_state : 0
 [weight0][ 382] = 0xeafc0402
-current_state : 0
-next_state : 0
 [weight0][ 383] = 0xdaf1e30e
-current_state : 0
-next_state : 0
 [weight0][ 384] = 0xfdda4ae5
-current_state : 0
-next_state : 0
 [weight0][ 385] = 0x0ef5d9ff
-current_state : 0
-next_state : 0
 [weight0][ 386] = 0xf2dafaff
-current_state : 0
-next_state : 0
 [weight0][ 387] = 0xfbeb17f2
-current_state : 0
-next_state : 0
 [weight0][ 388] = 0xf2d011d7
-current_state : 0
-next_state : 0
 [weight0][ 389] = 0xf442042b
-current_state : 0
-next_state : 0
 [weight0][ 390] = 0xfccc34dd
-current_state : 0
-next_state : 0
 [weight0][ 391] = 0x0ae955f6
-current_state : 0
-next_state : 0
 [weight0][ 392] = 0xe8feddf5
-current_state : 0
-next_state : 0
 [weight0][ 393] = 0x10c01606
-current_state : 0
-next_state : 0
 [weight0][ 394] = 0xf4130c0b
-current_state : 0
-next_state : 0
 [weight0][ 395] = 0x21dd06ea
-current_state : 0
-next_state : 0
 [weight0][ 396] = 0x50e71843
-current_state : 0
-next_state : 0
 [weight0][ 397] = 0xe6e107f5
-current_state : 0
-next_state : 0
 [weight0][ 398] = 0xeafb19fb
-current_state : 0
-next_state : 0
 [weight0][ 399] = 0xef00f0ff
-current_state : 0
-next_state : 0
 [weight0][ 400] = 0xf7e433f3
-current_state : 0
-next_state : 0
 [weight0][ 401] = 0xfce6e2f2
-current_state : 0
-next_state : 0
 [weight0][ 402] = 0xf1dffdfc
-current_state : 0
-next_state : 0
 [weight0][ 403] = 0xf6011901
-current_state : 0
-next_state : 0
 [weight0][ 404] = 0xefd50bdc
-current_state : 0
-next_state : 0
 [weight0][ 405] = 0xf21f0d2b
-current_state : 0
-next_state : 0
 [weight0][ 406] = 0xe8d71ce4
-current_state : 0
-next_state : 0
 [weight0][ 407] = 0x0bde43fb
-current_state : 0
-next_state : 0
 [weight0][ 408] = 0xeffadefe
-current_state : 0
-next_state : 0
 [weight0][ 409] = 0xfdbe0f0d
-current_state : 0
-next_state : 0
 [weight0][ 410] = 0x0224070d
-current_state : 0
-next_state : 0
 [weight0][ 411] = 0x13f010eb
-current_state : 0
-next_state : 0
 [weight0][ 412] = 0x3cca0834
-current_state : 0
-next_state : 0
 [weight0][ 413] = 0xf2ea0df2
-current_state : 0
-next_state : 0
 [weight0][ 414] = 0xe6091408
-current_state : 0
-next_state : 0
 [weight0][ 415] = 0xe6f6f4fe
-current_state : 0
-next_state : 0
 [weight0][ 416] = 0xfaed24b9
-current_state : 0
-next_state : 0
 [weight0][ 417] = 0x11d5fbe9
-current_state : 0
-next_state : 0
 [weight0][ 418] = 0xfee8f6f4
-current_state : 0
-next_state : 0
 [weight0][ 419] = 0xf1d81418
-current_state : 0
-next_state : 0
 [weight0][ 420] = 0x06d5e5cc
-current_state : 0
-next_state : 0
 [weight0][ 421] = 0x0c542f22
-current_state : 0
-next_state : 0
 [weight0][ 422] = 0xf9e261f2
-current_state : 0
-next_state : 0
 [weight0][ 423] = 0x10f85700
-current_state : 0
-next_state : 0
 [weight0][ 424] = 0x22e8e5e0
-current_state : 0
-next_state : 0
 [weight0][ 425] = 0xeb9b19fd
-current_state : 0
-next_state : 0
 [weight0][ 426] = 0xfb15ea62
-current_state : 0
-next_state : 0
 [weight0][ 427] = 0x1602f6f8
-current_state : 0
-next_state : 0
 [weight0][ 428] = 0x6722093a
-current_state : 0
-next_state : 0
 [weight0][ 429] = 0xe8d02af0
-current_state : 0
-next_state : 0
 [weight0][ 430] = 0xd1dff513
-current_state : 0
-next_state : 0
 [weight0][ 431] = 0xfff8d1f6
-current_state : 0
-next_state : 0
 [weight0][ 432] = 0xead829f9
-current_state : 0
-next_state : 0
 [weight0][ 433] = 0xe5cbeae6
-current_state : 0
-next_state : 0
 [weight0][ 434] = 0xf3d9e6e7
-current_state : 0
-next_state : 0
 [weight0][ 435] = 0xe9db0dfe
-current_state : 0
-next_state : 0
 [weight0][ 436] = 0xede1f0dc
-current_state : 0
-next_state : 0
 [weight0][ 437] = 0x07210f39
-current_state : 0
-next_state : 0
 [weight0][ 438] = 0xecd22ff4
-current_state : 0
-next_state : 0
 [weight0][ 439] = 0xf2e752e6
-current_state : 0
-next_state : 0
 [weight0][ 440] = 0x04f1f5f5
-current_state : 0
-next_state : 0
 [weight0][ 441] = 0xe9d90b10
-current_state : 0
-next_state : 0
 [weight0][ 442] = 0x0e22060c
-current_state : 0
-next_state : 0
 [weight0][ 443] = 0x11f1ede5
-current_state : 0
-next_state : 0
 [weight0][ 444] = 0x50cbff39
-current_state : 0
-next_state : 0
 [weight0][ 445] = 0xedfa17ea
-current_state : 0
-next_state : 0
 [weight0][ 446] = 0xd2fbfcfe
-current_state : 0
-next_state : 0
 [weight0][ 447] = 0xd7e6db09
-current_state : 0
-next_state : 0
 [weight0][ 448] = 0xfdfd0bfd
-current_state : 0
-next_state : 0
 [weight0][ 449] = 0xf5f80ff7
-current_state : 0
-next_state : 0
 [weight0][ 450] = 0xf0fd0af8
-current_state : 0
-next_state : 0
 [weight0][ 451] = 0x070801fb
-current_state : 0
-next_state : 0
 [weight0][ 452] = 0x01f50401
-current_state : 0
-next_state : 0
 [weight0][ 453] = 0x1209f70b
-current_state : 0
-next_state : 0
 [weight0][ 454] = 0xf90afd06
-current_state : 0
-next_state : 0
 [weight0][ 455] = 0xfcf21501
-current_state : 0
-next_state : 0
 [weight0][ 456] = 0x09fb08fd
-current_state : 0
-next_state : 0
 [weight0][ 457] = 0xfafd0ddf
-current_state : 0
-next_state : 0
 [weight0][ 458] = 0xf90e0904
-current_state : 0
-next_state : 0
 [weight0][ 459] = 0xf707fbfe
-current_state : 0
-next_state : 0
 [weight0][ 460] = 0x10fdf9ff
-current_state : 0
-next_state : 0
 [weight0][ 461] = 0xfa000a01
-current_state : 0
-next_state : 0
 [weight0][ 462] = 0xff0b040c
-current_state : 0
-next_state : 0
 [weight0][ 463] = 0x0d09fe01
-current_state : 0
-next_state : 0
 [weight0][ 464] = 0x02e936f5
-current_state : 0
-next_state : 0
 [weight0][ 465] = 0x090919e0
-current_state : 0
-next_state : 0
 [weight0][ 466] = 0xf7ff01dc
-current_state : 0
-next_state : 0
 [weight0][ 467] = 0x15fafffe
-current_state : 0
-next_state : 0
 [weight0][ 468] = 0xf8f309f3
-current_state : 0
-next_state : 0
 [weight0][ 469] = 0x0f2d0bf1
-current_state : 0
-next_state : 0
 [weight0][ 470] = 0xf720212b
-current_state : 0
-next_state : 0
 [weight0][ 471] = 0x04dd2eea
-current_state : 0
-next_state : 0
 [weight0][ 472] = 0x0ff7d804
-current_state : 0
-next_state : 0
 [weight0][ 473] = 0xf0d51fc3
-current_state : 0
-next_state : 0
 [weight0][ 474] = 0xf61c0c38
-current_state : 0
-next_state : 0
 [weight0][ 475] = 0x1a0ce8f1
-current_state : 0
-next_state : 0
 [weight0][ 476] = 0x3120ef1e
-current_state : 0
-next_state : 0
 [weight0][ 477] = 0xe2fc35e4
-current_state : 0
-next_state : 0
 [weight0][ 478] = 0xdacced0e
-current_state : 0
-next_state : 0
 [weight0][ 479] = 0x1937cadd
-current_state : 0
-next_state : 0
 [weight0][ 480] = 0xf1ef1c04
-current_state : 0
-next_state : 0
 [weight0][ 481] = 0xeeec17e0
-current_state : 0
-next_state : 0
 [weight0][ 482] = 0xf1fb01eb
-current_state : 0
-next_state : 0
 [weight0][ 483] = 0x04fdfaff
-current_state : 0
-next_state : 0
 [weight0][ 484] = 0xf402f7fa
-current_state : 0
-next_state : 0
 [weight0][ 485] = 0x0f251809
-current_state : 0
-next_state : 0
 [weight0][ 486] = 0xfb134318
-current_state : 0
-next_state : 0
 [weight0][ 487] = 0xfce13af9
-current_state : 0
-next_state : 0
 [weight0][ 488] = 0x1cf9dbf2
-current_state : 0
-next_state : 0
 [weight0][ 489] = 0xf0df0bfa
-current_state : 0
-next_state : 0
 [weight0][ 490] = 0x0d1ffd42
-current_state : 0
-next_state : 0
 [weight0][ 491] = 0x0e15f501
-current_state : 0
-next_state : 0
 [weight0][ 492] = 0x47f9ee0a
-current_state : 0
-next_state : 0
 [weight0][ 493] = 0xec104aec
-current_state : 0
-next_state : 0
 [weight0][ 494] = 0xfae7fb03
-current_state : 0
-next_state : 0
 [weight0][ 495] = 0xee0ce901
-current_state : 0
-next_state : 0
 [weight0][ 496] = 0xfcda1ae5
-current_state : 0
-next_state : 0
 [weight0][ 497] = 0xf1f3fbec
-current_state : 0
-next_state : 0
 [weight0][ 498] = 0xf1e0f1f0
-current_state : 0
-next_state : 0
 [weight0][ 499] = 0x17ed0802
-current_state : 0
-next_state : 0
 [weight0][ 500] = 0x02e3fbfb
-current_state : 0
-next_state : 0
 [weight0][ 501] = 0x03312d0d
-current_state : 0
-next_state : 0
 [weight0][ 502] = 0xeaff5715
-current_state : 0
-next_state : 0
 [weight0][ 503] = 0x0fe02ffc
-current_state : 0
-next_state : 0
 [weight0][ 504] = 0x23e4d900
-current_state : 0
-next_state : 0
 [weight0][ 505] = 0x03cb0df9
-current_state : 0
-next_state : 0
 [weight0][ 506] = 0xfc2af943
-current_state : 0
-next_state : 0
 [weight0][ 507] = 0x13fcf6e7
-current_state : 0
-next_state : 0
 [weight0][ 508] = 0x60ea0519
-current_state : 0
-next_state : 0
 [weight0][ 509] = 0xf6f536ef
-current_state : 0
-next_state : 0
 [weight0][ 510] = 0xdfe60f03
-current_state : 0
-next_state : 0
 [weight0][ 511] = 0x0116dfed
-current_state : 0
-next_state : 0
 [weight0][ 512] = 0x04e336ee
-current_state : 0
-next_state : 0
 [weight0][ 513] = 0x010510dc
-current_state : 0
-next_state : 0
 [weight0][ 514] = 0x00f3f5d6
-current_state : 0
-next_state : 0
 [weight0][ 515] = 0x14f607fa
-current_state : 0
-next_state : 0
 [weight0][ 516] = 0xf2f70bed
-current_state : 0
-next_state : 0
 [weight0][ 517] = 0x1e4316ea
-current_state : 0
-next_state : 0
 [weight0][ 518] = 0xff303733
-current_state : 0
-next_state : 0
 [weight0][ 519] = 0x03d12afb
-current_state : 0
-next_state : 0
 [weight0][ 520] = 0x1405e90b
-current_state : 0
-next_state : 0
 [weight0][ 521] = 0xebd00abf
-current_state : 0
-next_state : 0
 [weight0][ 522] = 0xea150a41
-current_state : 0
-next_state : 0
 [weight0][ 523] = 0x1515eef7
-current_state : 0
-next_state : 0
 [weight0][ 524] = 0x491fed26
-current_state : 0
-next_state : 0
 [weight0][ 525] = 0xedf033df
-current_state : 0
-next_state : 0
 [weight0][ 526] = 0xdbcff807
-current_state : 0
-next_state : 0
 [weight0][ 527] = 0x1738d3dd
-current_state : 0
-next_state : 0
 [weight0][ 528] = 0xfde205f4
-current_state : 0
-next_state : 0
 [weight0][ 529] = 0xfef2f9ee
-current_state : 0
-next_state : 0
 [weight0][ 530] = 0x16f3f705
-current_state : 0
-next_state : 0
 [weight0][ 531] = 0xfde4f80d
-current_state : 0
-next_state : 0
 [weight0][ 532] = 0xf7e8f3e8
-current_state : 0
-next_state : 0
 [weight0][ 533] = 0x0f13091b
-current_state : 0
-next_state : 0
 [weight0][ 534] = 0xf7134811
-current_state : 0
-next_state : 0
 [weight0][ 535] = 0x03f82df1
-current_state : 0
-next_state : 0
 [weight0][ 536] = 0x17fbe1f2
-current_state : 0
-next_state : 0
 [weight0][ 537] = 0xedcf14ff
-current_state : 0
-next_state : 0
 [weight0][ 538] = 0x0f23ef43
-current_state : 0
-next_state : 0
 [weight0][ 539] = 0x050c05ff
-current_state : 0
-next_state : 0
 [weight0][ 540] = 0x4fee0d1f
-current_state : 0
-next_state : 0
 [weight0][ 541] = 0xf70636e6
-current_state : 0
-next_state : 0
 [weight0][ 542] = 0x0af2f413
-current_state : 0
-next_state : 0
 [weight0][ 543] = 0xfdf8ec09
-current_state : 0
-next_state : 0
 [weight0][ 544] = 0xecde43de
-current_state : 0
-next_state : 0
 [weight0][ 545] = 0x08dedbf3
-current_state : 0
-next_state : 0
 [weight0][ 546] = 0xf1e8e5fa
-current_state : 0
-next_state : 0
 [weight0][ 547] = 0x06f71707
-current_state : 0
-next_state : 0
 [weight0][ 548] = 0xf6e90ad2
-current_state : 0
-next_state : 0
 [weight0][ 549] = 0xfc361227
-current_state : 0
-next_state : 0
 [weight0][ 550] = 0xeac240e3
-current_state : 0
-next_state : 0
 [weight0][ 551] = 0x19e553e7
-current_state : 0
-next_state : 0
 [weight0][ 552] = 0x00ebde04
-current_state : 0
-next_state : 0
 [weight0][ 553] = 0x0fc91e01
-current_state : 0
-next_state : 0
 [weight0][ 554] = 0xed2a0515
-current_state : 0
-next_state : 0
 [weight0][ 555] = 0x0ce50cef
-current_state : 0
-next_state : 0
 [weight0][ 556] = 0x5ee3173b
-current_state : 0
-next_state : 0
 [weight0][ 557] = 0xf0d619ed
-current_state : 0
-next_state : 0
 [weight0][ 558] = 0xe4070cff
-current_state : 0
-next_state : 0
 [weight0][ 559] = 0xf5f9e507
-current_state : 0
-next_state : 0
 [weight0][ 560] = 0xead91afa
-current_state : 0
-next_state : 0
 [weight0][ 561] = 0xe7e407ec
-current_state : 0
-next_state : 0
 [weight0][ 562] = 0xede6f2f6
-current_state : 0
-next_state : 0
 [weight0][ 563] = 0x0be3fa04
-current_state : 0
-next_state : 0
 [weight0][ 564] = 0xfbf2e102
-current_state : 0
-next_state : 0
 [weight0][ 565] = 0x102c1902
-current_state : 0
-next_state : 0
 [weight0][ 566] = 0xea175710
-current_state : 0
-next_state : 0
 [weight0][ 567] = 0x02de32eb
-current_state : 0
-next_state : 0
 [weight0][ 568] = 0x1edfde05
-current_state : 0
-next_state : 0
 [weight0][ 569] = 0xebd81105
-current_state : 0
-next_state : 0
 [weight0][ 570] = 0xf837e245
-current_state : 0
-next_state : 0
 [weight0][ 571] = 0x0d06f0fc
-current_state : 0
-next_state : 0
 [weight0][ 572] = 0x56e9f519
-current_state : 0
-next_state : 0
 [weight0][ 573] = 0xec053ee5
-current_state : 0
-next_state : 0
 [weight0][ 574] = 0xf2d40101
-current_state : 0
-next_state : 0
 [weight0][ 575] = 0xf910dbfb
-current_state : 0
-next_state : 0
 [weight0][ 576] = 0xf7e123e3
-current_state : 0
-next_state : 0
 [weight0][ 577] = 0x01f719e3
-current_state : 0
-next_state : 0
 [weight0][ 578] = 0xf0f3fefc
-current_state : 0
-next_state : 0
 [weight0][ 579] = 0x24ff00f6
-current_state : 0
-next_state : 0
 [weight0][ 580] = 0xff0502f8
-current_state : 0
-next_state : 0
 [weight0][ 581] = 0xef3516e3
-current_state : 0
-next_state : 0
 [weight0][ 582] = 0xe813251a
-current_state : 0
-next_state : 0
 [weight0][ 583] = 0x07e725e9
-current_state : 0
-next_state : 0
 [weight0][ 584] = 0x02dab6fe
-current_state : 0
-next_state : 0
 [weight0][ 585] = 0xefcf29f9
-current_state : 0
-next_state : 0
 [weight0][ 586] = 0xfa30f840
-current_state : 0
-next_state : 0
 [weight0][ 587] = 0x07f9fff9
-current_state : 0
-next_state : 0
 [weight0][ 588] = 0x3ee10619
-current_state : 0
-next_state : 0
 [weight0][ 589] = 0xf5f22be3
-current_state : 0
-next_state : 0
 [weight0][ 590] = 0xf5edf20b
-current_state : 0
-next_state : 0
 [weight0][ 591] = 0x0004f0f2
-current_state : 0
-next_state : 0
 [weight0][ 592] = 0xf9e01bff
-current_state : 0
-next_state : 0
 [weight0][ 593] = 0x010620e1
-current_state : 0
-next_state : 0
 [weight0][ 594] = 0xfcf803de
-current_state : 0
-next_state : 0
 [weight0][ 595] = 0x10f103fe
-current_state : 0
-next_state : 0
 [weight0][ 596] = 0xeef615f2
-current_state : 0
-next_state : 0
 [weight0][ 597] = 0x162a0eed
-current_state : 0
-next_state : 0
 [weight0][ 598] = 0xf1161c2a
-current_state : 0
-next_state : 0
 [weight0][ 599] = 0x0bd932f7
-current_state : 0
-next_state : 0
 [weight0][ 600] = 0x14ffdd06
-current_state : 0
-next_state : 0
 [weight0][ 601] = 0xe4d20fcc
-current_state : 0
-next_state : 0
 [weight0][ 602] = 0xf6100d3c
-current_state : 0
-next_state : 0
 [weight0][ 603] = 0x2014e7ee
-current_state : 0
-next_state : 0
 [weight0][ 604] = 0x3e21f21b
-current_state : 0
-next_state : 0
 [weight0][ 605] = 0xdff131ec
-current_state : 0
-next_state : 0
 [weight0][ 606] = 0xe2d0edff
-current_state : 0
-next_state : 0
 [weight0][ 607] = 0x1f30e1e7
-current_state : 0
-next_state : 0
 [weight0][ 608] = 0x02df22f7
-current_state : 0
-next_state : 0
 [weight0][ 609] = 0xff071fdb
-current_state : 0
-next_state : 0
 [weight0][ 610] = 0xf4e9f7ec
-current_state : 0
-next_state : 0
 [weight0][ 611] = 0x18f211f5
-current_state : 0
-next_state : 0
 [weight0][ 612] = 0xefe70ced
-current_state : 0
-next_state : 0
 [weight0][ 613] = 0x1c42fdeb
-current_state : 0
-next_state : 0
 [weight0][ 614] = 0xfb292d22
-current_state : 0
-next_state : 0
 [weight0][ 615] = 0x04de32f9
-current_state : 0
-next_state : 0
 [weight0][ 616] = 0x0bf5e6fc
-current_state : 0
-next_state : 0
 [weight0][ 617] = 0xf1cb1bc6
-current_state : 0
-next_state : 0
 [weight0][ 618] = 0xf1271543
-current_state : 0
-next_state : 0
 [weight0][ 619] = 0x180cf4f4
-current_state : 0
-next_state : 0
 [weight0][ 620] = 0x3b24f320
-current_state : 0
-next_state : 0
 [weight0][ 621] = 0xf0f529dd
-current_state : 0
-next_state : 0
 [weight0][ 622] = 0xe6d1e408
-current_state : 0
-next_state : 0
 [weight0][ 623] = 0x1f33dce3
-current_state : 0
-next_state : 0
 [weight0][ 624] = 0xeeeb2ff3
-current_state : 0
-next_state : 0
 [weight0][ 625] = 0xf0e919d7
-current_state : 0
-next_state : 0
 [weight0][ 626] = 0xf6f4f1e5
-current_state : 0
-next_state : 0
 [weight0][ 627] = 0x1bec10ff
-current_state : 0
-next_state : 0
 [weight0][ 628] = 0xf9f302fa
-current_state : 0
-next_state : 0
 [weight0][ 629] = 0xf82c19d9
-current_state : 0
-next_state : 0
 [weight0][ 630] = 0xef1e3522
-current_state : 0
-next_state : 0
 [weight0][ 631] = 0x0cd544f9
-current_state : 0
-next_state : 0
 [weight0][ 632] = 0x24dab2fa
-current_state : 0
-next_state : 0
 [weight0][ 633] = 0xeec216f0
-current_state : 0
-next_state : 0
 [weight0][ 634] = 0xe735f960
-current_state : 0
-next_state : 0
 [weight0][ 635] = 0x0afdf2f1
-current_state : 0
-next_state : 0
 [weight0][ 636] = 0x4aecf7ff
-current_state : 0
-next_state : 0
 [weight0][ 637] = 0xe6ef4de8
-current_state : 0
-next_state : 0
 [weight0][ 638] = 0xe8caf605
-current_state : 0
-next_state : 0
 [weight0][ 639] = 0x0d1bcdde
-current_state : 0
-next_state : 0
 [weight0][ 640] = 0xfdee2eee
-current_state : 0
-next_state : 0
 [weight0][ 641] = 0x061109e7
-current_state : 0
-next_state : 0
 [weight0][ 642] = 0xf4f9f4db
-current_state : 0
-next_state : 0
 [weight0][ 643] = 0x14f31103
-current_state : 0
-next_state : 0
 [weight0][ 644] = 0xfe030a09
-current_state : 0
-next_state : 0
 [weight0][ 645] = 0x06380be4
-current_state : 0
-next_state : 0
 [weight0][ 646] = 0xfa232a33
-current_state : 0
-next_state : 0
 [weight0][ 647] = 0x13d52afd
-current_state : 0
-next_state : 0
 [weight0][ 648] = 0x1ef7da0a
-current_state : 0
-next_state : 0
 [weight0][ 649] = 0x09cc0ed3
-current_state : 0
-next_state : 0
 [weight0][ 650] = 0xe9161246
-current_state : 0
-next_state : 0
 [weight0][ 651] = 0x220df109
-current_state : 0
-next_state : 0
 [weight0][ 652] = 0x370cf71a
-current_state : 0
-next_state : 0
 [weight0][ 653] = 0xeffb36eb
-current_state : 0
-next_state : 0
 [weight0][ 654] = 0xcdce0107
-current_state : 0
-next_state : 0
 [weight0][ 655] = 0x2030c8df
-current_state : 0
-next_state : 0
 [weight0][ 656] = 0xfaef0dde
-current_state : 0
-next_state : 0
 [weight0][ 657] = 0x07ddf7f3
-current_state : 0
-next_state : 0
 [weight0][ 658] = 0x05f9e701
-current_state : 0
-next_state : 0
 [weight0][ 659] = 0xf9e5171f
-current_state : 0
-next_state : 0
 [weight0][ 660] = 0xfbdedde9
-current_state : 0
-next_state : 0
 [weight0][ 661] = 0x112e1e1d
-current_state : 0
-next_state : 0
 [weight0][ 662] = 0xfcef610c
-current_state : 0
-next_state : 0
 [weight0][ 663] = 0x08f93f04
-current_state : 0
-next_state : 0
 [weight0][ 664] = 0x25f9ffe8
-current_state : 0
-next_state : 0
 [weight0][ 665] = 0xecc90803
-current_state : 0
-next_state : 0
 [weight0][ 666] = 0x1113ec46
-current_state : 0
-next_state : 0
 [weight0][ 667] = 0x110af9f6
-current_state : 0
-next_state : 0
 [weight0][ 668] = 0x5b05ff38
-current_state : 0
-next_state : 0
 [weight0][ 669] = 0x02ef28f0
-current_state : 0
-next_state : 0
 [weight0][ 670] = 0xe7f3fa09
-current_state : 0
-next_state : 0
 [weight0][ 671] = 0x0304e0ff
-current_state : 0
-next_state : 0
 [weight0][ 672] = 0xf0d252cf
-current_state : 0
-next_state : 0
 [weight0][ 673] = 0xfcf0e8f0
-current_state : 0
-next_state : 0
 [weight0][ 674] = 0xf7cfed0d
-current_state : 0
-next_state : 0
 [weight0][ 675] = 0x0fe81a0c
-current_state : 0
-next_state : 0
 [weight0][ 676] = 0xffc7f1d8
-current_state : 0
-next_state : 0
 [weight0][ 677] = 0xee3d272c
-current_state : 0
-next_state : 0
 [weight0][ 678] = 0xe2d559d8
-current_state : 0
-next_state : 0
 [weight0][ 679] = 0x1bf455f2
-current_state : 0
-next_state : 0
 [weight0][ 680] = 0x0fe6e801
-current_state : 0
-next_state : 0
 [weight0][ 681] = 0x08aa1c06
-current_state : 0
-next_state : 0
 [weight0][ 682] = 0x0537ea30
-current_state : 0
-next_state : 0
 [weight0][ 683] = 0x1be60beb
-current_state : 0
-next_state : 0
 [weight0][ 684] = 0x60e81741
-current_state : 0
-next_state : 0
 [weight0][ 685] = 0x02dc1af7
-current_state : 0
-next_state : 0
 [weight0][ 686] = 0xe2082708
-current_state : 0
-next_state : 0
 [weight0][ 687] = 0xfb0bddfc
-current_state : 0
-next_state : 0
 [weight0][ 688] = 0xe8f61805
-current_state : 0
-next_state : 0
 [weight0][ 689] = 0xeae9e7fb
-current_state : 0
-next_state : 0
 [weight0][ 690] = 0x06f108fd
-current_state : 0
-next_state : 0
 [weight0][ 691] = 0x01f3f1fb
-current_state : 0
-next_state : 0
 [weight0][ 692] = 0xfe01eafa
-current_state : 0
-next_state : 0
 [weight0][ 693] = 0x08fa032f
-current_state : 0
-next_state : 0
 [weight0][ 694] = 0xeef821fe
-current_state : 0
-next_state : 0
 [weight0][ 695] = 0xf4fe3cf8
-current_state : 0
-next_state : 0
 [weight0][ 696] = 0x10f7f700
-current_state : 0
-next_state : 0
 [weight0][ 697] = 0xf9f30cfe
-current_state : 0
-next_state : 0
 [weight0][ 698] = 0x0c31e314
-current_state : 0
-next_state : 0
 [weight0][ 699] = 0x0cfdf8ec
-current_state : 0
-next_state : 0
 [weight0][ 700] = 0x26d11025
-current_state : 0
-next_state : 0
 [weight0][ 701] = 0xf60f15f1
-current_state : 0
-next_state : 0
 [weight0][ 702] = 0x00fd0505
-current_state : 0
-next_state : 0
 [weight0][ 703] = 0xddee010a
-current_state : 0
-next_state : 0
 [weight0][ 704] = 0x00fb2bf4
-current_state : 0
-next_state : 0
 [weight0][ 705] = 0x13fd21e1
-current_state : 0
-next_state : 0
 [weight0][ 706] = 0xf8f8efda
-current_state : 0
-next_state : 0
 [weight0][ 707] = 0x27f90a01
-current_state : 0
-next_state : 0
 [weight0][ 708] = 0xea010ceb
-current_state : 0
-next_state : 0
 [weight0][ 709] = 0x0d360ed8
-current_state : 0
-next_state : 0
 [weight0][ 710] = 0xfc282636
-current_state : 0
-next_state : 0
 [weight0][ 711] = 0xfedc2ff6
-current_state : 0
-next_state : 0
 [weight0][ 712] = 0x1bfadefd
-current_state : 0
-next_state : 0
 [weight0][ 713] = 0xf4cc10cb
-current_state : 0
-next_state : 0
 [weight0][ 714] = 0xdf1a174e
-current_state : 0
-next_state : 0
 [weight0][ 715] = 0x1b28e7fa
-current_state : 0
-next_state : 0
 [weight0][ 716] = 0x432aef1e
-current_state : 0
-next_state : 0
 [weight0][ 717] = 0xddf134d9
-current_state : 0
-next_state : 0
 [weight0][ 718] = 0xd8c6f00f
-current_state : 0
-next_state : 0
 [weight0][ 719] = 0x273bbce6
-current_state : 0
-next_state : 0
 [weight0][ 720] = 0x02e832fb
-current_state : 0
-next_state : 0
 [weight0][ 721] = 0x070018db
-current_state : 0
-next_state : 0
 [weight0][ 722] = 0xeff2f3d8
-current_state : 0
-next_state : 0
 [weight0][ 723] = 0x15e507f8
-current_state : 0
-next_state : 0
 [weight0][ 724] = 0xf7000ae8
-current_state : 0
-next_state : 0
 [weight0][ 725] = 0x133409e2
-current_state : 0
-next_state : 0
 [weight0][ 726] = 0xf7252727
-current_state : 0
-next_state : 0
 [weight0][ 727] = 0x05d82fed
-current_state : 0
-next_state : 0
 [weight0][ 728] = 0x1705e30d
-current_state : 0
-next_state : 0
 [weight0][ 729] = 0xf7c307c2
-current_state : 0
-next_state : 0
 [weight0][ 730] = 0xec181342
-current_state : 0
-next_state : 0
 [weight0][ 731] = 0x200febf0
-current_state : 0
-next_state : 0
 [weight0][ 732] = 0x4628eb16
-current_state : 0
-next_state : 0
 [weight0][ 733] = 0xdd0036d4
-current_state : 0
-next_state : 0
 [weight0][ 734] = 0xdfd1e5fc
-current_state : 0
-next_state : 0
 [weight0][ 735] = 0x1635dae2
-current_state : 0
-next_state : 0
 [weight0][ 736] = 0xecd333f1
-current_state : 0
-next_state : 0
 [weight0][ 737] = 0xf8e3e6ee
-current_state : 0
-next_state : 0
 [weight0][ 738] = 0xe7d7ecf3
-current_state : 0
-next_state : 0
 [weight0][ 739] = 0xf1f815f5
-current_state : 0
-next_state : 0
 [weight0][ 740] = 0xf6e5fdeb
-current_state : 0
-next_state : 0
 [weight0][ 741] = 0xfd2a0520
-current_state : 0
-next_state : 0
 [weight0][ 742] = 0xf3ce1bee
-current_state : 0
-next_state : 0
 [weight0][ 743] = 0xfcde57f9
-current_state : 0
-next_state : 0
 [weight0][ 744] = 0xfe00e9f7
-current_state : 0
-next_state : 0
 [weight0][ 745] = 0x01bf1811
-current_state : 0
-next_state : 0
 [weight0][ 746] = 0xf61f1816
-current_state : 0
-next_state : 0
 [weight0][ 747] = 0x18f4fbee
-current_state : 0
-next_state : 0
 [weight0][ 748] = 0x44d00a4a
-current_state : 0
-next_state : 0
 [weight0][ 749] = 0xdffb0dfb
-current_state : 0
-next_state : 0
 [weight0][ 750] = 0xe0f012fa
-current_state : 0
-next_state : 0
 [weight0][ 751] = 0xe8f3e1ff
-current_state : 0
-next_state : 0
 [weight0][ 752] = 0xeddb1bfe
-current_state : 0
-next_state : 0
 [weight0][ 753] = 0xe6e91bd6
-current_state : 0
-next_state : 0
 [weight0][ 754] = 0xf0f0ebdb
-current_state : 0
-next_state : 0
 [weight0][ 755] = 0x20f2eafd
-current_state : 0
-next_state : 0
 [weight0][ 756] = 0xf614ea06
-current_state : 0
-next_state : 0
 [weight0][ 757] = 0xfc2d13d8
-current_state : 0
-next_state : 0
 [weight0][ 758] = 0xf31b3130
-current_state : 0
-next_state : 0
 [weight0][ 759] = 0xfbdd42f6
-current_state : 0
-next_state : 0
 [weight0][ 760] = 0x26e4bc02
-current_state : 0
-next_state : 0
 [weight0][ 761] = 0xedda17ea
-current_state : 0
-next_state : 0
 [weight0][ 762] = 0xf2480156
-current_state : 0
-next_state : 0
 [weight0][ 763] = 0x0befe7f9
-current_state : 0
-next_state : 0
 [weight0][ 764] = 0x3fe4e2f1
-current_state : 0
-next_state : 0
 [weight0][ 765] = 0xd8e74de4
-current_state : 0
-next_state : 0
 [weight0][ 766] = 0xe3d2f9f3
-current_state : 0
-next_state : 0
 [weight0][ 767] = 0x0d23d3d9
-current_state : 0
-next_state : 0
 [weight0][ 768] = 0xe9dc3403
-current_state : 0
-next_state : 0
 [weight0][ 769] = 0xfae0e5e8
-current_state : 0
-next_state : 0
 [weight0][ 770] = 0xe2e6f6f3
-current_state : 0
-next_state : 0
 [weight0][ 771] = 0x00f20afd
-current_state : 0
-next_state : 0
 [weight0][ 772] = 0xe7ea02e7
-current_state : 0
-next_state : 0
 [weight0][ 773] = 0x032e1630
-current_state : 0
-next_state : 0
 [weight0][ 774] = 0xefd61feb
-current_state : 0
-next_state : 0
 [weight0][ 775] = 0xfced4ceb
-current_state : 0
-next_state : 0
 [weight0][ 776] = 0x00e9ebff
-current_state : 0
-next_state : 0
 [weight0][ 777] = 0x04b51c0e
-current_state : 0
-next_state : 0
 [weight0][ 778] = 0xfe230310
-current_state : 0
-next_state : 0
 [weight0][ 779] = 0x12ea0ce5
-current_state : 0
-next_state : 0
 [weight0][ 780] = 0x3dd60d43
-current_state : 0
-next_state : 0
 [weight0][ 781] = 0xe1ee17f3
-current_state : 0
-next_state : 0
 [weight0][ 782] = 0xe8030207
-current_state : 0
-next_state : 0
 [weight0][ 783] = 0xddedeaf5
-current_state : 0
-next_state : 0
 [weight0][ 784] = 0xe7d936f2
-current_state : 0
-next_state : 0
 [weight0][ 785] = 0x03e8e0eb
-current_state : 0
-next_state : 0
 [weight0][ 786] = 0xebdcd8ef
-current_state : 0
-next_state : 0
 [weight0][ 787] = 0x07001400
-current_state : 0
-next_state : 0
 [weight0][ 788] = 0xf2dbfaea
-current_state : 0
-next_state : 0
 [weight0][ 789] = 0x08271d1d
-current_state : 0
-next_state : 0
 [weight0][ 790] = 0xeedc1ef2
-current_state : 0
-next_state : 0
 [weight0][ 791] = 0x06e14cf9
-current_state : 0
-next_state : 0
 [weight0][ 792] = 0x0deee517
-current_state : 0
-next_state : 0
 [weight0][ 793] = 0xfac81117
-current_state : 0
-next_state : 0
 [weight0][ 794] = 0xf421101f
-current_state : 0
-next_state : 0
 [weight0][ 795] = 0x24fcf6ea
-current_state : 0
-next_state : 0
 [weight0][ 796] = 0x3fdc0034
-current_state : 0
-next_state : 0
 [weight0][ 797] = 0xe6e21cf9
-current_state : 0
-next_state : 0
 [weight0][ 798] = 0xd1ef18ff
-current_state : 0
-next_state : 0
 [weight0][ 799] = 0xf4f5dc06
-current_state : 0
-next_state : 0
 [weight0][ 800] = 0xf3eb25ec
-current_state : 0
-next_state : 0
 [weight0][ 801] = 0x04e902f2
-current_state : 0
-next_state : 0
 [weight0][ 802] = 0x02e7effb
-current_state : 0
-next_state : 0
 [weight0][ 803] = 0x1ef50efd
-current_state : 0
-next_state : 0
 [weight0][ 804] = 0xf9e5e7eb
-current_state : 0
-next_state : 0
 [weight0][ 805] = 0x0f412a1a
-current_state : 0
-next_state : 0
 [weight0][ 806] = 0xf1fa5106
-current_state : 0
-next_state : 0
 [weight0][ 807] = 0x05e148f3
-current_state : 0
-next_state : 0
 [weight0][ 808] = 0x18efe40d
-current_state : 0
-next_state : 0
 [weight0][ 809] = 0xf7ba1802
-current_state : 0
-next_state : 0
 [weight0][ 810] = 0xfa2df43c
-current_state : 0
-next_state : 0
 [weight0][ 811] = 0x1df4f8e9
-current_state : 0
-next_state : 0
 [weight0][ 812] = 0x67ef051d
-current_state : 0
-next_state : 0
 [weight0][ 813] = 0xfaeb36f6
-current_state : 0
-next_state : 0
 [weight0][ 814] = 0xeaea0b0f
-current_state : 0
-next_state : 0
 [weight0][ 815] = 0xec0ce8f3
-current_state : 0
-next_state : 0
 [weight0][ 816] = 0x01fa2cfa
-current_state : 0
-next_state : 0
 [weight0][ 817] = 0x030516e7
-current_state : 0
-next_state : 0
 [weight0][ 818] = 0xfdf7f8e8
-current_state : 0
-next_state : 0
 [weight0][ 819] = 0x21f810fb
-current_state : 0
-next_state : 0
 [weight0][ 820] = 0xf2f20deb
-current_state : 0
-next_state : 0
 [weight0][ 821] = 0x123803f2
-current_state : 0
-next_state : 0
 [weight0][ 822] = 0xfc172e2d
-current_state : 0
-next_state : 0
 [weight0][ 823] = 0x16d429f9
-current_state : 0
-next_state : 0
 [weight0][ 824] = 0x1e01e602
-current_state : 0
-next_state : 0
 [weight0][ 825] = 0xf1d80dcd
-current_state : 0
-next_state : 0
 [weight0][ 826] = 0xee1d123f
-current_state : 0
-next_state : 0
 [weight0][ 827] = 0x221cfc03
-current_state : 0
-next_state : 0
 [weight0][ 828] = 0x3516f917
-current_state : 0
-next_state : 0
 [weight0][ 829] = 0xe0f929e4
-current_state : 0
-next_state : 0
 [weight0][ 830] = 0xe2d1fe0b
-current_state : 0
-next_state : 0
 [weight0][ 831] = 0x2036d5ea
-current_state : 0
-next_state : 0
 [weight0][ 832] = 0xecf334ea
-current_state : 0
-next_state : 0
 [weight0][ 833] = 0x00f00ad0
-current_state : 0
-next_state : 0
 [weight0][ 834] = 0xf0eff2e5
-current_state : 0
-next_state : 0
 [weight0][ 835] = 0x15e911fd
-current_state : 0
-next_state : 0
 [weight0][ 836] = 0xf1f909fc
-current_state : 0
-next_state : 0
 [weight0][ 837] = 0x09471ad8
-current_state : 0
-next_state : 0
 [weight0][ 838] = 0xe4013334
-current_state : 0
-next_state : 0
 [weight0][ 839] = 0x0cc64dfa
-current_state : 0
-next_state : 0
 [weight0][ 840] = 0x28eebafe
-current_state : 0
-next_state : 0
 [weight0][ 841] = 0xfaab08f0
-current_state : 0
-next_state : 0
 [weight0][ 842] = 0xf7330160
-current_state : 0
-next_state : 0
 [weight0][ 843] = 0x1508f8f3
-current_state : 0
-next_state : 0
 [weight0][ 844] = 0x51f8fa0f
-current_state : 0
-next_state : 0
 [weight0][ 845] = 0xd8e639e8
-current_state : 0
-next_state : 0
 [weight0][ 846] = 0xcdc601f5
-current_state : 0
-next_state : 0
 [weight0][ 847] = 0x141fbdd8
-current_state : 0
-next_state : 0
 [weight0][ 848] = 0xf4d61ac4
-current_state : 0
-next_state : 0
 [weight0][ 849] = 0xf0f7f8f0
-current_state : 0
-next_state : 0
 [weight0][ 850] = 0xedd3f9f0
-current_state : 0
-next_state : 0
 [weight0][ 851] = 0x07f40b06
-current_state : 0
-next_state : 0
 [weight0][ 852] = 0x03bee4de
-current_state : 0
-next_state : 0
 [weight0][ 853] = 0x15432afa
-current_state : 0
-next_state : 0
 [weight0][ 854] = 0xdaf85212
-current_state : 0
-next_state : 0
 [weight0][ 855] = 0x0edd3f07
-current_state : 0
-next_state : 0
 [weight0][ 856] = 0x23d8e1f1
-current_state : 0
-next_state : 0
 [weight0][ 857] = 0xe49d13f4
-current_state : 0
-next_state : 0
 [weight0][ 858] = 0xeb26fc7f
-current_state : 0
-next_state : 0
 [weight0][ 859] = 0x0f02ebd8
-current_state : 0
-next_state : 0
 [weight0][ 860] = 0x4ffe0933
-current_state : 0
-next_state : 0
 [weight0][ 861] = 0xf8ef25fe
-current_state : 0
-next_state : 0
 [weight0][ 862] = 0xdddb0206
-current_state : 0
-next_state : 0
 [weight0][ 863] = 0xfc06d2dd
-current_state : 0
-next_state : 0
 [weight0][ 864] = 0x01f23dec
-current_state : 0
-next_state : 0
 [weight0][ 865] = 0x11e2f0e2
-current_state : 0
-next_state : 0
 [weight0][ 866] = 0xe0e8e5f1
-current_state : 0
-next_state : 0
 [weight0][ 867] = 0x0d0120fe
-current_state : 0
-next_state : 0
 [weight0][ 868] = 0x02e319d4
-current_state : 0
-next_state : 0
 [weight0][ 869] = 0xe945130c
-current_state : 0
-next_state : 0
 [weight0][ 870] = 0xffb815dc
-current_state : 0
-next_state : 0
 [weight0][ 871] = 0x10e152ff
-current_state : 0
-next_state : 0
 [weight0][ 872] = 0x03f6f201
-current_state : 0
-next_state : 0
 [weight0][ 873] = 0x03c01904
-current_state : 0
-next_state : 0
 [weight0][ 874] = 0xee12210c
-current_state : 0
-next_state : 0
 [weight0][ 875] = 0x26e1fa03
-current_state : 0
-next_state : 0
 [weight0][ 876] = 0x34f20036
-current_state : 0
-next_state : 0
 [weight0][ 877] = 0xf5cc0ff5
-current_state : 0
-next_state : 0
 [weight0][ 878] = 0xd8f32101
-current_state : 0
-next_state : 0
 [weight0][ 879] = 0xedfef00a
-current_state : 0
-next_state : 0
 [weight0][ 880] = 0xe8c92d00
-current_state : 0
-next_state : 0
 [weight0][ 881] = 0xeecdefed
-current_state : 0
-next_state : 0
 [weight0][ 882] = 0x03eaedfb
-current_state : 0
-next_state : 0
 [weight0][ 883] = 0xf0dcfaf3
-current_state : 0
-next_state : 0
 [weight0][ 884] = 0xf4e5e0d1
-current_state : 0
-next_state : 0
 [weight0][ 885] = 0x1814fc36
-current_state : 0
-next_state : 0
 [weight0][ 886] = 0xeff332f2
-current_state : 0
-next_state : 0
 [weight0][ 887] = 0xf9f646dd
-current_state : 0
-next_state : 0
 [weight0][ 888] = 0x03f8ef04
-current_state : 0
-next_state : 0
 [weight0][ 889] = 0xe8d2130e
-current_state : 0
-next_state : 0
 [weight0][ 890] = 0x0c31f408
-current_state : 0
-next_state : 0
 [weight0][ 891] = 0x10fdffea
-current_state : 0
-next_state : 0
 [weight0][ 892] = 0x58d70a32
-current_state : 0
-next_state : 0
 [weight0][ 893] = 0xedf437e2
-current_state : 0
-next_state : 0
 [weight0][ 894] = 0xedf4ecfb
-current_state : 0
-next_state : 0
 [weight0][ 895] = 0xd4eae015
-current_state : 0
-next_state : 0
 [weight0][ 896] = 0xfc08ff01
-current_state : 0
-next_state : 0
 [weight0][ 897] = 0xf204f806
-current_state : 0
-next_state : 0
 [weight0][ 898] = 0xfbfdf817
-current_state : 0
-next_state : 0
 [weight0][ 899] = 0x0102ff00
-current_state : 0
-next_state : 0
 [weight0][ 900] = 0x0af3e305
-current_state : 0
-next_state : 0
 [weight0][ 901] = 0xffed0209
-current_state : 0
-next_state : 0
 [weight0][ 902] = 0x10f5feea
-current_state : 0
-next_state : 0
 [weight0][ 903] = 0xf515f0fb
-current_state : 0
-next_state : 0
 [weight0][ 904] = 0x09071901
-current_state : 0
-next_state : 0
 [weight0][ 905] = 0x0017fcf0
-current_state : 0
-next_state : 0
 [weight0][ 906] = 0x1603f9f9
-current_state : 0
-next_state : 0
 [weight0][ 907] = 0xf5f6000a
-current_state : 0
-next_state : 0
 [weight0][ 908] = 0xe20706e2
-current_state : 0
-next_state : 0
 [weight0][ 909] = 0x080df2ff
-current_state : 0
-next_state : 0
 [weight0][ 910] = 0x1b0e0ef6
-current_state : 0
-next_state : 0
 [weight0][ 911] = 0xe7ff170c
-current_state : 0
-next_state : 0
 [weight0][ 912] = 0xfaf12cf7
-current_state : 0
-next_state : 0
 [weight0][ 913] = 0x0cee20e8
-current_state : 0
-next_state : 0
 [weight0][ 914] = 0xf4fffadb
-current_state : 0
-next_state : 0
 [weight0][ 915] = 0x0902fdf9
-current_state : 0
-next_state : 0
 [weight0][ 916] = 0xedf20fee
-current_state : 0
-next_state : 0
 [weight0][ 917] = 0x1b2f10eb
-current_state : 0
-next_state : 0
 [weight0][ 918] = 0x03091625
-current_state : 0
-next_state : 0
 [weight0][ 919] = 0xfae22efc
-current_state : 0
-next_state : 0
 [weight0][ 920] = 0x1109daff
-current_state : 0
-next_state : 0
 [weight0][ 921] = 0xecd90bcf
-current_state : 0
-next_state : 0
 [weight0][ 922] = 0xf312152f
-current_state : 0
-next_state : 0
 [weight0][ 923] = 0x1d0fdd07
-current_state : 0
-next_state : 0
 [weight0][ 924] = 0x3426ea14
-current_state : 0
-next_state : 0
 [weight0][ 925] = 0xe3f828ec
-current_state : 0
-next_state : 0
 [weight0][ 926] = 0xdbcaee04
-current_state : 0
-next_state : 0
 [weight0][ 927] = 0x122dcbee
-current_state : 0
-next_state : 0
 [weight0][ 928] = 0xeae458b1
-current_state : 0
-next_state : 0
 [weight0][ 929] = 0x0cf6f7eb
-current_state : 0
-next_state : 0
 [weight0][ 930] = 0xe8e6e5ee
-current_state : 0
-next_state : 0
 [weight0][ 931] = 0xf8fa20ff
-current_state : 0
-next_state : 0
 [weight0][ 932] = 0x04d005d4
-current_state : 0
-next_state : 0
 [weight0][ 933] = 0xf94d13f8
-current_state : 0
-next_state : 0
 [weight0][ 934] = 0xe0db2ff0
-current_state : 0
-next_state : 0
 [weight0][ 935] = 0x14ec5502
-current_state : 0
-next_state : 0
 [weight0][ 936] = 0x14e1daeb
-current_state : 0
-next_state : 0
 [weight0][ 937] = 0x04b514fc
-current_state : 0
-next_state : 0
 [weight0][ 938] = 0xe11df050
-current_state : 0
-next_state : 0
 [weight0][ 939] = 0x20f904eb
-current_state : 0
-next_state : 0
 [weight0][ 940] = 0x48f50e37
-current_state : 0
-next_state : 0
 [weight0][ 941] = 0xf6df26f1
-current_state : 0
-next_state : 0
 [weight0][ 942] = 0xe0e30af8
-current_state : 0
-next_state : 0
 [weight0][ 943] = 0xf800d9dc
-current_state : 0
-next_state : 0
 [weight0][ 944] = 0xf4dd12f3
-current_state : 0
-next_state : 0
 [weight0][ 945] = 0xf8ee11e6
-current_state : 0
-next_state : 0
 [weight0][ 946] = 0xfeffecf2
-current_state : 0
-next_state : 0
 [weight0][ 947] = 0x0beffd02
-current_state : 0
-next_state : 0
 [weight0][ 948] = 0xf1feeff1
-current_state : 0
-next_state : 0
 [weight0][ 949] = 0x14231615
-current_state : 0
-next_state : 0
 [weight0][ 950] = 0xf5143819
-current_state : 0
-next_state : 0
 [weight0][ 951] = 0x01ea31ec
-current_state : 0
-next_state : 0
 [weight0][ 952] = 0x17f3cf08
-current_state : 0
-next_state : 0
 [weight0][ 953] = 0xf6e51506
-current_state : 0
-next_state : 0
 [weight0][ 954] = 0x073fe230
-current_state : 0
-next_state : 0
 [weight0][ 955] = 0xfff704f4
-current_state : 0
-next_state : 0
 [weight0][ 956] = 0x47e0fa1d
-current_state : 0
-next_state : 0
 [weight0][ 957] = 0xef0b44e9
-current_state : 0
-next_state : 0
 [weight0][ 958] = 0xfaf2f208
-current_state : 0
-next_state : 0
 [weight0][ 959] = 0xeef6e2f4
-current_state : 0
-next_state : 0
 [weight0][ 960] = 0xf0f639d4
-current_state : 0
-next_state : 0
 [weight0][ 961] = 0x04f908dd
-current_state : 0
-next_state : 0
 [weight0][ 962] = 0xeeedf500
-current_state : 0
-next_state : 0
 [weight0][ 963] = 0xfdfd25f2
-current_state : 0
-next_state : 0
 [weight0][ 964] = 0xf5e9fcf3
-current_state : 0
-next_state : 0
 [weight0][ 965] = 0xf43f1eea
-current_state : 0
-next_state : 0
 [weight0][ 966] = 0xeeef331b
-current_state : 0
-next_state : 0
 [weight0][ 967] = 0xffd843fc
-current_state : 0
-next_state : 0
 [weight0][ 968] = 0x1fe8adf8
-current_state : 0
-next_state : 0
 [weight0][ 969] = 0xfebb31f9
-current_state : 0
-next_state : 0
 [weight0][ 970] = 0xf830034e
-current_state : 0
-next_state : 0
 [weight0][ 971] = 0x15fcfafd
-current_state : 0
-next_state : 0
 [weight0][ 972] = 0x3bfb031c
-current_state : 0
-next_state : 0
 [weight0][ 973] = 0xe8f330e9
-current_state : 0
-next_state : 0
 [weight0][ 974] = 0xded900fe
-current_state : 0
-next_state : 0
 [weight0][ 975] = 0xfc12e1e5
-current_state : 0
-next_state : 0
 [weight0][ 976] = 0xf5df13e6
-current_state : 0
-next_state : 0
 [weight0][ 977] = 0xf3fa11fe
-current_state : 0
-next_state : 0
 [weight0][ 978] = 0xfdf0fc05
-current_state : 0
-next_state : 0
 [weight0][ 979] = 0x1cfbf7fc
-current_state : 0
-next_state : 0
 [weight0][ 980] = 0x05edebf5
-current_state : 0
-next_state : 0
 [weight0][ 981] = 0x021f2212
-current_state : 0
-next_state : 0
 [weight0][ 982] = 0xe3095913
-current_state : 0
-next_state : 0
 [weight0][ 983] = 0x06fd1bf8
-current_state : 0
-next_state : 0
 [weight0][ 984] = 0x12e7c8f6
-current_state : 0
-next_state : 0
 [weight0][ 985] = 0x00e71bfe
-current_state : 0
-next_state : 0
 [weight0][ 986] = 0xf93bf040
-current_state : 0
-next_state : 0
 [weight0][ 987] = 0xfefa06fd
-current_state : 0
-next_state : 0
 [weight0][ 988] = 0x46e30313
-current_state : 0
-next_state : 0
 [weight0][ 989] = 0xfc0446ed
-current_state : 0
-next_state : 0
 [weight0][ 990] = 0x10f2f50d
-current_state : 0
-next_state : 0
 [weight0][ 991] = 0xf205f902
-current_state : 0
-next_state : 0
 [weight0][ 992] = 0xf6e54ae6
-current_state : 0
-next_state : 0
 [weight0][ 993] = 0x0df0dded
-current_state : 0
-next_state : 0
 [weight0][ 994] = 0xe2e7e3ee
-current_state : 0
-next_state : 0
 [weight0][ 995] = 0x08fe30fd
-current_state : 0
-next_state : 0
 [weight0][ 996] = 0xfcd718e2
-current_state : 0
-next_state : 0
 [weight0][ 997] = 0xe33a121b
-current_state : 0
-next_state : 0
 [weight0][ 998] = 0xf0b915d7
-current_state : 0
-next_state : 0
 [weight0][ 999] = 0x18e25902
-current_state : 0
-next_state : 0
 [weight0][1000] = 0xfcf8e8fa
-current_state : 0
-next_state : 0
 [weight0][1001] = 0x12bb0d08
-current_state : 0
-next_state : 0
 [weight0][1002] = 0xf0152112
-current_state : 0
-next_state : 0
 [weight0][1003] = 0x24ea07f8
-current_state : 0
-next_state : 0
 [weight0][1004] = 0x51e50845
-current_state : 0
-next_state : 0
 [weight0][1005] = 0xebd8fcf3
-current_state : 0
-next_state : 0
 [weight0][1006] = 0xe606200a
-current_state : 0
-next_state : 0
 [weight0][1007] = 0xec05e3f0
-current_state : 0
-next_state : 0
 [weight0][1008] = 0xfffe11ef
-current_state : 0
-next_state : 0
 [weight0][1009] = 0x140118fe
-current_state : 0
-next_state : 0
 [weight0][1010] = 0xf6ec0aed
-current_state : 0
-next_state : 0
 [weight0][1011] = 0x11000102
-current_state : 0
-next_state : 0
 [weight0][1012] = 0xfefb0af0
-current_state : 0
-next_state : 0
 [weight0][1013] = 0x083509e1
-current_state : 0
-next_state : 0
 [weight0][1014] = 0xf5283117
-current_state : 0
-next_state : 0
 [weight0][1015] = 0x14e31af4
-current_state : 0
-next_state : 0
 [weight0][1016] = 0x1afbe9fa
-current_state : 0
-next_state : 0
 [weight0][1017] = 0x02d816dd
-current_state : 0
-next_state : 0
 [weight0][1018] = 0xe6170d3c
-current_state : 0
-next_state : 0
 [weight0][1019] = 0x1b02fd02
-current_state : 0
-next_state : 0
 [weight0][1020] = 0x3722fe10
-current_state : 0
-next_state : 0
 [weight0][1021] = 0xecf32ef0
-current_state : 0
-next_state : 0
 [weight0][1022] = 0xeed6f408
-current_state : 0
-next_state : 0
 [weight0][1023] = 0x222adff5
-current_state : 0
-next_state : 0
 Start writing bias0...
 [bias0][ 0] = 5
-current_state : 0
-next_state : 0
 [bias0][ 1] = 1
-current_state : 0
-next_state : 0
 [bias0][ 2] = 3
-current_state : 0
-next_state : 0
 [bias0][ 3] = -1
-current_state : 0
-next_state : 0
 [bias0][ 4] = 1
-current_state : 0
-next_state : 0
 [bias0][ 5] = 2
-current_state : 0
-next_state : 0
 [bias0][ 6] = 0
-current_state : 0
-next_state : 0
 [bias0][ 7] = -1
-current_state : 0
-next_state : 0
 [bias0][ 8] = 4
-current_state : 0
-next_state : 0
 [bias0][ 9] = 2
-current_state : 0
-next_state : 0
 [bias0][10] = 0
-current_state : 0
-next_state : 0
 [bias0][11] = -2
-current_state : 0
-next_state : 0
 [bias0][12] = 2
-current_state : 0
-next_state : 0
 [bias0][13] = 0
-current_state : 0
-next_state : 0
 [bias0][14] = 1
-current_state : 0
-next_state : 0
 [bias0][15] = 0
-current_state : 0
-next_state : 0
 [bias0][16] = 0
-current_state : 0
-next_state : 0
 [bias0][17] = 2
-current_state : 0
-next_state : 0
 [bias0][18] = 1
-current_state : 0
-next_state : 0
 [bias0][19] = 3
-current_state : 0
-next_state : 0
 [bias0][20] = 0
-current_state : 0
-next_state : 0
 [bias0][21] = 1
-current_state : 0
-next_state : 0
 [bias0][22] = 4
-current_state : 0
-next_state : 0
 [bias0][23] = 0
-current_state : 0
-next_state : 0
 [bias0][24] = -2
-current_state : 0
-next_state : 0
 [bias0][25] = -1
-current_state : 0
-next_state : 0
 [bias0][26] = -2
-current_state : 0
-next_state : 0
 [bias0][27] = 3
-current_state : 0
-next_state : 0
 [bias0][28] = 3
-current_state : 0
-next_state : 0
 [bias0][29] = 4
-current_state : 0
-next_state : 0
 [bias0][30] = 1
-current_state : 0
-next_state : 0
 [bias0][31] = 2
-current_state : 0
-next_state : 0
 [bias0][32] = 4
-current_state : 0
-next_state : 0
 [bias0][33] = 0
-current_state : 0
-next_state : 0
 [bias0][34] = -4
-current_state : 0
-next_state : 0
 [bias0][35] = 2
-current_state : 0
-next_state : 0
 [bias0][36] = -2
-current_state : 0
-next_state : 0
 [bias0][37] = 3
-current_state : 0
-next_state : 0
 [bias0][38] = 3
-current_state : 0
-next_state : 0
 [bias0][39] = 3
-current_state : 0
-next_state : 0
 [bias0][40] = 3
-current_state : 0
-next_state : 0
 [bias0][41] = -1
-current_state : 0
-next_state : 0
 [bias0][42] = -3
-current_state : 0
-next_state : 0
 [bias0][43] = 1
-current_state : 0
-next_state : 0
 [bias0][44] = 4
-current_state : 0
-next_state : 0
 [bias0][45] = 2
-current_state : 0
-next_state : 0
 [bias0][46] = -3
-current_state : 0
-next_state : 0
 [bias0][47] = 3
-current_state : 0
-next_state : 0
 [bias0][48] = 1
-current_state : 0
-next_state : 0
 [bias0][49] = 1
-current_state : 0
-next_state : 0
 [bias0][50] = -2
-current_state : 0
-next_state : 0
 [bias0][51] = 3
-current_state : 0
-next_state : 0
 [bias0][52] = 1
-current_state : 0
-next_state : 0
 [bias0][53] = 0
-current_state : 0
-next_state : 0
 [bias0][54] = -3
-current_state : 0
-next_state : 0
 [bias0][55] = 1
-current_state : 0
-next_state : 0
 [bias0][56] = 1
-current_state : 0
-next_state : 0
 [bias0][57] = 4
-current_state : 0
-next_state : 0
 [bias0][58] = 0
-current_state : 0
-next_state : 0
 [bias0][59] = 1
-current_state : 0
-next_state : 0
 [bias0][60] = 0
-current_state : 0
-next_state : 0
 [bias0][61] = 1
-current_state : 0
-next_state : 0
 [bias0][62] = -4
-current_state : 0
-next_state : 0
 [bias0][63] = 3
-current_state : 0
-next_state : 0
 Before wait_for_interrupt()
 finish wait_for_interrupt()
 Start writing ifmap0...
 i = 0
 [ifmap0][ 0] = 0xfcf9f7ff
-current_state : 0
-next_state : 0
 i = 1
 [ifmap0][ 1] = 0xfefd00fc
-current_state : 0
-next_state : 0
 i = 2
 [ifmap0][ 2] = 0xfffdfffc
-current_state : 0
-next_state : 0
 i = 3
 [ifmap0][ 3] = 0xfefdff00
-current_state : 0
-next_state : 0
 i = 4
 [ifmap0][ 4] = 0xfcfefffe
-current_state : 0
-next_state : 0
 i = 5
 [ifmap0][ 5] = 0x01fffeff
-current_state : 0
-next_state : 0
 i = 6
 [ifmap0][ 6] = 0xfd010100
-current_state : 0
-next_state : 0
 i = 7
 [ifmap0][ 7] = 0xfdfd04fc
-current_state : 0
-next_state : 0
 i = 8
 [ifmap0][ 8] = 0x00ff01fe
-current_state : 0
-next_state : 0
 i = 9
 [ifmap0][ 9] = 0xfefdfd7e
-current_state : 0
-next_state : 0
 i = 10
 [ifmap0][10] = 0x0000fe00
-current_state : 0
-next_state : 0
 i = 11
 [ifmap0][11] = 0xfd00fcfb
-current_state : 0
-next_state : 0
 i = 12
 [ifmap0][12] = 0x0300fdfe
-current_state : 0
-next_state : 0
 i = 13
 [ifmap0][13] = 0xfc00fffd
-current_state : 0
-next_state : 0
 i = 14
 [ifmap0][14] = 0xfdfbfe00
-current_state : 0
-next_state : 0
 i = 15
 [ifmap0][15] = 0xfdebfbff
-current_state : 0
-next_state : 0
 Start writing weight0...
 [weight0][   0] = 0xffe823fb
-current_state : 0
-next_state : 0
 [weight0][   1] = 0xfcf80ef1
-current_state : 0
-next_state : 0
 [weight0][   2] = 0x04efffe2
-current_state : 0
-next_state : 0
 [weight0][   3] = 0x0aeef7fa
-current_state : 0
-next_state : 0
 [weight0][   4] = 0x03eb11f6
-current_state : 0
-next_state : 0
 [weight0][   5] = 0x2325ffff
-current_state : 0
-next_state : 0
 [weight0][   6] = 0xfd182623
-current_state : 0
-next_state : 0
 [weight0][   7] = 0x0aea21f4
-current_state : 0
-next_state : 0
 [weight0][   8] = 0x12f4f806
-current_state : 0
-next_state : 0
 [weight0][   9] = 0xe4e807c7
-current_state : 0
-next_state : 0
 [weight0][  10] = 0xf21f0a22
-current_state : 0
-next_state : 0
 [weight0][  11] = 0xfb1cf2f2
-current_state : 0
-next_state : 0
 [weight0][  12] = 0x3c0bf716
-current_state : 0
-next_state : 0
 [weight0][  13] = 0xe7e523e2
-current_state : 0
-next_state : 0
 [weight0][  14] = 0xf7ebfd07
-current_state : 0
-next_state : 0
 [weight0][  15] = 0x1031ddf4
-current_state : 0
-next_state : 0
 [weight0][  16] = 0xe8cd39f8
-current_state : 0
-next_state : 0
 [weight0][  17] = 0xf5dce3e9
-current_state : 0
-next_state : 0
 [weight0][  18] = 0xeddaf1f1
-current_state : 0
-next_state : 0
 [weight0][  19] = 0xfef20af5
-current_state : 0
-next_state : 0
 [weight0][  20] = 0xe5dc10ed
-current_state : 0
-next_state : 0
 [weight0][  21] = 0xf7370526
-current_state : 0
-next_state : 0
 [weight0][  22] = 0xf3d522e4
-current_state : 0
-next_state : 0
 [weight0][  23] = 0x0bdb4def
-current_state : 0
-next_state : 0
 [weight0][  24] = 0x01f4e70d
-current_state : 0
-next_state : 0
 [weight0][  25] = 0x0acf181a
-current_state : 0
-next_state : 0
 [weight0][  26] = 0xea230d08
-current_state : 0
-next_state : 0
 [weight0][  27] = 0x1ee9f9df
-current_state : 0
-next_state : 0
 [weight0][  28] = 0x41cdfe34
-current_state : 0
-next_state : 0
 [weight0][  29] = 0xd8f516ef
-current_state : 0
-next_state : 0
 [weight0][  30] = 0xdaf813fc
-current_state : 0
-next_state : 0
 [weight0][  31] = 0xe7fdeef4
-current_state : 0
-next_state : 0
 [weight0][  32] = 0x03ec1af4
-current_state : 0
-next_state : 0
 [weight0][  33] = 0x0dff17e6
-current_state : 0
-next_state : 0
 [weight0][  34] = 0xf1f0efe1
-current_state : 0
-next_state : 0
 [weight0][  35] = 0x23fafcfa
-current_state : 0
-next_state : 0
 [weight0][  36] = 0xef010ff9
-current_state : 0
-next_state : 0
 [weight0][  37] = 0x043305db
-current_state : 0
-next_state : 0
 [weight0][  38] = 0xed2c3121
-current_state : 0
-next_state : 0
 [weight0][  39] = 0x12ce20fe
-current_state : 0
-next_state : 0
 [weight0][  40] = 0x16f5de07
-current_state : 0
-next_state : 0
 [weight0][  41] = 0xeddb05cd
-current_state : 0
-next_state : 0
 [weight0][  42] = 0xd9240f36
-current_state : 0
-next_state : 0
 [weight0][  43] = 0x180feffc
-current_state : 0
-next_state : 0
 [weight0][  44] = 0x3720e41f
-current_state : 0
-next_state : 0
 [weight0][  45] = 0xebf423ef
-current_state : 0
-next_state : 0
 [weight0][  46] = 0xd7caf509
-current_state : 0
-next_state : 0
 [weight0][  47] = 0x2c2acfe2
-current_state : 0
-next_state : 0
 [weight0][  48] = 0xe3d13704
-current_state : 0
-next_state : 0
 [weight0][  49] = 0xe9d7dfee
-current_state : 0
-next_state : 0
 [weight0][  50] = 0xe4d4e2ec
-current_state : 0
-next_state : 0
 [weight0][  51] = 0xf5f60af9
-current_state : 0
-next_state : 0
 [weight0][  52] = 0xeed4f6f0
-current_state : 0
-next_state : 0
 [weight0][  53] = 0x1124032d
-current_state : 0
-next_state : 0
 [weight0][  54] = 0xd9db33f1
-current_state : 0
-next_state : 0
 [weight0][  55] = 0xf6df5adb
-current_state : 0
-next_state : 0
 [weight0][  56] = 0xffe6fafd
-current_state : 0
-next_state : 0
 [weight0][  57] = 0xf8c11415
-current_state : 0
-next_state : 0
 [weight0][  58] = 0xf7340113
-current_state : 0
-next_state : 0
 [weight0][  59] = 0x10eafce8
-current_state : 0
-next_state : 0
 [weight0][  60] = 0x4ac8fd3e
-current_state : 0
-next_state : 0
 [weight0][  61] = 0xebfb1bf1
-current_state : 0
-next_state : 0
 [weight0][  62] = 0xe1fa01fd
-current_state : 0
-next_state : 0
 [weight0][  63] = 0xdcf2e601
-current_state : 0
-next_state : 0
 [weight0][  64] = 0xece836d6
-current_state : 0
-next_state : 0
 [weight0][  65] = 0x03f1eae3
-current_state : 0
-next_state : 0
 [weight0][  66] = 0xf4ebe3f2
-current_state : 0
-next_state : 0
 [weight0][  67] = 0xfdf3160b
-current_state : 0
-next_state : 0
 [weight0][  68] = 0xf8ec02e4
-current_state : 0
-next_state : 0
 [weight0][  69] = 0xf9510e02
-current_state : 0
-next_state : 0
 [weight0][  70] = 0xebe63606
-current_state : 0
-next_state : 0
 [weight0][  71] = 0x0fe24d0e
-current_state : 0
-next_state : 0
 [weight0][  72] = 0x16ecd3f6
-current_state : 0
-next_state : 0
 [weight0][  73] = 0xf3bc15fa
-current_state : 0
-next_state : 0
 [weight0][  74] = 0xd91dee3e
-current_state : 0
-next_state : 0
 [weight0][  75] = 0x2001fbe4
-current_state : 0
-next_state : 0
 [weight0][  76] = 0x61f90637
-current_state : 0
-next_state : 0
 [weight0][  77] = 0xf8da14e7
-current_state : 0
-next_state : 0
 [weight0][  78] = 0xe4e30f09
-current_state : 0
-next_state : 0
 [weight0][  79] = 0xff08d6e6
-current_state : 0
-next_state : 0
 [weight0][  80] = 0xefde2cf3
-current_state : 0
-next_state : 0
 [weight0][  81] = 0xe8dbf3dd
-current_state : 0
-next_state : 0
 [weight0][  82] = 0xf5dfe8ed
-current_state : 0
-next_state : 0
 [weight0][  83] = 0x0b03fcf4
-current_state : 0
-next_state : 0
 [weight0][  84] = 0xeaedfb08
-current_state : 0
-next_state : 0
 [weight0][  85] = 0x05201820
-current_state : 0
-next_state : 0
 [weight0][  86] = 0xede53d08
-current_state : 0
-next_state : 0
 [weight0][  87] = 0xf4e151f3
-current_state : 0
-next_state : 0
 [weight0][  88] = 0x1ff1e40c
-current_state : 0
-next_state : 0
 [weight0][  89] = 0x07cf1415
-current_state : 0
-next_state : 0
 [weight0][  90] = 0x0e27f62a
-current_state : 0
-next_state : 0
 [weight0][  91] = 0x18f6f1e7
-current_state : 0
-next_state : 0
 [weight0][  92] = 0x51de0824
-current_state : 0
-next_state : 0
 [weight0][  93] = 0xeaf933f9
-current_state : 0
-next_state : 0
 [weight0][  94] = 0xd6e108f8
-current_state : 0
-next_state : 0
 [weight0][  95] = 0xf0f4dafb
-current_state : 0
-next_state : 0
 [weight0][  96] = 0xebd620fa
-current_state : 0
-next_state : 0
 [weight0][  97] = 0xe9f404e4
-current_state : 0
-next_state : 0
 [weight0][  98] = 0xfeeff0fd
-current_state : 0
-next_state : 0
 [weight0][  99] = 0x0de3fbfa
-current_state : 0
-next_state : 0
 [weight0][ 100] = 0x01fdecf6
-current_state : 0
-next_state : 0
 [weight0][ 101] = 0x081c0f10
-current_state : 0
-next_state : 0
 [weight0][ 102] = 0xfa0d4208
-current_state : 0
-next_state : 0
 [weight0][ 103] = 0x04f325e0
-current_state : 0
-next_state : 0
 [weight0][ 104] = 0x0ddfda08
-current_state : 0
-next_state : 0
 [weight0][ 105] = 0xf7ea130b
-current_state : 0
-next_state : 0
 [weight0][ 106] = 0xfb39ef1b
-current_state : 0
-next_state : 0
 [weight0][ 107] = 0x01f7fef3
-current_state : 0
-next_state : 0
 [weight0][ 108] = 0x5ecd070e
-current_state : 0
-next_state : 0
 [weight0][ 109] = 0xf20241e9
-current_state : 0
-next_state : 0
 [weight0][ 110] = 0x03e5f00f
-current_state : 0
-next_state : 0
 [weight0][ 111] = 0xe1f1eb06
-current_state : 0
-next_state : 0
 [weight0][ 112] = 0xf1e12efc
-current_state : 0
-next_state : 0
 [weight0][ 113] = 0xf7eef2f1
-current_state : 0
-next_state : 0
 [weight0][ 114] = 0xe2e1f2ed
-current_state : 0
-next_state : 0
 [weight0][ 115] = 0x03f91aee
-current_state : 0
-next_state : 0
 [weight0][ 116] = 0xf2df1ae5
-current_state : 0
-next_state : 0
 [weight0][ 117] = 0xf53b0814
-current_state : 0
-next_state : 0
 [weight0][ 118] = 0xf9ca12e8
-current_state : 0
-next_state : 0
 [weight0][ 119] = 0x0ee548ed
-current_state : 0
-next_state : 0
 [weight0][ 120] = 0xeafbe909
-current_state : 0
-next_state : 0
 [weight0][ 121] = 0x14c70e0c
-current_state : 0
-next_state : 0
 [weight0][ 122] = 0xef111cfd
-current_state : 0
-next_state : 0
 [weight0][ 123] = 0x0ee1f8ec
-current_state : 0
-next_state : 0
 [weight0][ 124] = 0x2bd60637
-current_state : 0
-next_state : 0
 [weight0][ 125] = 0xe5f308f7
-current_state : 0
-next_state : 0
 [weight0][ 126] = 0xdbf90f08
-current_state : 0
-next_state : 0
 [weight0][ 127] = 0xf9f8effe
-current_state : 0
-next_state : 0
 [weight0][ 128] = 0xf1eb14f9
-current_state : 0
-next_state : 0
 [weight0][ 129] = 0xeae71ada
-current_state : 0
-next_state : 0
 [weight0][ 130] = 0xedfeeef3
-current_state : 0
-next_state : 0
 [weight0][ 131] = 0x0bdef1fc
-current_state : 0
-next_state : 0
 [weight0][ 132] = 0xe5f6e9e8
-current_state : 0
-next_state : 0
 [weight0][ 133] = 0x1c191a09
-current_state : 0
-next_state : 0
 [weight0][ 134] = 0x0024511b
-current_state : 0
-next_state : 0
 [weight0][ 135] = 0xf8eb24f7
-current_state : 0
-next_state : 0
 [weight0][ 136] = 0x2201dff8
-current_state : 0
-next_state : 0
 [weight0][ 137] = 0xfada03fd
-current_state : 0
-next_state : 0
 [weight0][ 138] = 0x122fea2e
-current_state : 0
-next_state : 0
 [weight0][ 139] = 0x0f12f507
-current_state : 0
-next_state : 0
 [weight0][ 140] = 0x4afef805
-current_state : 0
-next_state : 0
 [weight0][ 141] = 0xec1a48df
-current_state : 0
-next_state : 0
 [weight0][ 142] = 0xfde0e505
-current_state : 0
-next_state : 0
 [weight0][ 143] = 0xfc13e6fc
-current_state : 0
-next_state : 0
 [weight0][ 144] = 0x06ea20ea
-current_state : 0
-next_state : 0
 [weight0][ 145] = 0x080000f2
-current_state : 0
-next_state : 0
 [weight0][ 146] = 0xfdee05f2
-current_state : 0
-next_state : 0
 [weight0][ 147] = 0x0efbfb13
-current_state : 0
-next_state : 0
 [weight0][ 148] = 0x00f304ed
-current_state : 0
-next_state : 0
 [weight0][ 149] = 0x0a320ff4
-current_state : 0
-next_state : 0
 [weight0][ 150] = 0xf706341b
-current_state : 0
-next_state : 0
 [weight0][ 151] = 0x0fe0210d
-current_state : 0
-next_state : 0
 [weight0][ 152] = 0x1affe60b
-current_state : 0
-next_state : 0
 [weight0][ 153] = 0xf3c318e1
-current_state : 0
-next_state : 0
 [weight0][ 154] = 0xef0d0747
-current_state : 0
-next_state : 0
 [weight0][ 155] = 0x2d0e020a
-current_state : 0
-next_state : 0
 [weight0][ 156] = 0x3510f528
-current_state : 0
-next_state : 0
 [weight0][ 157] = 0xf8ef1ced
-current_state : 0
-next_state : 0
 [weight0][ 158] = 0xe8e6f20c
-current_state : 0
-next_state : 0
 [weight0][ 159] = 0x1e26e4e7
-current_state : 0
-next_state : 0
 [weight0][ 160] = 0xecd83501
-current_state : 0
-next_state : 0
 [weight0][ 161] = 0xf4eeeddf
-current_state : 0
-next_state : 0
 [weight0][ 162] = 0xe7e4e7ef
-current_state : 0
-next_state : 0
 [weight0][ 163] = 0x08051ff3
-current_state : 0
-next_state : 0
 [weight0][ 164] = 0xecd700ef
-current_state : 0
-next_state : 0
 [weight0][ 165] = 0xf7440f0f
-current_state : 0
-next_state : 0
 [weight0][ 166] = 0xf1d91cf4
-current_state : 0
-next_state : 0
 [weight0][ 167] = 0x16e45def
-current_state : 0
-next_state : 0
 [weight0][ 168] = 0xfbe3eb0a
-current_state : 0
-next_state : 0
 [weight0][ 169] = 0x07bd111b
-current_state : 0
-next_state : 0
 [weight0][ 170] = 0xe725120c
-current_state : 0
-next_state : 0
 [weight0][ 171] = 0x1cf9f1e2
-current_state : 0
-next_state : 0
 [weight0][ 172] = 0x3dd5f93f
-current_state : 0
-next_state : 0
 [weight0][ 173] = 0xd8de06e7
-current_state : 0
-next_state : 0
 [weight0][ 174] = 0xe1ee18f8
-current_state : 0
-next_state : 0
 [weight0][ 175] = 0xebfed804
-current_state : 0
-next_state : 0
 [weight0][ 176] = 0xf7d923a5
-current_state : 0
-next_state : 0
 [weight0][ 177] = 0x0ae802ee
-current_state : 0
-next_state : 0
 [weight0][ 178] = 0xf3dcf009
-current_state : 0
-next_state : 0
 [weight0][ 179] = 0xffe41c21
-current_state : 0
-next_state : 0
 [weight0][ 180] = 0x10c6ebe2
-current_state : 0
-next_state : 0
 [weight0][ 181] = 0xfc55220a
-current_state : 0
-next_state : 0
 [weight0][ 182] = 0xe7e058ed
-current_state : 0
-next_state : 0
 [weight0][ 183] = 0x16ea4afc
-current_state : 0
-next_state : 0
 [weight0][ 184] = 0x11e7c9e7
-current_state : 0
-next_state : 0
 [weight0][ 185] = 0xeca21eff
-current_state : 0
-next_state : 0
 [weight0][ 186] = 0xfa33d96e
-current_state : 0
-next_state : 0
 [weight0][ 187] = 0x1af010ee
-current_state : 0
-next_state : 0
 [weight0][ 188] = 0x4ff11039
-current_state : 0
-next_state : 0
 [weight0][ 189] = 0x0cd624fc
-current_state : 0
-next_state : 0
 [weight0][ 190] = 0xdce61110
-current_state : 0
-next_state : 0
 [weight0][ 191] = 0xfc06e3e9
-current_state : 0
-next_state : 0
 [weight0][ 192] = 0xe7f310ff
-current_state : 0
-next_state : 0
 [weight0][ 193] = 0xf2f511eb
-current_state : 0
-next_state : 0
 [weight0][ 194] = 0xfef9f7ef
-current_state : 0
-next_state : 0
 [weight0][ 195] = 0x1afff1fb
-current_state : 0
-next_state : 0
 [weight0][ 196] = 0xf2fbf70f
-current_state : 0
-next_state : 0
 [weight0][ 197] = 0x09101f05
-current_state : 0
-next_state : 0
 [weight0][ 198] = 0xeb204222
-current_state : 0
-next_state : 0
 [weight0][ 199] = 0x05e41cf8
-current_state : 0
-next_state : 0
 [weight0][ 200] = 0x19e3d301
-current_state : 0
-next_state : 0
 [weight0][ 201] = 0xf5e30000
-current_state : 0
-next_state : 0
 [weight0][ 202] = 0xfc39ee2e
-current_state : 0
-next_state : 0
 [weight0][ 203] = 0x0407f302
-current_state : 0
-next_state : 0
 [weight0][ 204] = 0x42dff506
-current_state : 0
-next_state : 0
 [weight0][ 205] = 0xee064be8
-current_state : 0
-next_state : 0
 [weight0][ 206] = 0xffda020b
-current_state : 0
-next_state : 0
 [weight0][ 207] = 0xf9ffeafd
-current_state : 0
-next_state : 0
 [weight0][ 208] = 0xf5ec0808
-current_state : 0
-next_state : 0
 [weight0][ 209] = 0xe4fcf8f6
-current_state : 0
-next_state : 0
 [weight0][ 210] = 0x08010b0b
-current_state : 0
-next_state : 0
 [weight0][ 211] = 0x10f5eb0a
-current_state : 0
-next_state : 0
 [weight0][ 212] = 0x000feb15
-current_state : 0
-next_state : 0
 [weight0][ 213] = 0x08db021d
-current_state : 0
-next_state : 0
 [weight0][ 214] = 0xe2082f0a
-current_state : 0
-next_state : 0
 [weight0][ 215] = 0xf40d0dec
-current_state : 0
-next_state : 0
 [weight0][ 216] = 0x0deaf2fb
-current_state : 0
-next_state : 0
 [weight0][ 217] = 0xf00b1400
-current_state : 0
-next_state : 0
 [weight0][ 218] = 0x0b3fcf0d
-current_state : 0
-next_state : 0
 [weight0][ 219] = 0xf602fde2
-current_state : 0
-next_state : 0
 [weight0][ 220] = 0x3cd01208
-current_state : 0
-next_state : 0
 [weight0][ 221] = 0x0a0b2ef4
-current_state : 0
-next_state : 0
 [weight0][ 222] = 0x1300f8ef
-current_state : 0
-next_state : 0
 [weight0][ 223] = 0xeae50b0e
-current_state : 0
-next_state : 0
 [weight0][ 224] = 0xec00fe07
-current_state : 0
-next_state : 0
 [weight0][ 225] = 0xf407f500
-current_state : 0
-next_state : 0
 [weight0][ 226] = 0xf606fe16
-current_state : 0
-next_state : 0
 [weight0][ 227] = 0xfa0bf8f7
-current_state : 0
-next_state : 0
 [weight0][ 228] = 0x0408e217
-current_state : 0
-next_state : 0
 [weight0][ 229] = 0xfbf6f90b
-current_state : 0
-next_state : 0
 [weight0][ 230] = 0x11fffaf5
-current_state : 0
-next_state : 0
 [weight0][ 231] = 0xf71afcf7
-current_state : 0
-next_state : 0
 [weight0][ 232] = 0x0bfd16f1
-current_state : 0
-next_state : 0
 [weight0][ 233] = 0x0a10fef3
-current_state : 0
-next_state : 0
 [weight0][ 234] = 0x1c0200fa
-current_state : 0
-next_state : 0
 [weight0][ 235] = 0xe6f3040e
-current_state : 0
-next_state : 0
 [weight0][ 236] = 0xecfd00eb
-current_state : 0
-next_state : 0
 [weight0][ 237] = 0x1005f010
-current_state : 0
-next_state : 0
 [weight0][ 238] = 0x1512fbf6
-current_state : 0
-next_state : 0
 [weight0][ 239] = 0xfa021614
-current_state : 0
-next_state : 0
 [weight0][ 240] = 0xe3e215f3
-current_state : 0
-next_state : 0
 [weight0][ 241] = 0xf7de0cde
-current_state : 0
-next_state : 0
 [weight0][ 242] = 0xeef6f5f6
-current_state : 0
-next_state : 0
 [weight0][ 243] = 0x15ebf101
-current_state : 0
-next_state : 0
 [weight0][ 244] = 0xf6feeafa
-current_state : 0
-next_state : 0
 [weight0][ 245] = 0x12212006
-current_state : 0
-next_state : 0
 [weight0][ 246] = 0xf1044e1b
-current_state : 0
-next_state : 0
 [weight0][ 247] = 0x0bde3fef
-current_state : 0
-next_state : 0
 [weight0][ 248] = 0x0eeecdfe
-current_state : 0
-next_state : 0
 [weight0][ 249] = 0x01d10d0a
-current_state : 0
-next_state : 0
 [weight0][ 250] = 0x0335eb31
-current_state : 0
-next_state : 0
 [weight0][ 251] = 0x04fff6fe
-current_state : 0
-next_state : 0
 [weight0][ 252] = 0x52e20313
-current_state : 0
-next_state : 0
 [weight0][ 253] = 0xe4063fe4
-current_state : 0
-next_state : 0
 [weight0][ 254] = 0xeedaf3fc
-current_state : 0
-next_state : 0
 [weight0][ 255] = 0xf504e7f1
-current_state : 0
-next_state : 0
 [weight0][ 256] = 0xe1d936fe
-current_state : 0
-next_state : 0
 [weight0][ 257] = 0xeedce5e8
-current_state : 0
-next_state : 0
 [weight0][ 258] = 0xf6e4dde4
-current_state : 0
-next_state : 0
 [weight0][ 259] = 0xf9f005f9
-current_state : 0
-next_state : 0
 [weight0][ 260] = 0xe0e4f8e0
-current_state : 0
-next_state : 0
 [weight0][ 261] = 0x0d350735
-current_state : 0
-next_state : 0
 [weight0][ 262] = 0xe6ca23eb
-current_state : 0
-next_state : 0
 [weight0][ 263] = 0xf8df5edd
-current_state : 0
-next_state : 0
 [weight0][ 264] = 0x00f1f408
-current_state : 0
-next_state : 0
 [weight0][ 265] = 0xffc91017
-current_state : 0
-next_state : 0
 [weight0][ 266] = 0xf91f1212
-current_state : 0
-next_state : 0
 [weight0][ 267] = 0x10f4fcdf
-current_state : 0
-next_state : 0
 [weight0][ 268] = 0x45d20740
-current_state : 0
-next_state : 0
 [weight0][ 269] = 0xdceb18ed
-current_state : 0
-next_state : 0
 [weight0][ 270] = 0xd7fc09fb
-current_state : 0
-next_state : 0
 [weight0][ 271] = 0xdaf3d8fc
-current_state : 0
-next_state : 0
 [weight0][ 272] = 0xf2ee11f7
-current_state : 0
-next_state : 0
 [weight0][ 273] = 0xf9f1fdef
-current_state : 0
-next_state : 0
 [weight0][ 274] = 0xf3fff6ef
-current_state : 0
-next_state : 0
 [weight0][ 275] = 0x00e7eb0a
-current_state : 0
-next_state : 0
 [weight0][ 276] = 0xf5fbf803
-current_state : 0
-next_state : 0
 [weight0][ 277] = 0x15131b0a
-current_state : 0
-next_state : 0
 [weight0][ 278] = 0xde0d5024
-current_state : 0
-next_state : 0
 [weight0][ 279] = 0x01de29f4
-current_state : 0
-next_state : 0
 [weight0][ 280] = 0x1eeeed0b
-current_state : 0
-next_state : 0
 [weight0][ 281] = 0xf3e01106
-current_state : 0
-next_state : 0
 [weight0][ 282] = 0x0627f638
-current_state : 0
-next_state : 0
 [weight0][ 283] = 0x08fe00f4
-current_state : 0
-next_state : 0
 [weight0][ 284] = 0x3deef411
-current_state : 0
-next_state : 0
 [weight0][ 285] = 0xf40844f0
-current_state : 0
-next_state : 0
 [weight0][ 286] = 0xeaedfcfc
-current_state : 0
-next_state : 0
 [weight0][ 287] = 0xe7fee0f8
-current_state : 0
-next_state : 0
 [weight0][ 288] = 0xfc05f401
-current_state : 0
-next_state : 0
 [weight0][ 289] = 0x07f60105
-current_state : 0
-next_state : 0
 [weight0][ 290] = 0xfe090804
-current_state : 0
-next_state : 0
 [weight0][ 291] = 0x02000102
-current_state : 0
-next_state : 0
 [weight0][ 292] = 0x05080803
-current_state : 0
-next_state : 0
 [weight0][ 293] = 0x0103040c
-current_state : 0
-next_state : 0
 [weight0][ 294] = 0xf806f7f7
-current_state : 0
-next_state : 0
 [weight0][ 295] = 0xf507fefb
-current_state : 0
-next_state : 0
 [weight0][ 296] = 0x030805f8
-current_state : 0
-next_state : 0
 [weight0][ 297] = 0x00fd06fa
-current_state : 0
-next_state : 0
 [weight0][ 298] = 0xf8faf3f7
-current_state : 0
-next_state : 0
 [weight0][ 299] = 0x00fd06fe
-current_state : 0
-next_state : 0
 [weight0][ 300] = 0x03000006
-current_state : 0
-next_state : 0
 [weight0][ 301] = 0xfeff09fe
-current_state : 0
-next_state : 0
 [weight0][ 302] = 0xfffb0101
-current_state : 0
-next_state : 0
 [weight0][ 303] = 0xf4f8fc03
-current_state : 0
-next_state : 0
 [weight0][ 304] = 0xeee721fe
-current_state : 0
-next_state : 0
 [weight0][ 305] = 0x05f109eb
-current_state : 0
-next_state : 0
 [weight0][ 306] = 0xf2ebebf1
-current_state : 0
-next_state : 0
 [weight0][ 307] = 0xfaf317f8
-current_state : 0
-next_state : 0
 [weight0][ 308] = 0x03fd03ea
-current_state : 0
-next_state : 0
 [weight0][ 309] = 0xf51b1df4
-current_state : 0
-next_state : 0
 [weight0][ 310] = 0xfdff3f1a
-current_state : 0
-next_state : 0
 [weight0][ 311] = 0x07e439fb
-current_state : 0
-next_state : 0
 [weight0][ 312] = 0x18ffc5ed
-current_state : 0
-next_state : 0
 [weight0][ 313] = 0xf8da1af7
-current_state : 0
-next_state : 0
 [weight0][ 314] = 0x02230b3c
-current_state : 0
-next_state : 0
 [weight0][ 315] = 0x220af1ff
-current_state : 0
-next_state : 0
 [weight0][ 316] = 0x5211f317
-current_state : 0
-next_state : 0
 [weight0][ 317] = 0xf7f833f0
-current_state : 0
-next_state : 0
 [weight0][ 318] = 0xf0d6fa00
-current_state : 0
-next_state : 0
 [weight0][ 319] = 0xf605eff1
-current_state : 0
-next_state : 0
 [weight0][ 320] = 0xecd72ff3
-current_state : 0
-next_state : 0
 [weight0][ 321] = 0xe7dedfed
-current_state : 0
-next_state : 0
 [weight0][ 322] = 0x06e2f807
-current_state : 0
-next_state : 0
 [weight0][ 323] = 0xf9e7f2f8
-current_state : 0
-next_state : 0
 [weight0][ 324] = 0xf9d8f5e0
-current_state : 0
-next_state : 0
 [weight0][ 325] = 0x0b0c042a
-current_state : 0
-next_state : 0
 [weight0][ 326] = 0xf2e640fd
-current_state : 0
-next_state : 0
 [weight0][ 327] = 0xfff84ef5
-current_state : 0
-next_state : 0
 [weight0][ 328] = 0x00eff007
-current_state : 0
-next_state : 0
 [weight0][ 329] = 0xfdde100e
-current_state : 0
-next_state : 0
 [weight0][ 330] = 0x0429f707
-current_state : 0
-next_state : 0
 [weight0][ 331] = 0x13f106e1
-current_state : 0
-next_state : 0
 [weight0][ 332] = 0x4ed00e3c
-current_state : 0
-next_state : 0
 [weight0][ 333] = 0xf3ef21ea
-current_state : 0
-next_state : 0
 [weight0][ 334] = 0xf3f601ff
-current_state : 0
-next_state : 0
 [weight0][ 335] = 0xd6f4f50b
-current_state : 0
-next_state : 0
 [weight0][ 336] = 0xe7d72800
-current_state : 0
-next_state : 0
 [weight0][ 337] = 0xf2f12ed3
-current_state : 0
-next_state : 0
 [weight0][ 338] = 0xf1f7fbf4
-current_state : 0
-next_state : 0
 [weight0][ 339] = 0x0cf6f2f4
-current_state : 0
-next_state : 0
 [weight0][ 340] = 0xf9fef6e4
-current_state : 0
-next_state : 0
 [weight0][ 341] = 0x113416f3
-current_state : 0
-next_state : 0
 [weight0][ 342] = 0xff194826
-current_state : 0
-next_state : 0
 [weight0][ 343] = 0xf3d73ae8
-current_state : 0
-next_state : 0
 [weight0][ 344] = 0x16f0b8fe
-current_state : 0
-next_state : 0
 [weight0][ 345] = 0xf0ca1bef
-current_state : 0
-next_state : 0
 [weight0][ 346] = 0xff3e093d
-current_state : 0
-next_state : 0
 [weight0][ 347] = 0x0bfae910
-current_state : 0
-next_state : 0
 [weight0][ 348] = 0x4afbf0fe
-current_state : 0
-next_state : 0
 [weight0][ 349] = 0xf20546da
-current_state : 0
-next_state : 0
 [weight0][ 350] = 0xf5d3e317
-current_state : 0
-next_state : 0
 [weight0][ 351] = 0xf11fe0e7
-current_state : 0
-next_state : 0
 [weight0][ 352] = 0x00f72bff
-current_state : 0
-next_state : 0
 [weight0][ 353] = 0x13f71fea
-current_state : 0
-next_state : 0
 [weight0][ 354] = 0x02f7f9ea
-current_state : 0
-next_state : 0
 [weight0][ 355] = 0x0ff70efa
-current_state : 0
-next_state : 0
 [weight0][ 356] = 0xfcf810ef
-current_state : 0
-next_state : 0
 [weight0][ 357] = 0x1a3607e7
-current_state : 0
-next_state : 0
 [weight0][ 358] = 0xfa1f1d24
-current_state : 0
-next_state : 0
 [weight0][ 359] = 0x0bd621f8
-current_state : 0
-next_state : 0
 [weight0][ 360] = 0x16fbe30d
-current_state : 0
-next_state : 0
 [weight0][ 361] = 0xf2d814cb
-current_state : 0
-next_state : 0
 [weight0][ 362] = 0xe918112d
-current_state : 0
-next_state : 0
 [weight0][ 363] = 0x141be4ef
-current_state : 0
-next_state : 0
 [weight0][ 364] = 0x3d25e71e
-current_state : 0
-next_state : 0
 [weight0][ 365] = 0xed0033df
-current_state : 0
-next_state : 0
 [weight0][ 366] = 0xdddcf101
-current_state : 0
-next_state : 0
 [weight0][ 367] = 0x2127d8e8
-current_state : 0
-next_state : 0
 [weight0][ 368] = 0xf1cd30f6
-current_state : 0
-next_state : 0
 [weight0][ 369] = 0xf2dee7e5
-current_state : 0
-next_state : 0
 [weight0][ 370] = 0xebdeeff8
-current_state : 0
-next_state : 0
 [weight0][ 371] = 0x0af309fb
-current_state : 0
-next_state : 0
 [weight0][ 372] = 0xe3cf01ea
-current_state : 0
-next_state : 0
 [weight0][ 373] = 0x052b0728
-current_state : 0
-next_state : 0
 [weight0][ 374] = 0xebcf28e8
-current_state : 0
-next_state : 0
 [weight0][ 375] = 0xfeea4cea
-current_state : 0
-next_state : 0
 [weight0][ 376] = 0xfbebeefc
-current_state : 0
-next_state : 0
 [weight0][ 377] = 0x01cd050e
-current_state : 0
-next_state : 0
 [weight0][ 378] = 0xf02b1000
-current_state : 0
-next_state : 0
 [weight0][ 379] = 0x14f6fada
-current_state : 0
-next_state : 0
 [weight0][ 380] = 0x4ed80f33
-current_state : 0
-next_state : 0
 [weight0][ 381] = 0xd7e116e3
-current_state : 0
-next_state : 0
 [weight0][ 382] = 0xeafc0402
-current_state : 0
-next_state : 0
 [weight0][ 383] = 0xdaf1e30e
-current_state : 0
-next_state : 0
 [weight0][ 384] = 0xfdda4ae5
-current_state : 0
-next_state : 0
 [weight0][ 385] = 0x0ef5d9ff
-current_state : 0
-next_state : 0
 [weight0][ 386] = 0xf2dafaff
-current_state : 0
-next_state : 0
 [weight0][ 387] = 0xfbeb17f2
-current_state : 0
-next_state : 0
 [weight0][ 388] = 0xf2d011d7
-current_state : 0
-next_state : 0
 [weight0][ 389] = 0xf442042b
-current_state : 0
-next_state : 0
 [weight0][ 390] = 0xfccc34dd
-current_state : 0
-next_state : 0
 [weight0][ 391] = 0x0ae955f6
-current_state : 0
-next_state : 0
 [weight0][ 392] = 0xe8feddf5
-current_state : 0
-next_state : 0
 [weight0][ 393] = 0x10c01606
-current_state : 0
-next_state : 0
 [weight0][ 394] = 0xf4130c0b
-current_state : 0
-next_state : 0
 [weight0][ 395] = 0x21dd06ea
-current_state : 0
-next_state : 0
 [weight0][ 396] = 0x50e71843
-current_state : 0
-next_state : 0
 [weight0][ 397] = 0xe6e107f5
-current_state : 0
-next_state : 0
 [weight0][ 398] = 0xeafb19fb
-current_state : 0
-next_state : 0
 [weight0][ 399] = 0xef00f0ff
-current_state : 0
-next_state : 0
 [weight0][ 400] = 0xf7e433f3
-current_state : 0
-next_state : 0
 [weight0][ 401] = 0xfce6e2f2
-current_state : 0
-next_state : 0
 [weight0][ 402] = 0xf1dffdfc
-current_state : 0
-next_state : 0
 [weight0][ 403] = 0xf6011901
-current_state : 0
-next_state : 0
 [weight0][ 404] = 0xefd50bdc
-current_state : 0
-next_state : 0
 [weight0][ 405] = 0xf21f0d2b
-current_state : 0
-next_state : 0
 [weight0][ 406] = 0xe8d71ce4
-current_state : 0
-next_state : 0
 [weight0][ 407] = 0x0bde43fb
-current_state : 0
-next_state : 0
 [weight0][ 408] = 0xeffadefe
-current_state : 0
-next_state : 0
 [weight0][ 409] = 0xfdbe0f0d
-current_state : 0
-next_state : 0
 [weight0][ 410] = 0x0224070d
-current_state : 0
-next_state : 0
 [weight0][ 411] = 0x13f010eb
-current_state : 0
-next_state : 0
 [weight0][ 412] = 0x3cca0834
-current_state : 0
-next_state : 0
 [weight0][ 413] = 0xf2ea0df2
-current_state : 0
-next_state : 0
 [weight0][ 414] = 0xe6091408
-current_state : 0
-next_state : 0
 [weight0][ 415] = 0xe6f6f4fe
-current_state : 0
-next_state : 0
 [weight0][ 416] = 0xfaed24b9
-current_state : 0
-next_state : 0
 [weight0][ 417] = 0x11d5fbe9
-current_state : 0
-next_state : 0
 [weight0][ 418] = 0xfee8f6f4
-current_state : 0
-next_state : 0
 [weight0][ 419] = 0xf1d81418
-current_state : 0
-next_state : 0
 [weight0][ 420] = 0x06d5e5cc
-current_state : 0
-next_state : 0
 [weight0][ 421] = 0x0c542f22
-current_state : 0
-next_state : 0
 [weight0][ 422] = 0xf9e261f2
-current_state : 0
-next_state : 0
 [weight0][ 423] = 0x10f85700
-current_state : 0
-next_state : 0
 [weight0][ 424] = 0x22e8e5e0
-current_state : 0
-next_state : 0
 [weight0][ 425] = 0xeb9b19fd
-current_state : 0
-next_state : 0
 [weight0][ 426] = 0xfb15ea62
-current_state : 0
-next_state : 0
 [weight0][ 427] = 0x1602f6f8
-current_state : 0
-next_state : 0
 [weight0][ 428] = 0x6722093a
-current_state : 0
-next_state : 0
 [weight0][ 429] = 0xe8d02af0
-current_state : 0
-next_state : 0
 [weight0][ 430] = 0xd1dff513
-current_state : 0
-next_state : 0
 [weight0][ 431] = 0xfff8d1f6
-current_state : 0
-next_state : 0
 [weight0][ 432] = 0xead829f9
-current_state : 0
-next_state : 0
 [weight0][ 433] = 0xe5cbeae6
-current_state : 0
-next_state : 0
 [weight0][ 434] = 0xf3d9e6e7
-current_state : 0
-next_state : 0
 [weight0][ 435] = 0xe9db0dfe
-current_state : 0
-next_state : 0
 [weight0][ 436] = 0xede1f0dc
-current_state : 0
-next_state : 0
 [weight0][ 437] = 0x07210f39
-current_state : 0
-next_state : 0
 [weight0][ 438] = 0xecd22ff4
-current_state : 0
-next_state : 0
 [weight0][ 439] = 0xf2e752e6
-current_state : 0
-next_state : 0
 [weight0][ 440] = 0x04f1f5f5
-current_state : 0
-next_state : 0
 [weight0][ 441] = 0xe9d90b10
-current_state : 0
-next_state : 0
 [weight0][ 442] = 0x0e22060c
-current_state : 0
-next_state : 0
 [weight0][ 443] = 0x11f1ede5
-current_state : 0
-next_state : 0
 [weight0][ 444] = 0x50cbff39
-current_state : 0
-next_state : 0
 [weight0][ 445] = 0xedfa17ea
-current_state : 0
-next_state : 0
 [weight0][ 446] = 0xd2fbfcfe
-current_state : 0
-next_state : 0
 [weight0][ 447] = 0xd7e6db09
-current_state : 0
-next_state : 0
 [weight0][ 448] = 0xfdfd0bfd
-current_state : 0
-next_state : 0
 [weight0][ 449] = 0xf5f80ff7
-current_state : 0
-next_state : 0
 [weight0][ 450] = 0xf0fd0af8
-current_state : 0
-next_state : 0
 [weight0][ 451] = 0x070801fb
-current_state : 0
-next_state : 0
 [weight0][ 452] = 0x01f50401
-current_state : 0
-next_state : 0
 [weight0][ 453] = 0x1209f70b
-current_state : 0
-next_state : 0
 [weight0][ 454] = 0xf90afd06
-current_state : 0
-next_state : 0
 [weight0][ 455] = 0xfcf21501
-current_state : 0
-next_state : 0
 [weight0][ 456] = 0x09fb08fd
-current_state : 0
-next_state : 0
 [weight0][ 457] = 0xfafd0ddf
-current_state : 0
-next_state : 0
 [weight0][ 458] = 0xf90e0904
-current_state : 0
-next_state : 0
 [weight0][ 459] = 0xf707fbfe
-current_state : 0
-next_state : 0
 [weight0][ 460] = 0x10fdf9ff
-current_state : 0
-next_state : 0
 [weight0][ 461] = 0xfa000a01
-current_state : 0
-next_state : 0
 [weight0][ 462] = 0xff0b040c
-current_state : 0
-next_state : 0
 [weight0][ 463] = 0x0d09fe01
-current_state : 0
-next_state : 0
 [weight0][ 464] = 0x02e936f5
-current_state : 0
-next_state : 0
 [weight0][ 465] = 0x090919e0
-current_state : 0
-next_state : 0
 [weight0][ 466] = 0xf7ff01dc
-current_state : 0
-next_state : 0
 [weight0][ 467] = 0x15fafffe
-current_state : 0
-next_state : 0
 [weight0][ 468] = 0xf8f309f3
-current_state : 0
-next_state : 0
 [weight0][ 469] = 0x0f2d0bf1
-current_state : 0
-next_state : 0
 [weight0][ 470] = 0xf720212b
-current_state : 0
-next_state : 0
 [weight0][ 471] = 0x04dd2eea
-current_state : 0
-next_state : 0
 [weight0][ 472] = 0x0ff7d804
-current_state : 0
-next_state : 0
 [weight0][ 473] = 0xf0d51fc3
-current_state : 0
-next_state : 0
 [weight0][ 474] = 0xf61c0c38
-current_state : 0
-next_state : 0
 [weight0][ 475] = 0x1a0ce8f1
-current_state : 0
-next_state : 0
 [weight0][ 476] = 0x3120ef1e
-current_state : 0
-next_state : 0
 [weight0][ 477] = 0xe2fc35e4
-current_state : 0
-next_state : 0
 [weight0][ 478] = 0xdacced0e
-current_state : 0
-next_state : 0
 [weight0][ 479] = 0x1937cadd
-current_state : 0
-next_state : 0
 [weight0][ 480] = 0xf1ef1c04
-current_state : 0
-next_state : 0
 [weight0][ 481] = 0xeeec17e0
-current_state : 0
-next_state : 0
 [weight0][ 482] = 0xf1fb01eb
-current_state : 0
-next_state : 0
 [weight0][ 483] = 0x04fdfaff
-current_state : 0
-next_state : 0
 [weight0][ 484] = 0xf402f7fa
-current_state : 0
-next_state : 0
 [weight0][ 485] = 0x0f251809
-current_state : 0
-next_state : 0
 [weight0][ 486] = 0xfb134318
-current_state : 0
-next_state : 0
 [weight0][ 487] = 0xfce13af9
-current_state : 0
-next_state : 0
 [weight0][ 488] = 0x1cf9dbf2
-current_state : 0
-next_state : 0
 [weight0][ 489] = 0xf0df0bfa
-current_state : 0
-next_state : 0
 [weight0][ 490] = 0x0d1ffd42
-current_state : 0
-next_state : 0
 [weight0][ 491] = 0x0e15f501
-current_state : 0
-next_state : 0
 [weight0][ 492] = 0x47f9ee0a
-current_state : 0
-next_state : 0
 [weight0][ 493] = 0xec104aec
-current_state : 0
-next_state : 0
 [weight0][ 494] = 0xfae7fb03
-current_state : 0
-next_state : 0
 [weight0][ 495] = 0xee0ce901
-current_state : 0
-next_state : 0
 [weight0][ 496] = 0xfcda1ae5
-current_state : 0
-next_state : 0
 [weight0][ 497] = 0xf1f3fbec
-current_state : 0
-next_state : 0
 [weight0][ 498] = 0xf1e0f1f0
-current_state : 0
-next_state : 0
 [weight0][ 499] = 0x17ed0802
-current_state : 0
-next_state : 0
 [weight0][ 500] = 0x02e3fbfb
-current_state : 0
-next_state : 0
 [weight0][ 501] = 0x03312d0d
-current_state : 0
-next_state : 0
 [weight0][ 502] = 0xeaff5715
-current_state : 0
-next_state : 0
 [weight0][ 503] = 0x0fe02ffc
-current_state : 0
-next_state : 0
 [weight0][ 504] = 0x23e4d900
-current_state : 0
-next_state : 0
 [weight0][ 505] = 0x03cb0df9
-current_state : 0
-next_state : 0
 [weight0][ 506] = 0xfc2af943
-current_state : 0
-next_state : 0
 [weight0][ 507] = 0x13fcf6e7
-current_state : 0
-next_state : 0
 [weight0][ 508] = 0x60ea0519
-current_state : 0
-next_state : 0
 [weight0][ 509] = 0xf6f536ef
-current_state : 0
-next_state : 0
 [weight0][ 510] = 0xdfe60f03
-current_state : 0
-next_state : 0
 [weight0][ 511] = 0x0116dfed
-current_state : 0
-next_state : 0
 [weight0][ 512] = 0x04e336ee
-current_state : 0
-next_state : 0
 [weight0][ 513] = 0x010510dc
-current_state : 0
-next_state : 0
 [weight0][ 514] = 0x00f3f5d6
-current_state : 0
-next_state : 0
 [weight0][ 515] = 0x14f607fa
-current_state : 0
-next_state : 0
 [weight0][ 516] = 0xf2f70bed
-current_state : 0
-next_state : 0
 [weight0][ 517] = 0x1e4316ea
-current_state : 0
-next_state : 0
 [weight0][ 518] = 0xff303733
-current_state : 0
-next_state : 0
 [weight0][ 519] = 0x03d12afb
-current_state : 0
-next_state : 0
 [weight0][ 520] = 0x1405e90b
-current_state : 0
-next_state : 0
 [weight0][ 521] = 0xebd00abf
-current_state : 0
-next_state : 0
 [weight0][ 522] = 0xea150a41
-current_state : 0
-next_state : 0
 [weight0][ 523] = 0x1515eef7
-current_state : 0
-next_state : 0
 [weight0][ 524] = 0x491fed26
-current_state : 0
-next_state : 0
 [weight0][ 525] = 0xedf033df
-current_state : 0
-next_state : 0
 [weight0][ 526] = 0xdbcff807
-current_state : 0
-next_state : 0
 [weight0][ 527] = 0x1738d3dd
-current_state : 0
-next_state : 0
 [weight0][ 528] = 0xfde205f4
-current_state : 0
-next_state : 0
 [weight0][ 529] = 0xfef2f9ee
-current_state : 0
-next_state : 0
 [weight0][ 530] = 0x16f3f705
-current_state : 0
-next_state : 0
 [weight0][ 531] = 0xfde4f80d
-current_state : 0
-next_state : 0
 [weight0][ 532] = 0xf7e8f3e8
-current_state : 0
-next_state : 0
 [weight0][ 533] = 0x0f13091b
-current_state : 0
-next_state : 0
 [weight0][ 534] = 0xf7134811
-current_state : 0
-next_state : 0
 [weight0][ 535] = 0x03f82df1
-current_state : 0
-next_state : 0
 [weight0][ 536] = 0x17fbe1f2
-current_state : 0
-next_state : 0
 [weight0][ 537] = 0xedcf14ff
-current_state : 0
-next_state : 0
 [weight0][ 538] = 0x0f23ef43
-current_state : 0
-next_state : 0
 [weight0][ 539] = 0x050c05ff
-current_state : 0
-next_state : 0
 [weight0][ 540] = 0x4fee0d1f
-current_state : 0
-next_state : 0
 [weight0][ 541] = 0xf70636e6
-current_state : 0
-next_state : 0
 [weight0][ 542] = 0x0af2f413
-current_state : 0
-next_state : 0
 [weight0][ 543] = 0xfdf8ec09
-current_state : 0
-next_state : 0
 [weight0][ 544] = 0xecde43de
-current_state : 0
-next_state : 0
 [weight0][ 545] = 0x08dedbf3
-current_state : 0
-next_state : 0
 [weight0][ 546] = 0xf1e8e5fa
-current_state : 0
-next_state : 0
 [weight0][ 547] = 0x06f71707
-current_state : 0
-next_state : 0
 [weight0][ 548] = 0xf6e90ad2
-current_state : 0
-next_state : 0
 [weight0][ 549] = 0xfc361227
-current_state : 0
-next_state : 0
 [weight0][ 550] = 0xeac240e3
-current_state : 0
-next_state : 0
 [weight0][ 551] = 0x19e553e7
-current_state : 0
-next_state : 0
 [weight0][ 552] = 0x00ebde04
-current_state : 0
-next_state : 0
 [weight0][ 553] = 0x0fc91e01
-current_state : 0
-next_state : 0
 [weight0][ 554] = 0xed2a0515
-current_state : 0
-next_state : 0
 [weight0][ 555] = 0x0ce50cef
-current_state : 0
-next_state : 0
 [weight0][ 556] = 0x5ee3173b
-current_state : 0
-next_state : 0
 [weight0][ 557] = 0xf0d619ed
-current_state : 0
-next_state : 0
 [weight0][ 558] = 0xe4070cff
-current_state : 0
-next_state : 0
 [weight0][ 559] = 0xf5f9e507
-current_state : 0
-next_state : 0
 [weight0][ 560] = 0xead91afa
-current_state : 0
-next_state : 0
 [weight0][ 561] = 0xe7e407ec
-current_state : 0
-next_state : 0
 [weight0][ 562] = 0xede6f2f6
-current_state : 0
-next_state : 0
 [weight0][ 563] = 0x0be3fa04
-current_state : 0
-next_state : 0
 [weight0][ 564] = 0xfbf2e102
-current_state : 0
-next_state : 0
 [weight0][ 565] = 0x102c1902
-current_state : 0
-next_state : 0
 [weight0][ 566] = 0xea175710
-current_state : 0
-next_state : 0
 [weight0][ 567] = 0x02de32eb
-current_state : 0
-next_state : 0
 [weight0][ 568] = 0x1edfde05
-current_state : 0
-next_state : 0
 [weight0][ 569] = 0xebd81105
-current_state : 0
-next_state : 0
 [weight0][ 570] = 0xf837e245
-current_state : 0
-next_state : 0
 [weight0][ 571] = 0x0d06f0fc
-current_state : 0
-next_state : 0
 [weight0][ 572] = 0x56e9f519
-current_state : 0
-next_state : 0
 [weight0][ 573] = 0xec053ee5
-current_state : 0
-next_state : 0
 [weight0][ 574] = 0xf2d40101
-current_state : 0
-next_state : 0
 [weight0][ 575] = 0xf910dbfb
-current_state : 0
-next_state : 0
 [weight0][ 576] = 0xf7e123e3
-current_state : 0
-next_state : 0
 [weight0][ 577] = 0x01f719e3
-current_state : 0
-next_state : 0
 [weight0][ 578] = 0xf0f3fefc
-current_state : 0
-next_state : 0
 [weight0][ 579] = 0x24ff00f6
-current_state : 0
-next_state : 0
 [weight0][ 580] = 0xff0502f8
-current_state : 0
-next_state : 0
 [weight0][ 581] = 0xef3516e3
-current_state : 0
-next_state : 0
 [weight0][ 582] = 0xe813251a
-current_state : 0
-next_state : 0
 [weight0][ 583] = 0x07e725e9
-current_state : 0
-next_state : 0
 [weight0][ 584] = 0x02dab6fe
-current_state : 0
-next_state : 0
 [weight0][ 585] = 0xefcf29f9
-current_state : 0
-next_state : 0
 [weight0][ 586] = 0xfa30f840
-current_state : 0
-next_state : 0
 [weight0][ 587] = 0x07f9fff9
-current_state : 0
-next_state : 0
 [weight0][ 588] = 0x3ee10619
-current_state : 0
-next_state : 0
 [weight0][ 589] = 0xf5f22be3
-current_state : 0
-next_state : 0
 [weight0][ 590] = 0xf5edf20b
-current_state : 0
-next_state : 0
 [weight0][ 591] = 0x0004f0f2
-current_state : 0
-next_state : 0
 [weight0][ 592] = 0xf9e01bff
-current_state : 0
-next_state : 0
 [weight0][ 593] = 0x010620e1
-current_state : 0
-next_state : 0
 [weight0][ 594] = 0xfcf803de
-current_state : 0
-next_state : 0
 [weight0][ 595] = 0x10f103fe
-current_state : 0
-next_state : 0
 [weight0][ 596] = 0xeef615f2
-current_state : 0
-next_state : 0
 [weight0][ 597] = 0x162a0eed
-current_state : 0
-next_state : 0
 [weight0][ 598] = 0xf1161c2a
-current_state : 0
-next_state : 0
 [weight0][ 599] = 0x0bd932f7
-current_state : 0
-next_state : 0
 [weight0][ 600] = 0x14ffdd06
-current_state : 0
-next_state : 0
 [weight0][ 601] = 0xe4d20fcc
-current_state : 0
-next_state : 0
 [weight0][ 602] = 0xf6100d3c
-current_state : 0
-next_state : 0
 [weight0][ 603] = 0x2014e7ee
-current_state : 0
-next_state : 0
 [weight0][ 604] = 0x3e21f21b
-current_state : 0
-next_state : 0
 [weight0][ 605] = 0xdff131ec
-current_state : 0
-next_state : 0
 [weight0][ 606] = 0xe2d0edff
-current_state : 0
-next_state : 0
 [weight0][ 607] = 0x1f30e1e7
-current_state : 0
-next_state : 0
 [weight0][ 608] = 0x02df22f7
-current_state : 0
-next_state : 0
 [weight0][ 609] = 0xff071fdb
-current_state : 0
-next_state : 0
 [weight0][ 610] = 0xf4e9f7ec
-current_state : 0
-next_state : 0
 [weight0][ 611] = 0x18f211f5
-current_state : 0
-next_state : 0
 [weight0][ 612] = 0xefe70ced
-current_state : 0
-next_state : 0
 [weight0][ 613] = 0x1c42fdeb
-current_state : 0
-next_state : 0
 [weight0][ 614] = 0xfb292d22
-current_state : 0
-next_state : 0
 [weight0][ 615] = 0x04de32f9
-current_state : 0
-next_state : 0
 [weight0][ 616] = 0x0bf5e6fc
-current_state : 0
-next_state : 0
 [weight0][ 617] = 0xf1cb1bc6
-current_state : 0
-next_state : 0
 [weight0][ 618] = 0xf1271543
-current_state : 0
-next_state : 0
 [weight0][ 619] = 0x180cf4f4
-current_state : 0
-next_state : 0
 [weight0][ 620] = 0x3b24f320
-current_state : 0
-next_state : 0
 [weight0][ 621] = 0xf0f529dd
-current_state : 0
-next_state : 0
 [weight0][ 622] = 0xe6d1e408
-current_state : 0
-next_state : 0
 [weight0][ 623] = 0x1f33dce3
-current_state : 0
-next_state : 0
 [weight0][ 624] = 0xeeeb2ff3
-current_state : 0
-next_state : 0
 [weight0][ 625] = 0xf0e919d7
-current_state : 0
-next_state : 0
 [weight0][ 626] = 0xf6f4f1e5
-current_state : 0
-next_state : 0
 [weight0][ 627] = 0x1bec10ff
-current_state : 0
-next_state : 0
 [weight0][ 628] = 0xf9f302fa
-current_state : 0
-next_state : 0
 [weight0][ 629] = 0xf82c19d9
-current_state : 0
-next_state : 0
 [weight0][ 630] = 0xef1e3522
-current_state : 0
-next_state : 0
 [weight0][ 631] = 0x0cd544f9
-current_state : 0
-next_state : 0
 [weight0][ 632] = 0x24dab2fa
-current_state : 0
-next_state : 0
 [weight0][ 633] = 0xeec216f0
-current_state : 0
-next_state : 0
 [weight0][ 634] = 0xe735f960
-current_state : 0
-next_state : 0
 [weight0][ 635] = 0x0afdf2f1
-current_state : 0
-next_state : 0
 [weight0][ 636] = 0x4aecf7ff
-current_state : 0
-next_state : 0
 [weight0][ 637] = 0xe6ef4de8
-current_state : 0
-next_state : 0
 [weight0][ 638] = 0xe8caf605
-current_state : 0
-next_state : 0
 [weight0][ 639] = 0x0d1bcdde
-current_state : 0
-next_state : 0
 [weight0][ 640] = 0xfdee2eee
-current_state : 0
-next_state : 0
 [weight0][ 641] = 0x061109e7
-current_state : 0
-next_state : 0
 [weight0][ 642] = 0xf4f9f4db
-current_state : 0
-next_state : 0
 [weight0][ 643] = 0x14f31103
-current_state : 0
-next_state : 0
 [weight0][ 644] = 0xfe030a09
-current_state : 0
-next_state : 0
 [weight0][ 645] = 0x06380be4
-current_state : 0
-next_state : 0
 [weight0][ 646] = 0xfa232a33
-current_state : 0
-next_state : 0
 [weight0][ 647] = 0x13d52afd
-current_state : 0
-next_state : 0
 [weight0][ 648] = 0x1ef7da0a
-current_state : 0
-next_state : 0
 [weight0][ 649] = 0x09cc0ed3
-current_state : 0
-next_state : 0
 [weight0][ 650] = 0xe9161246
-current_state : 0
-next_state : 0
 [weight0][ 651] = 0x220df109
-current_state : 0
-next_state : 0
 [weight0][ 652] = 0x370cf71a
-current_state : 0
-next_state : 0
 [weight0][ 653] = 0xeffb36eb
-current_state : 0
-next_state : 0
 [weight0][ 654] = 0xcdce0107
-current_state : 0
-next_state : 0
 [weight0][ 655] = 0x2030c8df
-current_state : 0
-next_state : 0
 [weight0][ 656] = 0xfaef0dde
-current_state : 0
-next_state : 0
 [weight0][ 657] = 0x07ddf7f3
-current_state : 0
-next_state : 0
 [weight0][ 658] = 0x05f9e701
-current_state : 0
-next_state : 0
 [weight0][ 659] = 0xf9e5171f
-current_state : 0
-next_state : 0
 [weight0][ 660] = 0xfbdedde9
-current_state : 0
-next_state : 0
 [weight0][ 661] = 0x112e1e1d
-current_state : 0
-next_state : 0
 [weight0][ 662] = 0xfcef610c
-current_state : 0
-next_state : 0
 [weight0][ 663] = 0x08f93f04
-current_state : 0
-next_state : 0
 [weight0][ 664] = 0x25f9ffe8
-current_state : 0
-next_state : 0
 [weight0][ 665] = 0xecc90803
-current_state : 0
-next_state : 0
 [weight0][ 666] = 0x1113ec46
-current_state : 0
-next_state : 0
 [weight0][ 667] = 0x110af9f6
-current_state : 0
-next_state : 0
 [weight0][ 668] = 0x5b05ff38
-current_state : 0
-next_state : 0
 [weight0][ 669] = 0x02ef28f0
-current_state : 0
-next_state : 0
 [weight0][ 670] = 0xe7f3fa09
-current_state : 0
-next_state : 0
 [weight0][ 671] = 0x0304e0ff
-current_state : 0
-next_state : 0
 [weight0][ 672] = 0xf0d252cf
-current_state : 0
-next_state : 0
 [weight0][ 673] = 0xfcf0e8f0
-current_state : 0
-next_state : 0
 [weight0][ 674] = 0xf7cfed0d
-current_state : 0
-next_state : 0
 [weight0][ 675] = 0x0fe81a0c
-current_state : 0
-next_state : 0
 [weight0][ 676] = 0xffc7f1d8
-current_state : 0
-next_state : 0
 [weight0][ 677] = 0xee3d272c
-current_state : 0
-next_state : 0
 [weight0][ 678] = 0xe2d559d8
-current_state : 0
-next_state : 0
 [weight0][ 679] = 0x1bf455f2
-current_state : 0
-next_state : 0
 [weight0][ 680] = 0x0fe6e801
-current_state : 0
-next_state : 0
 [weight0][ 681] = 0x08aa1c06
-current_state : 0
-next_state : 0
 [weight0][ 682] = 0x0537ea30
-current_state : 0
-next_state : 0
 [weight0][ 683] = 0x1be60beb
-current_state : 0
-next_state : 0
 [weight0][ 684] = 0x60e81741
-current_state : 0
-next_state : 0
 [weight0][ 685] = 0x02dc1af7
-current_state : 0
-next_state : 0
 [weight0][ 686] = 0xe2082708
-current_state : 0
-next_state : 0
 [weight0][ 687] = 0xfb0bddfc
-current_state : 0
-next_state : 0
 [weight0][ 688] = 0xe8f61805
-current_state : 0
-next_state : 0
 [weight0][ 689] = 0xeae9e7fb
-current_state : 0
-next_state : 0
 [weight0][ 690] = 0x06f108fd
-current_state : 0
-next_state : 0
 [weight0][ 691] = 0x01f3f1fb
-current_state : 0
-next_state : 0
 [weight0][ 692] = 0xfe01eafa
-current_state : 0
-next_state : 0
 [weight0][ 693] = 0x08fa032f
-current_state : 0
-next_state : 0
 [weight0][ 694] = 0xeef821fe
-current_state : 0
-next_state : 0
 [weight0][ 695] = 0xf4fe3cf8
-current_state : 0
-next_state : 0
 [weight0][ 696] = 0x10f7f700
-current_state : 0
-next_state : 0
 [weight0][ 697] = 0xf9f30cfe
-current_state : 0
-next_state : 0
 [weight0][ 698] = 0x0c31e314
-current_state : 0
-next_state : 0
 [weight0][ 699] = 0x0cfdf8ec
-current_state : 0
-next_state : 0
 [weight0][ 700] = 0x26d11025
-current_state : 0
-next_state : 0
 [weight0][ 701] = 0xf60f15f1
-current_state : 0
-next_state : 0
 [weight0][ 702] = 0x00fd0505
-current_state : 0
-next_state : 0
 [weight0][ 703] = 0xddee010a
-current_state : 0
-next_state : 0
 [weight0][ 704] = 0x00fb2bf4
-current_state : 0
-next_state : 0
 [weight0][ 705] = 0x13fd21e1
-current_state : 0
-next_state : 0
 [weight0][ 706] = 0xf8f8efda
-current_state : 0
-next_state : 0
 [weight0][ 707] = 0x27f90a01
-current_state : 0
-next_state : 0
 [weight0][ 708] = 0xea010ceb
-current_state : 0
-next_state : 0
 [weight0][ 709] = 0x0d360ed8
-current_state : 0
-next_state : 0
 [weight0][ 710] = 0xfc282636
-current_state : 0
-next_state : 0
 [weight0][ 711] = 0xfedc2ff6
-current_state : 0
-next_state : 0
 [weight0][ 712] = 0x1bfadefd
-current_state : 0
-next_state : 0
 [weight0][ 713] = 0xf4cc10cb
-current_state : 0
-next_state : 0
 [weight0][ 714] = 0xdf1a174e
-current_state : 0
-next_state : 0
 [weight0][ 715] = 0x1b28e7fa
-current_state : 0
-next_state : 0
 [weight0][ 716] = 0x432aef1e
-current_state : 0
-next_state : 0
 [weight0][ 717] = 0xddf134d9
-current_state : 0
-next_state : 0
 [weight0][ 718] = 0xd8c6f00f
-current_state : 0
-next_state : 0
 [weight0][ 719] = 0x273bbce6
-current_state : 0
-next_state : 0
 [weight0][ 720] = 0x02e832fb
-current_state : 0
-next_state : 0
 [weight0][ 721] = 0x070018db
-current_state : 0
-next_state : 0
 [weight0][ 722] = 0xeff2f3d8
-current_state : 0
-next_state : 0
 [weight0][ 723] = 0x15e507f8
-current_state : 0
-next_state : 0
 [weight0][ 724] = 0xf7000ae8
-current_state : 0
-next_state : 0
 [weight0][ 725] = 0x133409e2
-current_state : 0
-next_state : 0
 [weight0][ 726] = 0xf7252727
-current_state : 0
-next_state : 0
 [weight0][ 727] = 0x05d82fed
-current_state : 0
-next_state : 0
 [weight0][ 728] = 0x1705e30d
-current_state : 0
-next_state : 0
 [weight0][ 729] = 0xf7c307c2
-current_state : 0
-next_state : 0
 [weight0][ 730] = 0xec181342
-current_state : 0
-next_state : 0
 [weight0][ 731] = 0x200febf0
-current_state : 0
-next_state : 0
 [weight0][ 732] = 0x4628eb16
-current_state : 0
-next_state : 0
 [weight0][ 733] = 0xdd0036d4
-current_state : 0
-next_state : 0
 [weight0][ 734] = 0xdfd1e5fc
-current_state : 0
-next_state : 0
 [weight0][ 735] = 0x1635dae2
-current_state : 0
-next_state : 0
 [weight0][ 736] = 0xecd333f1
-current_state : 0
-next_state : 0
 [weight0][ 737] = 0xf8e3e6ee
-current_state : 0
-next_state : 0
 [weight0][ 738] = 0xe7d7ecf3
-current_state : 0
-next_state : 0
 [weight0][ 739] = 0xf1f815f5
-current_state : 0
-next_state : 0
 [weight0][ 740] = 0xf6e5fdeb
-current_state : 0
-next_state : 0
 [weight0][ 741] = 0xfd2a0520
-current_state : 0
-next_state : 0
 [weight0][ 742] = 0xf3ce1bee
-current_state : 0
-next_state : 0
 [weight0][ 743] = 0xfcde57f9
-current_state : 0
-next_state : 0
 [weight0][ 744] = 0xfe00e9f7
-current_state : 0
-next_state : 0
 [weight0][ 745] = 0x01bf1811
-current_state : 0
-next_state : 0
 [weight0][ 746] = 0xf61f1816
-current_state : 0
-next_state : 0
 [weight0][ 747] = 0x18f4fbee
-current_state : 0
-next_state : 0
 [weight0][ 748] = 0x44d00a4a
-current_state : 0
-next_state : 0
 [weight0][ 749] = 0xdffb0dfb
-current_state : 0
-next_state : 0
 [weight0][ 750] = 0xe0f012fa
-current_state : 0
-next_state : 0
 [weight0][ 751] = 0xe8f3e1ff
-current_state : 0
-next_state : 0
 [weight0][ 752] = 0xeddb1bfe
-current_state : 0
-next_state : 0
 [weight0][ 753] = 0xe6e91bd6
-current_state : 0
-next_state : 0
 [weight0][ 754] = 0xf0f0ebdb
-current_state : 0
-next_state : 0
 [weight0][ 755] = 0x20f2eafd
-current_state : 0
-next_state : 0
 [weight0][ 756] = 0xf614ea06
-current_state : 0
-next_state : 0
 [weight0][ 757] = 0xfc2d13d8
-current_state : 0
-next_state : 0
 [weight0][ 758] = 0xf31b3130
-current_state : 0
-next_state : 0
 [weight0][ 759] = 0xfbdd42f6
-current_state : 0
-next_state : 0
 [weight0][ 760] = 0x26e4bc02
-current_state : 0
-next_state : 0
 [weight0][ 761] = 0xedda17ea
-current_state : 0
-next_state : 0
 [weight0][ 762] = 0xf2480156
-current_state : 0
-next_state : 0
 [weight0][ 763] = 0x0befe7f9
-current_state : 0
-next_state : 0
 [weight0][ 764] = 0x3fe4e2f1
-current_state : 0
-next_state : 0
 [weight0][ 765] = 0xd8e74de4
-current_state : 0
-next_state : 0
 [weight0][ 766] = 0xe3d2f9f3
-current_state : 0
-next_state : 0
 [weight0][ 767] = 0x0d23d3d9
-current_state : 0
-next_state : 0
 [weight0][ 768] = 0xe9dc3403
-current_state : 0
-next_state : 0
 [weight0][ 769] = 0xfae0e5e8
-current_state : 0
-next_state : 0
 [weight0][ 770] = 0xe2e6f6f3
-current_state : 0
-next_state : 0
 [weight0][ 771] = 0x00f20afd
-current_state : 0
-next_state : 0
 [weight0][ 772] = 0xe7ea02e7
-current_state : 0
-next_state : 0
 [weight0][ 773] = 0x032e1630
-current_state : 0
-next_state : 0
 [weight0][ 774] = 0xefd61feb
-current_state : 0
-next_state : 0
 [weight0][ 775] = 0xfced4ceb
-current_state : 0
-next_state : 0
 [weight0][ 776] = 0x00e9ebff
-current_state : 0
-next_state : 0
 [weight0][ 777] = 0x04b51c0e
-current_state : 0
-next_state : 0
 [weight0][ 778] = 0xfe230310
-current_state : 0
-next_state : 0
 [weight0][ 779] = 0x12ea0ce5
-current_state : 0
-next_state : 0
 [weight0][ 780] = 0x3dd60d43
-current_state : 0
-next_state : 0
 [weight0][ 781] = 0xe1ee17f3
-current_state : 0
-next_state : 0
 [weight0][ 782] = 0xe8030207
-current_state : 0
-next_state : 0
 [weight0][ 783] = 0xddedeaf5
-current_state : 0
-next_state : 0
 [weight0][ 784] = 0xe7d936f2
-current_state : 0
-next_state : 0
 [weight0][ 785] = 0x03e8e0eb
-current_state : 0
-next_state : 0
 [weight0][ 786] = 0xebdcd8ef
-current_state : 0
-next_state : 0
 [weight0][ 787] = 0x07001400
-current_state : 0
-next_state : 0
 [weight0][ 788] = 0xf2dbfaea
-current_state : 0
-next_state : 0
 [weight0][ 789] = 0x08271d1d
-current_state : 0
-next_state : 0
 [weight0][ 790] = 0xeedc1ef2
-current_state : 0
-next_state : 0
 [weight0][ 791] = 0x06e14cf9
-current_state : 0
-next_state : 0
 [weight0][ 792] = 0x0deee517
-current_state : 0
-next_state : 0
 [weight0][ 793] = 0xfac81117
-current_state : 0
-next_state : 0
 [weight0][ 794] = 0xf421101f
-current_state : 0
-next_state : 0
 [weight0][ 795] = 0x24fcf6ea
-current_state : 0
-next_state : 0
 [weight0][ 796] = 0x3fdc0034
-current_state : 0
-next_state : 0
 [weight0][ 797] = 0xe6e21cf9
-current_state : 0
-next_state : 0
 [weight0][ 798] = 0xd1ef18ff
-current_state : 0
-next_state : 0
 [weight0][ 799] = 0xf4f5dc06
-current_state : 0
-next_state : 0
 [weight0][ 800] = 0xf3eb25ec
-current_state : 0
-next_state : 0
 [weight0][ 801] = 0x04e902f2
-current_state : 0
-next_state : 0
 [weight0][ 802] = 0x02e7effb
-current_state : 0
-next_state : 0
 [weight0][ 803] = 0x1ef50efd
-current_state : 0
-next_state : 0
 [weight0][ 804] = 0xf9e5e7eb
-current_state : 0
-next_state : 0
 [weight0][ 805] = 0x0f412a1a
-current_state : 0
-next_state : 0
 [weight0][ 806] = 0xf1fa5106
-current_state : 0
-next_state : 0
 [weight0][ 807] = 0x05e148f3
-current_state : 0
-next_state : 0
 [weight0][ 808] = 0x18efe40d
-current_state : 0
-next_state : 0
 [weight0][ 809] = 0xf7ba1802
-current_state : 0
-next_state : 0
 [weight0][ 810] = 0xfa2df43c
-current_state : 0
-next_state : 0
 [weight0][ 811] = 0x1df4f8e9
-current_state : 0
-next_state : 0
 [weight0][ 812] = 0x67ef051d
-current_state : 0
-next_state : 0
 [weight0][ 813] = 0xfaeb36f6
-current_state : 0
-next_state : 0
 [weight0][ 814] = 0xeaea0b0f
-current_state : 0
-next_state : 0
 [weight0][ 815] = 0xec0ce8f3
-current_state : 0
-next_state : 0
 [weight0][ 816] = 0x01fa2cfa
-current_state : 0
-next_state : 0
 [weight0][ 817] = 0x030516e7
-current_state : 0
-next_state : 0
 [weight0][ 818] = 0xfdf7f8e8
-current_state : 0
-next_state : 0
 [weight0][ 819] = 0x21f810fb
-current_state : 0
-next_state : 0
 [weight0][ 820] = 0xf2f20deb
-current_state : 0
-next_state : 0
 [weight0][ 821] = 0x123803f2
-current_state : 0
-next_state : 0
 [weight0][ 822] = 0xfc172e2d
-current_state : 0
-next_state : 0
 [weight0][ 823] = 0x16d429f9
-current_state : 0
-next_state : 0
 [weight0][ 824] = 0x1e01e602
-current_state : 0
-next_state : 0
 [weight0][ 825] = 0xf1d80dcd
-current_state : 0
-next_state : 0
 [weight0][ 826] = 0xee1d123f
-current_state : 0
-next_state : 0
 [weight0][ 827] = 0x221cfc03
-current_state : 0
-next_state : 0
 [weight0][ 828] = 0x3516f917
-current_state : 0
-next_state : 0
 [weight0][ 829] = 0xe0f929e4
-current_state : 0
-next_state : 0
 [weight0][ 830] = 0xe2d1fe0b
-current_state : 0
-next_state : 0
 [weight0][ 831] = 0x2036d5ea
-current_state : 0
-next_state : 0
 [weight0][ 832] = 0xecf334ea
-current_state : 0
-next_state : 0
 [weight0][ 833] = 0x00f00ad0
-current_state : 0
-next_state : 0
 [weight0][ 834] = 0xf0eff2e5
-current_state : 0
-next_state : 0
 [weight0][ 835] = 0x15e911fd
-current_state : 0
-next_state : 0
 [weight0][ 836] = 0xf1f909fc
-current_state : 0
-next_state : 0
 [weight0][ 837] = 0x09471ad8
-current_state : 0
-next_state : 0
 [weight0][ 838] = 0xe4013334
-current_state : 0
-next_state : 0
 [weight0][ 839] = 0x0cc64dfa
-current_state : 0
-next_state : 0
 [weight0][ 840] = 0x28eebafe
-current_state : 0
-next_state : 0
 [weight0][ 841] = 0xfaab08f0
-current_state : 0
-next_state : 0
 [weight0][ 842] = 0xf7330160
-current_state : 0
-next_state : 0
 [weight0][ 843] = 0x1508f8f3
-current_state : 0
-next_state : 0
 [weight0][ 844] = 0x51f8fa0f
-current_state : 0
-next_state : 0
 [weight0][ 845] = 0xd8e639e8
-current_state : 0
-next_state : 0
 [weight0][ 846] = 0xcdc601f5
-current_state : 0
-next_state : 0
 [weight0][ 847] = 0x141fbdd8
-current_state : 0
-next_state : 0
 [weight0][ 848] = 0xf4d61ac4
-current_state : 0
-next_state : 0
 [weight0][ 849] = 0xf0f7f8f0
-current_state : 0
-next_state : 0
 [weight0][ 850] = 0xedd3f9f0
-current_state : 0
-next_state : 0
 [weight0][ 851] = 0x07f40b06
-current_state : 0
-next_state : 0
 [weight0][ 852] = 0x03bee4de
-current_state : 0
-next_state : 0
 [weight0][ 853] = 0x15432afa
-current_state : 0
-next_state : 0
 [weight0][ 854] = 0xdaf85212
-current_state : 0
-next_state : 0
 [weight0][ 855] = 0x0edd3f07
-current_state : 0
-next_state : 0
 [weight0][ 856] = 0x23d8e1f1
-current_state : 0
-next_state : 0
 [weight0][ 857] = 0xe49d13f4
-current_state : 0
-next_state : 0
 [weight0][ 858] = 0xeb26fc7f
-current_state : 0
-next_state : 0
 [weight0][ 859] = 0x0f02ebd8
-current_state : 0
-next_state : 0
 [weight0][ 860] = 0x4ffe0933
-current_state : 0
-next_state : 0
 [weight0][ 861] = 0xf8ef25fe
-current_state : 0
-next_state : 0
 [weight0][ 862] = 0xdddb0206
-current_state : 0
-next_state : 0
 [weight0][ 863] = 0xfc06d2dd
-current_state : 0
-next_state : 0
 [weight0][ 864] = 0x01f23dec
-current_state : 0
-next_state : 0
 [weight0][ 865] = 0x11e2f0e2
-current_state : 0
-next_state : 0
 [weight0][ 866] = 0xe0e8e5f1
-current_state : 0
-next_state : 0
 [weight0][ 867] = 0x0d0120fe
-current_state : 0
-next_state : 0
 [weight0][ 868] = 0x02e319d4
-current_state : 0
-next_state : 0
 [weight0][ 869] = 0xe945130c
-current_state : 0
-next_state : 0
 [weight0][ 870] = 0xffb815dc
-current_state : 0
-next_state : 0
 [weight0][ 871] = 0x10e152ff
-current_state : 0
-next_state : 0
 [weight0][ 872] = 0x03f6f201
-current_state : 0
-next_state : 0
 [weight0][ 873] = 0x03c01904
-current_state : 0
-next_state : 0
 [weight0][ 874] = 0xee12210c
-current_state : 0
-next_state : 0
 [weight0][ 875] = 0x26e1fa03
-current_state : 0
-next_state : 0
 [weight0][ 876] = 0x34f20036
-current_state : 0
-next_state : 0
 [weight0][ 877] = 0xf5cc0ff5
-current_state : 0
-next_state : 0
 [weight0][ 878] = 0xd8f32101
-current_state : 0
-next_state : 0
 [weight0][ 879] = 0xedfef00a
-current_state : 0
-next_state : 0
 [weight0][ 880] = 0xe8c92d00
-current_state : 0
-next_state : 0
 [weight0][ 881] = 0xeecdefed
-current_state : 0
-next_state : 0
 [weight0][ 882] = 0x03eaedfb
-current_state : 0
-next_state : 0
 [weight0][ 883] = 0xf0dcfaf3
-current_state : 0
-next_state : 0
 [weight0][ 884] = 0xf4e5e0d1
-current_state : 0
-next_state : 0
 [weight0][ 885] = 0x1814fc36
-current_state : 0
-next_state : 0
 [weight0][ 886] = 0xeff332f2
-current_state : 0
-next_state : 0
 [weight0][ 887] = 0xf9f646dd
-current_state : 0
-next_state : 0
 [weight0][ 888] = 0x03f8ef04
-current_state : 0
-next_state : 0
 [weight0][ 889] = 0xe8d2130e
-current_state : 0
-next_state : 0
 [weight0][ 890] = 0x0c31f408
-current_state : 0
-next_state : 0
 [weight0][ 891] = 0x10fdffea
-current_state : 0
-next_state : 0
 [weight0][ 892] = 0x58d70a32
-current_state : 0
-next_state : 0
 [weight0][ 893] = 0xedf437e2
-current_state : 0
-next_state : 0
 [weight0][ 894] = 0xedf4ecfb
-current_state : 0
-next_state : 0
 [weight0][ 895] = 0xd4eae015
-current_state : 0
-next_state : 0
 [weight0][ 896] = 0xfc08ff01
-current_state : 0
-next_state : 0
 [weight0][ 897] = 0xf204f806
-current_state : 0
-next_state : 0
 [weight0][ 898] = 0xfbfdf817
-current_state : 0
-next_state : 0
 [weight0][ 899] = 0x0102ff00
-current_state : 0
-next_state : 0
 [weight0][ 900] = 0x0af3e305
-current_state : 0
-next_state : 0
 [weight0][ 901] = 0xffed0209
-current_state : 0
-next_state : 0
 [weight0][ 902] = 0x10f5feea
-current_state : 0
-next_state : 0
 [weight0][ 903] = 0xf515f0fb
-current_state : 0
-next_state : 0
 [weight0][ 904] = 0x09071901
-current_state : 0
-next_state : 0
 [weight0][ 905] = 0x0017fcf0
-current_state : 0
-next_state : 0
 [weight0][ 906] = 0x1603f9f9
-current_state : 0
-next_state : 0
 [weight0][ 907] = 0xf5f6000a
-current_state : 0
-next_state : 0
 [weight0][ 908] = 0xe20706e2
-current_state : 0
-next_state : 0
 [weight0][ 909] = 0x080df2ff
-current_state : 0
-next_state : 0
 [weight0][ 910] = 0x1b0e0ef6
-current_state : 0
-next_state : 0
 [weight0][ 911] = 0xe7ff170c
-current_state : 0
-next_state : 0
 [weight0][ 912] = 0xfaf12cf7
-current_state : 0
-next_state : 0
 [weight0][ 913] = 0x0cee20e8
-current_state : 0
-next_state : 0
 [weight0][ 914] = 0xf4fffadb
-current_state : 0
-next_state : 0
 [weight0][ 915] = 0x0902fdf9
-current_state : 0
-next_state : 0
 [weight0][ 916] = 0xedf20fee
-current_state : 0
-next_state : 0
 [weight0][ 917] = 0x1b2f10eb
-current_state : 0
-next_state : 0
 [weight0][ 918] = 0x03091625
-current_state : 0
-next_state : 0
 [weight0][ 919] = 0xfae22efc
-current_state : 0
-next_state : 0
 [weight0][ 920] = 0x1109daff
-current_state : 0
-next_state : 0
 [weight0][ 921] = 0xecd90bcf
-current_state : 0
-next_state : 0
 [weight0][ 922] = 0xf312152f
-current_state : 0
-next_state : 0
 [weight0][ 923] = 0x1d0fdd07
-current_state : 0
-next_state : 0
 [weight0][ 924] = 0x3426ea14
-current_state : 0
-next_state : 0
 [weight0][ 925] = 0xe3f828ec
-current_state : 0
-next_state : 0
 [weight0][ 926] = 0xdbcaee04
-current_state : 0
-next_state : 0
 [weight0][ 927] = 0x122dcbee
-current_state : 0
-next_state : 0
 [weight0][ 928] = 0xeae458b1
-current_state : 0
-next_state : 0
 [weight0][ 929] = 0x0cf6f7eb
-current_state : 0
-next_state : 0
 [weight0][ 930] = 0xe8e6e5ee
-current_state : 0
-next_state : 0
 [weight0][ 931] = 0xf8fa20ff
-current_state : 0
-next_state : 0
 [weight0][ 932] = 0x04d005d4
-current_state : 0
-next_state : 0
 [weight0][ 933] = 0xf94d13f8
-current_state : 0
-next_state : 0
 [weight0][ 934] = 0xe0db2ff0
-current_state : 0
-next_state : 0
 [weight0][ 935] = 0x14ec5502
-current_state : 0
-next_state : 0
 [weight0][ 936] = 0x14e1daeb
-current_state : 0
-next_state : 0
 [weight0][ 937] = 0x04b514fc
-current_state : 0
-next_state : 0
 [weight0][ 938] = 0xe11df050
-current_state : 0
-next_state : 0
 [weight0][ 939] = 0x20f904eb
-current_state : 0
-next_state : 0
 [weight0][ 940] = 0x48f50e37
-current_state : 0
-next_state : 0
 [weight0][ 941] = 0xf6df26f1
-current_state : 0
-next_state : 0
 [weight0][ 942] = 0xe0e30af8
-current_state : 0
-next_state : 0
 [weight0][ 943] = 0xf800d9dc
-current_state : 0
-next_state : 0
 [weight0][ 944] = 0xf4dd12f3
-current_state : 0
-next_state : 0
 [weight0][ 945] = 0xf8ee11e6
-current_state : 0
-next_state : 0
 [weight0][ 946] = 0xfeffecf2
-current_state : 0
-next_state : 0
 [weight0][ 947] = 0x0beffd02
-current_state : 0
-next_state : 0
 [weight0][ 948] = 0xf1feeff1
-current_state : 0
-next_state : 0
 [weight0][ 949] = 0x14231615
-current_state : 0
-next_state : 0
 [weight0][ 950] = 0xf5143819
-current_state : 0
-next_state : 0
 [weight0][ 951] = 0x01ea31ec
-current_state : 0
-next_state : 0
 [weight0][ 952] = 0x17f3cf08
-current_state : 0
-next_state : 0
 [weight0][ 953] = 0xf6e51506
-current_state : 0
-next_state : 0
 [weight0][ 954] = 0x073fe230
-current_state : 0
-next_state : 0
 [weight0][ 955] = 0xfff704f4
-current_state : 0
-next_state : 0
 [weight0][ 956] = 0x47e0fa1d
-current_state : 0
-next_state : 0
 [weight0][ 957] = 0xef0b44e9
-current_state : 0
-next_state : 0
 [weight0][ 958] = 0xfaf2f208
-current_state : 0
-next_state : 0
 [weight0][ 959] = 0xeef6e2f4
-current_state : 0
-next_state : 0
 [weight0][ 960] = 0xf0f639d4
-current_state : 0
-next_state : 0
 [weight0][ 961] = 0x04f908dd
-current_state : 0
-next_state : 0
 [weight0][ 962] = 0xeeedf500
-current_state : 0
-next_state : 0
 [weight0][ 963] = 0xfdfd25f2
-current_state : 0
-next_state : 0
 [weight0][ 964] = 0xf5e9fcf3
-current_state : 0
-next_state : 0
 [weight0][ 965] = 0xf43f1eea
-current_state : 0
-next_state : 0
 [weight0][ 966] = 0xeeef331b
-current_state : 0
-next_state : 0
 [weight0][ 967] = 0xffd843fc
-current_state : 0
-next_state : 0
 [weight0][ 968] = 0x1fe8adf8
-current_state : 0
-next_state : 0
 [weight0][ 969] = 0xfebb31f9
-current_state : 0
-next_state : 0
 [weight0][ 970] = 0xf830034e
-current_state : 0
-next_state : 0
 [weight0][ 971] = 0x15fcfafd
-current_state : 0
-next_state : 0
 [weight0][ 972] = 0x3bfb031c
-current_state : 0
-next_state : 0
 [weight0][ 973] = 0xe8f330e9
-current_state : 0
-next_state : 0
 [weight0][ 974] = 0xded900fe
-current_state : 0
-next_state : 0
 [weight0][ 975] = 0xfc12e1e5
-current_state : 0
-next_state : 0
 [weight0][ 976] = 0xf5df13e6
-current_state : 0
-next_state : 0
 [weight0][ 977] = 0xf3fa11fe
-current_state : 0
-next_state : 0
 [weight0][ 978] = 0xfdf0fc05
-current_state : 0
-next_state : 0
 [weight0][ 979] = 0x1cfbf7fc
-current_state : 0
-next_state : 0
 [weight0][ 980] = 0x05edebf5
-current_state : 0
-next_state : 0
 [weight0][ 981] = 0x021f2212
-current_state : 0
-next_state : 0
 [weight0][ 982] = 0xe3095913
-current_state : 0
-next_state : 0
 [weight0][ 983] = 0x06fd1bf8
-current_state : 0
-next_state : 0
 [weight0][ 984] = 0x12e7c8f6
-current_state : 0
-next_state : 0
 [weight0][ 985] = 0x00e71bfe
-current_state : 0
-next_state : 0
 [weight0][ 986] = 0xf93bf040
-current_state : 0
-next_state : 0
 [weight0][ 987] = 0xfefa06fd
-current_state : 0
-next_state : 0
 [weight0][ 988] = 0x46e30313
-current_state : 0
-next_state : 0
 [weight0][ 989] = 0xfc0446ed
-current_state : 0
-next_state : 0
 [weight0][ 990] = 0x10f2f50d
-current_state : 0
-next_state : 0
 [weight0][ 991] = 0xf205f902
-current_state : 0
-next_state : 0
 [weight0][ 992] = 0xf6e54ae6
-current_state : 0
-next_state : 0
 [weight0][ 993] = 0x0df0dded
-current_state : 0
-next_state : 0
 [weight0][ 994] = 0xe2e7e3ee
-current_state : 0
-next_state : 0
 [weight0][ 995] = 0x08fe30fd
-current_state : 0
-next_state : 0
 [weight0][ 996] = 0xfcd718e2
-current_state : 0
-next_state : 0
 [weight0][ 997] = 0xe33a121b
-current_state : 0
-next_state : 0
 [weight0][ 998] = 0xf0b915d7
-current_state : 0
-next_state : 0
 [weight0][ 999] = 0x18e25902
-current_state : 0
-next_state : 0
 [weight0][1000] = 0xfcf8e8fa
-current_state : 0
-next_state : 0
 [weight0][1001] = 0x12bb0d08
-current_state : 0
-next_state : 0
 [weight0][1002] = 0xf0152112
-current_state : 0
-next_state : 0
 [weight0][1003] = 0x24ea07f8
-current_state : 0
-next_state : 0
 [weight0][1004] = 0x51e50845
-current_state : 0
-next_state : 0
 [weight0][1005] = 0xebd8fcf3
-current_state : 0
-next_state : 0
 [weight0][1006] = 0xe606200a
-current_state : 0
-next_state : 0
 [weight0][1007] = 0xec05e3f0
-current_state : 0
-next_state : 0
 [weight0][1008] = 0xfffe11ef
-current_state : 0
-next_state : 0
 [weight0][1009] = 0x140118fe
-current_state : 0
-next_state : 0
 [weight0][1010] = 0xf6ec0aed
-current_state : 0
-next_state : 0
 [weight0][1011] = 0x11000102
-current_state : 0
-next_state : 0
 [weight0][1012] = 0xfefb0af0
-current_state : 0
-next_state : 0
 [weight0][1013] = 0x083509e1
-current_state : 0
-next_state : 0
 [weight0][1014] = 0xf5283117
-current_state : 0
-next_state : 0
 [weight0][1015] = 0x14e31af4
-current_state : 0
-next_state : 0
 [weight0][1016] = 0x1afbe9fa
-current_state : 0
-next_state : 0
 [weight0][1017] = 0x02d816dd
-current_state : 0
-next_state : 0
 [weight0][1018] = 0xe6170d3c
-current_state : 0
-next_state : 0
 [weight0][1019] = 0x1b02fd02
-current_state : 0
-next_state : 0
 [weight0][1020] = 0x3722fe10
-current_state : 0
-next_state : 0
 [weight0][1021] = 0xecf32ef0
-current_state : 0
-next_state : 0
 [weight0][1022] = 0xeed6f408
-current_state : 0
-next_state : 0
 [weight0][1023] = 0x222adff5
-current_state : 0
-next_state : 0
 Start writing bias0...
 [bias0][ 0] = 5
-current_state : 0
-next_state : 0
 [bias0][ 1] = 1
-current_state : 0
-next_state : 0
 [bias0][ 2] = 3
-current_state : 0
-next_state : 0
 [bias0][ 3] = -1
-current_state : 0
-next_state : 0
 [bias0][ 4] = 1
-current_state : 0
-next_state : 0
 [bias0][ 5] = 2
-current_state : 0
-next_state : 0
 [bias0][ 6] = 0
-current_state : 0
-next_state : 0
 [bias0][ 7] = -1
-current_state : 0
-next_state : 0
 [bias0][ 8] = 4
-current_state : 0
-next_state : 0
 [bias0][ 9] = 2
-current_state : 0
-next_state : 0
 [bias0][10] = 0
-current_state : 0
-next_state : 0
 [bias0][11] = -2
-current_state : 0
-next_state : 0
 [bias0][12] = 2
-current_state : 0
-next_state : 0
 [bias0][13] = 0
-current_state : 0
-next_state : 0
 [bias0][14] = 1
-current_state : 0
-next_state : 0
 [bias0][15] = 0
-current_state : 0
-next_state : 0
 [bias0][16] = 0
-current_state : 0
-next_state : 0
 [bias0][17] = 2
-current_state : 0
-next_state : 0
 [bias0][18] = 1
-current_state : 0
-next_state : 0
 [bias0][19] = 3
-current_state : 0
-next_state : 0
 [bias0][20] = 0
-current_state : 0
-next_state : 0
 [bias0][21] = 1
-current_state : 0
-next_state : 0
 [bias0][22] = 4
-current_state : 0
-next_state : 0
 [bias0][23] = 0
-current_state : 0
-next_state : 0
 [bias0][24] = -2
-current_state : 0
-next_state : 0
 [bias0][25] = -1
-current_state : 0
-next_state : 0
 [bias0][26] = -2
-current_state : 0
-next_state : 0
 [bias0][27] = 3
-current_state : 0
-next_state : 0
 [bias0][28] = 3
-current_state : 0
-next_state : 0
 [bias0][29] = 4
-current_state : 0
-next_state : 0
 [bias0][30] = 1
-current_state : 0
-next_state : 0
 [bias0][31] = 2
-current_state : 0
-next_state : 0
 [bias0][32] = 4
-current_state : 0
-next_state : 0
 [bias0][33] = 0
-current_state : 0
-next_state : 0
 [bias0][34] = -4
-current_state : 0
-next_state : 0
 [bias0][35] = 2
-current_state : 0
-next_state : 0
 [bias0][36] = -2
-current_state : 0
-next_state : 0
 [bias0][37] = 3
-current_state : 0
-next_state : 0
 [bias0][38] = 3
-current_state : 0
-next_state : 0
 [bias0][39] = 3
-current_state : 0
-next_state : 0
 [bias0][40] = 3
-current_state : 0
-next_state : 0
 [bias0][41] = -1
-current_state : 0
-next_state : 0
 [bias0][42] = -3
-current_state : 0
-next_state : 0
 [bias0][43] = 1
-current_state : 0
-next_state : 0
 [bias0][44] = 4
-current_state : 0
-next_state : 0
 [bias0][45] = 2
-current_state : 0
-next_state : 0
 [bias0][46] = -3
-current_state : 0
-next_state : 0
 [bias0][47] = 3
-current_state : 0
-next_state : 0
 [bias0][48] = 1
-current_state : 0
-next_state : 0
 [bias0][49] = 1
-current_state : 0
-next_state : 0
 [bias0][50] = -2
-current_state : 0
-next_state : 0
 [bias0][51] = 3
-current_state : 0
-next_state : 0
 [bias0][52] = 1
-current_state : 0
-next_state : 0
 [bias0][53] = 0
-current_state : 0
-next_state : 0
 [bias0][54] = -3
-current_state : 0
-next_state : 0
 [bias0][55] = 1
-current_state : 0
-next_state : 0
 [bias0][56] = 1
-current_state : 0
-next_state : 0
 [bias0][57] = 4
-current_state : 0
-next_state : 0
 [bias0][58] = 0
-current_state : 0
-next_state : 0
 [bias0][59] = 1
-current_state : 0
-next_state : 0
 [bias0][60] = 0
-current_state : 0
-next_state : 0
 [bias0][61] = 1
-current_state : 0
-next_state : 0
 [bias0][62] = -4
-current_state : 0
-next_state : 0
 [bias0][63] = 3
-current_state : 0
-next_state : 0
+finish
+for 0RDATA_S :0
+resp : 0
+output_in_DRAM[0] : 0
+for 1RDATA_S :0
+resp : 0
+output_in_DRAM[1] : 0
+for 2RDATA_S :0
+resp : 0
+output_in_DRAM[2] : 0
+for 3RDATA_S :0
+resp : 0
+output_in_DRAM[3] : 0
+for 4RDATA_S :0
+resp : 0
+output_in_DRAM[4] : 0
+for 5RDATA_S :0
+resp : 0
+output_in_DRAM[5] : 0
+for 6RDATA_S :0
+resp : 0
+output_in_DRAM[6] : 0
+for 7RDATA_S :0
+resp : 0
+output_in_DRAM[7] : 0
+for 8RDATA_S :0
+resp : 0
+output_in_DRAM[8] : 0
+for 9RDATA_S :0
+resp : 0
+output_in_DRAM[9] : 0
+for 10RDATA_S :0
+resp : 0
+output_in_DRAM[10] : 0
+for 11RDATA_S :0
+resp : 0
+output_in_DRAM[11] : 0
+for 12RDATA_S :0
+resp : 0
+output_in_DRAM[12] : 0
+for 13RDATA_S :0
+resp : 0
+output_in_DRAM[13] : 0
+for 14RDATA_S :0
+resp : 0
+output_in_DRAM[14] : 0
+for 15RDATA_S :0
+resp : 0
+output_in_DRAM[15] : 0
+for 16RDATA_S :0
+resp : 0
+output_in_DRAM[16] : 0
+for 17RDATA_S :0
+resp : 0
+output_in_DRAM[17] : 0
+for 18RDATA_S :0
+resp : 0
+output_in_DRAM[18] : 0
+for 19RDATA_S :0
+resp : 0
+output_in_DRAM[19] : 0
+for 20RDATA_S :0
+resp : 0
+output_in_DRAM[20] : 0
+for 21RDATA_S :0
+resp : 0
+output_in_DRAM[21] : 0
+for 22RDATA_S :0
+resp : 0
+output_in_DRAM[22] : 0
+for 23RDATA_S :0
+resp : 0
+output_in_DRAM[23] : 0
+for 24RDATA_S :0
+resp : 0
+output_in_DRAM[24] : 0
+for 25RDATA_S :0
+resp : 0
+output_in_DRAM[25] : 0
+for 26RDATA_S :0
+resp : 0
+output_in_DRAM[26] : 0
+for 27RDATA_S :0
+resp : 0
+output_in_DRAM[27] : 0
+for 28RDATA_S :0
+resp : 0
+output_in_DRAM[28] : 0
+for 29RDATA_S :0
+resp : 0
+output_in_DRAM[29] : 0
+for 30RDATA_S :0
+resp : 0
+output_in_DRAM[30] : 0
+for 31RDATA_S :0
+resp : 0
+output_in_DRAM[31] : 0
+for 32RDATA_S :0
+resp : 0
+output_in_DRAM[32] : 0
+for 33RDATA_S :0
+resp : 0
+output_in_DRAM[33] : 0
+for 34RDATA_S :0
+resp : 0
+output_in_DRAM[34] : 0
+for 35RDATA_S :0
+resp : 0
+output_in_DRAM[35] : 0
+for 36RDATA_S :0
+resp : 0
+output_in_DRAM[36] : 0
+for 37RDATA_S :0
+resp : 0
+output_in_DRAM[37] : 0
+for 38RDATA_S :0
+resp : 0
+output_in_DRAM[38] : 0
+for 39RDATA_S :0
+resp : 0
+output_in_DRAM[39] : 0
+for 40RDATA_S :0
+resp : 0
+output_in_DRAM[40] : 0
+for 41RDATA_S :0
+resp : 0
+output_in_DRAM[41] : 0
+for 42RDATA_S :0
+resp : 0
+output_in_DRAM[42] : 0
+for 43RDATA_S :0
+resp : 0
+output_in_DRAM[43] : 0
+for 44RDATA_S :0
+resp : 0
+output_in_DRAM[44] : 0
+for 45RDATA_S :0
+resp : 0
+output_in_DRAM[45] : 0
+for 46RDATA_S :0
+resp : 0
+output_in_DRAM[46] : 0
+for 47RDATA_S :0
+resp : 0
+output_in_DRAM[47] : 0
+for 48RDATA_S :0
+resp : 0
+output_in_DRAM[48] : 0
+for 49RDATA_S :0
+resp : 0
+output_in_DRAM[49] : 0
+for 50RDATA_S :0
+resp : 0
+output_in_DRAM[50] : 0
+for 51RDATA_S :0
+resp : 0
+output_in_DRAM[51] : 0
+for 52RDATA_S :0
+resp : 0
+output_in_DRAM[52] : 0
+for 53RDATA_S :0
+resp : 0
+output_in_DRAM[53] : 0
+for 54RDATA_S :0
+resp : 0
+output_in_DRAM[54] : 0
+for 55RDATA_S :0
+resp : 0
+output_in_DRAM[55] : 0
+for 56RDATA_S :0
+resp : 0
+output_in_DRAM[56] : 0
+for 57RDATA_S :0
+resp : 0
+output_in_DRAM[57] : 0
+for 58RDATA_S :0
+resp : 0
+output_in_DRAM[58] : 0
+for 59RDATA_S :0
+resp : 0
+output_in_DRAM[59] : 0
+for 60RDATA_S :0
+resp : 0
+output_in_DRAM[60] : 0
+for 61RDATA_S :0
+resp : 0
+output_in_DRAM[61] : 0
+for 62RDATA_S :0
+resp : 0
+output_in_DRAM[62] : 0
+for 63RDATA_S :0
+resp : 0
+output_in_DRAM[63] : 0
+for 64RDATA_S :0
+resp : 0
+output_in_DRAM[64] : 1
+for 65RDATA_S :0
+resp : 0
+output_in_DRAM[65] : 5
+for 66RDATA_S :0
+resp : 0
+output_in_DRAM[66] : 0
+for 67RDATA_S :0
+resp : 0
+output_in_DRAM[67] : 0
+for 68RDATA_S :0
+resp : 0
+output_in_DRAM[68] : 0
+for 69output_in_DRAM[69] : 4096
+for 70output_in_DRAM[70] : -2113605968
+for 71output_in_DRAM[71] : 21960
+for 72output_in_DRAM[72] : 0
+for 73output_in_DRAM[73] : 21960
+for 74output_in_DRAM[74] : 1
+for 75output_in_DRAM[75] : 0
+for 76output_in_DRAM[76] : 0
+for 77output_in_DRAM[77] : 0
+for 78output_in_DRAM[78] : 0
+for 79output_in_DRAM[79] : 0
+for 80output_in_DRAM[80] : 0
+for 81output_in_DRAM[81] : 0
+for 82output_in_DRAM[82] : 0
+for 83output_in_DRAM[83] : 0
+for 84output_in_DRAM[84] : 0
+for 85output_in_DRAM[85] : 0
+for 86output_in_DRAM[86] : 0
+for 87output_in_DRAM[87] : 0
+for 88output_in_DRAM[88] : 0
+for 89output_in_DRAM[89] : 0
+for 90output_in_DRAM[90] : 0
+for 91output_in_DRAM[91] : 0
+for 92output_in_DRAM[92] : -1
+for 93output_in_DRAM[93] : 65792
+for 94output_in_DRAM[94] : 202113024
+for 95output_in_DRAM[95] : 0
+for 96output_in_DRAM[96] : 1
+for 97output_in_DRAM[97] : 0
+for 98output_in_DRAM[98] : 0
+for 99output_in_DRAM[99] : 99
+for 100output_in_DRAM[100] : 0
+for 101output_in_DRAM[101] : 20
+for 102output_in_DRAM[102] : 0
+for 103output_in_DRAM[103] : 0
+for 104output_in_DRAM[104] : 0
+for 105output_in_DRAM[105] : 0
+for 106output_in_DRAM[106] : 0
+for 107output_in_DRAM[107] : 0
+for 108output_in_DRAM[108] : 0
+for 109output_in_DRAM[109] : 0
+for 110output_in_DRAM[110] : 0
+for 111output_in_DRAM[111] : 0
+for 112output_in_DRAM[112] : -2122092400
+for 113output_in_DRAM[113] : 21960
+for 114output_in_DRAM[114] : 0
+for 115output_in_DRAM[115] : 0
+for 116output_in_DRAM[116] : 0
+for 117output_in_DRAM[117] : 0
+for 118output_in_DRAM[118] : 0
+for 119output_in_DRAM[119] : 0
+for 120output_in_DRAM[120] : -2122092368
+for 121output_in_DRAM[121] : 21960
+for 122output_in_DRAM[122] : 0
+for 123output_in_DRAM[123] : 0
+for 124output_in_DRAM[124] : 0
+for 125output_in_DRAM[125] : 0
+for 126output_in_DRAM[126] : 0
+for 127output_in_DRAM[127] : 0
+Index 0 is wrong: Correct answer: -7 Your answer: 0
+Index 1 is wrong: Correct answer: 5 Your answer: 0
+Index 2 is wrong: Correct answer: -6 Your answer: 0
+Index 3 is wrong: Correct answer: 5 Your answer: 0
+Index 4 is wrong: Correct answer: 1 Your answer: 0
+Index 5 is wrong: Correct answer: 5 Your answer: 0
+Index 6 is wrong: Correct answer: 3 Your answer: 0
+Index 7 is wrong: Correct answer: 3 Your answer: 0
+Index 8 is wrong: Correct answer: 1 Your answer: 0
+Index 9 is wrong: Correct answer: -4 Your answer: 0
+Index 10 is wrong: Correct answer: 5 Your answer: 0
+Index 11 is wrong: Correct answer: 1 Your answer: 0
+Index 12 is wrong: Correct answer: 1 Your answer: 0
+Index 13 is wrong: Correct answer: 1 Your answer: 0
+Index 14 is wrong: Correct answer: -2 Your answer: 0
+Index 15 is wrong: Correct answer: 3 Your answer: 0
+Index 16 is wrong: Correct answer: 5 Your answer: 0
+Index 17 is wrong: Correct answer: 2 Your answer: 0
+Index 20 is wrong: Correct answer: 3 Your answer: 0
+Index 21 is wrong: Correct answer: -1 Your answer: 0
+Index 22 is wrong: Correct answer: -6 Your answer: 0
+Index 23 is wrong: Correct answer: 4 Your answer: 0
+Index 24 is wrong: Correct answer: 1 Your answer: 0
+Index 25 is wrong: Correct answer: 3 Your answer: 0
+Index 26 is wrong: Correct answer: 2 Your answer: 0
+Index 27 is wrong: Correct answer: 5 Your answer: 0
+Index 28 is wrong: Correct answer: -4 Your answer: 0
+Index 29 is wrong: Correct answer: -7 Your answer: 0
+Index 32 is wrong: Correct answer: -8 Your answer: 0
+Index 33 is wrong: Correct answer: 1 Your answer: 0
+Index 34 is wrong: Correct answer: 1 Your answer: 0
+Index 35 is wrong: Correct answer: 2 Your answer: 0
+Index 37 is wrong: Correct answer: -6 Your answer: 0
+Index 38 is wrong: Correct answer: -7 Your answer: 0
+Index 39 is wrong: Correct answer: -1 Your answer: 0
+Index 40 is wrong: Correct answer: -6 Your answer: 0
+Index 41 is wrong: Correct answer: 2 Your answer: 0
+Index 42 is wrong: Correct answer: 1 Your answer: 0
+Index 43 is wrong: Correct answer: 1 Your answer: 0
+Index 44 is wrong: Correct answer: -6 Your answer: 0
+Index 45 is wrong: Correct answer: -7 Your answer: 0
+Index 46 is wrong: Correct answer: 4 Your answer: 0
+Index 47 is wrong: Correct answer: -1 Your answer: 0
+Index 48 is wrong: Correct answer: 4 Your answer: 0
+Index 49 is wrong: Correct answer: 5 Your answer: 0
+Index 50 is wrong: Correct answer: 1 Your answer: 0
+Index 51 is wrong: Correct answer: -7 Your answer: 0
+Index 52 is wrong: Correct answer: -1 Your answer: 0
+Index 53 is wrong: Correct answer: 1 Your answer: 0
+Index 54 is wrong: Correct answer: 1 Your answer: 0
+Index 55 is wrong: Correct answer: 4 Your answer: 0
+Index 56 is wrong: Correct answer: -3 Your answer: 0
+Index 57 is wrong: Correct answer: -6 Your answer: 0
+Index 58 is wrong: Correct answer: 1 Your answer: 0
+Index 59 is wrong: Correct answer: 3 Your answer: 0
+Index 62 is wrong: Correct answer: 1 Your answer: 0
+Index 63 is wrong: Correct answer: -4 Your answer: 0
+There are 57 errors

@@ -67,7 +67,6 @@ int qlinear_relu(int8_t *input_in_DRAM, int8_t *weight_in_DRAM,
     set_enable(scale, mode);  // undone
     printf("Start writing ifmap0...\n");
     for (int i = 0; i < 16; i++) {
-        printf("i = %d\n", i);
         uint32_t val = ((uint8_t)input_in_DRAM[4 * i + 3] << 24) |
                        ((uint8_t)input_in_DRAM[4 * i + 2] << 16) |
                        ((uint8_t)input_in_DRAM[4 * i + 1] << 8)  |
@@ -120,13 +119,13 @@ int qlinear_relu(int8_t *input_in_DRAM, int8_t *weight_in_DRAM,
     }
 
     wait_for_interrupt();
-    //printf("2222222finish wait_for_interrupt()\n");
-    fflush(stdout);
+    printf("finish\n");
+    //fflush(stdout);
     // Read data from the DLA register
-    for (uint32_t i = 0; i < 64; ++i) {
-        uint32_t v = reg_read(DLA_OFMAP_OFFSET);
-        printf("v = %d\n", v);
-        output_in_DRAM[i] = v;
+    for(int i = 0; i < 128; i++){
+        printf("for %d", i);
+        reg_read(DLA_DATA_OFFSET, output_in_DRAM[i]);
+        printf("output_in_DRAM[%d] : %d\n", i, output_in_DRAM[i]);
     }
     fflush(stdout);
 #ifdef DLA_INFO

@@ -107,7 +107,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VL_OUT(RDATA_S,31,0);
         IData/*31:0*/ asic_wrapper__DOT__ofmap;
         IData/*31:0*/ asic_wrapper__DOT__i;
-        IData/*31:0*/ asic_wrapper__DOT__RDATA;
         IData/*31:0*/ asic_wrapper__DOT__addr_S_reg;
         IData/*31:0*/ asic_wrapper__DOT__addr_S_reg_next;
         IData/*31:0*/ asic_wrapper__DOT__ASIC_ENABLE;
@@ -156,9 +155,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VlUnpacked<VlUnpacked<CData/*7:0*/, 8>, 4> asic_wrapper__DOT__Top__DOT__GLB_ifmap__DOT__DO_wire;
         VlUnpacked<IData/*31:0*/, 1024> asic_wrapper__DOT__Top__DOT__GLB_weight__DOT__ram;
         VlUnpacked<VlUnpacked<CData/*7:0*/, 64>, 4> asic_wrapper__DOT__Top__DOT__GLB_weight__DOT__DO_wire;
+        VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__Top__DOT__GLB_bias__DOT__ram;
     };
     struct {
-        VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__Top__DOT__GLB_bias__DOT__ram;
         VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__Top__DOT__GLB_ofmap__DOT__ram;
         VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };

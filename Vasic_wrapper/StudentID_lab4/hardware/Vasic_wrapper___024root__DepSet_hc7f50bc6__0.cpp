@@ -1595,7 +1595,6 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
         vlSelfRef.asic_wrapper__DOT__cs_slave = vlSelfRef.asic_wrapper__DOT__cs_slave_next;
         vlSelfRef.current_state = vlSelfRef.asic_wrapper__DOT__cs_slave;
         vlSelfRef.RRESP_S = 0U;
-        vlSelfRef.RDATA_S = 0U;
         vlSelfRef.BRESP_S = 0U;
         vlSelfRef.AWREADY_S = 0U;
         vlSelfRef.ARREADY_S = 0U;
@@ -1628,7 +1627,6 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
         vlSelfRef.asic_wrapper__DOT__cs_slave = 0U;
         vlSelfRef.current_state = vlSelfRef.asic_wrapper__DOT__cs_slave;
         vlSelfRef.RRESP_S = 0U;
-        vlSelfRef.RDATA_S = 0U;
         vlSelfRef.BRESP_S = 0U;
         vlSelfRef.AWREADY_S = 0U;
         vlSelfRef.ARREADY_S = 0U;
@@ -1735,9 +1733,6 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
                                                    : 2U)));
                 if ((0x10040000U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                     if ((0x10040004U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                        if ((0x10040008U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                            vlSelfRef.RDATA_S = 0U;
-                        }
                         if ((0x10040008U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                             vlSelfRef.asic_wrapper__DOT__output_cnt_next 
                                 = (0x7fU & ((IData)(1U) 
@@ -1796,24 +1791,6 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
     vlSelfRef.asic_wrapper__DOT__count = ((IData)(vlSelfRef.ARESETn)
                                            ? (IData)(vlSelfRef.asic_wrapper__DOT__count_next)
                                            : 0U);
-    if ((4U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
-        if ((1U & (~ ((IData)(vlSelfRef.asic_wrapper__DOT__cs_slave) 
-                      >> 1U)))) {
-            if ((1U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
-                if ((0x10040000U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                    vlSelfRef.asic_wrapper__DOT__RDATA 
-                        = vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE;
-                } else if ((0x10040004U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                    vlSelfRef.asic_wrapper__DOT__RDATA 
-                        = vlSelfRef.asic_wrapper__DOT__DATA;
-                } else if ((0x10040008U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                    vlSelfRef.asic_wrapper__DOT__RDATA 
-                        = vlSelfRef.asic_wrapper__DOT__ofmap_reg
-                        [vlSelfRef.asic_wrapper__DOT__output_cnt];
-                }
-            }
-        }
-    }
     vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT____Vcellinp__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block__weight[0U] 
         = vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT__weight_wire
         [0U][0U];
@@ -2056,6 +2033,24 @@ VL_INLINE_OPT void Vasic_wrapper___024root___nba_sequent__TOP__0(Vasic_wrapper__
                             = vlSelfRef.WDATA_S;
                     }
                 }
+            }
+        }
+    }
+    vlSelfRef.RDATA_S = 0U;
+    if ((4U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
+        if ((1U & (~ ((IData)(vlSelfRef.asic_wrapper__DOT__cs_slave) 
+                      >> 1U)))) {
+            if ((1U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
+                vlSelfRef.RDATA_S = ((0x10040000U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)
+                                      ? vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE
+                                      : ((0x10040004U 
+                                          == vlSelfRef.asic_wrapper__DOT__addr_S_reg)
+                                          ? vlSelfRef.asic_wrapper__DOT__DATA
+                                          : ((0x10040008U 
+                                              == vlSelfRef.asic_wrapper__DOT__addr_S_reg)
+                                              ? vlSelfRef.asic_wrapper__DOT__ofmap_reg
+                                             [vlSelfRef.asic_wrapper__DOT__output_cnt]
+                                              : 0U)));
             }
         }
     }

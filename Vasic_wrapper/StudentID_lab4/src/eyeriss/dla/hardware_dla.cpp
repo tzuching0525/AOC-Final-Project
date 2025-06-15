@@ -29,10 +29,8 @@ void reg_write(uint32_t offset, uint32_t value) {
     hal.memory_set(offset + DLA_MMIO_BASE_ADDR, value);
 }
 
-uint32_t reg_read(uint32_t offset) {
-    uint32_t v = 0;
-    hal.memory_get(DLA_MMIO_BASE_ADDR + offset, v);
-    return v;
+void reg_read(uint32_t offset, int32_t &data) {
+    hal.memory_get(DLA_MMIO_BASE_ADDR + offset, data);
 }
 
 /* ========================= DLA Configuration ========================= */

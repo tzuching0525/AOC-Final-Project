@@ -234,7 +234,6 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     for (int __Vi0 = 0; __Vi0 < 128; ++__Vi0) {
         vlSelf->asic_wrapper__DOT__ofmap_reg[__Vi0] = VL_RAND_RESET_I(32);
     }
-    vlSelf->asic_wrapper__DOT__RDATA = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__cs_slave = VL_RAND_RESET_I(3);
     vlSelf->asic_wrapper__DOT__cs_slave_next = VL_RAND_RESET_I(3);
     vlSelf->asic_wrapper__DOT__addr_S_reg = VL_RAND_RESET_I(32);

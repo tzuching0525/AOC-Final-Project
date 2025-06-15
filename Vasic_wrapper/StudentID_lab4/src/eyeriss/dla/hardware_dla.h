@@ -69,8 +69,7 @@ void reset_runtime_info();
  * @param relu Enables ReLU activation (true/false).
  * @param operation Specifies the type of operation.
  */
-
-uint32_t reg_read(uint32_t offset);
+void reg_read(uint32_t offset, int32_t &data);
 void set_enable(uint32_t scale_factor, uint32_t mode);
 
 #endif  // HARDWARE_DLA_H
