@@ -1,0 +1,7 @@
+==307032== Massif, a heap profiler
+==307032== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==307032== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==307032== Command: ./LINEAR_original.elf
+==307032== Parent PID: 307016
+==307032== 
+==307032== 
