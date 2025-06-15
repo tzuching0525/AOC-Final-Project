@@ -69,7 +69,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_settle(Vasic_wrapper___024root*
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("asic_wrapper.sv", 24, "", "Settle region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -180,9 +180,13 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     vlSelf->ASIC_interrupt = VL_RAND_RESET_I(1);
     vlSelf->AWID_S = VL_RAND_RESET_I(8);
     vlSelf->AWADDR_S = VL_RAND_RESET_I(32);
+    vlSelf->AWLEN_S = VL_RAND_RESET_I(4);
+    vlSelf->AWSIZE_S = VL_RAND_RESET_I(3);
+    vlSelf->AWBURST_S = VL_RAND_RESET_I(2);
     vlSelf->AWVALID_S = VL_RAND_RESET_I(1);
     vlSelf->AWREADY_S = VL_RAND_RESET_I(1);
     vlSelf->WDATA_S = VL_RAND_RESET_I(32);
+    vlSelf->WSTRB_S = VL_RAND_RESET_I(4);
     vlSelf->WLAST_S = VL_RAND_RESET_I(1);
     vlSelf->WVALID_S = VL_RAND_RESET_I(1);
     vlSelf->WREADY_S = VL_RAND_RESET_I(1);
@@ -192,6 +196,9 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     vlSelf->BREADY_S = VL_RAND_RESET_I(1);
     vlSelf->ARID_S = VL_RAND_RESET_I(8);
     vlSelf->ARADDR_S = VL_RAND_RESET_I(32);
+    vlSelf->ARLEN_S = VL_RAND_RESET_I(4);
+    vlSelf->ARSIZE_S = VL_RAND_RESET_I(3);
+    vlSelf->ARBURST_S = VL_RAND_RESET_I(2);
     vlSelf->ARVALID_S = VL_RAND_RESET_I(1);
     vlSelf->ARREADY_S = VL_RAND_RESET_I(1);
     vlSelf->RID_S = VL_RAND_RESET_I(8);

@@ -13,8 +13,12 @@ Vasic_wrapper::Vasic_wrapper(VerilatedContext* _vcontextp__, const char* _vcname
     , ARESETn{vlSymsp->TOP.ARESETn}
     , ASIC_interrupt{vlSymsp->TOP.ASIC_interrupt}
     , AWID_S{vlSymsp->TOP.AWID_S}
+    , AWLEN_S{vlSymsp->TOP.AWLEN_S}
+    , AWSIZE_S{vlSymsp->TOP.AWSIZE_S}
+    , AWBURST_S{vlSymsp->TOP.AWBURST_S}
     , AWVALID_S{vlSymsp->TOP.AWVALID_S}
     , AWREADY_S{vlSymsp->TOP.AWREADY_S}
+    , WSTRB_S{vlSymsp->TOP.WSTRB_S}
     , WLAST_S{vlSymsp->TOP.WLAST_S}
     , WVALID_S{vlSymsp->TOP.WVALID_S}
     , WREADY_S{vlSymsp->TOP.WREADY_S}
@@ -23,6 +27,9 @@ Vasic_wrapper::Vasic_wrapper(VerilatedContext* _vcontextp__, const char* _vcname
     , BVALID_S{vlSymsp->TOP.BVALID_S}
     , BREADY_S{vlSymsp->TOP.BREADY_S}
     , ARID_S{vlSymsp->TOP.ARID_S}
+    , ARLEN_S{vlSymsp->TOP.ARLEN_S}
+    , ARSIZE_S{vlSymsp->TOP.ARSIZE_S}
+    , ARBURST_S{vlSymsp->TOP.ARBURST_S}
     , ARVALID_S{vlSymsp->TOP.ARVALID_S}
     , ARREADY_S{vlSymsp->TOP.ARREADY_S}
     , RID_S{vlSymsp->TOP.RID_S}

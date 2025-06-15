@@ -30,8 +30,12 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VL_IN8(ARESETn,0,0);
         VL_OUT8(ASIC_interrupt,0,0);
         VL_IN8(AWID_S,7,0);
+        VL_IN8(AWLEN_S,3,0);
+        VL_IN8(AWSIZE_S,2,0);
+        VL_IN8(AWBURST_S,1,0);
         VL_IN8(AWVALID_S,0,0);
         VL_OUT8(AWREADY_S,0,0);
+        VL_IN8(WSTRB_S,3,0);
         VL_IN8(WLAST_S,0,0);
         VL_IN8(WVALID_S,0,0);
         VL_OUT8(WREADY_S,0,0);
@@ -40,6 +44,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VL_OUT8(BVALID_S,0,0);
         VL_IN8(BREADY_S,0,0);
         VL_IN8(ARID_S,7,0);
+        VL_IN8(ARLEN_S,3,0);
+        VL_IN8(ARSIZE_S,2,0);
+        VL_IN8(ARBURST_S,1,0);
         VL_IN8(ARVALID_S,0,0);
         VL_OUT8(ARREADY_S,0,0);
         VL_OUT8(RID_S,7,0);
@@ -83,6 +90,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         SData/*10:0*/ asic_wrapper__DOT__write_cnt;
         SData/*10:0*/ asic_wrapper__DOT__write_cnt_next;
         SData/*10:0*/ asic_wrapper__DOT__count;
+    };
+    struct {
         SData/*10:0*/ asic_wrapper__DOT__count_next;
         SData/*10:0*/ asic_wrapper__DOT__bias_cnt;
         SData/*11:0*/ asic_wrapper__DOT__Top__DOT__data_address;
@@ -90,8 +99,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VL_IN(AWADDR_S,31,0);
         VL_IN(WDATA_S,31,0);
         VL_IN(ARADDR_S,31,0);
-    };
-    struct {
         VL_OUT(RDATA_S,31,0);
         IData/*31:0*/ asic_wrapper__DOT__ofmap;
         IData/*31:0*/ asic_wrapper__DOT__i;

@@ -292,7 +292,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__ico(vlSelf);
 #endif
-            VL_FATAL_MT("asic_wrapper.sv", 24, "", "Input combinational region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "Input combinational region did not converge.");
         }
         __VicoIterCount = ((IData)(1U) + __VicoIterCount);
         __VicoContinue = 0U;
@@ -308,7 +308,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("asic_wrapper.sv", 24, "", "NBA region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -319,7 +319,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vasic_wrapper___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("asic_wrapper.sv", 24, "", "Active region did not converge.");
+                VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);
@@ -345,14 +345,28 @@ void Vasic_wrapper___024root___eval_debug_assertions(Vasic_wrapper___024root* vl
         Verilated::overWidthError("ACLK");}
     if (VL_UNLIKELY((vlSelfRef.ARESETn & 0xfeU))) {
         Verilated::overWidthError("ARESETn");}
+    if (VL_UNLIKELY((vlSelfRef.AWLEN_S & 0xf0U))) {
+        Verilated::overWidthError("AWLEN_S");}
+    if (VL_UNLIKELY((vlSelfRef.AWSIZE_S & 0xf8U))) {
+        Verilated::overWidthError("AWSIZE_S");}
+    if (VL_UNLIKELY((vlSelfRef.AWBURST_S & 0xfcU))) {
+        Verilated::overWidthError("AWBURST_S");}
     if (VL_UNLIKELY((vlSelfRef.AWVALID_S & 0xfeU))) {
         Verilated::overWidthError("AWVALID_S");}
+    if (VL_UNLIKELY((vlSelfRef.WSTRB_S & 0xf0U))) {
+        Verilated::overWidthError("WSTRB_S");}
     if (VL_UNLIKELY((vlSelfRef.WLAST_S & 0xfeU))) {
         Verilated::overWidthError("WLAST_S");}
     if (VL_UNLIKELY((vlSelfRef.WVALID_S & 0xfeU))) {
         Verilated::overWidthError("WVALID_S");}
     if (VL_UNLIKELY((vlSelfRef.BREADY_S & 0xfeU))) {
         Verilated::overWidthError("BREADY_S");}
+    if (VL_UNLIKELY((vlSelfRef.ARLEN_S & 0xf0U))) {
+        Verilated::overWidthError("ARLEN_S");}
+    if (VL_UNLIKELY((vlSelfRef.ARSIZE_S & 0xf8U))) {
+        Verilated::overWidthError("ARSIZE_S");}
+    if (VL_UNLIKELY((vlSelfRef.ARBURST_S & 0xfcU))) {
+        Verilated::overWidthError("ARBURST_S");}
     if (VL_UNLIKELY((vlSelfRef.ARVALID_S & 0xfeU))) {
         Verilated::overWidthError("ARVALID_S");}
     if (VL_UNLIKELY((vlSelfRef.RREADY_S & 0xfeU))) {
