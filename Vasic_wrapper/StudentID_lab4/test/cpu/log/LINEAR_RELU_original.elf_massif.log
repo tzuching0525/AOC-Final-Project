@@ -1,7 +1,0 @@
-==308519== Massif, a heap profiler
-==308519== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
-==308519== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==308519== Command: ./LINEAR_RELU_original.elf
-==308519== Parent PID: 308507
-==308519== 
-==308519== 
