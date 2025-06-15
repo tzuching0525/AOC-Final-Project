@@ -83,6 +83,7 @@ module asic_wrapper (
   logic [6:0] output_cnt_next, output_cnt;
   logic [7:0] ofmap_count;
   logic [31:0] ofmap_reg [0:127]; // ofmap 128
+  logic step;
   logic ofmap_valid;
 /***************************************** 
         ASIC slave ( MMIO config ) 
@@ -110,27 +111,45 @@ module asic_wrapper (
   logic [`DATA_BITS-1:0] ASIC_OFMAP, ASIC_OFMAP_next;
 
   // Sequential logic DATA for top
-  always_ff @(posedge ACLK) begin
-    if (~ARESETn) begin
-      DATA <= 32'd0;
-    end
-    else begin
-      if (data_ready_reg == 1'b1) begin
-        DATA <= DATA_buffer[count];
-      end
-    end
-  end
-
-  always_comb begin
-    ASIC_interrupt = (ofmap_count == 64 || ofmap_count == 128);
-  end
-
   always_comb begin
     if (data_ready_reg == 1'b1) begin
-      count_next = count + 1'b1;
+      DATA = DATA_buffer[count];
     end
-    else if (count == 11'd1103) begin
+    else begin
+      DATA = `DATA_BITS'd0;
+    end
+  end
+
+  always_comb begin
+    ASIC_interrupt = 1'b0;
+    case (step)
+      1'b0: begin
+        if (ofmap_count == 64)
+          ASIC_interrupt = 1'b1;
+      end
+      1'b1: begin
+        if (ofmap_count == 128)
+          ASIC_interrupt = 1'b1;
+      end
+    endcase
+  end
+  always_ff @(posedge ACLK) begin
+    if (~ARESETn) begin
+      step <= 1'b0;
+    end else begin
+      if (step == 0 && ofmap_count == 64)
+        step <= 1;
+      else if (step == 1 && ofmap_count == 128)
+        step <= 0;
+    end
+  end
+
+  always_comb begin
+    if (count == 11'd1103) begin
       count_next = 11'd0;
+    end
+    else if (data_ready_reg == 1'b1) begin
+      count_next = count + 1'b1;
     end
     else begin
       count_next = count;
@@ -145,7 +164,12 @@ module asic_wrapper (
       end
     end
     else begin
-      DATA_buffer[write_cnt] <= ASIC_DATA_next;
+      // LOAD_BIAS
+      if (valid && state == LOAD_BIAS) begin
+        DATA_buffer[bias_cnt] <= ofmap;
+      end else begin
+        DATA_buffer[write_cnt] <= ASIC_DATA_next;
+      end
     end
   end
 
@@ -221,8 +245,6 @@ module asic_wrapper (
       if (valid) begin
         case (state)
           LOAD_BIAS: begin
-            DATA_buffer[bias_cnt] <= ofmap;
-            ofmap_count <= ofmap_count + 1;
             bias_write <= 1'd1;
           end
           LOAD_OFMAP: begin
@@ -251,9 +273,12 @@ module asic_wrapper (
     else begin
       if (count == 11'd1103) begin
         data_ready_reg_next = 1'b0;
+        data_ready = 1'b0;
+      end 
+      else begin
+        data_ready = 1'b0;
+        data_ready_reg_next = data_ready_reg;
       end
-      data_ready = 1'b0;
-      data_ready_reg_next = data_ready_reg;
     end
   end
 
@@ -335,7 +360,7 @@ module asic_wrapper (
             RRESP_S = `AXI_RESP_OKAY;
           end
           `ASIC_OFMAP_OFFSET: begin
-            RDATA = ofmap_reg[output_cnt];
+            RDATA_S = ofmap_reg[output_cnt];
             output_cnt_next = output_cnt + 1'd1;
             RRESP_S = `AXI_RESP_OKAY;
           end
