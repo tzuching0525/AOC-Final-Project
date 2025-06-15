@@ -1,6 +1,6 @@
-`define ASIC_ENABLE_OFFSET   32'h00
-`define ASIC_DATA_OFFSET     32'h04
-`define ASIC_OFMAP_OFFSET    32'h08
+`define ASIC_ENABLE_OFFSET   32'h10040000
+`define ASIC_DATA_OFFSET     32'h10040004
+`define ASIC_OFMAP_OFFSET    32'h10040008
 `define AXI_ID_BITS 4
 `define AXI_IDS_BITS 8
 `define AXI_ADDR_BITS 32
@@ -58,6 +58,10 @@ module asic_wrapper (
 	input ARVALID_S,
 	output logic ARREADY_S,
 
+
+  output logic [2:0] current_state,
+  output logic [2:0] n_state,
+
 	//READ DATA0
 	output logic [`AXI_IDS_BITS-1:0] RID_S,
 	output logic [`AXI_DATA_BITS-1:0] RDATA_S,
@@ -83,8 +87,6 @@ module asic_wrapper (
   logic [6:0] output_cnt_next, output_cnt;
   logic [7:0] ofmap_count;
   logic [31:0] ofmap_reg [0:127]; // ofmap 128
-  logic step;
-  logic ofmap_valid;
 /***************************************** 
         ASIC slave ( MMIO config ) 
 *****************************************/
@@ -102,6 +104,8 @@ module asic_wrapper (
   } AXI_state;
 
   AXI_state cs_slave, cs_slave_next;
+  assign current_state = cs_slave;
+  assign n_state = cs_slave_next;
   logic [`AXI_ADDR_BITS-1:0] addr_S_reg, addr_S_reg_next;
   logic [`AXI_IDS_BITS-1:0] BID_S_next, RID_S_next;
   logic write_error, write_error_next;
@@ -111,45 +115,27 @@ module asic_wrapper (
   logic [`DATA_BITS-1:0] ASIC_OFMAP, ASIC_OFMAP_next;
 
   // Sequential logic DATA for top
-  always_comb begin
-    if (data_ready_reg == 1'b1) begin
-      DATA = DATA_buffer[count];
-    end
-    else begin
-      DATA = `DATA_BITS'd0;
-    end
-  end
-
-  always_comb begin
-    ASIC_interrupt = 1'b0;
-    case (step)
-      1'b0: begin
-        if (ofmap_count == 64)
-          ASIC_interrupt = 1'b1;
-      end
-      1'b1: begin
-        if (ofmap_count == 128)
-          ASIC_interrupt = 1'b1;
-      end
-    endcase
-  end
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
-      step <= 1'b0;
-    end else begin
-      if (step == 0 && ofmap_count == 64)
-        step <= 1;
-      else if (step == 1 && ofmap_count == 128)
-        step <= 0;
+      DATA <= 32'd0;
+    end
+    else begin
+      if (data_ready_reg == 1'b1) begin
+        DATA <= DATA_buffer[count];
+      end
     end
   end
 
   always_comb begin
-    if (count == 11'd1103) begin
-      count_next = 11'd0;
-    end
-    else if (data_ready_reg == 1'b1) begin
+    ASIC_interrupt = (ofmap_count == 64 || ofmap_count == 128);
+  end
+
+  always_comb begin
+    if (data_ready_reg == 1'b1) begin
       count_next = count + 1'b1;
+    end
+    else if (count == 11'd1103) begin
+      count_next = 11'd0;
     end
     else begin
       count_next = count;
@@ -164,12 +150,7 @@ module asic_wrapper (
       end
     end
     else begin
-      // LOAD_BIAS
-      if (valid && state == LOAD_BIAS) begin
-        DATA_buffer[bias_cnt] <= ofmap;
-      end else begin
-        DATA_buffer[write_cnt] <= ASIC_DATA_next;
-      end
+      DATA_buffer[write_cnt] <= ASIC_DATA_next;
     end
   end
 
@@ -238,13 +219,15 @@ module asic_wrapper (
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
       ofmap_count <= 8'd0;
-      ofmap_valid <= 1'd0;
+      //ofmap_valid <= 1'd0;
       bias_write <= 1'd0;
     end 
     else begin
       if (valid) begin
         case (state)
           LOAD_BIAS: begin
+            DATA_buffer[bias_cnt] <= ofmap;
+            ofmap_count <= ofmap_count + 1;
             bias_write <= 1'd1;
           end
           LOAD_OFMAP: begin
@@ -273,12 +256,9 @@ module asic_wrapper (
     else begin
       if (count == 11'd1103) begin
         data_ready_reg_next = 1'b0;
-        data_ready = 1'b0;
-      end 
-      else begin
-        data_ready = 1'b0;
-        data_ready_reg_next = data_ready_reg;
       end
+      data_ready = 1'b0;
+      data_ready_reg_next = data_ready_reg;
     end
   end
 
@@ -360,7 +340,7 @@ module asic_wrapper (
             RRESP_S = `AXI_RESP_OKAY;
           end
           `ASIC_OFMAP_OFFSET: begin
-            RDATA_S = ofmap_reg[output_cnt];
+            RDATA = ofmap_reg[output_cnt];
             output_cnt_next = output_cnt + 1'd1;
             RRESP_S = `AXI_RESP_OKAY;
           end
