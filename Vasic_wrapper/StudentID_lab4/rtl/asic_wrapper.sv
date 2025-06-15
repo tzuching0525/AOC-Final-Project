@@ -1,6 +1,6 @@
-`define ASIC_ENABLE_OFFSET   32'h00
-`define ASIC_DATA_OFFSET     32'h04
-`define ASIC_OFMAP_OFFSET    32'h08
+`define ASIC_ENABLE_OFFSET   32'h10040000
+`define ASIC_DATA_OFFSET     32'h10040004
+`define ASIC_OFMAP_OFFSET    32'h10040008
 `define AXI_ID_BITS 4
 `define AXI_IDS_BITS 8
 `define AXI_ADDR_BITS 32
@@ -58,6 +58,10 @@ module asic_wrapper (
 	input ARVALID_S,
 	output logic ARREADY_S,
 
+
+  output logic [2:0] current_state,
+  output logic [2:0] n_state,
+
 	//READ DATA0
 	output logic [`AXI_IDS_BITS-1:0] RID_S,
 	output logic [`AXI_DATA_BITS-1:0] RDATA_S,
@@ -83,7 +87,6 @@ module asic_wrapper (
   logic [6:0] output_cnt_next, output_cnt;
   logic [7:0] ofmap_count;
   logic [31:0] ofmap_reg [0:127]; // ofmap 128
-  logic ofmap_valid;
 /***************************************** 
         ASIC slave ( MMIO config ) 
 *****************************************/
@@ -101,6 +104,8 @@ module asic_wrapper (
   } AXI_state;
 
   AXI_state cs_slave, cs_slave_next;
+  assign current_state = cs_slave;
+  assign n_state = cs_slave_next;
   logic [`AXI_ADDR_BITS-1:0] addr_S_reg, addr_S_reg_next;
   logic [`AXI_IDS_BITS-1:0] BID_S_next, RID_S_next;
   logic write_error, write_error_next;
@@ -214,7 +219,7 @@ module asic_wrapper (
   always_ff @(posedge ACLK) begin
     if (~ARESETn) begin
       ofmap_count <= 8'd0;
-      ofmap_valid <= 1'd0;
+      //ofmap_valid <= 1'd0;
       bias_write <= 1'd0;
     end 
     else begin

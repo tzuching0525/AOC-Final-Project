@@ -134,6 +134,8 @@ bool HardwareAbstractionLayer::memory_set(uint32_t addr, uint32_t data) {
         clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
     }
     clock_step(device, ACLK, info.elapsed_cycle, info.elapsed_time);
+    printf("current_state : %d\n", device->current_state);
+    printf("next_state : %d\n", device->n_state);
     device->BREADY_S = 0;
 
     int resp = device->BRESP_S;

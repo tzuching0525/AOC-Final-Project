@@ -33,6 +33,8 @@ Vasic_wrapper::Vasic_wrapper(VerilatedContext* _vcontextp__, const char* _vcname
     , ARBURST_S{vlSymsp->TOP.ARBURST_S}
     , ARVALID_S{vlSymsp->TOP.ARVALID_S}
     , ARREADY_S{vlSymsp->TOP.ARREADY_S}
+    , current_state{vlSymsp->TOP.current_state}
+    , n_state{vlSymsp->TOP.n_state}
     , RID_S{vlSymsp->TOP.RID_S}
     , RRESP_S{vlSymsp->TOP.RRESP_S}
     , RLAST_S{vlSymsp->TOP.RLAST_S}

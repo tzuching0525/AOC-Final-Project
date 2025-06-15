@@ -66,6 +66,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
     vlSelfRef.WREADY_S = 0U;
     vlSelfRef.ASIC_interrupt = ((0x40U == (IData)(vlSelfRef.asic_wrapper__DOT__ofmap_count)) 
                                 | (0x80U == (IData)(vlSelfRef.asic_wrapper__DOT__ofmap_count)));
+    vlSelfRef.current_state = vlSelfRef.asic_wrapper__DOT__cs_slave;
     vlSelfRef.asic_wrapper__DOT__count_next = (0x7ffU 
                                                & ((IData)(vlSelfRef.asic_wrapper__DOT__data_ready_reg)
                                                    ? 
@@ -143,8 +144,8 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
                     vlSelfRef.asic_wrapper__DOT__BID_S_next = 0U;
                 }
             } else if (vlSelfRef.WVALID_S) {
-                if ((0U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                    if ((4U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                if ((0x10040000U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040004U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                         vlSelfRef.asic_wrapper__DOT__write_error_next = 1U;
                     }
                 }
@@ -152,8 +153,8 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
             if ((1U & (~ (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave)))) {
                 vlSelfRef.WREADY_S = 1U;
                 if (vlSelfRef.WVALID_S) {
-                    if ((0U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                        if ((4U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040000U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                        if ((0x10040004U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                             vlSelfRef.asic_wrapper__DOT__write_cnt_next 
                                 = ((0x44fU == (IData)(vlSelfRef.asic_wrapper__DOT__write_cnt))
                                     ? 0U : (0x7ffU 
@@ -163,7 +164,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
                                 = vlSelfRef.WDATA_S;
                         }
                     }
-                    if ((0U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040000U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                         vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE_next 
                             = vlSelfRef.WDATA_S;
                     }
@@ -408,15 +409,15 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
                       >> 1U)))) {
             if ((1U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
                 vlSelfRef.RLAST_S = 1U;
-                if ((0U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                if ((0x10040000U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                     vlSelfRef.RRESP_S = 0U;
                     vlSelfRef.asic_wrapper__DOT__RDATA 
                         = vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE;
-                } else if ((4U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                } else if ((0x10040004U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                     vlSelfRef.RRESP_S = 0U;
                     vlSelfRef.asic_wrapper__DOT__RDATA 
                         = vlSelfRef.asic_wrapper__DOT__DATA;
-                } else if ((8U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                } else if ((0x10040008U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                     vlSelfRef.RRESP_S = 0U;
                     vlSelfRef.asic_wrapper__DOT__RDATA 
                         = vlSelfRef.asic_wrapper__DOT__ofmap_reg
@@ -424,12 +425,12 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
                 } else {
                     vlSelfRef.RRESP_S = 2U;
                 }
-                if ((0U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                    if ((4U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                        if ((8U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                if ((0x10040000U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040004U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                        if ((0x10040008U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                             vlSelfRef.RDATA_S = 0U;
                         }
-                        if ((8U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                        if ((0x10040008U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                             vlSelfRef.asic_wrapper__DOT__output_cnt_next 
                                 = (0x7fU & ((IData)(1U) 
                                             + (IData)(vlSelfRef.asic_wrapper__DOT__output_cnt)));
@@ -3753,6 +3754,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___stl_sequent__TOP__0(Vasic_wrapper___
                  ? ((0xfU == (IData)(vlSelfRef.asic_wrapper__DOT__Top__DOT__data_address))
                      ? 2U : 1U) : ((IData)(vlSelfRef.asic_wrapper__DOT__data_ready)
                                     ? 1U : 0U))));
+    vlSelfRef.n_state = vlSelfRef.asic_wrapper__DOT__cs_slave_next;
     vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT____Vcellinp__PE_array__BRA__0__KET____DOT__gen_PE_array0__DOT__pe_block__weight[0U] 
         = vlSelfRef.asic_wrapper__DOT__Top__DOT__array__DOT__weight_wire
         [0U][0U];

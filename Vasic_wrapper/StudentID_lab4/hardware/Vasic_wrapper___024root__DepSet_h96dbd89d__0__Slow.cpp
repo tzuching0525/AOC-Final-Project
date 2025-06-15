@@ -66,7 +66,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_settle(Vasic_wrapper___024root*
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "Settle region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102153/AOC-Final-Project/Vasic_wrapper/StudentID_lab4/rtl/asic_wrapper.sv", 24, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -203,6 +203,8 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     vlSelf->ARBURST_S = VL_RAND_RESET_I(2);
     vlSelf->ARVALID_S = VL_RAND_RESET_I(1);
     vlSelf->ARREADY_S = VL_RAND_RESET_I(1);
+    vlSelf->current_state = VL_RAND_RESET_I(3);
+    vlSelf->n_state = VL_RAND_RESET_I(3);
     vlSelf->RID_S = VL_RAND_RESET_I(8);
     vlSelf->RDATA_S = VL_RAND_RESET_I(32);
     vlSelf->RRESP_S = VL_RAND_RESET_I(2);
@@ -232,7 +234,6 @@ VL_ATTR_COLD void Vasic_wrapper___024root___ctor_var_reset(Vasic_wrapper___024ro
     for (int __Vi0 = 0; __Vi0 < 128; ++__Vi0) {
         vlSelf->asic_wrapper__DOT__ofmap_reg[__Vi0] = VL_RAND_RESET_I(32);
     }
-    vlSelf->asic_wrapper__DOT__ofmap_valid = VL_RAND_RESET_I(1);
     vlSelf->asic_wrapper__DOT__RDATA = VL_RAND_RESET_I(32);
     vlSelf->asic_wrapper__DOT__cs_slave = VL_RAND_RESET_I(3);
     vlSelf->asic_wrapper__DOT__cs_slave_next = VL_RAND_RESET_I(3);

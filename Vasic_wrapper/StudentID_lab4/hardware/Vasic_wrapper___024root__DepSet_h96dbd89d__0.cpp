@@ -54,8 +54,8 @@ VL_INLINE_OPT void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper__
         if ((2U & (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave))) {
             if ((1U & (~ (IData)(vlSelfRef.asic_wrapper__DOT__cs_slave)))) {
                 if (vlSelfRef.WVALID_S) {
-                    if ((0U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                        if ((4U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040000U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                        if ((0x10040004U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                             vlSelfRef.asic_wrapper__DOT__write_cnt_next 
                                 = ((0x44fU == (IData)(vlSelfRef.asic_wrapper__DOT__write_cnt))
                                     ? 0U : (0x7ffU 
@@ -65,7 +65,7 @@ VL_INLINE_OPT void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper__
                                 = vlSelfRef.WDATA_S;
                         }
                     }
-                    if ((0U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040000U == vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                         vlSelfRef.asic_wrapper__DOT__ASIC_ENABLE_next 
                             = vlSelfRef.WDATA_S;
                     }
@@ -77,8 +77,8 @@ VL_INLINE_OPT void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper__
                     vlSelfRef.asic_wrapper__DOT__BID_S_next = 0U;
                 }
             } else if (vlSelfRef.WVALID_S) {
-                if ((0U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
-                    if ((4U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                if ((0x10040000U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
+                    if ((0x10040004U != vlSelfRef.asic_wrapper__DOT__addr_S_reg)) {
                         vlSelfRef.asic_wrapper__DOT__write_error_next = 1U;
                     }
                 }
@@ -123,6 +123,7 @@ VL_INLINE_OPT void Vasic_wrapper___024root___ico_sequent__TOP__0(Vasic_wrapper__
         vlSelfRef.asic_wrapper__DOT__cs_slave_next = 5U;
         vlSelfRef.asic_wrapper__DOT__RID_S_next = vlSelfRef.ARID_S;
     }
+    vlSelfRef.n_state = vlSelfRef.asic_wrapper__DOT__cs_slave_next;
 }
 
 void Vasic_wrapper___024root___eval_triggers__ico(Vasic_wrapper___024root* vlSelf);
@@ -285,7 +286,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__ico(vlSelf);
 #endif
-            VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "Input combinational region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102153/AOC-Final-Project/Vasic_wrapper/StudentID_lab4/rtl/asic_wrapper.sv", 24, "", "Input combinational region did not converge.");
         }
         __VicoIterCount = ((IData)(1U) + __VicoIterCount);
         __VicoContinue = 0U;
@@ -301,7 +302,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "NBA region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102153/AOC-Final-Project/Vasic_wrapper/StudentID_lab4/rtl/asic_wrapper.sv", 24, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -312,7 +313,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vasic_wrapper___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "Active region did not converge.");
+                VL_FATAL_MT("/home2/aoc2025/e24102153/AOC-Final-Project/Vasic_wrapper/StudentID_lab4/rtl/asic_wrapper.sv", 24, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);

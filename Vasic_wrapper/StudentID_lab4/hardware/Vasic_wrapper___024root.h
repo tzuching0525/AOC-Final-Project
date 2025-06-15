@@ -49,6 +49,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VL_IN8(ARBURST_S,1,0);
         VL_IN8(ARVALID_S,0,0);
         VL_OUT8(ARREADY_S,0,0);
+        VL_OUT8(current_state,2,0);
+        VL_OUT8(n_state,2,0);
         VL_OUT8(RID_S,7,0);
         VL_OUT8(RRESP_S,1,0);
         VL_OUT8(RLAST_S,0,0);
@@ -64,7 +66,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         CData/*6:0*/ asic_wrapper__DOT__output_cnt_next;
         CData/*6:0*/ asic_wrapper__DOT__output_cnt;
         CData/*7:0*/ asic_wrapper__DOT__ofmap_count;
-        CData/*0:0*/ asic_wrapper__DOT__ofmap_valid;
         CData/*2:0*/ asic_wrapper__DOT__cs_slave;
         CData/*2:0*/ asic_wrapper__DOT__cs_slave_next;
         CData/*7:0*/ asic_wrapper__DOT__BID_S_next;
@@ -89,9 +90,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         CData/*7:0*/ asic_wrapper__DOT__Top__DOT__array__DOT__valid_chain;
         CData/*0:0*/ __VstlFirstIteration;
         CData/*0:0*/ __VicoFirstIteration;
-        CData/*0:0*/ __Vtrigprevexpr___TOP__ACLK__0;
     };
     struct {
+        CData/*0:0*/ __Vtrigprevexpr___TOP__ACLK__0;
         CData/*0:0*/ __VactContinue;
         SData/*10:0*/ asic_wrapper__DOT__write_cnt;
         SData/*10:0*/ asic_wrapper__DOT__write_cnt_next;
@@ -155,9 +156,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper___024root final : public Verila
         VlUnpacked<VlUnpacked<CData/*7:0*/, 8>, 4> asic_wrapper__DOT__Top__DOT__GLB_ifmap__DOT__DO_wire;
         VlUnpacked<IData/*31:0*/, 1024> asic_wrapper__DOT__Top__DOT__GLB_weight__DOT__ram;
         VlUnpacked<VlUnpacked<CData/*7:0*/, 64>, 4> asic_wrapper__DOT__Top__DOT__GLB_weight__DOT__DO_wire;
-        VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__Top__DOT__GLB_bias__DOT__ram;
     };
     struct {
+        VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__Top__DOT__GLB_bias__DOT__ram;
         VlUnpacked<IData/*31:0*/, 128> asic_wrapper__DOT__Top__DOT__GLB_ofmap__DOT__ram;
         VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };

@@ -45,7 +45,6 @@ compile: hardware
 	$(CXX) $(CXXFLAGS) -c V$(TOP)___024root*.cpp && \
 	$(CXX) $(CXXFLAGS) -c V$(TOP)__Trace*.cpp && \
 	echo "Creating libraries..." && \
-	$(AR) $(ARFLAGS) libverilated.a verilated.o verilated_threads.o verilated_vcd_c.o && \
 	$(AR) $(ARFLAGS) libV$(TOP).a V$(TOP)*.o && \
 	echo "Done!"
 

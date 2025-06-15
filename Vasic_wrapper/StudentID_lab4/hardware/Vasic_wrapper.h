@@ -54,6 +54,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vasic_wrapper VL_NOT_FINAL : public Verilated
     VL_IN8(&ARBURST_S,1,0);
     VL_IN8(&ARVALID_S,0,0);
     VL_OUT8(&ARREADY_S,0,0);
+    VL_OUT8(&current_state,2,0);
+    VL_OUT8(&n_state,2,0);
     VL_OUT8(&RID_S,7,0);
     VL_OUT8(&RRESP_S,1,0);
     VL_OUT8(&RLAST_S,0,0);
