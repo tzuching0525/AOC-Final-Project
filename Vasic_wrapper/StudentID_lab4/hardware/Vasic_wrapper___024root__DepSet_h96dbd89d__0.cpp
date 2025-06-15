@@ -292,7 +292,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__ico(vlSelf);
 #endif
-            VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "Input combinational region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "Input combinational region did not converge.");
         }
         __VicoIterCount = ((IData)(1U) + __VicoIterCount);
         __VicoContinue = 0U;
@@ -308,7 +308,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "NBA region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -319,7 +319,7 @@ void Vasic_wrapper___024root___eval(Vasic_wrapper___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vasic_wrapper___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "Active region did not converge.");
+                VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);

@@ -69,7 +69,7 @@ VL_ATTR_COLD void Vasic_wrapper___024root___eval_settle(Vasic_wrapper___024root*
 #ifdef VL_DEBUG
             Vasic_wrapper___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("/home2/aoc2025/e24102064/final/hdl/asic_wrapper.sv", 24, "", "Settle region did not converge.");
+            VL_FATAL_MT("/home2/aoc2025/e24102064/final/rtl/asic_wrapper.sv", 24, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
