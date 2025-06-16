@@ -1,5 +1,5 @@
-`timescale 1ns/1ps
-`define CYCLE 10
+`timescale 1ps/1ps
+`define CYCLE 3000
 `define MAX_CYCLE 10000
 `define DATA 8
 `define ifmap_size 128 // define max value maybe some of array are not used
@@ -9,9 +9,13 @@
 `define ofmap_size 128
 
 `ifdef SYN
-    `define SDFFILE "Top_syn.sdf"
+    `define SDFFILE "../syn/Top_syn.sdf"
+    `include "../syn/Top_syn.v"
+    `include "/cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v"
+`else
+    `include "Top.sv"
 `endif
-`include "Top.sv"
+
 
 module tb;
 
