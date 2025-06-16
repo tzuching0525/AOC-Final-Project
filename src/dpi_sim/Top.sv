@@ -49,7 +49,13 @@ module Top (
     logic [7:0] ppu_output;
     logic [31:0] ppu_in_out;
     logic mode1_step0;
-    
+    /*int idx;
+    always@(posedge clk) begin
+        if(rst) idx = 0;
+        else idx++;
+        $display("[DPI] top valid %h, count i = %d.\n", valid, idx);
+    end*/
+      
 
     logic compute_stage0;
 

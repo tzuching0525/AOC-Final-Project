@@ -10,7 +10,11 @@
 // 1. 介面模組：產生時鐘 / reset，並例化 RTL Core
 //=============================================================================
 module dpi_interfaces;
-
+    localparam int IFMAP_BYTES_64  = 64;          // 64  byte
+    localparam int WEIGHT_BYTES_64 = 64*64;       // 一層 W，共 4 096 byte
+    localparam int BIAS_BYTES_64   = 64;          // 64  byte
+    byte weight_buf_64 [0:WEIGHT_BYTES_64-1];
+    byte bias_buf_64   [0:BIAS_BYTES_64-1];
     // -------- clock & reset --------------------------------------------------
     bit clk = 0;
     always #5 clk = ~clk;                 // 100 MHz (10 ns 週期)
@@ -52,22 +56,54 @@ module dpi_interfaces;
     //      • output_vec : byte  開放陣列，len = out_dim
     // ---------------------------------------------------------------------
     /* 64-byte 版本 */
+    byte weight_buf_64 [0:WEIGHT_BYTES_64-1];
+byte bias_buf_64   [0:BIAS_BYTES_64-1];
+
+// ==== 1. 由 C++ 載入權重 + bias ========================================
+//   • wb_vec = {fc1_w , fc1_b , fc2_w , fc2_b}  (皆 int8)
+//   • 長度 = 4 096 + 64 = 4 160  byte
+export "DPI-C" task sv_mlp_load_weight_64;
+task automatic sv_mlp_load_weight_64
+  (input byte wb_vec [0:WEIGHT_BYTES_64+BIAS_BYTES_64-1]);
+   int i;
+   for(i=0; i<WEIGHT_BYTES_64; i++) weight_buf_64[i] = wb_vec[i];
+   for(i=0; i<BIAS_BYTES_64;   i++) bias_buf_64[i]   = wb_vec[WEIGHT_BYTES_64+i];
+endtask
+
+// ==== 2. Forward 64-byte ================================================
+//   • in_vec  : byte  開放陣列，長度 = 64
+//   • out_vec : byte  開放陣列，長度 = 64
   export "DPI-C" task sv_mlp_forward_64;
   task automatic sv_mlp_forward_64
     (input  byte in_vec [`BYTE_VEC_64 ],
      output byte out_vec[`BYTE_VEC_64 ]);
     int i;
+    @(posedge clk) rst = 1; @(posedge clk) rst = 0; // reset
+    //$display("[DPI] sv_mlp_forward_64.\n");
     /* 啟動一次運算 */
     @(posedge clk) ready = 1; @(posedge clk) ready = 0;
-
     /* 送 64 個 byte → Top.sv */
-    for (i = 0; i < 64; i+=4) begin
+    //---------------- IFMAP ------------------------------------------------
+    for(i = 0; i < IFMAP_BYTES_64; i+=4) begin
       data_in = {in_vec[i+3],in_vec[i+2],in_vec[i+1],in_vec[i]};
       @(posedge clk);
     end
 
+    //---------------- WEIGHT -----------------------------------------------
+    for(i = 0; i < WEIGHT_BYTES_64; i+=4) begin
+      data_in = {weight_buf_64[i+3],weight_buf_64[i+2],
+                 weight_buf_64[i+1],weight_buf_64[i]};
+      @(posedge clk);
+    end
+
+   //---------------- BIAS -------------------------------------------------
+    for(i = 0; i < BIAS_BYTES_64; i+=4) begin
+      data_in = {bias_buf_64[i+3],bias_buf_64[i+2],
+                 bias_buf_64[i+1],bias_buf_64[i]};
+      @(posedge clk);
+    end
     /* 等 done，再收 64 個 byte */
-    wait(done);
+    wait(valid);
     i = 0;
     while (i < 64) begin
       @(posedge clk);
@@ -83,7 +119,28 @@ module dpi_interfaces;
   task automatic sv_mlp_forward_128
     (input  byte in_vec [`BYTE_VEC_128 ],
      output byte out_vec[`BYTE_VEC_128 ]);
-    /* … 尺寸 & 迴圈上限改 128 … */
+    int i;
+    @(posedge clk) rst = 1; @(posedge clk) rst = 0; // reset
+    //$display("[DPI] sv_mlp_forward_128.\n");
+    /* 啟動一次運算 */
+    @(posedge clk) ready = 1; @(posedge clk) ready = 0;
+
+    /* 送 64 個 byte → Top.sv */
+    for (i = 0; i < 128; i+=4) begin
+      data_in = {in_vec[i+3],in_vec[i+2],in_vec[i+1],in_vec[i]};
+      @(posedge clk);
+    end
+
+    /* 等 done，再收 64 個 byte */
+    wait(valid);
+    i = 0;
+    while (i < 128) begin
+      @(posedge clk);
+      if (valid) begin
+        out_vec[i] = ofmap[7:0];
+        i++;
+      end
+    end
   endtask
 
   /* 反傳佔位 */
@@ -92,5 +149,12 @@ module dpi_interfaces;
     (input int grad_out[63:0], output int grad_in[63:0]);
     $display("[DPI] backward not implemented.");
   endtask
-
+  
+import "DPI-C" context task run_trainer();
+initial begin
+    #50;
+    $display("[DPI] Starting C++ trainer.");
+    run_trainer();          // ⇦ 這裡啟動 C++ 程式
+    #1us $finish;
+end
 endmodule : dpi_interfaces
