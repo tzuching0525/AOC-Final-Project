@@ -1,0 +1,10 @@
+ifmap data type: int8
+PPU: divide
+
+*_decimal: real mlp0 pattern from ViT. You need to execute convert.c to generate hexdecimal pattern.
+
+generate simple pattern: 
+gcc pattern_gen.c
+./a.out
+You need to input mode (0: mlp0, 1: mlp3) and scaling factor
+

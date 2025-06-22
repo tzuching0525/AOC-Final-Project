@@ -1,0 +1,13 @@
+/home2/aoc2025/e24102153/final_lab4/rtl/Adder_tree.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/Controller.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/PE.v
+/home2/aoc2025/e24102153/final_lab4/rtl/PE_array.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/PE_block.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/PPU.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/Top.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/asic_wrapper.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/sram_bias.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/sram_ifmap.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/sram_ofmap.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/sram_weight.sv
+/home2/aoc2025/e24102153/final_lab4/rtl/tb_1.sv

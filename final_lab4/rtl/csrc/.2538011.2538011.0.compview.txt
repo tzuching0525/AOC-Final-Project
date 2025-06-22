@@ -1,0 +1,6 @@
+Command exited with non-zero status 3
+{"comelab":{"timestamp_begin":1750441666.025841838, "rt":0.01, "ut":0.01, "st":0.00}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1750441665.632779361}
+{"VCS_COMP_START_TIME": 1750441665.632779361}
+{"VCS_COMP_END_TIME": 1750441666.094504276}
+{"VCS_USER_OPTIONS": "-R -sverilog tb1.sv -debug_access+all -full64"}
