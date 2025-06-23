@@ -4,19 +4,21 @@
 - `$ conda create -n vit python=3.10 -y`
 - `$ conda activate vit`
 
-### Simulation
+### RTL testbench
+
+run `$ tcsh` before executing rtl testbench
 1. test rtl
-   `$ tcsh`
    `$ make test_rtl`
 2. test asic_wrapper mlp1
-   `$ tcsh`
    `$ make test_wrapper0`
 3. test asic wrapper mlp3
-   `$ tcsh`
    `$ make test_wrapper1`
-4. generate hardware (exit tcsh)
+
+### Integration testbench (exit tcsh)
+`$ conda activate vit`
+1. generate hardware
   `$ make hardware`
-5. test runtime (exit tcsh)
+2. test runtime (exit tcsh)
    `$ make test_runtime`
 
 ### Clean
