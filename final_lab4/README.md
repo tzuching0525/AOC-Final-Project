@@ -5,13 +5,18 @@
 - `$ conda activate vit`
 
 ### Simulation
-1. generate hardware
-  `$ make hardware`
-2. test rtl
+1. test rtl
    `$ tcsh`
    `$ make test_rtl`
-3. test runtime
+2. test asic_wrapper mlp1
    `$ tcsh`
+   `$ make test_wrapper0`
+3. test asic wrapper mlp3
+   `$ tcsh`
+   `$ make test_wrapper1`
+4. generate hardware (exit tcsh)
+  `$ make hardware`
+5. test runtime (exit tcsh)
    `$ make test_runtime`
 
 ### Clean
