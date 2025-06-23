@@ -1,8 +1,8 @@
 # Usage
 
 ### Create conda virtual environment
-conda create -n vit python=3.10 -y
-conda activate vit
+`$ conda create -n vit python=3.10 -y`
+`$ conda activate vit`
 
 ### Simulation
 1. generate hardware
@@ -15,7 +15,6 @@ conda activate vit
    `$ make test_runtime`
 
 ### Clean
-
 1. clean dataset
    `$ make clean_dataset`
 2. clean onnx model
