@@ -107,12 +107,9 @@ int qlinear_relu(int8_t *input_in_DRAM, int8_t *weight_in_DRAM,
     }
 
     wait_for_interrupt();
-    printf("finish\n");
 
     for(int i = 0; i < 128; i++){
         reg_read(DLA_OFMAP_OFFSET, output_in_DRAM[i]);
-        printf("output_in_DRAM[%d] : %d\n", i, output_in_DRAM[i]);
-        fflush(stdout);
     }
 #ifdef DLA_INFO
     dump_dla_info_to_csv(DLA_INFO_CSV, "qlinear_relu",
@@ -171,12 +168,9 @@ int qlinear_relu2(int8_t *input_in_DRAM, int8_t *weight_in_DRAM,
     }*/
 
     wait_for_interrupt();
-    printf("finish\n");
 
     for(int i = 0; i < 64; i++){
         reg_read(DLA_OFMAP_OFFSET, output_in_DRAM[i]);
-        printf("output_in_DRAM[%d] : %d\n", i, output_in_DRAM[i]);
-        fflush(stdout);
     }
 #ifdef DLA_INFO
     dump_dla_info_to_csv(DLA_INFO_CSV, "qlinear_relu",

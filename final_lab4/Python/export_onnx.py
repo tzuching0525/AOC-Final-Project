@@ -9,7 +9,7 @@ from vit import ViT
 if __name__ == "__main__":
     # —— 配置区域 —— 
     PT_MODEL_PATH    = "../model/quant_vit.pt"      # 你的 PyTorch 检查点
-    ONNX_EXPORT_PATH = "../model/quant_vit_int8.onnx"  # 导出的 ONNX 路径
+    ONNX_EXPORT_PATH = "../model/quant_vit.onnx"  # 导出的 ONNX 路径
     BATCH_SIZE       = 1
     N_CHANNELS       = 3
     IMAGE_SIZE       = 72

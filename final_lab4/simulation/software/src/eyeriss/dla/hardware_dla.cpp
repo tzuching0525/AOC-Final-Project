@@ -36,12 +36,10 @@ void reg_read(uint32_t offset, int32_t &data) {
 /* ========================= DLA Configuration ========================= */
 void set_enable(uint32_t scale_factor, bool mode) {
     uint32_t value;
-    printf("scale_factor: %d, mode: %d\n", scale_factor, mode);
     value = ((scale_factor) << 4) |   // scale_factor 12 bits (bits 15~4)
             ((mode) << 3) |     // operation: bit 3
             ((0) << 2) |          // relu: bit 2
             ((0) << 1) |       // maxpool: bit 1
             ((0) << 0);                      // en: bit 0
-    printf("value: 0x%08x\n", value);
     reg_write(DLA_ENABLE_OFFSET, value);
 }

@@ -1,0 +1,62 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "asic_wrapper_0000": [
+        "asic_wrapper_0000",
+        "Ryuz1",
+        "module",
+        2
+    ],
+    "PE_block_0000": [
+        "PE_block_0000",
+        "ka870",
+        "module",
+        3
+    ],
+    "sram_weight_0000": [
+        "sram_weight_0000",
+        "cVP0V",
+        "module",
+        4
+    ],
+    "sram_ifmap_0000": [
+        "sram_ifmap_0000",
+        "e9Mr8",
+        "module",
+        5
+    ],
+    "sram_bias": [
+        "sram_bias",
+        "e7BDj",
+        "module",
+        6
+    ],
+    "sram_ofmap": [
+        "sram_ofmap",
+        "kSeEF",
+        "module",
+        7
+    ],
+    "Adder_tree": [
+        "Adder_tree",
+        "ztjwB",
+        "module",
+        8
+    ],
+    "tb": [
+        "tb",
+        "g7hgQ",
+        "module",
+        9
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        10
+    ]
+}

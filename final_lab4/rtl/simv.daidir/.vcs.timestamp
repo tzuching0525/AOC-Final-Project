@@ -1,0 +1,135 @@
+0 
+31
++itf+/usr/cad/synopsys/vcs/2022.06/linux64/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/cad/synopsys/vcs/2022.06/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/cad/synopsys/vcs/2022.06/linux64/lib/libvirsim.so /usr/cad/synopsys/vcs/2022.06/linux64/lib/liberrorinf.so /usr/cad/synopsys/vcs/2022.06/linux64/lib/libsnpsmalloc.so /usr/cad/synopsys/vcs/2022.06/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/cad/synopsys/vcs/2022.06/include
+-Mxllcflags=
+-P
+-Xvcs_run_simv=1
+-debug_access+all
+-fsdb
+-full64
+-gen_obj
+-picarchive
+-sverilog
+/usr/cad/synopsys/vcs/2022.06/linux64/bin/vcs1
+/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/verdi.tab
+tb_1.sv
+76
+_CONDA_ROOT=/home2/aoc2025/e24102064/miniconda3
+_CONDA_EXE=/home2/aoc2025/e24102064/miniconda3/bin/conda
+XDG_SESSION_TYPE=tty
+XDG_SESSION_ID=12195
+XDG_SESSION_CLASS=user
+XDG_RUNTIME_DIR=/run/user/1835
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VSCODE_IPC_HOOK_CLI=/run/user/1835/vscode-ipc-1c972556-fc0d-450c-be26-ec6c8ef1fc6f.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1835/vscode-git-47ebfea869.sock
+VSCODE_GIT_ASKPASS_NODE=/home2/aoc2025/e24102064/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/node
+VSCODE_GIT_ASKPASS_MAIN=/home2/aoc2025/e24102064/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/home2/aoc2025/e24102064/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-4f8b9a956ad11232.txt
+VMR_MODE_FLAG=64
+VERDI_HOME=/usr/cad/synopsys/verdi/2019.06/
+VENDOR=unknown
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/cad/synopsys/vcs/2022.06
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_CC=gcc
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/usr/cad/synopsys/vcs/2022.06/linux64
+TERM_PROGRAM_VERSION=1.101.1
+TERM_PROGRAM=vscode
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/2019.12//doc/syn/man
+SYNOPSYS_LC_ROOT=/cad/synopsys/lc/cur
+SSL_CERT_FILE=/usr/lib/ssl/certs/ca-certificates.crt
+SSL_CERT_DIR=/usr/lib/ssl/certs
+SSH_CONNECTION=140.116.20.187 50088 140.116.164.70 22
+SSH_CLIENT=140.116.20.187 50088 22
+SNPS_VCS_CLANG_PATH=/usr/cad/synopsys/vcs/2022.06/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=ubuntu
+SHLIB_PATH=/usr/cad/synopsys/verdi/2019.06//etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/::/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2019.06//etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/::/usr/cad/synopsys/verdi/2019.06//etc/lib/libstdc++/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/lib/LINUX64/:/usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/:
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+PYDEVD_DISABLE_FILE_VALIDATION=1
+OVA_UUM=0
+OSTYPE=linux
+MSM_PRODUCT=MSM
+MSM_HOME=/usr/local/MegaRAID Storage Manager
+MOTD_SHOWN=pam
+MFLAGS=-w
+MAKE_TERMOUT=/dev/pts/35
+MAKE_TERMERR=/dev/pts/35
+MAKELEVEL=2
+MAKEFLAGS=w
+LESSOPEN=| /usr/bin/lesspipe %s
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_TIME=lzh_TW
+LC_TELEPHONE=lzh_TW
+LC_PAPER=lzh_TW
+LC_NUMERIC=lzh_TW
+LC_NAME=lzh_TW
+LC_MONETARY=lzh_TW
+LC_MEASUREMENT=lzh_TW
+LC_IDENTIFICATION=lzh_TW
+LC_ALL=C
+LC_ADDRESS=lzh_TW
+HOSTTYPE=x86_64-linux
+GROUP=e24102064
+GIT_ASKPASS=/home2/aoc2025/e24102064/.vscode-server/cli/servers/Stable-18e3a1ec544e6907be1e944a94c496e302073435/server/extensions/git/dist/askpass.sh
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1835/bus
+CONDA_SHLVL=0
+CONDA_ROOT=/home2/aoc2025/e24102064/miniconda3
+CONDA_PYTHON_EXE=/home2/aoc2025/e24102064/miniconda3/bin/python
+CONDA_PROMPT_MODIFIER=(base) 
+CONDA_PREFIX=/home2/aoc2025/e24102064/miniconda3
+CONDA_EXE=/home2/aoc2025/e24102064/miniconda3/bin/conda
+CONDA_DEFAULT_ENV=base
+COLORTERM=truecolor
+BUNDLED_DEBUGPY_PATH=/home2/aoc2025/e24102064/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy
+0
+0
+15
+1750659385 Adder_tree.sv
+1750659385 sram_ofmap.sv
+1750659385 sram_bias.sv
+1750659385 sram_ifmap.sv
+1750659385 sram_weight.sv
+1750659385 PE.v
+1750659385 PE_block.sv
+1750659385 PE_array.sv
+1750659385 PPU.sv
+1750659385 Controller.sv
+1750659385 Top.sv
+1750653629 asic_wrapper.sv
+1750688186 tb_1.sv
+1558867316 /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/verdi.tab
+1654052745 /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcsdp_lite.tab
+4
+1654054205 /usr/cad/synopsys/vcs/2022.06/linux64/lib/libvirsim.so
+1654053585 /usr/cad/synopsys/vcs/2022.06/linux64/lib/liberrorinf.so
+1654053489 /usr/cad/synopsys/vcs/2022.06/linux64/lib/libsnpsmalloc.so
+1654053565 /usr/cad/synopsys/vcs/2022.06/linux64/lib/libvfs.so
+1750688944 simv.daidir
+-1 partitionlib

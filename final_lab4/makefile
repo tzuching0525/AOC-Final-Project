@@ -59,6 +59,9 @@ hardware: gen_hardware
 	$(AR) $(ARFLAGS) libV$(TOP).a V$(TOP)*.o && \
 	echo "Done!"
 
+onnx:
+	$(QUIET)cd Python && \
+	python export_onnx.py
 	
 build_model:
 	$(QUIET)echo "Building model..."
@@ -96,7 +99,17 @@ test_rtl:
 	$(QUIET)echo "Running program..."
 	$(QUIET)cd $(RTL_DIR) && make rtl && cd -
 
+test_wrapper0:
+	$(QUIET)echo "Cleaning ..."
+	$(QUIET)cd $(RTL_DIR) && make clean && cd -
+	$(QUIET)echo "Running program..."
+	$(QUIET)cd $(RTL_DIR) && make wrapper0 && cd -
 
+test_wrapper1:
+	$(QUIET)echo "Cleaning ..."
+	$(QUIET)cd $(RTL_DIR) && make clean && cd -
+	$(QUIET)echo "Running program..."
+	$(QUIET)cd $(RTL_DIR) && make wrapper1 && cd -
 
 visuTVM:
 	python $(VISUTAM) \
@@ -107,8 +120,8 @@ visuTVM:
 	-wi
 
 clean:
-	rm -rf $(HW_DIR) *.vcd *.log
 	$(QUIET)echo "Cleaning up..."
+	rm -rf $(HW_DIR) *.vcd *.log
 	$(QUIET)cd $(TEST_DIR)/integration && make clean && cd -
 	$(QUIET)cd $(TEST_DIR)/runtime && make clean && cd -
 	$(QUIET)cd $(RTL_DIR) && make clean && cd -
