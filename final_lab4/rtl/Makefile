@@ -13,7 +13,7 @@ rtl_all: rtl
 
 # Compile and run for pre-sim
 rtl:
-	vcs -R -sverilog tb.sv -debug_access+all -full64
+	vcs -R -sverilog tb_top.sv -debug_access+all -full64
 
 syn:
 	vcs -R -sverilog +neg_tchk -negdelay -v /cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/VERILOG/N16ADFP_StdCell.v tb.sv -debug_access+all -full64 -diag=sdf:verbose +incdir+./syn +define+SYN
