@@ -14,7 +14,7 @@ run `$ tcsh` before executing rtl testbench
    `$ make test_rtl`
 2. test asic_wrapper mlp1
    `$ make test_wrapper0`
-3. test asic wrapper mlp3
+3. test asic_wrapper mlp3
    `$ make test_wrapper1`
 
 ### Integration testbench (exit tcsh)
