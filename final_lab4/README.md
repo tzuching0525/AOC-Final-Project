@@ -1,5 +1,13 @@
 # Usage
 
+### Download Miniconda
+```
+[[ ! -f /tmp/miniconda.sh ]] && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
+bash /tmp/miniconda.sh -b -u -p ~/miniconda3
+source ~/miniconda3/bin/activate
+conda init --all
+```
+
 ### Create conda virtual environment
 - `$ conda create -n vit python=3.11 -y`
 - `$ conda activate vit`
