@@ -81,6 +81,9 @@ build_model:
 	$(QUIET)mkdir -p $(BIN_SOURCE_DIR)
 	$(QUIET)mv $(OUTPUT_DIR)/*.bin $(BIN_SOURCE_DIR)
 
+synthesize:
+	$(QUIET)cd $(RTL_DIR) && make synthesize && cd-
+
 test:
 	$(QUIET)echo "Cleaning ..."
 	$(QUIET)cd $(TEST_DIR)/integration && make clean && cd -
@@ -130,3 +133,6 @@ clean:
 clean_data:
 	$(QUIET)echo "Cleaning up dataset..."
 	$(QUIET)rm -rf $(DATASET)
+
+clean_model:
+	$(QUIET)cd model && rm *.onnx

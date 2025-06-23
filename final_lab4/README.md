@@ -13,3 +13,12 @@ conda activate vit
 3. test runtime
    `$ tcsh`
    `$ make test_runtime`
+
+### Clean
+
+1. clean dataset
+   `$ make clean_dataset`
+2. clean onnx model
+   `$ make clean_model`
+3. clean all except dataset & model
+   `$ make clean`

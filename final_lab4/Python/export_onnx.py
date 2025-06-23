@@ -1,76 +1,56 @@
-#!/usr/bin/env python3
-# export_onnx.py
-
 import torch
-from torch.onnx import OperatorExportTypes
-from torch.quantization import quantize_dynamic
 from vit import ViT
 
-if __name__ == "__main__":
-    # —— 配置区域 —— 
-    PT_MODEL_PATH    = "../model/quant_vit.pt"      # 你的 PyTorch 检查点
-    ONNX_EXPORT_PATH = "../model/quant_vit.onnx"  # 导出的 ONNX 路径
-    BATCH_SIZE       = 1
-    N_CHANNELS       = 3
-    IMAGE_SIZE       = 72
-    # ————————
+RAW_PATH   = "../model/quant_vit.pt"
+ONNX_PATH  = "../model/quant_vit.onnx"
+EXAMPLE_IN = torch.randn(1, 3, 72, 72)  
 
-    # 1. 构建 float32 的 ViT 并 load 权重
-    print("1) Loading float model and weights…")
-    num_classes        = 100
-    patch_size         = 6
-    projection_dim     = 64
-    num_patches        = (IMAGE_SIZE // patch_size) ** 2
-    num_heads          = 4
-    transformer_units  = [projection_dim * 2, projection_dim]
-    transformer_layers = 8
-    mlp_head_units     = [2048, 1024]
+raw = torch.load(RAW_PATH, map_location="cpu")
 
-    model_fp = ViT(
-        image_size=IMAGE_SIZE,
-        patch_size=patch_size,
-        num_classes=num_classes,
-        projection_dim=projection_dim,
-        num_patches=num_patches,
-        num_heads=num_heads,
-        transformer_units=transformer_units,
-        transformer_layers=transformer_layers,
-        mlp_head_units=mlp_head_units
-    ).eval()
+if isinstance(raw, torch.nn.Module):
+    model = raw
+else:
+# 參數
+# num_classes = 100
+# input_shape = (32, 32, 3)
+# learning_rate = 0.001
+# weight_decay = 0.0001
+# batch_size = 256
+# num_epochs = 100
+# image_size = 72
+# patch_size = 6
+# num_patches = (image_size // patch_size) ** 2
+# projection_dim = 64
+# num_heads = 4
+# transformer_units = [projection_dim * 2, projection_dim]
+# transformer_layers = 8
+# mlp_head_units = [2048, 1024]
 
-    ckpt = torch.load(PT_MODEL_PATH, map_location="cpu")
-    state_dict = ckpt.get("state_dict", ckpt)
-    # 如果键里带 'module.' 前缀，可以去掉
-    state_dict = {k.replace("module.", ""): v for k, v in state_dict.items()}
-    missing, unexpected = model_fp.load_state_dict(state_dict, strict=False)
-    print("   missing keys:", missing)
-    print("   unexpected keys:", unexpected)
-
-    # 2. 对所有 Linear 层做动态量化
-    print("2) Applying dynamic quantization to Linear layers…")
-    model_int8 = quantize_dynamic(
-        model_fp,                     # 要量化的模型
-        {torch.nn.Linear},            # 只对哪些算子做量化
-        dtype=torch.qint8             # 量化到 int8
+    model = ViT(
+        image_size=72, patch_size=6, num_classes=100,
+        projection_dim=64, num_patches=(72//6)**2,
+        num_heads=4, transformer_units=[128,64],
+        transformer_layers=8, mlp_head_units=[2048,1024]
     )
-    print("   ✔ dynamic quantization done.")
+    sd = raw.get("state_dict", raw)
+    clean_sd = {
+        k.replace("module.",""): v
+        for k,v in sd.items()
+        if not any(t in k for t in [".scale",".zero_point","_packed_params"])
+    }
+    model.load_state_dict(clean_sd, strict=False)
 
-    # 3. 导出到 ONNX（包含 QuantizeLinear/DequantizeLinear/QLinearMatMul 等节点）
-    print("3) Exporting quantized model to ONNX…")
-    dummy = torch.randn(BATCH_SIZE, N_CHANNELS, IMAGE_SIZE, IMAGE_SIZE)
-    torch.onnx.export(
-        model_int8,
-        dummy,
-        ONNX_EXPORT_PATH,
-        input_names=["input"],
-        output_names=["logits"],
-        opset_version=13,
-        do_constant_folding=False,                # 不折叠常量，保留量化/反量化节点
-        operator_export_type=OperatorExportTypes.ONNX,  
-        dynamic_axes={
-            "input":  {0: "batch"},
-            "logits": {0: "batch"},
-        },
-        verbose=False,
-    )
-    print(f"✔ Exported INT8-quantized ONNX to {ONNX_EXPORT_PATH}")
+model.eval()
+
+print(f"onnx to  {ONNX_PATH} …")
+torch.onnx.export(
+    model,                     
+    EXAMPLE_IN,                
+    ONNX_PATH,                
+    input_names=["input"],    
+    output_names=["output"],   
+    opset_version=13,          
+    do_constant_folding=True, 
+)
+
+print(f"export {ONNX_PATH}")
