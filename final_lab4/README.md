@@ -1,8 +1,9 @@
 # Usage
 
 ### Create conda virtual environment
-- `$ conda create -n vit python=3.10 -y`
+- `$ conda create -n vit python=3.11 -y`
 - `$ conda activate vit`
+- `$ conda install llvmdev=18 -c conda-forge`
 
 ### Install dependency packages 
 - `$ pip install -r requirements.txt`
