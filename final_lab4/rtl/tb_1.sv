@@ -264,6 +264,6 @@ module tb;
     $readmemh("ifmap2.txt", ifmap_mem);
     $readmemh("weight1.txt", weight_mem);
     $readmemh("bias1.txt", bias_mem);
-    $readmemh("golden1.txt", golden_mem);
+    $readmemh("golden2.txt", golden_mem);
   end
 endmodule
