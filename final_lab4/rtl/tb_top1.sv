@@ -276,12 +276,12 @@ always begin
 end
 
 initial begin
-    $readmemh("ifmap.txt", ifmap);
-    $readmemh("weight.txt", weight);
-    $readmemh("bias.txt", bias);
-    $readmemh("golden.txt", golden_opsum);
-    $readmemb("mode.txt", mode);
-    $readmemh("scaling_factor.txt", scaling_factor);
+    $readmemh("ifmap1.txt", ifmap);
+    $readmemh("weight1.txt", weight);
+    $readmemh("bias1.txt", bias);
+    $readmemh("golden1.txt", golden_opsum);
+    $readmemb("mode1.txt", mode);
+    $readmemh("scaling_factor1.txt", scaling_factor);
 end
 
 initial begin 
