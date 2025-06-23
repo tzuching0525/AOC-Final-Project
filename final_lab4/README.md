@@ -15,7 +15,7 @@ run `$ tcsh` before executing rtl testbench
    `$ make test_wrapper1`
 
 ### Integration testbench (exit tcsh)
-`$ conda activate vit`
+activate virtual environment first `$ conda activate vit`
 1. generate hardware
   `$ make hardware`
 2. test runtime (exit tcsh)
