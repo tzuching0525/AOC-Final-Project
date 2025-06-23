@@ -3,6 +3,8 @@
 ### Create conda virtual environment
 - `$ conda create -n vit python=3.10 -y`
 - `$ conda activate vit`
+
+### Install dependency packages 
 - `$ pip install -r requirements.txt`
 
 ### RTL testbench
