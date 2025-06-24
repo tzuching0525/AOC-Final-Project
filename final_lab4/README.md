@@ -32,6 +32,10 @@ activate virtual environment first `$ conda activate vit`
   `$ make hardware`
 2. test runtime (exit tcsh)
    `$ make test_runtime`
+3. convert pt model to onnx model
+   `$ make onnx`
+4. dump relay_ir graph
+   `$ make visuTVM`
 
 ### Clean
 1. clean dataset
