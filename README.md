@@ -50,10 +50,13 @@ activate virtual environment first `$ conda activate vit`
    `$ make clean_all`
 
 ### Model
-- training.ipynb             - cifar100 Vit model training
-- vit.pt, quant_vit.py       - model file
-- cifar_test.py              - generate layer_outputs and quant_vit.py accuracy test
-- load.py                    - generate model_weights
-- load_fp.py, load_test.py   - used by calculating scaling factor (floating point parameter)
-- mlp0.py, mlp3.py           - generate my_quantized_outputs for hardware testbench
+
+| 檔案名稱                  | 功能說明                                                      |
+|--------------------------|---------------------------------------------------------------|
+| training.ipynb           | cifar100 Vit model training                                   |
+| vit.pt, quant_vit.py     | model file                                                    |
+| cifar_test.py            | generate layer_outputs and quant_vit.py accuracy test         |
+| load.py                  | generate model_weights                                        |
+| load_fp.py, load_test.py | used by calculating scaling factor (floating point parameter) |
+| mlp0.py, mlp3.py         | generate my_quantized_outputs for hardware testbench          |
 
