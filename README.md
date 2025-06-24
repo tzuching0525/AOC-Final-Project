@@ -50,6 +50,7 @@ activate virtual environment first `$ conda activate vit`
    `$ make clean_all`
 
 ### Model
+$$
 \begin{align}
 1. training.ipynb           &- cifar100 Vit model training
 2. vit.pt, quant_vit.py     &- model file
@@ -58,3 +59,4 @@ activate virtual environment first `$ conda activate vit`
 5. load_fp.py, load_test.py &- used by calculating scaling factor (floating point parameter)
 6. mlp0.py, mlp3.py         &- generate my_quantized_outputs for hardware testbench
 \end{align}
+$$
