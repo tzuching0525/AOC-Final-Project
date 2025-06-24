@@ -44,3 +44,5 @@ activate virtual environment first `$ conda activate vit`
    `$ make clean_model`
 3. clean all except dataset & model
    `$ make clean`
+4. clean dataset, model, output
+   `$ make clean_all`
