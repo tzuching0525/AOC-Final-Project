@@ -230,8 +230,7 @@ Top Top(
     .data_in(data_in),
     .valid(valid),
     .ofmap(ofmap),
-    .done(done),
-    .ppu_out()
+    .done(done)
 );
 
 

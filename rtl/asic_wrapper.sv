@@ -58,20 +58,6 @@ module asic_wrapper (
 	input ARVALID_S,
 	output logic ARREADY_S,
 
-  output logic [11:0] output_scale,
-  output logic [6:0] output_cnt,
-  output logic [2:0] current_state,
-  output logic [2:0] n_state,
-  output logic [10:0] dataout,
-  output logic [10:0] dataout2,
-  output logic [`DATA_BITS-1:0] ASIC_DATA_n,
-  output logic [`DATA_BITS-1:0] data_temp [8:0],
-
-  output logic [`DATA_BITS-1:0] ifmap [15:0],
-  output logic [`DATA_BITS-1:0] weight [15:0],
-  output logic [`DATA_BITS-1:0] bias,
-  output logic [`DATA_BITS-1:0] ppu_out_temp [63:0],
-
 	//READ DATA0
 	output logic [`AXI_IDS_BITS-1:0] RID_S,
 	output logic [`AXI_DATA_BITS-1:0] RDATA_S,
@@ -80,19 +66,8 @@ module asic_wrapper (
 	output logic RVALID_S,
 	input RREADY_S
 );
-//1600~1663
-//400~415
+
   logic [31:0] DATA_buffer [0:1103]; // ifmap weight bias 16 + 1024 + 64
-  genvar k;
-  generate
-    for (k = 0; k < 16; k = k + 1) begin : gen_ifmap
-      assign ifmap[k] = DATA_buffer[k];
-    end
-    for (k = 0; k < 16; k = k + 1) begin : gen_weight
-      assign weight[k] = DATA_buffer[k + 416];
-    end
-    assign bias = DATA_buffer[1064];
-  endgenerate
   
   logic [10:0] write_cnt, write_cnt_next, count, count_next, bias_cnt;
   logic [31:0] ofmap;
@@ -106,7 +81,7 @@ module asic_wrapper (
   } state_t;
 
   state_t state, next_state;
-  logic [6:0] output_cnt_next;
+  logic [6:0] output_cnt, output_cnt_next;
   logic [7:0] ofmap_count;
   logic [31:0] ofmap_reg [0:127]; // ofmap 128
   logic step;
@@ -127,11 +102,6 @@ module asic_wrapper (
   } AXI_state;
 
   AXI_state cs_slave, cs_slave_next;
-  //assign output_scale = ASIC_ENABLE[15:4];
-  assign current_state = cs_slave;
-  assign n_state = cs_slave_next;
-  assign dataout = write_cnt;
-  assign dataout2 = write_cnt_next;
   logic [`AXI_ADDR_BITS-1:0] addr_S_reg, addr_S_reg_next;
   logic [`AXI_IDS_BITS-1:0] BID_S_next, RID_S_next;
   logic write_error, write_error_next;
@@ -139,7 +109,6 @@ module asic_wrapper (
   logic [`DATA_BITS-1:0] ASIC_ENABLE, ASIC_ENABLE_next;
   logic [`DATA_BITS-1:0] DATA, ASIC_DATA_next;     
 
-  assign ASIC_DATA_n = ASIC_DATA_next;
 
   logic [`DATA_BITS-1:0] ASIC_OFMAP, ASIC_OFMAP_next;
 
@@ -155,47 +124,6 @@ module asic_wrapper (
     end
   end
 
-  always_ff @(posedge ACLK) begin
-    if (~ARESETn) begin
-      for (int j = 0; j < 9; j = j + 1) begin
-        data_temp[j] <= 32'd0;
-      end
-    end
-    else begin
-      if (count == 11'd0 && data_ready_reg == 1'b1) begin
-        data_temp[0] <= DATA;
-      end
-      else if (count == 11'd1) begin
-        data_temp[1] <= DATA;
-      end
-      else if (count == 11'd2) begin
-        data_temp[2] <= DATA;
-      end
-      else if (count == 11'd3) begin
-        data_temp[3] <= DATA;
-      end
-      else if (count == 11'd4) begin
-        data_temp[4] <= DATA;
-      end
-      else if (count == 11'd5) begin
-        data_temp[5] <= DATA;
-      end
-      else if (count == 11'd6) begin
-        data_temp[6] <= DATA;
-      end
-      else if (count == 11'd7) begin
-        data_temp[7] <= DATA;
-      end
-      else if (count == 11'd8) begin
-        data_temp[8] <= DATA;
-      end
-      else begin
-        for (int j = 0; j < 9; j = j + 1) begin
-          data_temp[j] <= data_temp[j];
-        end
-      end
-    end
-  end
 
   always_comb begin
     ASIC_interrupt = 1'b0;
@@ -517,64 +445,6 @@ module asic_wrapper (
         ASIC (transformer based)
 *********************************************/
 
-logic [31:0] ppu_out;
-
-
-always_ff @(posedge ACLK) begin
-    if (~ARESETn) begin
-        for (int j = 0; j < 64; j = j + 1) begin
-          ppu_out_temp[j] <= 32'd0;
-        end
-    end
-    else if (ofmap_count == 65) begin
-        ppu_out_temp[1] <= ppu_out;
-    end
-    else if (ofmap_count == 7) begin
-        ppu_out_temp[7] <= ppu_out;
-    end
-    else if (ofmap_count == 11) begin
-        ppu_out_temp[11] <= ppu_out;
-    end
-    else if (ofmap_count == 24) begin
-        ppu_out_temp[24] <= ppu_out;
-    end
-    else if (ofmap_count == 25) begin
-        ppu_out_temp[25] <= ppu_out;
-    end
-    else if (ofmap_count == 26) begin
-        ppu_out_temp[26] <= ppu_out;
-    end
-    else if (ofmap_count == 34) begin
-        ppu_out_temp[34] <= ppu_out;
-    end
-    else if (ofmap_count == 36) begin
-        ppu_out_temp[36] <= ppu_out;
-    end
-    else if (ofmap_count == 41) begin
-        ppu_out_temp[41] <= ppu_out;
-    end
-    else if (ofmap_count == 42) begin
-        ppu_out_temp[42] <= ppu_out;
-    end
-    else if (ofmap_count == 46) begin
-        ppu_out_temp[46] <= ppu_out;
-    end
-    else if (ofmap_count == 50) begin
-        ppu_out_temp[50] <= ppu_out;
-    end
-    else if (ofmap_count == 54) begin
-        ppu_out_temp[54] <= ppu_out;
-    end
-    else if (ofmap_count == 62) begin
-        ppu_out_temp[62] <= ppu_out;
-    end
-    else begin
-        for (int j = 0; j < 64; j = j + 1) begin
-          ppu_out_temp[j] <= ppu_out_temp[j];
-        end
-    end
-end
-
 Top Top (
     .clk(ACLK),
     .rst(~ARESETn),
@@ -586,8 +456,7 @@ Top Top (
     .data_in(DATA),
     .valid(valid),
     .ofmap(ofmap),
-    .done(),
-    .ppu_out(ppu_out)
+    .done()
 );
 
 endmodule

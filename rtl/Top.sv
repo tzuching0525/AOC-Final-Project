@@ -29,9 +29,8 @@ module Top (
     output logic valid, // output valid signal
     output logic [`DATA_SIZE-1:0] ofmap, // output feature map
     // output logic address,
-    output logic done, // done signal
+    output logic done // done signal
 
-    output logic [31:0] ppu_out
 );
     integer i;
     logic ifmap_wen;
@@ -54,8 +53,6 @@ module Top (
     logic valid_array, valid_ppu;
     logic [6:0] ppu_output;
     logic [31:0] ppu_in_out;
-
-    assign ppu_out = ppu_in_out;
 
     logic mode1_step0;
     
