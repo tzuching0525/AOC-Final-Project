@@ -133,3 +133,5 @@ clean_data:
 
 clean_model:
 	$(QUIET)cd model && rm *.onnx
+
+clean_all: clean clean_data clean_model
