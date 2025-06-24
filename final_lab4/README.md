@@ -19,11 +19,13 @@ conda init --all
 ### RTL testbench
 
 run `$ tcsh` before executing rtl testbench
-1. test rtl
-   `$ make test_rtl`
-2. test asic_wrapper mlp1
+1. test rtl (mlp1)
+   `$ make test_rtl0`
+2. testrtl (mlp3)
+   `$ make test_rtl1`
+3. test asic_wrapper (mlp1)
    `$ make test_wrapper0`
-3. test asic_wrapper mlp3
+4. test asic_wrapper (mlp3)
    `$ make test_wrapper1`
 
 ### Integration testbench (exit tcsh)
