@@ -1,2 +1,57 @@
-Error: Current design is not defined. (UID-4)
-0
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+        -sort_by group
+Design : Top
+Version: Q-2019.12
+Date   : Tue Jun 24 00:25:16 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ff0p88v125c   Library: N16ADFP_StdCellff0p88v125c
+Wire Load Model Mode: segmented
+
+  Startpoint: ready (input port clocked by clk)
+  Endpoint: controller/cur_state_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Top                ZeroWireload          N16ADFP_StdCellss0p72vm40c
+  Controller         ZeroWireload          N16ADFP_StdCellss0p72vm40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  input external delay                                  0.0000     0.2000 r
+  ready (in)                                            0.0016     0.2016 r
+  U563/Z (CKBD1BWP16P90LVT)                             0.0111     0.2127 r
+  controller/ready (Controller)                         0.0000     0.2127 r
+  controller/U67/ZN (OAI31D1BWP16P90LVT)                0.0092     0.2219 f
+  controller/U66/ZN (AOI21D1BWP16P90LVT)                0.0076     0.2296 r
+  controller/U3/ZN (NR2D1BWP20P90)                      0.0090     0.2385 f
+  controller/U4/Z (CKBD1BWP16P90LVT)                    0.0091     0.2476 f
+  controller/cur_state_reg_2_/D (DFQD2BWP16P90LVT)      0.0000     0.2476 f
+  data arrival time                                                0.2476
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.2000     0.2000
+  clock uncertainty                                     0.0200     0.2200
+  controller/cur_state_reg_2_/CP (DFQD2BWP16P90LVT)     0.0000     0.2200 r
+  library hold time                                     0.0276     0.2476
+  data required time                                               0.2476
+  --------------------------------------------------------------------------
+  data required time                                               0.2476
+  data arrival time                                               -0.2476
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0000
+
+
+1

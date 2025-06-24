@@ -1,2 +1,30 @@
-Error: Current design is not defined. (UID-4)
-0
+ 
+****************************************
+Report : area
+Design : Top
+Version: Q-2019.12
+Date   : Tue Jun 24 00:25:16 2025
+****************************************
+
+Library(s) Used:
+
+    N16ADFP_StdCellss0p72vm40c (File: /cad/CBDK/Executable_Package/Collaterals/IP/stdcell/N16ADFP_StdCell/NLDM/N16ADFP_StdCellss0p72vm40c.db)
+
+Number of ports:                        98326
+Number of nets:                        362986
+Number of cells:                       268328
+Number of combinational cells:         216034
+Number of sequential cells:             51369
+Number of macros/black boxes:               0
+Number of buf/inv:                      10691
+Number of references:                      24
+
+Combinational area:              79884.715828
+Buf/Inv area:                     1812.430148
+Noncombinational area:           47934.167671
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                127818.883499
+Total area:                 undefined
+1
