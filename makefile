@@ -97,11 +97,17 @@ test_runtime:
 	$(QUIET)echo "Running program..."
 	$(QUIET)cd $(TEST_DIR)/runtime && make test && cd -
 
-test_rtl:
+test_rtl0:
 	$(QUIET)echo "Cleaning ..."
 	$(QUIET)cd $(RTL_DIR) && make clean && cd -
 	$(QUIET)echo "Running program..."
-	$(QUIET)cd $(RTL_DIR) && make rtl && cd -
+	$(QUIET)cd $(RTL_DIR) && make rtl0 && cd -
+
+test_rtl1:
+	$(QUIET)echo "Cleaning ..."
+	$(QUIET)cd $(RTL_DIR) && make clean && cd -
+	$(QUIET)echo "Running program..."
+	$(QUIET)cd $(RTL_DIR) && make rtl1 && cd -
 
 test_wrapper0:
 	$(QUIET)echo "Cleaning ..."

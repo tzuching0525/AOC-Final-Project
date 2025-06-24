@@ -1,6 +1,7 @@
 syn_dir  := ../syn
 bld_dir  := ../build
-TB_RTL   := tb_top.sv
+TB_RTL0   := tb_top.sv
+TB_RTL1   := tb_top1.sv
 TB_ASIC0 := tb.sv
 TB_ASIC1 := tb_1.sv
 
@@ -17,8 +18,11 @@ rtl_all: rtl
 	@echo "Usage: make rtl"
 
 # Compile and run for pre-sim
-rtl:
-	$(VCSFLAG) $(TB_RTL)
+rtl0:
+	$(VCSFLAG) $(TB_RTL0)
+
+rtl1:
+	$(VCSFLAG) $(TB_RTL1)
 
 wrapper0:
 	$(VCSFLAG) $(TB_ASIC0)
