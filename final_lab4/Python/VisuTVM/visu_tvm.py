@@ -52,7 +52,7 @@ class VisuGraph(object):
         self.node_code = ''
         self.edge_code = ''
         self.parse_res = list()
-        self.save_name = 'output/visu_{}_relay_ir'.format(save_name)
+        self.save_name = '../../output/visu_{}_relay_ir'.format(save_name)
         self.txt_file = txt_file
         self.node_map = dict()
         self.tensor_info = dict()
@@ -73,7 +73,7 @@ class VisuGraph(object):
         # pattern_iargs = re.compile(r'(%[a-z]+\d+\.*[a-z]*):')
         # '%0 = add(%input0, 0.1f);'
         pattern1 = re.compile(r'\s/\*.+?\*/')
-        pattern2 = re.compile(r'([%\w\d\._]+)\((.*)\)')
+        pattern2 = re.compile(r'(%\d+) = (.+)')
         for line in lines[1:-1]:
             line = re.sub(pattern1, '', line)
             line = line.strip().strip(';')
@@ -272,7 +272,7 @@ class VisuGraphFuseOps(VisuGraph):
     def __init__(self, txt_file, save_name='example', with_info=False) -> None:
         super(VisuGraphFuseOps, self).__init__(txt_file, save_name, with_info)
         self.op_args_map = dict()
-        self.save_name = 'output/visu_{}_relay_ir_pass'.format(save_name)
+        self.save_name = '../../output/visu_{}_relay_ir_pass'.format(save_name)
 
     def parse_txt(self, txt_file=''):
         assert txt_file, "You must have a txt file!!!"
@@ -421,7 +421,7 @@ class VisuGraphRUF(VisuGraph):
             CombineParallelBatchMatmul Pass Relay IR"""
     def __init__(self, txt_file, save_name='example', with_info=False) -> None:
         super(VisuGraphRUF, self).__init__(txt_file, save_name, with_info)
-        self.save_name = 'output/visu_{}_relay_ir_pass'.format(save_name)
+        self.save_name = '../../output/visu_{}_relay_ir_pass'.format(save_name)
 
     def parse_node(self):
         self.node_map = dict()
@@ -448,7 +448,7 @@ class VisuGraphMC(VisuGraphFuseOps):
     # 显示算子融合后的名称
     def __init__(self, txt_file, save_name='example', with_info=False) -> None:
         super(VisuGraphMC, self).__init__(txt_file, save_name, with_info)
-        self.save_name = 'output/visu_{}_relay_ir_pass'.format(save_name)
+        self.save_name = '../../output/visu_{}_relay_ir_pass'.format(save_name)
 
     def parse_txt(self, txt_file=''):
         assert txt_file, "You must have a txt file!!!"

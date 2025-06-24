@@ -12,7 +12,8 @@ CACHE_DIR = ./Python/utils/__pycache__
 BUILD_SCRIPT = ./Python/build_model.py
 TEST_DIR = ./tests
 DATASET = ./data
-VISUTAM = Python/VisuTVM/main.py
+VISUTAM = visual.py
+RELAY   = onnx2relay.py
 
 VFLAGS   = --cc --top-module $(TOP) -I$(RTL_DIR) --Mdir $(HW_DIR) \
            --trace --trace-structs
@@ -115,12 +116,8 @@ test_wrapper1:
 	$(QUIET)cd $(RTL_DIR) && make wrapper1 && cd -
 
 visuTVM:
-	python $(VISUTAM) \
-	-bp $(LOG_DIR)/relay_mc_origin_model.txt \
-	-ap $(LOG_DIR)/relay_mc_MergeComposite_model.txt \
-	-pn AllPass  \
-	-sn VGG8 \
-	-wi
+	$(QUIET)cd Python && python $(RELAY) && cd -
+	$(QUIET)cd Python/VisuTVM && python $(VISUTAM) && cd -
 
 clean:
 	$(QUIET)echo "Cleaning up..."
